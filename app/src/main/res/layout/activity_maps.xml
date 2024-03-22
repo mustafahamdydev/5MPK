@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity"
+    >
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/mapFragment"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_open_drawer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="123"
+
+                    app:tint="@color/white"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icons8_fries_menu_1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toEndOf="@+id/mapFragment"
+                    app:layout_constraintHorizontal_bias="0.045"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.045"
+                    app:shapeAppearanceOverlay="@style/RoundedCornerFab" />
+
+                <ImageButton
+                    android:id="@+id/customLocationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="10dp"
+                    android:background="@drawable/roundedbackground"
+                    android:src="@drawable/my_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.943"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/mapFragment"
+                    app:layout_constraintVertical_bias="0.499" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/maps_BottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:background="@drawable/bottom_sheet_background"
+                android:orientation="vertical"
+                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bottom_sheet_handle" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="30dp">
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/autocomplete_fragment"
+                        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        tools:layout_editor_absoluteX="166dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/des_search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="30dp">>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/des_autocomplete_fragment"
+                        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        tools:layout_editor_absoluteX="166dp"
+                        tools:layout_editor_absoluteY="0dp" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"/>
+
+                <Button
+                    android:id="@+id/res_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Result"/>
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:id="@+id/drawer_menu"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        >
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/nav_style"
+            app:menu="@menu/drawer_menu"
+            app:headerLayout="@layout/nav_header"
+            />
+        <!-- Your drawer menu items go here -->
+        <Button
+            android:id="@+id/btn_drawer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawer Button"/>
+    </LinearLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">5MPK</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="Google_Api_Key">AIzaSyBOOPU9s4r-Wdo_x47hY7XCfnDcn1HehFI</string>
+    <string name="enter_location_coordinates">Enter Location Coordinates</string>
+    <string name="enter_destination_coordinates">Enter Destination Coordinates</string>
+    <string name="view_route">View Route On Map</string>
+    <string name="latitude_decimal">Latitude (decimal)</string>
+    <string name="longitude_decimal">Longitude (decimal)</string>
+    <string name="get_route">Get Route</string>
+    <string name="open">Open</string>
+    <string name="close">CLose</string>
+</resources>

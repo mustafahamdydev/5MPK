@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:title="test1"
+            android:id="@+id/test1"
+            android:checked="true"
+            />
+        <item
+            android:title="test2"
+            android:id="@+id/test2"
+            />
+        <item
+            android:title="test3"
+            android:id="@+id/test3"
+            />
+        <item
+            android:title="test4"
+            android:id="@+id/test4"
+            />
+
+        <item
+            android:title="test5"
+            android:id="@+id/test5"
+            />
+
+
+    </group>
+
+    <item
+        android:title="tet"
+        >
+
+
+
+        <menu>
+            <item
+                android:title="logout"
+                android:id="@+id/logout">
+
+            </item>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RoundedCornerFab" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item> <!-- Set cornerSize to 0dp for circular edges -->
+    </style>
+</resources>

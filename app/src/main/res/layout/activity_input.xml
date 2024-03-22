@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".InputActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_location_coordinates"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etStartLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/latitude_decimal"
+                android:inputType="numberDecimal"
+                android:textSize="11sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etStartLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/longitude_decimal"
+                android:inputType="numberDecimal"
+                android:textSize="11sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_destination_coordinates"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEndLat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/latitude_decimal"
+                android:inputType="numberDecimal"
+                android:textSize="11sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEndLon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/longitude_decimal"
+                android:inputType="numberDecimal"
+                android:textSize="11sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_route"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"/>
+
+    <Button
+        android:id="@+id/btnViewRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view_route"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

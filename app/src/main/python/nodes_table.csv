@@ -1,0 +1,2738 @@
+stop_id,stop_name,latitude,longitude
+stop1,(Mostorod Bridge) Ring Road,30.163368,31.304024
+stop2,10 St. Steps (Ring Rd.),30.10626,31.202986
+stop3,10 St. Steps (Ring Rd.),30.106283,31.202766
+stop4,10th District (Nasr City),30.049072,31.378845
+stop5,10th District (Nasr City),30.048328,31.379961
+stop6,10th District (Nasr City),30.049362,31.379839
+stop7,10th District (Nasr City),30.048904,31.37905
+stop8,10th District (Nasr City),30.049112,31.379221
+stop9,10th District (Nasr City),30.048325,31.38006
+stop10,10th District (Shorouq City),30.134521,31.657364
+stop11,10th District (Shorouq City),30.13433,31.657202
+stop12,10th District Station (6th of October),29.964344,30.915606
+stop13,10th District Station (6th of October),29.963678,30.914577
+stop14,10th District Station (6th of October),29.963781,30.914484
+stop15,10th of Ramadan,30.154938,31.408575
+stop16,10th of Ramadan (Ismailiya Desert Rd.),30.148645,31.422926
+stop17,10th of Ramadan City,30.295128,31.743813
+stop18,10th of Ramadan City Entrance,30.26461,31.755386
+stop19,11th District (6th of October),29.962776,30.901794
+stop20,11th District (Hay Al Hadi Ashr) Exit - Sheikh Zayed,30.049696,30.976954
+stop21,11th District Exit (Sheikh Zayed),30.049063,30.976707
+stop22,15th of May,29.810863,31.378103
+stop23,15th of May Checkpoint,29.821608,31.352797
+stop24,15th of May City Authority,29.826612,31.364035
+stop25,15th of May City Authority,29.826466,31.364223
+stop26,15th of May School (Mostorod),30.132105,31.282913
+stop27,15th of May Youth Forum,29.831581,31.37835
+stop28,15th of May Youth Forum,29.83146,31.378393
+stop29,16th District (Sheikh Zayed),30.053202,30.966187
+stop30,1st Settlement Authority,30.052122,31.448147
+stop31,1st Settlement Station,30.064577,31.449131
+stop32,20 St. & Al Mostaqbal St. (Sheikh Zayed),30.047403,30.976717
+stop33,20 St. & Al Mostaqbal St. (Sheikh Zayed),30.047106,30.976511
+stop34,26th of July Corridor & Alex Desert Rd.,30.04711,31.051592
+stop35,26th of July Corridor & Alex Desert Rd.,30.048206,31.052382
+stop36,26th of July Corridor & Alex Desert Rd.,30.047281,31.052485
+stop37,26th of July Corridor Entrance from Ring Rd.,30.063845,31.17437
+stop38,26th of July Corridor Exit to Alex Desert Rd.,30.048586,31.050406
+stop39,2nd District Entrance - Obour,30.249115,31.46816
+stop40,2nd Nasr City Police Station,30.05068,31.311892
+stop41,2nd Nasr City Police Station,30.050518,31.312164
+stop42,3rd Settlement Station,29.984022,31.442358
+stop43,3rd Settlement Station,29.984312,31.442474
+stop44,4th Neighbourhood Council (15th of May ),29.837914,31.376825
+stop45,4th Neighbourhood Council (15th of May),29.83835,31.37779
+stop46,5th Settlement Authority,29.993355,31.416061
+stop47,5th Settlement Authority,29.993156,31.417702
+stop48,5th Settlement Authority,29.993097,31.416092
+stop49,5th Settlement Police Station,29.997766,31.426624
+stop50,6 October Bridge (Mostorod),30.137955,31.29324
+stop51,6 October Bridge (Mostorod),30.13781,31.29327
+stop52,6th District (6th of October),29.931501,30.917341
+stop53,6th District (6th of October),29.931467,30.91719
+stop54,6th Of October City Authority,29.98265,30.952312
+stop55,6th Of October City Authority,29.98274,30.952488
+stop56,6th Of October Public Library,29.986101,30.943127
+stop57,6th Of October Public Library,29.986055,30.94303
+stop58,6th Of October University,29.975758,30.949817
+stop59,6th of October Garden (Helwan),29.840557,31.329374
+stop60,6th of October Garden (Helwan),29.840471,31.329432
+stop61,6th of October Panorama,30.074152,31.303833
+stop62,7 Omarat,30.08798,31.336267
+stop63,7th District (6th of October),29.983267,30.93946
+stop64,7th District (Nasr City),30.041981,31.329512
+stop65,7th District Entrance (6th of October),29.979935,30.949512
+stop66,7th District Entrance (6th of October),29.980381,30.950205
+stop67,7th District Entrance (6th of October),29.97744,30.940578
+stop68,7th District Entrance (6th of October),29.977373,30.94048
+stop69,7th District Station (Nasr City),30.043678,31.329226
+stop70,7th District Station (Nasr City),30.043547,31.329361
+stop71,8th District (6th of October),29.974854,30.93174
+stop72,8th District (6th of October),29.97423,30.930529
+stop73,8th District (Nasr City),30.06141,31.380363
+stop74,8th District (Nasr City),30.061361,31.379536
+stop75,8th District (Shorouq City),30.16387,31.605534
+stop76,8th District (Shorouq City),30.163845,31.60537
+stop77,Aba Al Kassem Mosque (Autostrad),29.932964,31.28809
+stop78,Aba Al Kassem Mosque (Autostrad),29.933023,31.288227
+stop79,Abbas Al Akkad St. & Mostafa Al Nahas St.,30.05365,31.338762
+stop80,Abbas Al Akkad St. & Mostafa Al Nahas St.,30.054043,31.338547
+stop81,Abbaseya,30.073334,31.284698
+stop82,Abbaseya,30.073181,31.28507
+stop83,Abbaseya,30.072712,31.285635
+stop84,Abbaseya,30.072832,31.286053
+stop85,Abbaseya,30.07252,31.28438
+stop86,Abbaseya Bridge Entrance,30.070265,31.289656
+stop87,Abbaseya Bridge Entrance,30.070246,31.289957
+stop88,Abbaseya Bridge Etrance,30.070488,31.28931
+stop89,Abbaseya Bridge Exit,30.075361,31.283716
+stop90,Abbaseya Hospital,30.068605,31.292269
+stop91,Abbaseya Hospital,30.071074,31.294273
+stop92,Abbaseya Hospital,30.070976,31.29467
+stop93,Abbaseya Square,30.073889,31.285383
+stop94,Abbaseya Square,30.07421,31.285593
+stop95,Abboud,30.103725,31.256844
+stop96,Abboud,30.104708,31.255331
+stop97,Abboud,30.104778,31.25526
+stop98,Abboud,30.104794,31.255758
+stop99,Abboud,30.10612,31.253843
+stop100,Abboud,30.10363,31.255983
+stop101,Abboud,30.105156,31.255384
+stop102,Abboud,30.104134,31.253756
+stop103,Abd Al Moneim Riad,30.049492,31.231245
+stop104,Abd Al Moneim Riad,30.050419,31.23375
+stop105,Abd Al Moneim Riad,30.04973,31.23477
+stop106,Abd Al Moneim Riad,30.048674,31.232658
+stop107,Abd Al Moneim Riad,30.050127,31.233873
+stop108,Abd Al Moneim Riad,30.049494,31.231836
+stop109,Abd Al Moneim Riad,30.049524,31.234486
+stop110,Abd Al Moneim Riad Mosque (Nile Corniche),29.937511,31.276367
+stop111,Abd Al Moneim Riad Mosque (Nile Corniche),29.937572,31.276457
+stop112,Abd El Aziz St. (Ataba),30.050024,31.251093
+stop113,Abd El Aziz St. (Ataba),30.049429,31.250246
+stop114,Abdeen,30.04115,31.245586
+stop115,Abdo Basha,30.065397,31.276688
+stop116,Abdo Basha,30.065416,31.276987
+stop117,Abdullah Al Othaym (Nile Corniche),29.882502,31.289268
+stop118,Abdullah Al Othaym (Nile Corniche),29.88251,31.289392
+stop119,Abdullah El Refaey,30.160072,31.355534
+stop120,Abdullah El Refaey,30.160095,31.355633
+stop121,Abo Senna Steps,30.155146,31.229029
+stop122,Abo Senna Steps,30.155176,31.229177
+stop123,Abo Sir Steps (Ring Rd.),30.16462,31.38842
+stop124,Abou Al Farag St & Rod Al Farag St,30.081617,31.236904
+stop125,Abou Al Majd Center (Mostorod),30.126974,31.28783
+stop126,Abou Al Majd Center (Mostorod),30.12676,31.289162
+stop127,Abou Al Majd Center (Mostorod),30.126623,31.289328
+stop128,Abou Al Majd Center (Mostorod),30.126709,31.287874
+stop129,Abou Al Reesh,30.028622,31.234652
+stop130,Abou Al Reesh,30.02918,31.237198
+stop131,Abou Al Reesh,30.028427,31.236984
+stop132,Abou Al Reesh,30.028858,31.234861
+stop133,Abou Al Reesh,30.028225,31.23742
+stop134,Abou Allaam (6th of October),29.95861,30.900978
+stop135,Abou Allaam (6th of October),29.958567,30.901049
+stop136,Abou Rawwash,30.04527,31.09508
+stop137,Abou Rawwash,30.04542,31.09493
+stop138,Abou Wafya,30.097776,31.256016
+stop139,Abou Wafya,30.097773,31.256128
+stop140,Abou Wafya,30.09736,31.255854
+stop141,Abou Wafya Bridge,30.095648,31.265926
+stop142,Abou Zaabal,30.2535,31.34968
+stop143,Abou Zaabal,30.249165,31.354725
+stop144,Abou Zaabal Bridge,30.197258,31.318819
+stop145,Abu Al Gheit Ambulance Service,30.158215,31.198006
+stop146,Abu Al Gheit Ambulance Service,30.1583,31.198042
+stop147,Abu Al Houl (Al Mansoureyya Rd. ),29.97892,31.144003
+stop148,Abu Al Houl (Al Mansoureyya Rd. ),29.978842,31.143768
+stop149,Abu Al Houl St.,29.977596,31.142946
+stop150,Abu Al Houl St.,29.977516,31.142992
+stop151,Abu Al Nomros Police Station,29.95806,31.212864
+stop152,Abu Bakr Al Sedeeq Mosque - Sheraton,30.100565,31.375988
+stop153,Abu Bakr Al Sediq Mosque (Sheraton),30.100943,31.37464
+stop154,Abu Bakr Al Sediq St. & Teraat Al Dakat St.,30.103348,31.261017
+stop155,Abu Bakr Al Siddiq Mosque (6th of October),29.960669,30.948013
+stop156,Abu Bakr Al Siddiq Mosque (6th of October),29.960602,30.948132
+stop157,Abu Bakr Al Sidiq Square (15th of May),29.828604,31.369951
+stop158,Abu El Numrus,29.95958,31.231003
+stop159,Abu Khater (Al Matareyya),30.126175,31.29817
+stop160,Abu Khater (Al Matareyya),30.12582,31.298115
+stop161,Abu Makarem Mosque (Al Waili),30.055565,31.279568
+stop162,Abu Rawwash Rd. & Al Mansoureyya Rd.,30.041054,31.096401
+stop163,Abu Rawwash Rd. & Al Mansoureyya Rd.,30.041172,31.096252
+stop164,Adawy (Nile Corniche),29.896675,31.28756
+stop165,Adawy (Nile Corniche),29.89672,31.28768
+stop166,Aden St. & Sudan St.,30.051548,31.191841
+stop167,Aden St. & Sudan St.,30.0515,31.191721
+stop168,Adidas Steps (Ring Rd.),29.983969,31.321686
+stop169,Adidas Steps (Ring Rd.),29.98455,31.321777
+stop170,Administrative Control Authority ( Nozha),30.077711,31.339493
+stop171,Administrative Control Authority (Nozha),30.07764,31.33978
+stop172,Adminstration Of Mobilization And Recruitment,30.10635,31.323847
+stop173,Adminstration Of Mobilization And Recruitment,30.106493,31.324167
+stop174,Afendina Dome (Manshiyat Nasser),30.043393,31.277236
+stop175,Agouza Corniche,30.046488,31.218107
+stop176,Agouza Corniche,30.046524,31.218216
+stop177,Agouza Police Hospital,30.052305,31.216717
+stop178,Agouza Police Hospital,30.052334,31.216871
+stop179,Agricultural Center (Badrasheen),29.851421,31.247364
+stop180,Agricultural Research Center - Cairo University,30.021055,31.211437
+stop181,Agricultural Research Center - Cairo University,30.021217,31.211544
+stop182,Agyad School (Betcho),29.973534,31.329773
+stop183,Ahli Bank (Al Nadi Al Gedid St.),29.969296,31.271973
+stop184,Ahli Kuwaiti Bank (Sudan St.),30.048325,31.192566
+stop185,Ahli Kuwaiti Bank (Sudan St.),30.048128,31.192492
+stop186,Ahmed Al Sallab Mall (Nasr City),30.05198,31.323462
+stop187,Ahmed Al Sallab Mall (Nasr City),30.051758,31.323694
+stop188,Ahmed Badawi St.,30.066303,31.245766
+stop189,Ahmed Badawi St.,30.066317,31.245083
+stop190,Ahmed Esmat St. & Ain Shams St.,30.129118,31.321548
+stop191,Ahmed Esmat St. & Ain Shams St.,30.129154,31.321438
+stop192,Ahmed Fakhry and Autostrad,30.069502,31.348722
+stop193,Ahmed Fakhry and Autostrad,30.069653,31.348051
+stop194,Ahmed Fakhry and Autostrad,30.070032,31.348309
+stop195,Ahmed Galal Military Passage,30.141209,31.436773
+stop196,Ahmed Galal Military Passage,30.141262,31.436964
+stop197,Ahmed Helmy,30.064966,31.247765
+stop198,Ahmed Helmy,30.06485,31.24576
+stop199,Ahmed Helmy,30.065004,31.24655
+stop200,Ahmed Helmy,30.064476,31.244982
+stop201,Ahmed Helmy,30.06495,31.244743
+stop202,Ahmed Helmy,30.06488,31.24488
+stop203,Ahmed Ismail Square (Alf Maskan),30.121449,31.333935
+stop204,Ahmed Khalil St & Mogamaa Al Masanae St,30.10649,31.266975
+stop205,Ahmed Maher Teaching Hospital,30.039724,31.25036
+stop206,Ahmed Maher Teaching Hospital,30.03984,31.250195
+stop207,Ahmed Oraby (Ramses),30.057416,31.241444
+stop208,Ahmed Oraby Metro,30.057005,31.242458
+stop209,Ahmed Oraby Square (Obour),30.2254,31.457281
+stop210,Ahmed Oraby Square (Obour),30.223509,31.458424
+stop211,Ahmed Oraby St.,30.060703,31.24266
+stop212,Ahmed Oraby St.,30.060907,31.242842
+stop213,Ahmed Saaed Bridge Entrance,30.070701,31.272823
+stop214,Ahmed Saeed St. & Abaseyya St.,30.064054,31.272795
+stop215,Ahmed Zaki St. (Maadi),29.964628,31.260937
+stop216,Ahmed Zaki St. (Maadi),29.96462,31.260855
+stop217,Ahram Canadian University,29.935389,30.881168
+stop218,Ahram Canadian University,29.935225,30.881178
+stop219,Ahram Gardens Resort (6th of October),29.951689,31.087765
+stop220,Ahram School for Basic Education,29.988497,31.112795
+stop221,Aida (Ahmed Helmy St.),30.08503,31.255957
+stop222,Aida (Ahmed Helmy St.),30.084835,31.255865
+stop223,Ain Helwan Metro,29.862497,31.32542
+stop224,Ain Helwan Metro,29.862564,31.325506
+stop225,Ain Shams Metro,30.130777,31.319643
+stop226,Ain Shams University,30.075756,31.287075
+stop227,Ain Shams University,30.075634,31.287308
+stop228,Ain Shams University (Obour),30.204412,31.45731
+stop229,Ain Shams University (Obour),30.20442,31.457462
+stop230,Ain Shams University Dorms,30.077845,31.28954
+stop231,Ain Shams University Dorms,30.077896,31.289236
+stop232,Air Force Hospital,30.01642,31.433527
+stop233,Air Force Hospital,30.016155,31.433405
+stop234,Air Force Hospital (Al Waili),30.062466,31.273512
+stop235,Akhbar Al Yom Academy,29.941103,30.889927
+stop236,Akhbar Al Yom Academy,29.940996,30.89004
+stop237,Akhnaton School,30.006285,31.41433
+stop238,Akhnaton School,30.006426,31.414362
+stop239,Akhnaton Square (5th Settlement),30.007364,31.411411
+stop240,Akhnaton Square (5th Settlement),30.007837,31.412228
+stop241,Akhnaton Square (5th Settlement),30.00725,31.411852
+stop242,Al Aalam Specialized Hospital,30.066193,31.191797
+stop243,Al Aalam Specialized Hospital,30.066227,31.191727
+stop244,Al Abageyya,30.023909,31.2637
+stop245,Al Abageyya,30.024376,31.263426
+stop246,Al Abaseyya Institute for Computer & Commercial Sciences,30.142096,31.322294
+stop247,Al Abaseyya Institute for Computer & Commercial Sciences,30.141941,31.322317
+stop248,Al Abeet Steps (Ring Rd.),30.06731,31.174437
+stop249,Al Abeet Steps (Ring Rd.),30.067156,31.17457
+stop250,Al Abtal City (15th of May),29.82823,31.354708
+stop251,Al Abtal Club ( Ein Al Seera),30.016285,31.25047
+stop252,Al Abtal Club ( Ein Al Seera),30.016209,31.250294
+stop253,Al Abyad Automotive ( Faisal St.),30.013374,31.198689
+stop254,Al Abyad Automotive ( Faisal St.),30.01348,31.198534
+stop255,Al Agouza Hospital,30.056046,31.216007
+stop256,Al Agouza Hospital,30.055784,31.215935
+stop257,Al Agouza Steps (October Bridge),30.048407,31.218903
+stop258,Al Agouza Steps (October Bridge),30.048462,31.218576
+stop259,Al Ahli Bank (Courniche Boulaq),30.062214,31.227352
+stop260,Al Ahli Bank (Courniche Boulaq),30.062159,31.227253
+stop261,Al Ahli Bank (Faisal St.),30.006664,31.18118
+stop262,Al Ahli Bank (Faisal St.),30.006525,31.181217
+stop263,Al Ahly Sporting Club,30.071226,31.354671
+stop264,Al Ahly Sporting Club (Nasr City),30.071619,31.3545
+stop265,Al Amir Steps (Ring Rd.),30.163588,31.318558
+stop266,Al Amir Steps (Ring Rd.),30.163439,31.31855
+stop267,Al Anabeeb - Waili,30.100046,31.278885
+stop268,Al Anabeeb - Waili,30.1,31.279015
+stop269,Al Andalous Specialized Hospital (7th District Nasr City),30.04051,31.329748
+stop270,Al Ansar School (Gesr Al Suez),30.117926,31.33605
+stop271,Al Areesh (Haram St.),29.99377,31.160122
+stop272,Al Areesh (Haram St.),29.99386,31.15995
+stop273,Al Ashgar District,29.958164,31.067366
+stop274,Al Atraby Basha Abu Al Ezz St. & Gesr Al Suez St.,30.116325,31.336695
+stop275,Al Atraby Basha Abu Al Ezz St. & Gesr Al Suez St.,30.116423,31.336401
+stop276,Al Azhar Park Gate,30.040054,31.266449
+stop277,Al Azhar Park Gate,30.040133,31.266335
+stop278,Al Azhar Pedestrian Bridge,30.060999,31.307325
+stop279,Al Azhar Pedestrian Bridge,30.060776,31.307522
+stop280,Al Azhar University Hospital (Nasr City),30.054255,31.3121
+stop281,Al Azhar University Hospital (Nasr City),30.054237,31.311935
+stop282,Al Azhar University Northen Gate,30.062721,31.31125
+stop283,Al Azhar University Northen Gate,30.06296,31.311049
+stop284,Al Azhar University Southern Gate,30.051014,31.320547
+stop285,Al Aziz Bellah (Gesr Al Suez),30.099646,31.315746
+stop286,Al Aziz Bellah (Gesr Al Suez),30.099506,31.315903
+stop287,Al Aziz Bellah St. & Selim Al Awwal St.,30.102497,31.310328
+stop288,Al Azizeya Bridge,29.879017,31.246502
+stop289,Al Azizeya Bridge,29.879189,31.247
+stop290,Al Badrasheen City Council,29.850159,31.277643
+stop291,Al Badrasheen City Council,29.850286,31.277628
+stop292,Al Bahr Al Aazam St. Exit End,29.989006,31.215307
+stop293,Al Bahr Al Aazam St. Exit Start,29.98712,31.218306
+stop294,Al Baloun Theatre (Al Agouza),30.058973,31.215134
+stop295,Al Baloun Theatre (Al Agouza),30.059118,31.215239
+stop296,Al Banat Mosque,30.046577,31.254023
+stop297,Al Banat Mosque,30.046368,31.253794
+stop298,Al Banhawi,30.057482,31.260452
+stop299,Al Banhawi,30.057438,31.260529
+stop300,Al Banhawi,30.05738,31.26046
+stop301,Al Barageel Entrance,30.064266,31.161451
+stop302,Al Barageel Entrance,30.06439,31.16148
+stop303,Al Barageel Steps (Ring Rd.),30.076975,31.179056
+stop304,Al Barageel Steps (Ring Rd.),30.077217,31.179096
+stop305,Al Bassous,30.13373,31.212517
+stop306,Al Bassous Steps - Ring Road,30.145258,31.21147
+stop307,Al Bassous Steps - Ring Road,30.145214,31.211433
+stop308,Al Batal Ahmed - Saheb Al Diwan,30.216969,31.354765
+stop309,Al Behiry Stone (Basateen),29.98856,31.27179
+stop310,Al Bibany St.,30.034868,31.25552
+stop311,Al Bibany St.,30.034893,31.255573
+stop312,Al Bohi (Imbaba),30.08783,31.212393
+stop313,Al Bohi (Imbaba),30.087969,31.212423
+stop314,Al Bosta Steps (Ring Rd.),30.11304,31.203129
+stop315,Al Bostan Compound Entrance,29.946632,30.941286
+stop316,Al Bostan Compound Entrance,29.946539,30.941416
+stop317,Al Central (Laylat Al Qadr),29.944225,30.906439
+stop318,Al Central (Laylat Al Qadr),29.944159,30.906334
+stop319,Al Central St. & Abou Al Farag St.,30.074154,31.233644
+stop320,Al Central St. & Abou Al Farag St.,30.074373,31.23372
+stop321,Al Checheeny St.,29.998724,31.142818
+stop322,Al Dandarawy St. & Basateen Rd.,29.998434,31.265287
+stop323,Al Darb Al Ahmar Police Station,30.037426,31.252235
+stop324,Al Darraasa,30.047348,31.270027
+stop325,Al Darraasa Traffic Department,30.052475,31.269976
+stop326,Al Darraasa Traffic Department,30.052637,31.270203
+stop327,Al Dawagen (Nile Corniche),29.879644,31.28941
+stop328,Al Dawagen (Nile Corniche),29.87965,31.289314
+stop329,Al Demerdash Hospital,30.07155,31.276493
+stop330,Al Demerdash Metro,30.077417,31.276714
+stop331,Al Demerdash Metro,30.076593,31.277029
+stop332,Al Demerdash Metro,30.0774,31.276953
+stop333,Al Eman Mosque (Makram Ebeid St.),30.064726,31.344831
+stop334,Al Eman Mosque (Makram Ebeid St.),30.064701,31.344625
+stop335,Al Etaby Center,30.04596,30.966927
+stop336,Al Etaby Center,30.046036,30.966928
+stop337,Al Ezaby Pharmacy Al Mehwar Al Markazi (6th of October),29.964293,30.933182
+stop338,Al Ezaby Pharmacy Al Mehwar Al Markazi (6th of October),29.964369,30.933052
+stop339,Al Farag Butchery (Magra Al Oyoun),30.021412,31.235706
+stop340,Al Farag Butchery (Magra Al Oyoun),30.021336,31.235683
+stop341,Al Faragany (Ain Shams St.),30.117764,31.31749
+stop342,Al Fardous Compound Entrance (6th of October),29.95871,31.054106
+stop343,Al Fath Mosque (Mansheyyet Al Gamal St.),30.097857,31.249022
+stop344,Al Fath Schools (Abu Al Nomros),29.964838,31.21103
+stop345,Al Fath Superjet (Nasr City),30.046176,31.30797
+stop346,Al Fath Superjet (Nasr City),30.046175,31.307589
+stop347,Al Fath Superjet (Nasr City),30.046179,31.307774
+stop348,Al Fayrouz Center (6th of October),29.95741,30.942307
+stop349,Al Fayrouz Center (6th of October),29.957525,30.942234
+stop350,Al Fayrouz Medical Center (Helwan),29.84321,31.303896
+stop351,Al Fayrouz Medical Center (Helwan),29.843159,31.303776
+stop352,Al Fouad Hospital (Abbaseya),30.078667,31.277546
+stop353,Al Gabal Al Asfar (Marg),30.203524,31.355268
+stop354,Al Gabal Al Asfar (Marg),30.203552,31.35522
+stop355,Al Galaa Bridge,30.094828,31.342428
+stop356,Al Galaa Bridge,30.09459,31.342043
+stop357,Al Galaa Bridge,30.095995,31.342604
+stop358,Al Galaa Bridge (Helipolis),30.095806,31.34181
+stop359,Al Galaa Military Hospital,30.099928,31.350761
+stop360,Al Galaa Military Hospital,30.10023,31.35057
+stop361,Al Gamaia Al Sharaia (Nasr City),30.047667,31.313395
+stop362,Al Gamaia Al Sharaia (Nasr City),30.047638,31.313843
+stop363,Al Gamaleya Youth Center,30.050003,31.268854
+stop364,Al Gamaleya Youth Center,30.049973,31.268959
+stop365,Al Garage ( Sawah ),30.105597,31.2816
+stop366,Al Garage - Sawah,30.105658,31.281425
+stop367,Al Gazaer Exit (Ring Rd.),30.165888,31.359163
+stop368,Al Gazareen (Warraq),30.101063,31.222471
+stop369,Al Gazareen (Warraq),30.101206,31.222555
+stop370,Al Gehaz Entrance (6th of October),29.962456,30.969912
+stop371,Al Gehaz Entrance (6th of October),29.962309,30.970058
+stop372,Al Geish Square,30.062183,31.267786
+stop373,Al Geish Square,30.062384,31.267963
+stop374,Al Gezira (Al Moqattam),30.010698,31.303282
+stop375,Al Gezira (Al Moqattam),30.01081,31.303375
+stop376,Al Gezira Steps (October Bridge),30.04906,31.226988
+stop377,Al Gezira Steps (October Bridge),30.049175,31.227026
+stop378,Al Gomhoreya St. & Al Masraf St.,30.236792,31.357018
+stop379,Al Gomhoreya St. & Al Masraf St.,30.237087,31.356897
+stop380,Al Gomhoreyya St. & Al Masraf St. (Marg),30.175446,31.347479
+stop381,Al Gomhoreyya St. & Howd Al Shaikh St. (Marg),30.187437,31.351437
+stop382,Al Habib Mosque (Al Barageel),30.073574,31.169323
+stop383,Al Hadaba Al Wosta (Al Moqattam),30.009562,31.338305
+stop384,Al Hadaba Al Wosta (Al Moqattam),30.010624,31.339434
+stop385,Al Hadaba Al Wosta (Al Moqattam),30.009756,31.339985
+stop386,Al Hamd Square Station,30.00197,31.423
+stop387,Al Hamd Square Station,30.002249,31.423048
+stop388,Al Haq Hospital (Arbean St.),30.133135,31.314157
+stop389,Al Harania Footbridge,29.968088,31.177929
+stop390,Al Harania Footbridge,29.96837,31.177433
+stop391,Al Hawamdeyya,29.896235,31.265867
+stop392,Al Hawamdeyya,29.887955,31.272583
+stop393,Al Hawamdeyya,29.896284,31.265852
+stop394,Al Hawamdeyya,29.88794,31.272482
+stop395,Al Hawamdeyya Bridge St.,29.897238,31.270447
+stop396,Al Hawamdeyya Bridge St.,29.897247,31.270351
+stop397,Al Hawamdeyya Traffic Authority,29.905104,31.268637
+stop398,Al Hawamdeyya Traffic Authority,29.905119,31.268744
+stop399,Al Hayat Islamic School (Marg),30.189718,31.351118
+stop400,Al Hays Pastry (Nozha St.),30.104265,31.34375
+stop401,Al Hays Pastry (Nozha St.),30.10434,31.343601
+stop402,Al Hedaya Mosque (6th of October),29.92803,30.943192
+stop403,Al Hegaz Mall (6th of October),29.964191,30.950956
+stop404,Al Hegaz Mall (6th of October),29.964224,30.951107
+stop405,Al Hegaz Square,30.111052,31.344738
+stop406,Al Hegaz Square,30.110971,31.345095
+stop407,Al Hegaz Square,30.11072,31.346651
+stop408,Al Hegaz Square,30.1106,31.346199
+stop409,Al Helmeya Garden (Gesr Al Suez),30.108894,31.32707
+stop410,Al Helmeya Garden (Gesr Al Suez),30.108757,31.327242
+stop411,Al Helmeya Square (Heliopolis),30.111986,31.316608
+stop412,Al Helmeya Square (Heliopolis),30.112122,31.316082
+stop413,Al Hennawy Furniture (Airport Rd.),30.124329,31.376574
+stop414,Al Hennawy Furniture (Airport Rd.),30.12446,31.376423
+stop415,Al Herafeyin (Gesr Al Suez),30.136763,31.387785
+stop416,Al Herafyeen (Gesr Al Suez),30.136904,31.387648
+stop417,Al Hikma Labs (Nohza St.),30.107193,31.344307
+stop418,Al Hikma Labs (Nohza St.),30.107138,31.344542
+stop419,Al Hoda Factory (6th of October),29.911556,30.897825
+stop420,Al Hoda Factory (6th of October),29.91161,30.897757
+stop421,Al Horeyya Rd. (Badr),30.13239,31.71704
+stop422,Al Horeyya Rd. (Badr),30.132471,31.717293
+stop423,Al Horia Square (Maadi),29.95966,31.254309
+stop424,Al Horreya Square (Shorouq City),30.168861,31.602583
+stop425,Al Horreya Square (Shorouq City),30.167946,31.602236
+stop426,Al Hossary Azhari Language School,29.97068,30.949888
+stop427,Al Hossary Azhari Language School,29.970753,30.949821
+stop428,Al Huda Mosuqe (Al Mosky),30.052149,31.256735
+stop429,Al Huda Mosuqe (Al Mosky),30.052002,31.256573
+stop430,Al Hussein Hospital (Al Darraasa),30.04557,31.267014
+stop431,Al Imam Al Shafei Cemetaries (Autostrad),30.01218,31.267265
+stop432,Al Imam Al Shafei Cemetaries (Autostrad),30.012442,31.267273
+stop433,Al Ismailiya (10th of Ramadan),30.266582,31.753588
+stop434,Al Ismailiya Square,30.096703,31.334856
+stop435,Al Ismailiya Square,30.096458,31.334913
+stop436,Al Itihadeya,30.0903,31.319857
+stop437,Al Itihadeya,30.090506,31.319868
+stop438,Al Juman,30.033937,30.982586
+stop439,Al Kabbani Furniture (6th of October),29.957438,30.92147
+stop440,Al Kabbani Furniture (6th of October),29.957325,30.92156
+stop441,Al Kahraba Housing Complex,29.872654,31.289335
+stop442,Al Kahraba Housing Complex,29.872765,31.289448
+stop443,Al Kahraba St. & Al Wahat Road,29.94554,30.948612
+stop444,Al Kahraba St. & Al Wahat Road,29.945427,30.94858
+stop445,Al Kahraba St. & Tabarak St.,29.947828,30.94267
+stop446,Al Kahraba St. & Tabarak St.,29.947971,30.942572
+stop447,Al Kahraba St. (Nasr City),30.0502,31.389242
+stop448,Al Kahraba St. (Nasr City),30.05003,31.389256
+stop449,Al Karma Compound Gate (Sheikh Zayed),30.042257,31.00429
+stop450,Al Karma Compound Gate (Sheikh Zayed),30.042171,31.004456
+stop451,Al Kawetch (Al Matareyya),30.128681,31.296139
+stop452,Al Kawetch (Al Matareyya),30.128363,31.296206
+stop453,Al Kawthar St. & Gamal Al Din Al Banna St.,30.007936,31.134933
+stop454,Al Kawthar St. & Gamal Al Din Al Banna St.,30.007704,31.135054
+stop455,Al Kerdasi Schools (Marg),30.207495,31.356346
+stop456,Al Kersh Cars (Heliopolis),30.084106,31.325827
+stop457,Al Khalafawy Square,30.098,31.245333
+stop458,Al Khalafawy Square,30.098118,31.245436
+stop459,Al Khalafawy Square,30.097866,31.245634
+stop460,Al Khanka (Al Salam Rd.),30.227818,31.35844
+stop461,Al Khanka (Al Salam Rd.),30.227833,31.358517
+stop462,Al Khanka Local Unit,30.223232,31.359287
+stop463,Al Khanka Local Unit,30.22325,31.359203
+stop464,Al Khanka Terminal,30.22,31.371689
+stop465,Al Khankah Police Station,30.22834,31.3622
+stop466,Al Khashab Bridge,30.009602,31.227407
+stop467,Al Khashab Bridge,30.009604,31.22727
+stop468,Al Khazan St. (6th of October),29.956507,30.920063
+stop469,Al Khazan St. (6th of October),29.956379,30.92011
+stop470,Al Khelaa St.,30.017767,31.264633
+stop471,Al Khelaa St.,30.017385,31.264917
+stop472,Al Kholafaa Al Rashdeen Mosque (Nasr City),30.037191,31.333483
+stop473,Al Kholafaa Al Rashedeen Mosque (6th of October),29.950453,30.931364
+stop474,Al Kholafaa Al Rashedeen Mosque (6th of October),29.950335,30.931425
+stop475,Al Khosous,30.16287,31.323223
+stop476,Al Khosous,30.1579,31.32025
+stop477,Al Khosous,30.15803,31.320232
+stop478,Al Khouly Steps (Ring Rd.),30.099281,31.200953
+stop479,Al Khouly Steps (Ring Rd.),30.099117,31.20103
+stop480,Al Kuwaiti Mosque (Zahraa Al Maadi),29.9614,31.313738
+stop481,Al Kuwaiti Mosque (Zahraa Al Maadi),29.961643,31.313585
+stop482,Al Laimoon Bridge,30.062027,31.246017
+stop483,Al Maadi Company St. and Al Gazaer St.,29.98506,31.273626
+stop484,Al Maadi Company St. and Al Gazaer St.,29.985058,31.27377
+stop485,Al Maagfera Mosque (Bolak),30.0675,31.229301
+stop486,Al Maagfera Mosque (Bolak),30.067547,31.229431
+stop487,Al Maamal ( Al Remaya St.),29.990488,31.116158
+stop488,Al Maasara Ferry,29.901474,31.288033
+stop489,Al Maasara Ferry,29.90146,31.28794
+stop490,Al Maasara For Engineering Industries,29.905754,31.288372
+stop491,Al Maasara For Engineering Industries,29.905787,31.288431
+stop492,Al Maasara Police Station,29.888689,31.3039
+stop493,Al Mafareq (Al Moqattam),30.011747,31.329819
+stop494,Al Mafareq (Al Moqattam),30.011885,31.329071
+stop495,Al Mafareq (Al Moqattam),30.011995,31.3292
+stop496,Al Mafariq (Al Zawya Al Hamra),30.098444,31.264992
+stop497,Al Magzar (Al Mariouteya),29.97866,31.159628
+stop498,Al Magzar (Al Mariouteya),29.978767,31.15969
+stop499,Al Magzar (Al Mariouteya),29.978935,31.15996
+stop500,Al Magzar Al Aali (Autostrad),30.00261,31.2745
+stop501,Al Magzar Al Aali (Autostrad),30.002554,31.274338
+stop502,Al Mahkama (New Cairo),30.00348,31.426191
+stop503,Al Mahkama (New Cairo),30.003382,31.426245
+stop504,Al Malek Al Saleh,30.01593,31.23239
+stop505,Al Malek Al Saleh,30.01536,31.228754
+stop506,Al Malek Al Saleh,30.016024,31.230904
+stop507,Al Malek Al Saleh,30.016022,31.23239
+stop508,Al Malek Al Saleh,30.015383,31.22852
+stop509,Al Malek Al Saleh Bridge,30.015816,31.228838
+stop510,Al Malek Al Saleh Bridge,30.015966,31.22862
+stop511,Al Malek Al Saleh Bridge Entrance,30.013632,31.228355
+stop512,Al Malek Al Saleh Bridge Entrance,30.013716,31.22827
+stop513,Al Malek Al Saleh Metro,30.018171,31.229294
+stop514,Al Malek Al Saleh Metro,30.018211,31.22921
+stop515,Al Malek Al Saleh Tunnel Square,30.01615,31.234028
+stop516,Al Manara Kiosk (Al Moqattam),30.007004,31.328888
+stop517,Al Manara Kiosk (Al Moqattam),30.006956,31.328785
+stop518,Al Manarah Center For International Conferences,30.018322,31.386217
+stop519,Al Manhal Private School,30.056055,31.357536
+stop520,Al Manhal Private School,30.055525,31.3573
+stop521,Al Manial,30.02843,31.224298
+stop522,Al Manial,30.028318,31.224285
+stop523,Al Mansoreya & 26th of July Corridor,30.062769,31.098043
+stop524,Al Mansoreya & 26th of July Corridor,30.062904,31.09802
+stop525,Al Mansoureya Canal Rd. (Nahya),30.058088,31.127079
+stop526,Al Mansoureyya Rd. & Ring Rd.,29.954962,31.154152
+stop527,Al Mansoureyya Rd. & Ring Rd.,29.955954,31.153889
+stop528,Al Maqreezy St. & Gesr Al Suez St.,30.089796,31.303766
+stop529,Al Maqreezy St. & Gesr Al Suez St.,30.09006,31.30434
+stop530,Al Maraziq,29.8083,31.27276
+stop531,Al Maraziq,29.80826,31.27266
+stop532,Al Marioteya Rd. & 26th of July Corridor,30.065132,31.126377
+stop533,Al Marioteya Rd. & 26th of July Corridor,30.064991,31.126404
+stop534,Al Markaz St. (Abu Al Nomros),29.95322,31.213694
+stop535,Al Masa Hall (Nile Corniche),29.911516,31.286692
+stop536,Al Masa Hall (Nile Corniche),29.911526,31.286804
+stop537,Al Masabek Steps (Ring Rd.),30.090952,31.196869
+stop538,Al Masah (Nasr City),30.059359,31.317032
+stop539,Al Masah (Nasr City),30.059227,31.316841
+stop540,Al Masah Hospital (Mahdy Arafa St.),30.052721,31.379496
+stop541,Al Masah Hospital (Mahdy Arafa St.),30.052734,31.379246
+stop542,Al Masallah St. & Al Terilli St,30.127495,31.308311
+stop543,Al Masanea Rd. & Nile Corniche,29.79661,31.298319
+stop544,Al Masanea Rd. & Nile Corniche,29.796595,31.298445
+stop545,Al Masriya (Nasr City),30.062925,31.361877
+stop546,Al Massalah (6th of October),29.92767,30.903837
+stop547,Al Massalah (6th of October),29.927605,30.903896
+stop548,Al Matareyya Central,30.129805,31.312162
+stop549,Al Matareyya City Authority,30.113956,31.297707
+stop550,Al Matareyya City Authority,30.113855,31.297613
+stop551,Al Matareyya Educational Hospital,30.118303,31.304146
+stop552,Al Matareyya Educational Hospital,30.118229,31.304071
+stop553,Al Matareyya Metro,30.121422,31.313549
+stop554,Al Matareyya Square Station,30.115042,31.306063
+stop555,Al Matareyya Square Station,30.115557,31.306524
+stop556,Al Mazallaat ( Shubra),30.101793,31.24535
+stop557,Al Mazallaat ( Shubra),30.101738,31.245249
+stop558,Al Mazallat,30.103737,31.245483
+stop559,Al Mazallat Metro Station,30.103745,31.245829
+stop560,Al Mearag Mosque (Ring Rd.),29.986458,31.309261
+stop561,Al Moassasa Steps (Ring Rd.),30.16674,31.37168
+stop562,Al Moassasa Steps (Ring Rd.),30.166914,31.371672
+stop563,Al Moatamadiya Post Office,30.050852,31.169855
+stop564,Al Moatamadiya Post Office,30.050783,31.169752
+stop565,Al Moemen Mosque,30.057875,31.374603
+stop566,Al Moemen Mosque,30.057322,31.372074
+stop567,Al Mohandes Insurance (Ramses),30.066647,31.259783
+stop568,Al Mohandes Insurance (Ramses),30.066555,31.260061
+stop569,Al Mokhayam Al Daaem (Nasr City),30.047398,31.31414
+stop570,Al Mokhtabar (Haram St.),29.992449,31.156635
+stop571,Al Mokhtabar (Haram St.),29.992586,31.156551
+stop572,Al Montazah Compound,29.943274,30.939817
+stop573,Al Montazah Compound,29.943312,30.939692
+stop574,Al Moqattam Entrance (Al Gamea Al Haditha St.),29.991447,31.318209
+stop575,Al Moqattam Entrance (Al Gamea Al Haditha St.),29.991526,31.31776
+stop576,Al Moqattam Hospital,30.020498,31.243654
+stop577,Al Moqattam Hospital,30.020576,31.243595
+stop578,Al Mosheer Tantawy Mosque,30.020458,31.377924
+stop579,Al Moshir Tantawi Corridor Entrance,30.02461,31.358881
+stop580,Al Moshir Tantawi Corridor Entrance,30.024332,31.358952
+stop581,Al Mosky (Port Said St.),30.048029,31.254915
+stop582,Al Mostafa Center (6th of October),29.965252,30.905333
+stop583,Al Mostafa Center (6th of October),29.96514,30.905413
+stop584,Al Mostafa Mosque,30.00582,31.454342
+stop585,Al Mostafa Mosque,30.005945,31.454512
+stop586,Al Mostaqbal Entrance,29.933107,30.92047
+stop587,Al Mostaqbal Entrance,29.933048,30.920523
+stop588,Al Mostaqbal Square (Obour),30.267118,31.478725
+stop589,Al Mostaqbal Square (Obour),30.26732,31.479343
+stop590,Al Mostashfa St & Ahmed Helmy St,30.073332,31.254347
+stop591,Al Mostashfa St & Ahmed Helmy St,30.07331,31.254482
+stop592,Al Mostashfa St. & Faisel St.,29.995499,31.151705
+stop593,Al Mostashfa St. & Faisel St.,29.99566,31.151697
+stop594,Al Motamayez Entrance (6th of October),29.995703,30.962264
+stop595,Al Motamayez Entrance (6th of October),29.996001,30.961962
+stop596,Al Motamayez Station,29.98229,30.979116
+stop597,Al Motamayez Wahat Entrance 1,29.97491,30.98913
+stop598,Al Motamayez Wahat Entrance 1,29.9747,30.989222
+stop599,Al Motamayez Wahat Entrance 2,29.973446,30.987085
+stop600,Al Motamayez Wahat Entrance 2,29.973629,30.98698
+stop601,Al Mothalath (Ahmed Al Zomor St.),30.048033,31.370842
+stop602,Al Mothalath (Ahmed Al Zomor St.),30.048288,31.37139
+stop603,Al Mothalath (Marg),30.212894,31.35778
+stop604,Al Mounira Hospital,30.034418,31.23906
+stop605,Al Mounira School (Downtown),30.032558,31.234665
+stop606,Al Mukhtar Mosque (Bassous),30.132278,31.217838
+stop607,Al Muluk,29.942482,30.919756
+stop608,Al Naam Square (Ain Shams),30.12167,31.317968
+stop609,Al Nada Hospital (Al Manial),30.019455,31.225248
+stop610,Al Nada Hospital (Al Manial),30.019386,31.225323
+stop611,Al Nadi Square (Maadi),29.963156,31.263714
+stop612,Al Nady St. & Al Khalifa Al Mamoun St.,30.091326,31.311943
+stop613,Al Nady St. & Al Khalifa Al Mamoun St.,30.090502,31.312386
+stop614,Al Nafoura Square (Al Moqattam),30.015251,31.281609
+stop615,Al Nafoura Square (Al Moqattam),30.015163,31.281435
+stop616,Al Nagda Square (6th of October),29.96105,30.929283
+stop617,Al Nagda Square (6th of October),29.961401,30.929354
+stop618,Al Nahda Square (5th Settlement),29.99892,31.468252
+stop619,Al Nahda Square (5th Settlement),29.999655,31.469324
+stop620,Al Nahda Square (Shorouq City),30.1612,31.62346
+stop621,Al Nahda Square (Shorouq City),30.1618,31.624016
+stop622,Al Nakhl (Nile Corniche),29.8887,31.289171
+stop623,Al Nakhl (Nile Corniche),29.888704,31.28927
+stop624,Al Narges 4 (5th Settlement),30.005848,31.449463
+stop625,Al Narges 4 (5th Settlement),30.005953,31.449608
+stop626,Al Narges 7 (5th Settlement),30.003317,31.459267
+stop627,Al Narges 7 (5th Settlement),30.00344,31.458988
+stop628,Al Narges 8 (5th Settlement),30.001673,31.461159
+stop629,Al Nasr Hospital (Helwan),29.839209,31.321718
+stop630,Al Nasr Hospital (Helwan),29.839321,31.321663
+stop631,Al Nasr Hotel (Al Tayaran St.),30.070602,31.324417
+stop632,Al Nasr Hotel (Al Tayaran St.),30.070452,31.324629
+stop633,Al Nasr Restaurant (Basateen),29.98616,31.271645
+stop634,Al Nasr School ( Al Waili ),30.0966,31.277388
+stop635,Al Nasr School ( Al Waili ),30.096582,31.277498
+stop636,Al Noaman Palace (Orouba Rd.),30.086115,31.32596
+stop637,Al Noaman Palace (Orouba Rd.),30.08624,31.325869
+stop638,Al Noor Al Mohammady (Imbaba),30.091385,31.21306
+stop639,Al Noor Al Mohammady (Imbaba),30.090916,31.213305
+stop640,Al Noqrashy School (Hadayek Al Qobba),30.091951,31.293217
+stop641,Al Noqrashy School (Hadayek Al Qobba),30.092031,31.29312
+stop642,Al Nour Mosque (6th of October),29.923346,30.935284
+stop643,Al Nour Mosque (Abbaseya),30.074873,31.282331
+stop644,Al Nour Mosque (Helwan Corniche),29.813047,31.301075
+stop645,Al Nour Mosque (Helwan Corniche),29.813057,31.301178
+stop646,Al Nour Mosque (Nasr City),30.04985,31.386005
+stop647,Al Nozha Al Gadeeda,30.1277,31.362385
+stop648,Al Nozha Al Gadeeda,30.12908,31.36174
+stop649,Al Nozha Al Gadida,30.125357,31.362902
+stop650,Al Nozha Al Gadida,30.125673,31.363243
+stop651,Al Nozha St. & 30 St. (Sheikh Zayed),30.041935,31.012388
+stop652,Al Nozha St. & 30 St. (Sheikh Zayed),30.041945,31.012049
+stop653,Al Nozha St. & Al Horreya (Sheikh Zayed),30.044872,31.009504
+stop654,Al Nozha St. & Al Horreya (Sheikh Zayed),30.045076,31.009653
+stop655,Al Nozha St. & Al Horreya (Sheikh Zayed),30.045862,31.008646
+stop656,Al Omraneyya,29.995625,31.203712
+stop657,Al Omraneyya Al Gadida,29.98854,31.189411
+stop658,Al Omraneyya Bridge Entrance from Giza,30.002886,31.208817
+stop659,Al Omraneyya Bridge Entrance from Giza,30.002901,31.208694
+stop660,Al Omraneyya Bridge Exit,29.998625,31.205225
+stop661,Al Omraneyya Bridge Exit,29.998503,31.20515
+stop662,Al Omraneyya Steps (Ring Rd.),29.985207,31.206505
+stop663,Al Omraneyya Steps (Ring Rd.),29.985334,31.206339
+stop664,Al Orouba Rd. & Al Thawra St.,30.089006,31.330618
+stop665,Al Orouba Rd. & Al Thawra St.,30.088335,31.33001
+stop666,Al Orouba St. & Mergheny St.,30.084906,31.323523
+stop667,Al Orouba St. & Mergheny St.,30.085289,31.324465
+stop668,Al Othman Motors (Ring Rd.),30.165676,31.358969
+stop669,Al Qanater Al Khayriya,30.194822,31.132936
+stop670,Al Qanater Al Khayriya,30.194876,31.133083
+stop671,Al Qawmeya Al Arabeya St.,30.09339,31.208502
+stop672,Al Qawmeya Cement Club,29.823414,31.300066
+stop673,Al Qawmeya Cement Club,29.823425,31.299944
+stop674,Al Qobba Al Fidaweyya Mosque (Abbaseya),30.069087,31.28054
+stop675,Al Qudsi Mosque (Ain Shams St.),30.137257,31.325626
+stop676,Al Qudsi Mosque (Ain Shams St.),30.137259,31.325539
+stop677,Al Rabwa (Sheikh Zayed),30.056498,30.999525
+stop678,Al Rabwa (Sheikh Zayed),30.05621,30.999773
+stop679,Al Rahma Mosque (Airport Rd.),30.121313,31.372154
+stop680,Al Rahma Mosque (Airport Rd.),30.121025,31.372356
+stop681,Al Rahman Mosque (1st Settlement),30.052885,31.455204
+stop682,Al Rahman Mosque (Al Salam City),30.170624,31.422419
+stop683,Al Rashaah (Kerdasa),30.023123,31.106602
+stop684,Al Rashaah (Kerdasa),30.023104,31.106535
+stop685,Al Rashaah Steps (Ring Rd.),30.163366,31.323687
+stop686,Al Rawda & Al Horreya St.,30.040749,31.003204
+stop687,Al Rawda & Al Horreya St.,30.040493,31.002905
+stop688,Al Rawda Square (Al Manial),30.016167,31.2247
+stop689,Al Rawda Square (Al Manial),30.016163,31.224783
+stop690,Al Rayan Hospital (Maadi),29.968021,31.264923
+stop691,Al Rayan Hospital (Maadi),29.967318,31.265654
+stop692,Al Remaya Square,29.98795,31.12821
+stop693,Al Remaya Square,29.990381,31.133532
+stop694,Al Remaya Square,29.98952,31.12884
+stop695,Al Remaya Square,29.990044,31.127506
+stop696,Al Saa Square,30.06942,31.338238
+stop697,Al Saa Square,30.069859,31.338638
+stop698,Al Sabteyya School,30.06549,31.23596
+stop699,Al Safa School (Wadi Hof),29.886381,31.303558
+stop700,Al Safa Square (Sheikh Zayed),30.030735,30.99008
+stop701,Al Safa Wal Marwa Mosque Steps (Ring Rd.),29.99251,31.24058
+stop702,Al Saff,29.863565,31.323288
+stop703,Al Saff,29.863678,31.323399
+stop704,Al Safwa Hospital (Shubra),30.093689,31.245354
+stop705,Al Safwa Hospital (Shubra),30.0937,31.245256
+stop706,Al Safwa Mall,30.01558,31.002607
+stop707,Al Safwa Wood Trading (6th of October),29.95713,30.89871
+stop708,Al Safwa Wood Trading (6th of October),29.957077,30.898762
+stop709,Al Sahel Fire Department,30.08544,31.24541
+stop710,Al Sahel Fire Department,30.085474,31.24531
+stop711,Al Sahel Police Department,30.083984,31.245268
+stop712,Al Sahel Police Department,30.084158,31.245382
+stop713,Al Sahel Youth Center,30.097725,31.253256
+stop714,Al Sahel Youth Center,30.097607,31.253016
+stop715,Al Salam,30.155006,31.408901
+stop716,Al Salam,30.15528,31.40884
+stop717,Al Salam Center (Maadi),29.977562,31.275085
+stop718,Al Salam Center (Maadi),29.977638,31.275238
+stop719,Al Salam First Police Station,30.159403,31.413313
+stop720,Al Salam First Police Station,30.159355,31.41338
+stop721,Al Salam Hospital (Al Salam City),30.164234,31.419847
+stop722,Al Salam Hospital (Al Salam City),30.164211,31.419672
+stop723,Al Salam International Hospital,29.98506,31.229553
+stop724,Al Salam International Hospital,29.985056,31.22967
+stop725,Al Salam Mosque (Haram St.),30.00362,31.1863
+stop726,Al Salam Mosque (Haram St.),30.003792,31.186283
+stop727,Al Salam Mosque (Nasr City),30.046284,31.356174
+stop728,Al Salam Mosque (Nasr City),30.046846,31.356453
+stop729,Al Salam Mosque (Wahat Rd.),29.964508,31.034796
+stop730,Al Salam Mosque (Wahat Rd.),29.964306,31.03473
+stop731,Al Salam Tunnel Exit (Ring Rd.),30.14842,31.42572
+stop732,Al Salam Tunnel Ring Rd. Entrance,30.148613,31.425762
+stop733,Al Saraya Elementary School (Abbaseya),30.06767,31.28357
+stop734,Al Saraya Mall (5th Settlement),29.996315,31.430637
+stop735,Al Sawah Square,30.107841,31.282597
+stop736,Al Sawah Square,30.108393,31.28317
+stop737,Al Sawahel Canal St.,30.075298,31.211945
+stop738,Al Sawalha Complex (Al Sekka Al Hadeed St.),30.128717,31.270584
+stop739,Al Sawalha Complex (Al Sekka Al Hadeed St.),30.128977,31.27041
+stop740,Al Sawy Culture Wheel,30.062286,31.217205
+stop741,Al Sawy Culture Wheel,30.062117,31.217148
+stop742,Al Sayeda Aisha,30.02439,31.257479
+stop743,Al Sayeda Aisha,30.02615,31.25722
+stop744,Al Sayeda Aisha,30.026709,31.25608
+stop745,Al Sayeda Aisha,30.024618,31.257446
+stop746,Al Sayeda Aisha,30.028326,31.257912
+stop747,Al Sayeda Aisha Station,30.0245,31.257284
+stop748,Al Sayeda Aisha Station,30.024458,31.257383
+stop749,Al Sayeda Khadiga School (Al Zawya Al Hamra),30.099007,31.267427
+stop750,Al Sayeda Khadija Mosque,30.117731,31.35562
+stop751,Al Sayeda Khadija Mosque - Al Hegaz Street,30.117971,31.355305
+stop752,Al Sayeda Nafeesa,30.020191,31.25143
+stop753,Al Sayeda Nafeesa,30.019945,31.251179
+stop754,Al Sayeda Safeya Mosque (Salah Salem St.),30.08379,31.321436
+stop755,Al Sayeda Safeya Mosque (Salah Salem St.),30.083628,31.321547
+stop756,Al Sayeda Zeinab,30.033152,31.241777
+stop757,Al Sayeda Zeinab,30.032047,31.243006
+stop758,Al Sayeda Zeinab District Presidency,30.030712,31.247993
+stop759,Al Sekka (Ring Rd.),30.07941,31.183414
+stop760,Al Sekka (Ring Rd.),30.07954,31.183384
+stop761,Al Sekka (Ring Rd.),30.079273,31.18345
+stop762,Al Sekka Al Hadid Sporting Club (Nasr City),30.058798,31.30376
+stop763,Al Sekka Al Hadid Sporting Club (Nasr City),30.059313,31.302637
+stop764,Al Sekka Al Hadid Sporting Club (Nasr City),30.058357,31.302303
+stop765,Al Serag Mall,30.05135,31.346582
+stop766,Al Sewedy (Laylat Al Qadr),29.948046,30.907045
+stop767,Al Sewedy (Laylat Al Qadr),29.947927,30.907137
+stop768,Al Shaarawy (Arbean St.),30.135317,31.315006
+stop769,Al Shaarawy St. (Shubra Al Kheima),30.133772,31.277494
+stop770,Al Shabab (Al Tagneed),29.984213,31.111347
+stop771,Al Shabab (Al Tagneed),29.984228,31.111443
+stop772,Al Shabab Entrance (1st Settlement),30.052444,31.452364
+stop773,Al Shabab Entrance (1st Settlement),30.052664,31.452328
+stop774,Al Shabab Entrance (5th Settlement),29.986502,31.41828
+stop775,Al Shabab Entrance (5th Settlement),29.986694,31.417976
+stop776,Al Shabab Square (1st Settlement),30.053411,31.46075
+stop777,Al Shabab Square (1st Settlement),30.053001,31.462132
+stop778,Al Shaboory Canal,30.132582,31.281689
+stop779,Al Shaboory Canal,30.132423,31.281706
+stop780,Al Shabrawy (1st Settlement),30.0597,31.461454
+stop781,Al Shabrawy (Al Mansoureyya Rd.),29.989964,31.134977
+stop782,Al Shaheed Corridor,30.023886,31.343197
+stop783,Al Shaheed Corridor,30.022781,31.344294
+stop784,Al Shaheed Corridor Pedestrian Bridge,30.031809,31.335459
+stop785,Al Shaheed Corridor Pedestrian Bridge,30.031593,31.335361
+stop786,Al Shaheed Mosque (Al Marg),30.153433,31.3303
+stop787,Al Shaheed Mosque (Al Marg),30.153305,31.33041
+stop788,Al Shaheed Square (Obour),30.25835,31.469742
+stop789,Al Shaheed Square (Obour),30.258074,31.469984
+stop790,Al Shaq Pedestrian Bridge (Autostrad),29.953848,31.287386
+stop791,Al Shaq Pedestrian Bridge (Autostrad),29.953852,31.28719
+stop792,Al Shari' Al Gadeed (Bahteem),30.135191,31.270918
+stop793,Al Shari' Al Gadeed (Bahteem),30.135656,31.270992
+stop794,Al Sheikh Agamy (Marg),30.195745,31.352886
+stop795,Al Sheikh Agamy (Marg),30.195843,31.352856
+stop796,Al Sheikh Al Jadid St.,30.031729,31.120783
+stop797,Al Sheikh Al Jadid St.,30.031609,31.120724
+stop798,Al Sheikh Mansour,30.145397,31.331627
+stop799,Al Sheikh Parking (Ahmed Helmy St.),30.094189,31.256025
+stop800,Al Sheikh Parking (Ahmed Helmy St.),30.094103,31.256134
+stop801,Al Shenawy St. & Sadat St.,30.149118,31.402313
+stop802,Al Shenawy St. & Sadat St.,30.1491,31.402212
+stop803,Al Shimy Car Center (Hadayeq Al Qobba),30.093586,31.288649
+stop804,Al Shimy Car Center (Hadayeq Al Qobba),30.093678,31.288498
+stop805,Al Shorouq Academy Entrance,30.10842,31.611654
+stop806,Al Shorouq Academy Entrance,30.108286,31.612204
+stop807,Al Shorouq Academy Station,30.11909,31.604338
+stop808,Al Shorouq Academy Station,30.11918,31.604593
+stop809,Al Shorouq City Authority Steps,30.158035,31.607243
+stop810,Al Shorouq City Authority Steps,30.157942,31.607294
+stop811,Al Shorouq Club (Nile Corniche),29.945822,31.269642
+stop812,Al Shorouq Club (Nile Corniche),29.945614,31.269749
+stop813,Al Shorouq Entrance 3,30.10999,31.6705
+stop814,Al Shorouq Entrance 3,30.10973,31.67149
+stop815,Al Shorouq Hospital ( 15th of May St.),30.11874,31.266876
+stop816,Al Shorouq Hospital ( 15th of May St.),30.118591,31.26701
+stop817,Al Shorouq School (Shorouq City),30.166422,31.651648
+stop818,Al Shorouq School (Shorouq City),30.166288,31.651531
+stop819,Al Shorouq Water Station,30.161491,31.621613
+stop820,Al Shorouq Water Station,30.161568,31.621567
+stop821,Al Soltan Hassan Mosque,30.031046,31.257513
+stop822,Al Soltan Hassan Mosque,30.031393,31.256714
+stop823,Al Souq (Al Moqattam),30.011305,31.33171
+stop824,Al Souq (Al Moqattam),30.011248,31.332712
+stop825,Al Souq Al Qadeem (6th of October),29.929688,30.915205
+stop826,Al Taawon (Haram St),29.995722,31.164904
+stop827,Al Taawon (Haram St),29.99567,31.165176
+stop828,Al Taawon Gas Station (Al Shabab St. Obour),30.247726,31.459013
+stop829,Al Tabba (6th of October),29.991469,30.954927
+stop830,Al Tabba (6th of October),29.991058,30.95524
+stop831,Al Tabba (6th of October),29.991201,30.955112
+stop832,Al Tabba (Nasr City),30.058405,31.379938
+stop833,Al Tabba (Nasr City),30.05805,31.379911
+stop834,Al Tabba (Nasr City),30.05832,31.380188
+stop835,Al Tadreeb Gate (Teraet Al Ismaili St),30.11002,31.269814
+stop836,Al Tadreeb Gate (Teraet Al Ismaili St),30.10991,31.26968
+stop837,Al Takwa Mosque (5th Settlement),29.995167,31.42283
+stop838,Al Takwa Mosque (5th Settlement),29.99528,31.422848
+stop839,Al Talateeny (Al Lebeny St.),29.982605,31.153406
+stop840,Al Talateeny (Al Lebeny St.),29.982697,31.1535
+stop841,Al Talbeya Steps (Ring Rd.),29.986698,31.188534
+stop842,Al Talbeya Steps (Ring Rd.),29.986858,31.188484
+stop843,Al Tarek Al Abead & Rind Rd.,30.056694,31.176073
+stop844,Al Tarek Al Abead & Rind Rd.,30.05666,31.1759
+stop845,Al Tarfaya (Dahshour),29.830582,31.274818
+stop846,Al Tawba Mosque (Abu Al Nomros),29.929398,31.259315
+stop847,Al Tawba Mosque (Abu Al Nomros),29.929361,31.259226
+stop848,Al Tawheed Mosque (1st Settlement),30.061687,31.461777
+stop849,Al Tawheed Mosque (Al Zaytoun),30.100172,31.290648
+stop850,Al Tawheed Wal Nour (10th of Ramadan),30.28025,31.749067
+stop851,Al Tawheed Wal Nour (10th of Ramadan),30.280191,31.748812
+stop852,Al Tawheed Wal Nour (Abbas Al Akkad St.),30.056221,31.338232
+stop853,Al Tawheed Wal Nour (Abbas Al Akkad St.),30.056185,31.33803
+stop854,Al Tawheed Wal Nour (Al Geish St.),30.060652,31.264574
+stop855,Al Tawheed Wal Nour (Al Hossary),29.9689,30.93914
+stop856,Al Tawheed Wal Nour (Al Hossary),29.96878,30.939222
+stop857,Al Tawheed Wal Nour (Al Nozha St),30.090273,31.341446
+stop858,Al Tawheed Wal Nour (Al Nozha St.),30.090595,31.340986
+stop859,Al Tawheed Wal Nour (Al Sayeda Zeinab),30.035936,31.247921
+stop860,Al Tawheed Wal Nour (Al Sayeda Zeinab),30.03587,31.247982
+stop861,Al Tawheed Wal Nour (Autostrad Maadi),29.961706,31.287447
+stop862,Al Tawheed Wal Nour (Autostrad Maadi),29.961756,31.287579
+stop863,Al Tawheed Wal Nour (Faisal St.),29.992489,31.143232
+stop864,Al Tawheed Wal Nour (Faisal St.),29.992393,31.143328
+stop865,Al Tawheed Wal Nour (Merryland),30.100769,31.324593
+stop866,Al Tawheed Wal Nour (Merryland),30.100578,31.324722
+stop867,Al Tawheed Wal Nour (Mostafa Al Nahas St.),30.054754,31.34605
+stop868,Al Tawheed Wal Nour (Mostafa Al Nahas St.),30.054358,31.346323
+stop869,Al Tawheed Wal Nour (Obour),30.19898,31.457628
+stop870,Al Tawheed Wal Nour (Obour),30.199045,31.457785
+stop871,Al Tawheed Wal Nour (Warraq),30.09628,31.223362
+stop872,Al Tawheed Wal Nour (Warraq),30.096283,31.22344
+stop873,Al Tawheed Wal Nour - Al Waili,30.094427,31.288992
+stop874,Al Tayaran St. & Khedr Al Touny St.,30.075645,31.321928
+stop875,Al Tayaran St. & Khedr Al Touny St.,30.075857,31.322075
+stop876,Al Tayaran St. & Khedr Al Touny St.,30.075668,31.322474
+stop877,Al Tayaran St. & Mostafa Al Nahas,30.052792,31.32718
+stop878,Al Tayaran St. & Mostafa Al Nahas,30.05223,31.327091
+stop879,Al Teraa Al Bolaqiya St.,30.116007,31.258604
+stop880,Al Thawra Hospital (Helipolis),30.090767,31.325748
+stop881,Al Thawra Hospital (Helipolis),30.09069,31.325626
+stop882,Al Tibeen,29.789625,31.296223
+stop883,Al Tibeen,29.790243,31.29775
+stop884,Al Tibeen,29.789711,31.296118
+stop885,Al Toob Al Ramly,30.037226,31.359314
+stop886,Al Toob Al Ramly,30.037018,31.359291
+stop887,Al Torgoman,30.060598,31.237522
+stop888,Al Torgoman,30.060602,31.237339
+stop889,Al Wafaa Wal Amal City,30.03927,31.355385
+stop890,Al Wagih Center (6th of October),29.962532,30.901417
+stop891,Al Wagih Center (6th of October),29.96264,30.901323
+stop892,Al Waha Compound (Shorouq City),30.14337,31.661596
+stop893,Al Waha Compound (Shorouq City),30.143536,31.661903
+stop894,Al Waha Garage (Nasr City),30.040447,31.37774
+stop895,Al Wahab Mosque St. (Marg),30.19853,31.353642
+stop896,Al Wahab Mosque St. (Marg),30.198679,31.35374
+stop897,Al Ward St. & Al Mansoureyya Rd.,29.967728,31.146627
+stop898,Al Ward St. & Al Mansoureyya Rd.,29.967644,31.146423
+stop899,Al Warraq,30.121422,31.20168
+stop900,Al Warraq,30.12139,31.201439
+stop901,Al Warraq,30.121138,31.202892
+stop902,Al Warraq Central Hospital,30.093447,31.214027
+stop903,Al Warraq Central Hospital,30.09315,31.213753
+stop904,Al Warraq Exit (Ring Rd.),30.125547,31.201492
+stop905,Al Warraq Exit (Ring Rd.),30.119043,31.202131
+stop906,Al Warraq Ferry,30.105005,31.220545
+stop907,Al Warraq Ferry,30.10492,31.22048
+stop908,Al Warraq Station,30.107075,31.213226
+stop909,Al Warraq Station,30.107082,31.213411
+stop910,Al Warraq Water Station,30.114674,31.209661
+stop911,Al Warraq Water Station,30.114756,31.20952
+stop912,Al Wehda (Imbaba),30.08687,31.217087
+stop913,Al Wehda (Imbaba),30.086967,31.217117
+stop914,Al Wehda (Imbaba),30.086967,31.216597
+stop915,Al Wehda Square,29.983654,31.418552
+stop916,Al Wehda Square,29.98375,31.41796
+stop917,Al Wekala (Nile Courniche),30.059109,31.227978
+stop918,Al Wekala (Nile Courniche),30.059196,31.228071
+stop919,Al Yasmin Compound North,29.941122,30.934982
+stop920,Al Yasmin Compound North,29.94124,30.934973
+stop921,Al Yasmine Compound (6th of October),29.93766,30.927471
+stop922,Al Yasmine Compound (6th of October),29.937609,30.92751
+stop923,Al Yasmine Compound Gate 3 (Sheikh Zayed),30.052652,30.990992
+stop924,Al Yasmine Compound Gate 3 (Sheikh Zayed),30.052395,30.99094
+stop925,Al Zaeem (Rashah),30.143288,31.383312
+stop926,Al Zahraa & Al Bewehy St. (Alf Maskan),30.13177,31.33668
+stop927,Al Zatoun School (Heliopolis),30.11052,31.315401
+stop928,Al Zawya Al Hamra,30.095545,31.266605
+stop929,Al Zawya Al Hamra,30.095463,31.266596
+stop930,Al Zawya Al Hamra,30.098625,31.26226
+stop931,Al Zawya Youth Center,30.101631,31.265745
+stop932,Al Zohour Nursery (Sheikh Zayed),30.0472,30.973793
+stop933,Al Zohour Nursery (Sheikh Zayed),30.047274,30.973854
+stop934,Alex Bank (Al Hegaz),30.09675,31.319399
+stop935,Alex Bank (Al Hegaz),30.096613,31.31956
+stop936,Alex Bank (Gameat Al Dowal St.),30.05123,31.199507
+stop937,Alex Bank (Gameat Al Dowal St.),30.051115,31.199553
+stop938,Alexandria Desert Rd. Steps (26th of July Corrdior),30.046585,31.051739
+stop939,Alexandria Desert Rd. Steps (26th of July Corrdior),30.046364,31.051823
+stop940,Alf Maskan,30.118416,31.340485
+stop941,Alf Maskan,30.119146,31.339767
+stop942,Alf Maskan,30.118752,31.34082
+stop943,Alf Maskan,30.121021,31.340454
+stop944,Alf Maskan,30.118889,31.339851
+stop945,Alf Maskan,30.121344,31.339989
+stop946,Alf Masnaa,29.975065,31.479588
+stop947,Alfa Lab (Al Manial),30.023283,31.225885
+stop948,Alfa Market (Nile Corniche),29.962276,31.246313
+stop949,Alfa Market (Nile Corniche),29.962267,31.246174
+stop950,Ali Abdel Halim St. & Tahrir St.,30.039167,31.215864
+stop951,Ali Abdel Halim St. & Tahrir St.,30.03929,31.215893
+stop952,Ali Al Sheikh Tower (Abboud),30.10118,31.256067
+stop953,Ali Al Sheikh Tower (Abboud),30.101057,31.255949
+stop954,Ali Basha St. & Al Qalaa St.,30.036158,31.255018
+stop955,Ali Basha St. & Al Qalaa St.,30.036268,31.255045
+stop956,Almaza Bridge Entrance,30.080095,31.360907
+stop957,Almaza Bridge Exit,30.080404,31.360401
+stop958,American School (Sheikh Zayed),30.032972,30.98804
+stop959,American University in Cairo (AUC) Gate 1 (New Cairo),30.025032,31.498503
+stop960,American University in Cairo (AUC) Gate 1 (New Cairo),30.025183,31.49882
+stop961,Americana Plaza - Sheikh Zayed,30.02826,31.01251
+stop962,Americana Plaza Mall,30.025452,31.495346
+stop963,Americana Plaza Mall,30.025034,31.4952
+stop964,Amin Hamada St & Petroleum St.,30.14823,31.329876
+stop965,Amir Al Shoaraa School (Al Giza),30.000275,31.20876
+stop966,Amir Al Shoaraa School (Al Giza),30.00015,31.208939
+stop967,Amir Mall (Khaloussi),30.079182,31.247953
+stop968,Amiriyyah,30.107508,31.29008
+stop969,Ammar Bin Yasser School (Al Moqattam),30.002645,31.33008
+stop970,Ammar Bin Yasser School (Al Moqattam),30.002623,31.329975
+stop971,Amoun Fountain (Obour),30.187254,31.466995
+stop972,Amoun Fountain (Obour),30.186325,31.468576
+stop973,Amr Ibn Al Aas School (Sheikh Zayed),30.04944,30.98182
+stop974,Amr Ibn Al Aas School (Sheikh Zayed),30.049297,30.982044
+stop975,Amr Ibn El Aas,30.009342,31.232174
+stop976,Anas Al Wogood Borg (Badrasheen),29.848698,31.270706
+stop977,Antidote and Vacince (Mohandeseen),30.051065,31.209562
+stop978,Antidote and Vacince (Mohandeseen),30.050838,31.209574
+stop979,Anwar Al Sadat Square (6th of October),29.953854,30.909399
+stop980,Arab African Bank (Haram St.),29.998188,31.171827
+stop981,Arab Contractors Sporting Club (Nasr Rd.),30.05571,31.294613
+stop982,Arab Contractors Sporting Club (Nasr Rd.),30.055565,31.294643
+stop983,Arab Engineering & Construction Company (Shubra Al Kheima),30.13335,31.278421
+stop984,Arab Investment Bank (Faisal St.),29.991955,31.140034
+stop985,Arab Investment Bank (Faisal St.),29.991861,31.140041
+stop986,Arab Maadi,29.970665,31.270039
+stop987,Arab Maadi,29.969334,31.269043
+stop988,Arab Maadi,29.969128,31.269053
+stop989,Arab Specialized Hospital (Gesr Al Suez),30.126457,31.351467
+stop990,Arab Specialized Hospital (Gesr Al Suez),30.12621,31.351257
+stop991,Arab Tuweila,30.139448,31.315664
+stop992,Arabella Square,29.985535,31.430393
+stop993,Arabella Square,29.985172,31.429834
+stop994,Arabella Square,29.985737,31.430256
+stop995,Aramex (10th of Ramadan),30.289186,31.745926
+stop996,Aramex (10th of Ramadan),30.289076,31.745697
+stop997,Arayes (Maadi),29.97889,31.285913
+stop998,Ard Al Lewa,30.057407,31.18847
+stop999,Ard Al Lewa,30.05746,31.18802
+stop1000,Ard Al Lewa Steps (26th of July Corridor),30.060074,31.187222
+stop1001,Ard Al Lewa Steps (26th of July Corridor),30.059988,31.187159
+stop1002,Ard Khedr Pedestrian Bridge (Shubra Al Kheima),30.129501,31.23814
+stop1003,Ard Khedr Pedestrian Bridge (Shubra Al Kheima),30.129261,31.238634
+stop1004,Ariel (6th of October Industrial Zone 4),29.938059,30.885239
+stop1005,Ariel (6th of October Industrial Zone 4),29.93794,30.885338
+stop1006,Arkadia Mall,30.069899,31.226944
+stop1007,Arkadia Mall,30.069885,31.226824
+stop1008,Armed Forces College Of Medicine,30.086802,31.303703
+stop1009,Armed Forces Medical Complex (Kobry Al Qobba),30.086048,31.297905
+stop1010,Armed Forces Medical Complex (Kobry Al Qobba),30.085926,31.29804
+stop1011,Arts Academy (Al Omraneyya ),29.99835,31.20017
+stop1012,Asaer Al Fardous (6th of October),29.951084,30.900373
+stop1013,Asaer Al Fardous (6th of October),29.951176,30.9005
+stop1014,Asfour Mosque ( Ibrahim Bek ),30.124979,31.259953
+stop1015,Asfour Mosque ( Ibrahim Bek ),30.124855,31.25972
+stop1016,Ashrafco Tyres (Nasr City),30.050446,31.319397
+stop1017,Asmarat,29.991255,31.344364
+stop1018,Asmarat,29.991201,31.344263
+stop1019,Aswan Pedestrian Bridge (Shubra Al Kheima),30.110758,31.275791
+stop1020,Aswan Pedestrian Bridge (Shubra Al Kheima),30.110903,31.276033
+stop1021,Ataba,30.054266,31.248539
+stop1022,Ataba,30.05226,31.24975
+stop1023,Ataba,30.0516,31.25051
+stop1024,Ataba,30.0536,31.246878
+stop1025,Ataba,30.05327,31.247133
+stop1026,Ataba,30.05151,31.250525
+stop1027,Atfal Misr Hospital (Abou Al Reesh),30.026718,31.235876
+stop1028,Athar Al Naby,29.98894,31.234833
+stop1029,Atlas Pharmacy (Atlas St),29.834776,31.348751
+stop1030,Audi Bank (Salah Salem St.),30.07629,31.30995
+stop1031,Audi Bank (Salah Salem St.),30.076578,31.309841
+stop1032,Audi Bank (Salah Salem St.),30.076628,31.30963
+stop1033,Autostrad & Al Moneeb Axis,29.994051,31.281534
+stop1034,Autostrad & Al Moneeb Axis,29.994602,31.280895
+stop1035,Autostrad Entrance from Al Abageyya,30.021492,31.263777
+stop1036,Autostrad Entrance from Al Abageyya,30.021441,31.263601
+stop1037,Autostrad Entrance from Al Maasra,29.904932,31.307676
+stop1038,Autostrad Entrance from Al Maasra,29.904943,31.307844
+stop1039,Autostrad Tunnel,29.978851,31.28994
+stop1040,Awlad Ragab Plumbing (6th of October),29.940735,30.92947
+stop1041,Awlad Ragab Plumbing (6th of October),29.940784,30.929546
+stop1042,Awlad Sokkar St. & Bigam Rd.,30.133034,31.246592
+stop1043,Awsim,30.125387,31.134064
+stop1044,Awsim,30.125263,31.134157
+stop1045,Awwal Abbas Al Akkad,30.068348,31.333212
+stop1046,Awwal Abbas Al Akkad,30.068241,31.336452
+stop1047,Awwal Abbas Al Akkad,30.06808,31.33295
+stop1048,Awwal Faisal,30.013945,31.199232
+stop1049,Awwal Makram Ebeid,30.069063,31.344217
+stop1050,Awwal Makram Ebeid,30.069258,31.343737
+stop1051,Awwal Makram Ebeid,30.069513,31.343733
+stop1052,Awwal Makram Ebeid,30.067999,31.343933
+stop1053,Awwel Al Eshreen (Zenin),30.030385,31.183425
+stop1054,Awwel Al Zawya,30.092615,31.275766
+stop1055,Awwel Al Zawya Bus Station,30.093119,31.276106
+stop1056,Awwel El Zawya Station,30.092552,31.275875
+stop1057,Awwel El Zawya Station,30.093374,31.276096
+stop1058,Azhar University City for Boys,30.050238,31.315918
+stop1059,Azhar University City for Boys,30.050026,31.316544
+stop1060,Azhari Institute,30.037365,31.0093
+stop1061,Azhari Institute (Ahmed Helmy St.),30.069838,31.253277
+stop1062,Azhari Institute (Ahmed Helmy St.),30.069832,31.253138
+stop1063,B Tech (Ahmed Oraby St.),30.067122,31.19948
+stop1064,B Tech (Ahmed Oraby St.),30.067488,31.199842
+stop1065,Bab Al Fotouh ( Al Gamalia ),30.05598,31.262964
+stop1066,Bab Al Fotouh ( Al Gamalia ),30.056015,31.263086
+stop1067,Bab Al Karim Mosque (Nahya),30.044624,31.181974
+stop1068,Bab Al Karim Mosque (Nahya),30.044712,31.181976
+stop1069,Bab Al Khalq ( Qalaa St. ),30.039595,31.253798
+stop1070,Bab Al Nasr ( Al Gamalia ),30.054354,31.26539
+stop1071,Bab Al Nasr ( Al Gamalia ),30.054308,31.265255
+stop1072,Bab Al Shaaria Square,30.054953,31.257505
+stop1073,Bab Al Shaaria Square,30.054777,31.257803
+stop1074,Bab Al Shaaria Square,30.055357,31.257668
+stop1075,Bab Al Shaereyya Girls Elementary School,30.061956,31.261299
+stop1076,Bab Al Shaereyya Hospital,30.060604,31.260565
+stop1077,Bab Al Sheareyya Metro,30.053144,31.255331
+stop1078,Badr,30.135027,31.734587
+stop1079,Badr,30.135859,31.735222
+stop1080,Badr Land,30.128847,31.36723
+stop1081,Badr Land,30.129065,31.367178
+stop1082,Badr Pharmacy (Helwan Corniche),29.81646,31.30071
+stop1083,Badr Pharmacy (Helwan Corniche),29.816504,31.30059
+stop1084,Badr Station (Sheikh Zayed),30.05496,30.959381
+stop1085,Badr Station (Sheikh Zayed),30.05504,30.959675
+stop1086,Badr Waste Area,30.132702,31.706966
+stop1087,Badr Waste Area,30.132751,31.70702
+stop1088,Badrasheen Bus Station,29.8474,31.27606
+stop1089,Badrasheen Station,29.852234,31.277987
+stop1090,Badrashen,29.84522,31.276844
+stop1091,Bahteem,30.157246,31.280693
+stop1092,Bahteem,30.157566,31.280933
+stop1093,Bahteem,30.156252,31.280128
+stop1094,Bahteem Specialized Hospital For Surgery,30.14473,31.277905
+stop1095,Bahteem Specialized Hospital For Surgery,30.144743,31.277752
+stop1096,Bahteem Square,30.141333,31.277658
+stop1097,Bahteem Square,30.141485,31.27754
+stop1098,Banha University (Obour),30.244678,31.4593
+stop1099,Bank Al Etihad (South Teseen St.),30.01639,31.420664
+stop1100,Bank Area Station (5th Settlement),30.016949,31.42785
+stop1101,Banque Misr (Abbas Al Akkad St.),30.058453,31.337698
+stop1102,Banque Misr (Abbas Al Akkad St.),30.058475,31.337915
+stop1103,Banque Misr (Aghakhan),30.103033,31.24348
+stop1104,Banque Misr (Aghakhan),30.103247,31.24322
+stop1105,Banque Misr (Aghakhan),30.103184,31.243336
+stop1106,Barageel St.,30.075052,31.164042
+stop1107,Barageel St.,30.07496,31.163914
+stop1108,Barageel St. (Ring Rd.),30.071934,31.176071
+stop1109,Barageel St. (Ring Rd.),30.072035,31.175343
+stop1110,Baron Mall Pedestrian Bridge (Ring Rd.),29.981976,31.338408
+stop1111,Baron Mall Pedestrian Bridge (Ring Rd.),29.982088,31.3386
+stop1112,Basateen,29.988531,31.271383
+stop1113,Basateen,29.989359,31.267551
+stop1114,Basateen,29.991135,31.28123
+stop1115,Basateen,29.991308,31.282515
+stop1116,Basateen,29.990677,31.27163
+stop1117,Basateen Police Station,29.991611,31.266865
+stop1118,Basateen Rd.,30.007051,31.262888
+stop1119,Basateen Steps (Ring Rd.),29.990417,31.266972
+stop1120,Basha Square (Al Manial),30.020788,31.225475
+stop1121,Basha Square (Al Manial),30.020779,31.225552
+stop1122,Bashayer,29.967297,30.912882
+stop1123,Bashayer Entrance (6th of October),29.97127,30.918036
+stop1124,Bashayer Entrance (6th of October),29.97136,30.917973
+stop1125,Bashtil,30.083393,31.189917
+stop1126,Bashtil,30.0825,31.188906
+stop1127,Bashtil (Ring Rd.),30.084145,31.192013
+stop1128,Bashtil (Ring Rd.),30.084227,31.19186
+stop1129,Bashtil El Balad,30.087393,31.183043
+stop1130,Bashtil El Balad,30.087406,31.183687
+stop1131,Basrawy,30.083416,31.206392
+stop1132,Basrawy,30.083326,31.2064
+stop1133,Batrawy (Abbas Al Akkad St.),30.061724,31.3375
+stop1134,Batrawy (Abbas Al Akkad St.),30.061733,31.337187
+stop1135,Bavaria Egypt (Gesr Al Suez),30.13295,31.378578
+stop1136,Bayt Al Karam Al Shamy (Haram St.),29.99737,31.169285
+stop1137,Bayt Al Karam Al Shamy (Haram St.),29.997135,31.169065
+stop1138,Bein Al Sarayat Youth Center,30.029305,31.202393
+stop1139,Beirut Square (Korba),30.093082,31.327492
+stop1140,Berm Al Tounsi St ( Abou Al Reesh ),30.025824,31.240131
+stop1141,Bigam,30.135122,31.245707
+stop1142,Bisco Misr (Al Zaytoun),30.104403,31.29614
+stop1143,Bisco Misr (Al Zaytoun),30.104233,31.296091
+stop1144,Bloom Bank (South Teseen St.),30.016375,31.417522
+stop1145,Blue Bells School (Al Motamayez),29.985638,30.975561
+stop1146,Blue Bells School (Al Motamayez),29.985565,30.975487
+stop1147,Board of Trustees (6th of October),29.994164,30.960052
+stop1148,Board of Trustees (6th of October),29.994553,30.959721
+stop1149,Board of Trustees (6th of October),29.994295,30.959944
+stop1150,Bohooth,30.035445,31.198718
+stop1151,Bonook (5th Settlement),30.016486,31.427882
+stop1152,Bonook (5th Settlement),30.016125,31.427883
+stop1153,Brazil St. & 26th of July,30.060143,31.222118
+stop1154,Brazil St. & 26th of July,30.05999,31.22204
+stop1155,Btech (Masr Wal Sudan St.),30.083288,31.281857
+stop1156,Bulaq Al Dakrur,30.040771,31.194324
+stop1157,Bulaq Dakrur,30.042427,31.192392
+stop1158,Bulaq Dakrur,30.040995,31.194695
+stop1159,Bulaq Dakrur,30.040976,31.194618
+stop1160,Bulaq Dakrur,30.042358,31.192322
+stop1161,Bulaq Dakrur,30.04295,31.192608
+stop1162,Bus Stop 43 (Al Matareyya),30.126816,31.316278
+stop1163,Bus Terminal to 6th of October,30.051308,31.177576
+stop1164,CIB (Al Hegaz),30.105307,31.332354
+stop1165,CIB (Al Hegaz),30.105328,31.331972
+stop1166,CIB (South Teseen St.),30.016125,31.423038
+stop1167,CIB (South Teseen St.),30.016392,31.423069
+stop1168,CIC - Sheikh Zayed,30.044933,30.991009
+stop1169,CTA Garage (Heliopolis),30.129633,31.360706
+stop1170,CTA Garage (Heliopolis),30.129417,31.360561
+stop1171,Cairo Airport,30.120197,31.398315
+stop1172,Cairo Airport,30.118357,31.397535
+stop1173,Cairo Airport Station,30.119211,31.398531
+stop1174,Cairo Alexandria Agriculture Road Pedestrian Mit Nama,30.142992,31.231098
+stop1175,Cairo Club (Opera St.),30.040838,31.222605
+stop1176,Cairo Club (Opera St.),30.040794,31.222727
+stop1177,Cairo Economic Court (Ring Rd.),29.987778,31.303753
+stop1178,Cairo Economic Court (Ring Rd.),29.988261,31.30383
+stop1179,Cairo Economic Court (Ring Rd.),29.988024,31.303741
+stop1180,Cairo Fair Metro,30.073378,31.301579
+stop1181,Cairo Fair Metro,30.073666,31.30152
+stop1182,Cairo Festival City (South Teseen St.),30.01601,31.40746
+stop1183,Cairo Festival City (South Teseen St.),30.016441,31.407455
+stop1184,Cairo Festival City Pedestrian Bridge (Ring Rd.),30.025211,31.40099
+stop1185,Cairo Festival City Pedestrian Bridge (Ring Rd.),30.025072,31.402718
+stop1186,Cairo Pyramids Hotel (Cairo Alex Desert Rd.),29.992447,31.125385
+stop1187,Cairo Pyramids Hotel (Cairo Alex Desert Rd.),29.992464,31.125683
+stop1188,Cairo Security Directorate,30.043674,31.2528
+stop1189,Cairo Security Directorate,30.043777,31.252527
+stop1190,Cairo Stadium,30.064495,31.306273
+stop1191,Cairo Stadium,30.064552,31.306486
+stop1192,Cairo University (Sheikh Zayed),30.03518,31.017578
+stop1193,Cairo University (Sheikh Zayed),30.035393,31.018013
+stop1194,Cairo University Bridge,30.028505,31.216496
+stop1195,Cairo University Bridge,30.028324,31.216492
+stop1196,Cairo University Main Gate,30.027258,31.210968
+stop1197,Cairo University Main Gate,30.027906,31.210682
+stop1198,Cairo University Main Gate,30.027864,31.210907
+stop1199,Cairo University Metro,30.025322,31.201765
+stop1200,Cairo University Metro,30.025337,31.201849
+stop1201,Cairo University Metro,30.027088,31.200535
+stop1202,Car Market (Nasr City),30.047895,31.366194
+stop1203,Car Market (Nasr City),30.047565,31.366226
+stop1204,Carrefour (Al Gazaer St.),29.983765,31.273972
+stop1205,Carrefour (Al Gazaer St.),29.983484,31.274128
+stop1206,Carrefour (Obour),30.171757,31.475435
+stop1207,Carrefour (Obour),30.172108,31.474895
+stop1208,Carrefour (Shorouq City),30.173714,31.592606
+stop1209,Carrefour (Shorouq City),30.173826,31.591864
+stop1210,Carrefour (Tora),29.928919,31.281488
+stop1211,Carrefour (Tora),29.92887,31.281387
+stop1212,Carrefour Maadi (Ring Rd.),29.984188,31.318043
+stop1213,Carrefour Maadi (Ring Rd.),29.984005,31.318106
+stop1214,Carrefour Maadi (Ring Rd.),29.983389,31.318142
+stop1215,Catholic Cemetery (Misr Al Qadima),30.013136,31.23316
+stop1216,Catholic Cemetery (Misr Al Qadima),30.013172,31.233051
+stop1217,Cemeteries (Maadi),30.021177,31.346272
+stop1218,Center Cairo Governorate Information Networks,30.095085,31.382605
+stop1219,Centeral Al Fustat,30.003334,31.24275
+stop1220,Centeral Al Fustat,30.00305,31.242348
+stop1221,Central Agency for Public Mobilization and Statistics,30.079561,31.315041
+stop1222,Central Agency for Public Mobilization and Statistics,30.079325,31.315351
+stop1223,Central Bank (Ataba),30.05546,31.246712
+stop1224,Central Bank (Ataba),30.056198,31.24648
+stop1225,Central Park (Badr),30.125532,31.714417
+stop1226,Central Park (Badr),30.125671,31.714249
+stop1227,Ceramica Cleopatra (Sheikh Zayed),30.025402,31.017004
+stop1228,Ceramica Cleopatra (Sheikh Zayed),30.025103,31.017313
+stop1229,Ceramica Cleopatra (Sheikh Zayed),30.025883,31.016518
+stop1230,Ceramica Square - Sheikh Zayed,30.03808,30.97876
+stop1231,Child Care Club Association - Al Sayeda Zeinab,30.029947,31.24871
+stop1232,City Mall (Shorouq City),30.18022,31.599415
+stop1233,City Mall (Shorouq City),30.18045,31.59938
+stop1234,City Scape Mall (6th of October),29.963898,30.926651
+stop1235,City Stars Mall,30.073526,31.339188
+stop1236,City Stars Mall,30.073557,31.338863
+stop1237,Civil Registry (Haram),29.999212,31.174557
+stop1238,Civil Registry (Haram),29.999329,31.174477
+stop1239,Civil Registry (Imbaba),30.079487,31.223639
+stop1240,Civil Registry (Imbaba),30.0796,31.223648
+stop1241,Concord Al Salam Hotel (Gesr Al Suez),30.124,31.346899
+stop1242,Concord Al Salam Hotel (Gesr Al Suez),30.124153,31.346788
+stop1243,Concord Plaza (5th Settlement),30.025543,31.485273
+stop1244,Concord Plaza (5th Settlement),30.025213,31.485222
+stop1245,Conrad Hotel,30.065182,31.227211
+stop1246,Conrad Hotel,30.065123,31.227304
+stop1247,Constitutional Court,29.969234,31.238335
+stop1248,Coop (Cairo Airport),30.12299,31.398748
+stop1249,Coop (Nasr Al Islam Square),30.088142,31.253609
+stop1250,Coop Gas Station (Helwan Corniche),29.80848,31.301844
+stop1251,Coop Gas Station (Helwan Corniche),29.808403,31.301712
+stop1252,Coop Gas Station (Om Bayoumi),30.129553,31.251131
+stop1253,Coop Gas Station (Om Bayoumi),30.12967,31.251339
+stop1254,Coptic Hospital,30.063524,31.251974
+stop1255,Coptic Hospital,30.063448,31.252092
+stop1256,Cottonil Factory - Gesr Al Suez,30.130552,31.372196
+stop1257,Credit Agricole (Al Mansoureyya Rd.),29.987421,31.13228
+stop1258,Criminal Evidence Registery (Abbaseya),30.071947,31.28747
+stop1259,Criminal Evidence Registery (Abbaseya),30.071728,31.287243
+stop1260,Criminal Evidence Registery (Abbaseya),30.07124,31.287176
+stop1261,Criminal Investigation Department (Al Maadi Company St.),29.984978,31.283539
+stop1262,Criminal Investigation Department (Al Maadi Company St.),29.985058,31.283352
+stop1263,Crystal Asfour ( Masaken Al Wehda ),30.120337,31.25831
+stop1264,Crystal Asfour ( Masaken Al Wehda ),30.120152,31.258314
+stop1265,Culture & Science City (6th of October),29.956316,30.913296
+stop1266,Czesch Republic Embassy (Dokki),30.030886,31.212473
+stop1267,Czesch Republic Embassy (Dokki),30.031044,31.21231
+stop1268,Dabsha ( Al Zaytoun),30.106659,31.286913
+stop1269,Dabsha (Al Zaytoun),30.106762,31.287254
+stop1270,Daewoo,29.919989,30.889503
+stop1271,Dandy Mall,30.060894,31.028856
+stop1272,Dandy Mall,30.06123,31.029121
+stop1273,Dandy Mall,30.06015,31.029615
+stop1274,Dar Al Foad Hospital (6th of October),29.999259,30.966954
+stop1275,Dar Al Foad Hospital (6th of October),29.999014,30.96719
+stop1276,Dar Al Mohandeseen Club (Helwan),29.864353,31.291777
+stop1277,Dar Al Mona (Alexandria Desert Rd.),30.024654,31.085266
+stop1278,Dar Al Mona (Alexandria Desert Rd.),30.024527,31.085314
+stop1279,Dar Al Salam,29.984676,31.241718
+stop1280,Dar Al Salam,29.981066,31.231771
+stop1281,Dar Al Salam,29.984034,31.238049
+stop1282,Dar Al Salam Police Station,29.971968,31.246912
+stop1283,Dar Al Salam Police Station,29.972128,31.24698
+stop1284,Dar Misr Square (Shorouq City),30.16457,31.640238
+stop1285,Dar Misr Square (Shorouq City),30.164211,31.640512
+stop1286,Darb 1718,30.00264,31.232004
+stop1287,Darb 1718,30.002718,31.232061
+stop1288,Darb Al Saqia (Manshiyat Nasser),30.04743,31.281578
+stop1289,Darb Al Saqia (Manshiyat Nasser),30.047285,31.281683
+stop1290,Dawaran Shubra,30.080523,31.24572
+stop1291,Degla Azhari Language School (Zahraa Al Maadi),29.964096,31.283844
+stop1292,Degla Azhari Language School (Zahraa Al Maadi),29.963974,31.283764
+stop1293,Diamonds Mall (6th of October),29.976773,30.944905
+stop1294,Didi Mall (1st Settlement),30.070581,31.452255
+stop1295,Doctors Tower (Nasr City),30.055182,31.352243
+stop1296,Doctors Tower (Nasr City),30.055378,31.352175
+stop1297,Documentation Center (Bolak),30.066687,31.227057
+stop1298,Documentation Center (Bolak),30.066761,31.226917
+stop1299,Dokki,30.03739,31.211329
+stop1300,Dokki,30.037415,31.211552
+stop1301,Dokki Metro,30.038628,31.212915
+stop1302,Dokki Metro,30.0385,31.212864
+stop1303,Dokki Square,30.038311,31.211502
+stop1304,Dokki Square,30.038118,31.211105
+stop1305,Dolce,29.935677,30.924425
+stop1306,Dolce,29.935627,30.924484
+stop1307,Dolphin Mall,29.978647,30.955572
+stop1308,Dolphin Mall,29.978714,30.955675
+stop1309,Dolphin Mall,29.978891,30.955803
+stop1310,Dorat Al Karaz Mall,29.990593,31.537077
+stop1311,Dorat Al Karaz Mall,29.992373,31.537487
+stop1312,Downtown Mall,30.016325,31.41264
+stop1313,Downtown Mall,30.016045,31.4115
+stop1314,Dreamland,29.958776,31.054636
+stop1315,Dusit Hotel,30.025146,31.456976
+stop1316,Dusit Hotel,30.025436,31.456917
+stop1317,Duty Free (Gameat Al Dowal St.),30.04715,31.196344
+stop1318,Duty Free (Gameat Al Dowal St.),30.04732,31.196085
+stop1319,Dwidar St. & Hadayeq Al Qobba St.,30.0837,31.28441
+stop1320,East Bulaq Dakrur (Nahya),30.0429,31.193829
+stop1321,East Bulaq Dakrur (Nahya),30.042837,31.193748
+stop1322,East Imbaba,30.077642,31.221771
+stop1323,Eastern Gate Obour Market,30.167093,31.476759
+stop1324,Eastern Weavers (Al Moqattam),30.010664,31.334198
+stop1325,Eastern Weavers (Al Moqattam),30.010893,31.334133
+stop1326,Ebny Baitak (Wahat Rd.),29.955969,31.078617
+stop1327,Education Directorate (Helwan),29.853346,31.295263
+stop1328,Education Directorate (Helwan),29.853361,31.295443
+stop1329,Egypt Air Hospital,30.091642,31.348394
+stop1330,Egypt Air Hospital,30.091494,31.348236
+stop1331,Egypt Air Steps (Ring Rd.),29.982597,31.178705
+stop1332,Egypt Air Steps (Ring Rd.),29.982721,31.178564
+stop1333,Egyptian Agricultural Bank (Al Giza),30.008606,31.209003
+stop1334,Egyptian Agricultural Bank (Al Giza),30.008642,31.209127
+stop1335,Egyptian Media Production City,29.969198,31.017769
+stop1336,Egyptian Media Production City,29.969402,31.01783
+stop1337,Egyptian Parlimant,30.041445,31.235617
+stop1338,Egyptian Russian University,30.139751,31.717985
+stop1339,Egyptian Russian University,30.139896,31.718245
+stop1340,Egyptian Russian University - East,30.14367,31.722767
+stop1341,Egyptian Shooting Club Pedestrian Tunnle (Kattameya),29.983452,31.32569
+stop1342,Egyptian Shooting Club Pedestrian Tunnle (Kattameya),29.98388,31.325584
+stop1343,Egyptian Telecom Club (Autostrad Maadi),29.969759,31.289045
+stop1344,Egyptian Telecom Club (Autostrad Maadi),29.969809,31.288832
+stop1345,El Kafr (Birak Al Khiyam),30.045744,31.157124
+stop1346,El Khanka Mental Health Hospital,30.225204,31.367352
+stop1347,El Nasr English School (Heliopolis),30.101046,31.332985
+stop1348,El Nasr English School (Heliopolis),30.101124,31.33253
+stop1349,El Warsha (Ezbet Al Nakhl),30.141165,31.34389
+stop1350,El Warsha (Ezbet Al Nakhl),30.141405,31.343824
+stop1351,Elecrticity Hospital (Suez Rd),30.078793,31.372389
+stop1352,Elecrticity Hospital (Suez Rd),30.079138,31.372322
+stop1353,Elecrticity Hospital (Suez Rd),30.079008,31.372307
+stop1354,Emad El Deen St. & 26th of July St.,30.052555,31.244308
+stop1355,Emad Market (6th of October),29.961224,30.899387
+stop1356,Emad Market (6th of October),29.961327,30.899296
+stop1357,Emerald (New Cairo),30.052742,31.430485
+stop1358,Enppi,30.044985,31.340738
+stop1359,Enppi,30.044605,31.339363
+stop1360,Epx Logistics For Transportation And Warehousing (Obour),30.260643,31.472372
+stop1361,Epx Logistics For Transportation And Warehousing (Obour),30.260561,31.472498
+stop1362,Experimental School (Bahteem),30.141401,31.275148
+stop1363,Experimental School (Bahteem),30.141304,31.27523
+stop1364,Export Development Authority (6th of October),29.94117,30.908895
+stop1365,Export Development Authority (6th of October),29.94123,30.908987
+stop1366,Ezbet Al Baydaa Steps (Ring Rd.),30.163185,31.32703
+stop1367,Ezbet Al Baydaa Steps (Ring Rd.),30.162998,31.327888
+stop1368,Ezbet Al Mofti Steps (Ring Rd.),30.0884,31.195387
+stop1369,Ezbet Al Mofti Steps (Ring Rd.),30.088337,31.195547
+stop1370,Ezbet Al Nakhl,30.138672,31.326351
+stop1371,Ezbet Al Nakhl,30.139065,31.32537
+stop1372,Ezbet Al Nakhl,30.138702,31.326279
+stop1373,Ezbet Anwar Steps (Ring Rd.),30.150188,31.265081
+stop1374,Ezbet Kheirallah Steps 1 (Ring Rd.),29.992666,31.243715
+stop1375,Ezbet Kheirallah Steps 1 (Ring Rd.),29.992844,31.243715
+stop1376,Ezbet Kheirallah Steps 2 (Ring Rd.),29.991568,31.251917
+stop1377,Ezbet Kheirallah Steps 2 (Ring Rd.),29.99172,31.251968
+stop1378,Ezbet Kheirallah Steps 3 (Ring Rd.),29.990322,31.257889
+stop1379,Ezbet Kheirallah Steps 3 (Ring Rd.),29.989767,31.260696
+stop1380,Ezbet Makar Bridge,29.910059,31.213072
+stop1381,Ezbet Makar Bridge,29.910412,31.213366
+stop1382,Faculty of Agriculture (Cairo University),30.019436,31.211624
+stop1383,Faculty of Agriculture (Cairo University),30.019444,31.211748
+stop1384,Faculty of Agriculture - Ain Shams University,30.111685,31.248222
+stop1385,Faculty of Agriculture - Ain Shams University,30.11212,31.2482
+stop1386,Faculty of Agriculture - Ain Shams University,30.115358,31.250252
+stop1387,Faculty of Agriculture - Ain Shams University,30.115234,31.250093
+stop1388,Faculty of Applied Arts (Helwan University),30.0294,31.20868
+stop1389,Faculty of Commerce (Cairo University),30.028393,31.20555
+stop1390,Faculty of Commerce (Cairo University),30.02853,31.2055
+stop1391,Faculty of Dental & Oral Medicine - Cairo University (Manial),30.028442,31.226645
+stop1392,Faculty of Dentistry - Modern Academy,29.997204,31.317764
+stop1393,Faculty of Dentistry - Modern Academy,29.997166,31.317648
+stop1394,Faculty of Engineering (Al Azhar University),30.064007,31.286402
+stop1395,Faculty of Engineering (Al Azhar University),30.064156,31.286692
+stop1396,Faculty of Engineering (Cairo University),30.024944,31.210882
+stop1397,Faculty of Engineering (Cairo University),30.02497,31.211037
+stop1398,Faculty of Engineering - Cairo University (Sheikh Zayed),30.034067,31.010378
+stop1399,Faculty of Engineering - Cairo University (Sheikh Zayed),30.034042,31.010565
+stop1400,Faculty of Medicine - Ain Shams University,30.077158,31.281176
+stop1401,Faculty of Pharmacy - Modern Academy,29.99502,31.3183
+stop1402,Faculty of Pharmacy - Modern Academy,29.995129,31.318352
+stop1403,Faisal,29.99369,31.14715
+stop1404,Faisal Bank (Othman Bin Affan St.),30.0993,31.341133
+stop1405,Faisal Bank (Othman Bin Affan St.),30.099216,31.341293
+stop1406,Faisal Islamic Bank (Tahrir St.),30.039593,31.217766
+stop1407,Faisal Islamic Bank (Tahrir St.),30.039766,31.21812
+stop1408,Faisal St.,29.99048,31.135342
+stop1409,Faisal St.,29.99018,31.13518
+stop1410,Faisal Tawabek,29.998228,31.15938
+stop1411,Faisal Tawabek,29.998325,31.159292
+stop1412,Falcon School (Shorouq City),30.135733,31.663792
+stop1413,Falcon School (Shorouq City),30.135576,31.66328
+stop1414,Family Land (6th of October),29.977726,30.928099
+stop1415,Farghali Realestate in Bashayer,29.967047,30.909021
+stop1416,Farghali Realestate in Bashayer,29.966946,30.909039
+stop1417,Farhety Hall (Port Said St.),30.078896,31.26989
+stop1418,Farhety Hall (Port Said St.),30.078915,31.270004
+stop1419,Farouq Corner Musuem (Helwan),29.84686,31.295616
+stop1420,Farouq Square (Maadi),29.957434,31.25595
+stop1421,Fatma Al Sharbatly Mosque,30.006203,31.44623
+stop1422,Fatma Al Sharbatly Mosque,30.005634,31.445208
+stop1423,Fayda Kamel,29.976025,31.258179
+stop1424,Fayda Kamel,29.976044,31.258282
+stop1425,Fayed Desert Rd. Exit to Madinaty,30.174204,31.554844
+stop1426,Ferdous (Rod Al Farag),30.078747,31.235851
+stop1427,Fiat Service Center (Obour),30.179096,31.471952
+stop1428,Fiat Service Center (Obour),30.179071,31.472136
+stop1429,Filfil Mosque (Bashtil),30.082487,31.193096
+stop1430,Fom Al Khalig,30.023077,31.230179
+stop1431,Fom Al Khalig,30.022871,31.2309
+stop1432,Fom Al Khalig Police Station,30.024158,31.232475
+stop1433,Free Zone (Nasr City),30.035168,31.34707
+stop1434,Free Zone (Nasr City),30.034992,31.34721
+stop1435,Fustat Market,30.009237,31.23143
+stop1436,Fustat Market,30.009287,31.231325
+stop1437,Future School (Nasr City),30.045698,31.34755
+stop1438,Future School (Nasr City),30.045496,31.347565
+stop1439,Future University in Egypt (Fue),30.025515,31.491087
+stop1440,Future University in Egypt (Fue),30.025673,31.490385
+stop1441,Future University in Egypt (Fue),30.025234,31.490547
+stop1442,Galaa Bridge Exit to Dokki,30.040174,31.220144
+stop1443,Galaa Bridge Exit to Dokki,30.040054,31.220125
+stop1444,Galal Motors (Basateen),29.989855,31.271263
+stop1445,Galal Motors (Basateen),29.98996,31.271091
+stop1446,Galleria 40,30.01535,31.00181
+stop1447,Galleria 40,30.015417,31.001556
+stop1448,Gamaa St. (Obour),30.2109,31.457462
+stop1449,Gamaat Rd. (Obour),30.142193,31.691246
+stop1450,Gamaat Rd. (Obour),30.14274,31.69098
+stop1451,Gamal Abd Al Nasser Metro,30.053526,31.23882
+stop1452,Gamal Abd Al Nasser Metro,30.053915,31.23769
+stop1453,Gamal Abd Al Nasser Square (5th Settlement),29.991102,31.431713
+stop1454,Gamal Abd Al Nasser Square (5th Settlement),29.99041,31.430689
+stop1455,Gamal Abd Al Nasser St. in Bashayer (6th of October),29.970097,30.91605
+stop1456,Gamal Abd Al Nasser St. in Bashayer (6th of October),29.969976,30.916067
+stop1457,Gamal Abd Al Nasser Steps (Ring Rd.),30.072231,31.175898
+stop1458,Gamal Abd Al Nasser Steps (Ring Rd.),30.072258,31.175756
+stop1459,Gamal Al Din Al Banna St. & Al Checheeny St.,29.997728,31.142284
+stop1460,Gamal Al Din Al Banna St. & Al Checheeny St.,29.997906,31.142288
+stop1461,Gardenia (Cairo Suez Rd.),30.081188,31.399471
+stop1462,Gardenia (Cairo Suez Rd.),30.080574,31.399897
+stop1463,Gardenia Heights (5th Settlement),29.985876,31.468805
+stop1464,Gardenia Heights (5th Settlement),29.985523,31.468552
+stop1465,Gas (5th Settlement),30.01481,31.416227
+stop1466,Gas (5th Settlement),30.014647,31.416464
+stop1467,Gas Tech Gas Station ( Faisal St.),29.998543,31.15986
+stop1468,Gas Tech Gas Station ( Faisal St.),29.99843,31.159916
+stop1469,Gawad Hosny St & Anwar Al Sadat St.,29.814964,31.380407
+stop1470,General Company for Land Reclamation,29.984325,31.254826
+stop1471,Genius International School (Kerdasa),30.009972,31.115637
+stop1472,Genius International School (Kerdasa),30.009825,31.115635
+stop1473,Gesr Al Suez - Taha Hussein,30.13218,31.376968
+stop1474,Gesr Al Suez St. & Al Qobba St.,30.095554,31.310822
+stop1475,Gesr Al Suez St. & Al Qobba St.,30.095737,31.310823
+stop1476,Gesr El Suez Garage Station,30.127558,31.362158
+stop1477,Gesr El Suez Garage Station,30.128984,31.361477
+stop1478,Ghamra,30.068111,31.264067
+stop1479,Ghamra,30.068193,31.264004
+stop1480,Ghamra,30.068024,31.264788
+stop1481,Ghamra,30.068064,31.26467
+stop1482,Ghamra Bridge Entrance,30.073153,31.26721
+stop1483,Ghamra Bridge Exit to Cairo University,30.073225,31.267382
+stop1484,Girls' College (Ain Shams University),30.080982,31.32727
+stop1485,Girls' College (Ain Shams University),30.081087,31.327066
+stop1486,Giza Bridge Exit to Cairo University,30.017714,31.211979
+stop1487,Giza Bridge Exit to Cairo University,30.017687,31.211834
+stop1488,Giza Courthouse Complex,30.010727,31.209091
+stop1489,Giza Courthouse Complex,30.010729,31.208992
+stop1490,Giza Directorate of Health Affairs,30.067818,31.193562
+stop1491,Giza Directorate of Health Affairs,30.067879,31.193472
+stop1492,Giza Governorate Authority,30.008718,31.199814
+stop1493,Giza Governorate Authority,30.008764,31.199505
+stop1494,Giza Helwan Bus Station,30.015514,31.215265
+stop1495,Giza Metro,30.01407,31.206219
+stop1496,Giza Park (Bashtil),30.077011,31.193508
+stop1497,Giza Park (Bashtil),30.076767,31.193062
+stop1498,Giza Square,30.016607,31.21213
+stop1499,Giza Square,30.014465,31.210016
+stop1500,Giza Square,30.0145,31.209661
+stop1501,Giza Square,30.016932,31.213783
+stop1502,Giza Square,30.0167,31.211948
+stop1503,Giza Square,30.015232,31.212465
+stop1504,Giza Square,30.016989,31.213684
+stop1505,Giza Square Station,30.015612,31.212263
+stop1506,Giza Square Station,30.015663,31.211855
+stop1507,Gladios Garden Compound,30.009624,31.1046
+stop1508,Gladios Garden Compound,30.00958,31.104485
+stop1509,Golf Square (5th Settlement),29.99893,31.405945
+stop1510,Greek Hospital,30.066776,31.280869
+stop1511,Green Hills Club,30.163437,31.634155
+stop1512,Green Hills Club,30.16318,31.634249
+stop1513,Hadabet Al Ahram,29.971235,31.108894
+stop1514,Hadabet Al Ahram,29.971302,31.108633
+stop1515,Hadayek Al Ahram Gate 3,29.948538,31.095287
+stop1516,Hadayek Al Qobba,30.087042,31.290428
+stop1517,Hadayek Al Qobba Metro,30.086593,31.292439
+stop1518,Hadayek Al Qobba Police Station,30.094019,31.286434
+stop1519,Hadayek Al Qobba Police Station,30.093857,31.286385
+stop1520,Hadayek Al Qobba Youth Center,30.08954,31.285679
+stop1521,Hadayek Al Qobba Youth Center,30.089405,31.285637
+stop1522,Hadayek Al Qobba Youth Center,30.089594,31.285381
+stop1523,Hadayeq Al Qobba Police Station,30.092794,31.288004
+stop1524,Hadayeq Al Zaytoun School (Al Matareyya St.),30.109705,31.303926
+stop1525,Hadayeq Al Zaytoun School (Al Matareyya St.),30.109724,31.304052
+stop1526,Hadayeq Helwan,29.892954,31.298574
+stop1527,Hall 3 (Cairo Airport),30.12284,31.402615
+stop1528,Hall 4 (Cairo Airport),30.124031,31.397747
+stop1529,Hamada Emam - Industrial Zone 2,29.909454,30.894407
+stop1530,Hamada Emam - Industrial Zone 2,29.909355,30.894491
+stop1531,Haram & Marioteya,29.989735,31.149443
+stop1532,Haram & Marioteya,29.989939,31.14931
+stop1533,Haram & Marioteya,29.98991,31.149921
+stop1534,Haram Mashaal,29.986492,31.141478
+stop1535,Haram Mashaal,29.986578,31.141068
+stop1536,Haram Mashaal,29.98784,31.14374
+stop1537,Haram Mashaal,29.987705,31.14034
+stop1538,Haram Mashaal,29.987938,31.140657
+stop1539,Haram Mashaal,29.987679,31.143797
+stop1540,Haram Mashaal (Al Mansoreya Rd.),29.98683,31.141497
+stop1541,Haram St. & Talbeya,30.001793,31.181437
+stop1542,Haram Talbeya,30.001972,31.181414
+stop1543,Haram Tunnel (Al Lebeny St.),29.988,31.149021
+stop1544,Haram Tunnel (Al Lebeny St.),29.987968,31.148926
+stop1545,Hareer St. (Helwan),29.841398,31.307827
+stop1546,Hareer St. (Helwan),29.84144,31.307983
+stop1547,Hazem Hassan Consulting (Alexandria Desert Rd.),30.022081,31.072115
+stop1548,Hazem Hassan Consulting (Alexandria Desert Rd.),30.021868,31.072021
+stop1549,Health Affairs Directorate - 6th of October,30.045992,30.970053
+stop1550,Health Affairs Directorate - 6th of October,30.045921,30.969946
+stop1551,Health Insurance Hospital (Nasr City),30.0595,31.326233
+stop1552,Health Insurance Hospital (Nasr City),30.059725,31.325876
+stop1553,Hearing and Speech Institute (Imbaba),30.081364,31.225246
+stop1554,Hearing and Speech Institute (Imbaba),30.081566,31.225447
+stop1555,Heliopolis Central (Gesr Al Suez),30.104343,31.321579
+stop1556,Heliopolis Central (Gesr Al Suez),30.10418,31.321753
+stop1557,Heliopolis Courthouse Complex,30.103313,31.328146
+stop1558,Heliopolis Courthouse Complex,30.103254,31.327711
+stop1559,Heliopolis Courthouse Complex,30.104174,31.32796
+stop1560,Heliopolis Hospital,30.107111,31.33593
+stop1561,Heliopolis Hospital,30.107023,31.336441
+stop1562,Heliopolis Sporting Club,30.090063,31.3158
+stop1563,Heliopolis Sporting Club,30.089039,31.317375
+stop1564,Heliopolis Square,30.108246,31.338537
+stop1565,Heliopolis Square,30.108091,31.338926
+stop1566,Helmeyet Al Zatoun Metro,30.112823,31.31431
+stop1567,Helmeyet Al Zatoun Metro,30.113195,31.314354
+stop1568,Helwan Mental Health Hospital,29.836367,31.335947
+stop1569,Helwan Mental Health Hospital,29.836317,31.335808
+stop1570,Helwan Metro,29.848576,31.333967
+stop1571,Helwan Metro,29.85194,31.33436
+stop1572,Helwan Metro,29.84972,31.33528
+stop1573,Helwan Observatory,29.868448,31.354622
+stop1574,Helwan Post Office,29.84743,31.33273
+stop1575,Helwan Post Office,29.8464,31.334034
+stop1576,Helwan Station,29.854057,31.331528
+stop1577,Helwan Station,29.854126,31.33159
+stop1578,Helwan University,29.869402,31.320698
+stop1579,Helwan University,29.869045,31.320093
+stop1580,Herafyeen Bridge Exit,30.138832,31.39696
+stop1581,Herafyeen Bridge Exit,30.138674,31.39704
+stop1582,Higher Institute For Hotels & Tourism (Sheraton),30.102877,31.380312
+stop1583,Higher Institute For Hotels & Tourism (Sheraton),30.102781,31.380157
+stop1584,Higher Institute Of Marketing Commerce & Information Systems,30.066246,31.450163
+stop1585,Higher Institute Of Marketing Commerce & Information Systems,30.066242,31.450056
+stop1586,Higher Technological Institute HTI (6th of October),29.955938,30.939781
+stop1587,Higher Technological Institute HTI (6th of October),29.955828,30.939842
+stop1588,Hikestep Bridge Entrance,30.14311,31.403936
+stop1589,Hilton Pyramids Golf (Dreamland),29.96232,31.041578
+stop1590,Hilton Pyramids Golf (Dreamland),29.961554,31.044987
+stop1591,Holding Company For Water & Wastewater (Hcww),30.080078,31.230715
+stop1592,Holding Company For Water & Wastewater (Hcww),30.080034,31.23081
+stop1593,Hospital 57357 ( Magra Al Oyoun ),30.025192,31.238302
+stop1594,Hossary Station,29.973577,30.943935
+stop1595,Hossary Station,29.968252,30.948452
+stop1596,Hossary Station,29.970945,30.946234
+stop1597,Hossary Station,29.97349,30.943802
+stop1598,Hossary Station,29.971909,30.944084
+stop1599,Hossary Station,29.97205,30.943916
+stop1600,Housing & Utilities Directorate (Giza),30.000895,31.204584
+stop1601,Housing And Development Bank (6th of October),29.95936,30.926264
+stop1602,Housing And Development Bank (6th of October),29.959248,30.926346
+stop1603,Huckstep,30.159666,31.468777
+stop1604,Huckstep,30.159693,31.468613
+stop1605,Huckstep Bridge Entrance,30.143229,31.403664
+stop1606,Hussein Sedqy Mosque (Maadi),29.959015,31.251232
+stop1607,Hyper One (10th of Ramadan),30.244669,31.725433
+stop1608,Hyper One (10th of Ramadan),30.244528,31.725595
+stop1609,Hyper One (Sheikh Zayed),30.029799,31.02244
+stop1610,Hyper One (Sheikh Zayed),30.029882,31.024052
+stop1611,Hyper One (Sheikh Zayed),30.029584,31.024175
+stop1612,Hyper One (Sheikh Zayed),30.028921,31.02162
+stop1613,Hyper One (Sheikh Zayed),30.03007,31.024
+stop1614,Ibn Al Hakam Square (Heliopolis),30.10983,31.32031
+stop1615,Ibn Al Hakam Square (Heliopolis),30.11032,31.32029
+stop1616,Ibn Khaldoun School (Heliopolis),30.118187,31.320263
+stop1617,Ibrahim Abdel Raziq St. & Ain Shams St.,30.126215,31.320044
+stop1618,Ibrahim Abdel Raziq St. & Ain Shams St.,30.126429,31.320028
+stop1619,Ibrahim Al Afifi Alley (Al Mansoureyya Rd.),29.974312,31.145088
+stop1620,Ibrahim Al Afifi Alley (Al Mansoureyya Rd.),29.974058,31.144901
+stop1621,Ibrahim Al Rifaie School (1st Settlement),30.070019,31.456205
+stop1622,Ibrahim Al Rifaie School (1st Settlement),30.070099,31.45631
+stop1623,Ibrahim Anwar Mosque (Al Zaytoun),30.103159,31.300596
+stop1624,Ibrahim Anwar Mosque (Al Zaytoun),30.103012,31.300531
+stop1625,Ibrahim Bek,30.136793,31.263454
+stop1626,Ibrahim Bek,30.13684,31.26313
+stop1627,Ibrahim Bek Youth Center,30.133259,31.262064
+stop1628,Ibrahim Bek Youth Center,30.13321,31.26229
+stop1629,Ibrahim Mosque (Marg Axis),30.15425,31.375656
+stop1630,Ibrahim Mosque (Marg Axis),30.154047,31.375692
+stop1631,Icon for Construction And Development,29.893797,31.315569
+stop1632,Icon for Construction And Development,29.893703,31.31569
+stop1633,Ideal Standard (Nasr Rd.),30.091213,31.372532
+stop1634,Ideal Standard (Nasr Rd.),30.091103,31.372566
+stop1635,Ikea (Cairo Festival City),30.03103,31.403511
+stop1636,Imam Al Shafei Mosque (Basateen Rd.),30.012344,31.262177
+stop1637,Imam Mohamed St & Anwar Al Sadat St.,29.820072,31.37639
+stop1638,Imam Mohamed St & Anwar Al Sadat St.,29.820087,31.376524
+stop1639,Imbaba,30.07957,31.214594
+stop1640,Imbaba,30.078262,31.21852
+stop1641,Imbaba,30.07665,31.213968
+stop1642,Imbaba,30.078259,31.217115
+stop1643,Imbaba,30.079754,31.214539
+stop1644,Imbaba,30.076674,31.214165
+stop1645,Imbaba,30.078299,31.218414
+stop1646,Imbaba Fevers Hospital,30.083801,31.226295
+stop1647,Imbaba Fevers Hospital,30.083834,31.225988
+stop1648,Imbaba Police Station,30.075249,31.222174
+stop1649,Imbaba Police Station,30.074944,31.222086
+stop1650,Imbaba Station,30.077566,31.221828
+stop1651,Industrial School (6th of October),29.948103,30.927742
+stop1652,Industrial School (6th of October),29.948004,30.927816
+stop1653,Industrial Technical Institute (Al Azhar),30.056147,31.271927
+stop1654,Industrial Zone 3,29.92983,30.892282
+stop1655,Industrial Zone's Banks Area (6th of October),29.946507,30.898552
+stop1656,Industrial Zone's Banks Area (6th of October),29.946634,30.89845
+stop1657,Infantry House (Heliopolis),30.07803,31.300356
+stop1658,Infantry House (Heliopolis),30.078014,31.300213
+stop1659,International Garden,30.051584,31.338675
+stop1660,International Garden,30.051746,31.338886
+stop1661,Isaaf,30.054693,31.238459
+stop1662,Isaaf,30.054348,31.236347
+stop1663,Isaaf,30.053852,31.23797
+stop1664,Isbiko Station,30.18049,31.412437
+stop1665,Isko,30.15113,31.277302
+stop1666,Islamic Center (Sheikh Zayed),30.05079,30.976734
+stop1667,Islamic Center (Sheikh Zayed),30.049625,30.978374
+stop1668,Islamic Center (Sheikh Zayed),30.049282,30.9787
+stop1669,Islamic Studies Institute (Al Waili),30.056332,31.279274
+stop1670,Islamic Studies Institute (Al Waili),30.056273,31.279202
+stop1671,Ismailiya Desert Rd. & Belbeis Desert Rd.,30.150515,31.429752
+stop1672,Ismailiya Desert Rd. & Belbeis Desert Rd.,30.150192,31.429571
+stop1673,Jazirat Mohamed,30.112425,31.204498
+stop1674,Journalists Club (Al Bahr Al Aazam St.),30.00548,31.217411
+stop1675,Journalists Club (Al Bahr Al Aazam St.),30.00547,31.217558
+stop1676,Judges Club (Al Dokki),30.04289,31.219189
+stop1677,Judges Club (Al Dokki),30.042927,31.219313
+stop1678,Juhayna Square,30.008417,30.982393
+stop1679,Juhayna Square,30.008562,30.98152
+stop1680,KFC ( Faisal St. ),30.002823,31.171217
+stop1681,KFC ( Faisal St. ),30.00271,31.171293
+stop1682,KFC (Al Lebeny St.),29.98655,31.150272
+stop1683,KFC (Al Lebeny St.),29.986595,31.15034
+stop1684,KFC (Al Manial),30.02819,31.226633
+stop1685,KFC (Gameat Al Dowal St.),30.055166,31.203672
+stop1686,KFC (Gameat Al Dowal St.),30.055372,31.203403
+stop1687,Kabdet Al Prince (Imbaba),30.080658,31.219267
+stop1688,Kabdet Al Prince (Imbaba),30.080744,31.219303
+stop1689,Kafr AL Shurafa,30.143358,31.358383
+stop1690,Kafr AL Shurafa,30.143213,31.358608
+stop1691,Kafr Hamza Mill,30.220135,31.32774
+stop1692,Kafr Hamza Mosque,30.230728,31.33224
+stop1693,Kafr Tohormos Steps (Ring Rd.),30.018217,31.166443
+stop1694,Kafr Tohormos Steps (Ring Rd.),30.018171,31.166273
+stop1695,Kafr Tuhurmis,30.016369,31.174747
+stop1696,Kafr Tuhurmis,30.016333,31.174618
+stop1697,Kahraba Club (Rod Al Farag),30.084936,31.232613
+stop1698,Kahraba Club (Rod Al Farag),30.08505,31.232473
+stop1699,Kan Kan 12th District (6th of October),29.955828,30.896494
+stop1700,Kan Kan 12th District (6th of October),29.95577,30.896347
+stop1701,Kasr Al Ainy,30.02923,31.2298
+stop1702,Kasr Al Ainy Hospital,30.029202,31.231014
+stop1703,Kasr Al Ainy Hospital,30.030838,31.232492
+stop1704,Kasr Al Ainy Hospital,30.030737,31.23078
+stop1705,Kattameya,29.9757,31.395063
+stop1706,Kattameya,29.974869,31.394905
+stop1707,Kattameya Church,29.982222,31.416859
+stop1708,Kattameya Church,29.982185,31.416798
+stop1709,Kattameya Traffic Department,29.97313,31.38987
+stop1710,Kattameya Traffic Department,29.97353,31.38994
+stop1711,Kawkab Al Sharq Cafe - Bashayer,29.968777,30.914675
+stop1712,Kawkab Al Sharq Cafe - Bashayer,29.968601,30.914368
+stop1713,Kempinski Hotel (Ring Rd.),30.060923,31.417439
+stop1714,Kempinski Hotel (Ring Rd.),30.060982,31.417215
+stop1715,Kempinski Nile Hotel (Qasr Al Nile),30.037794,31.229729
+stop1716,Kerdasa Saft Al Laban Rd.,30.032202,31.135979
+stop1717,Kerdasa Saft Al Laban Rd.,30.032131,31.13604
+stop1718,Kerdasa Station,30.035316,31.116539
+stop1719,Kerdasa Station,30.035124,31.11687
+stop1720,Khadija Mosque (Obour),30.235514,31.462864
+stop1721,Khadija Mosque (Obour),30.235748,31.463572
+stop1722,Khair Zaman (Zahraa Al Maadi),29.961248,31.289583
+stop1723,Khalafawi Square,30.097776,31.249243
+stop1724,Khalil Agha Military School,30.059074,31.262318
+stop1725,Kheir Zaman (Ahmed Al Zomor St.),30.047047,31.359509
+stop1726,Kheir Zaman Al Mehwar Al Markazi (6th of October),29.972227,30.937765
+stop1727,Khofo Gate (Hadayek Al Ahram),29.977314,31.112429
+stop1728,Khofo Gate (Hadayek Al Ahram),29.977547,31.112259
+stop1729,Khosous,30.162863,31.32287
+stop1730,Khosous,30.163202,31.323433
+stop1731,Kia Motors (Joseph Tito St.),30.136324,31.392082
+stop1732,Kids Land (Mostafa Al Nahas St.),30.057266,31.369188
+stop1733,Kids Land (Mostafa Al Nahas St.),30.057037,31.369213
+stop1734,Kilo 4 & Half Bus Station,30.079138,31.381405
+stop1735,Kilo 4 & Half Bus Station,30.079643,31.381018
+stop1736,Kit Kat District,30.071037,31.21763
+stop1737,Kit Kat District,30.071089,31.217554
+stop1738,Kit Kat Square,30.066458,31.213568
+stop1739,Kit Kat Square,30.065704,31.213562
+stop1740,Kit Kat Square,30.065008,31.213667
+stop1741,Kit Kat Square,30.066555,31.213938
+stop1742,Kobry Al Qobba,30.083977,31.295345
+stop1743,Kobry Al Qobba,30.087126,31.289679
+stop1744,Kobry Al Qobba,30.084438,31.296179
+stop1745,Kobry Orabi,30.121626,31.250525
+stop1746,Kobry Orabi,30.122028,31.250044
+stop1747,Kobry Orabi,30.122084,31.250387
+stop1748,Koleyet Al Banat (Azhar University),30.05677,31.326336
+stop1749,Koleyet Al Banat (Azhar University),30.052738,31.324799
+stop1750,Koleyet Al Banat (Azhar University),30.052969,31.325039
+stop1751,Koleyet Al Banat (Azhar University),30.056778,31.32662
+stop1752,Koleyet Al Banat Metro,30.083923,31.32859
+stop1753,Konayyesa (Moneeb),29.985314,31.197323
+stop1754,Konayyesa (Moneeb),29.985495,31.197496
+stop1755,Korba District,30.093632,31.324766
+stop1756,Korba District,30.092373,31.323391
+stop1757,Korba District,30.092485,31.323189
+stop1758,Koshary Abu Hanafy (Al Moqattam),29.999783,31.330936
+stop1759,Koshary Abu Hanafy (Al Moqattam),29.999662,31.330887
+stop1760,Koshary Al Tahrir (Nasr St.),29.975891,31.284729
+stop1761,Koshary Al Tahrir (Nasr St.),29.976028,31.284718
+stop1762,Koshary Aladin (Shobra),30.070969,31.247192
+stop1763,Koshary Hend ( Masaken Al Wehda),30.128618,31.260704
+stop1764,Koshary Hend ( Masaken Al Wehda),30.12872,31.260933
+stop1765,Language Institute (Al Qobba),30.0815,31.299479
+stop1766,Language Institute (Al Qobba),30.081596,31.299576
+stop1767,Laylat Al Qadr Entrance,29.948961,30.902271
+stop1768,Laylat Al Qadr Station,29.94641,30.904919
+stop1769,Laylat Al Qadr Station,29.946274,30.904243
+stop1770,Laylat Al Qadr Station,29.946026,30.904238
+stop1771,Laylat Al Qadr Station,29.946623,30.904802
+stop1772,Leather and Tanning Company (Autostrad),30.00009,31.27656
+stop1773,Leather and Tanning Company (Autostrad),30.000038,31.276407
+stop1774,Lebanon Square,30.059446,31.193308
+stop1775,Lebanon Square,30.059494,31.192745
+stop1776,Lebanon Square,30.05926,31.189613
+stop1777,Lebanon Square,30.059477,31.189928
+stop1778,Lebanon Square,30.059841,31.19268
+stop1779,Lebanon Square,30.059484,31.19002
+stop1780,Libya St,30.134573,31.251005
+stop1781,Libya St,30.134546,31.250698
+stop1782,Lotfy Al Sayed St & Masr Wal Sudan St,30.074575,31.27288
+stop1783,Lotus (5th Settlement),30.02684,31.49883
+stop1784,Lux School (Al Marg),30.15831,31.328766
+stop1785,Lux School (Al Marg),30.158333,31.328917
+stop1786,MCS Oil (Zahraa Al Maadi ),29.964432,31.3197
+stop1787,MCS Oil (Zahraa Al Maadi),29.964256,31.319916
+stop1788,MIU (Obour),30.166313,31.491087
+stop1789,MIU (Obour),30.166183,31.492315
+stop1790,MSA University,29.954983,30.959091
+stop1791,MSA University,29.955135,30.958887
+stop1792,Maadi Metro,29.961842,31.258198
+stop1793,Maadi Metro Station,29.96018,31.257246
+stop1794,Maadi Military Hospital,29.968187,31.239403
+stop1795,Maadi Military Hospital,29.967924,31.239506
+stop1796,Maahad Baneen,30.039726,30.978
+stop1797,Maasara Autostrad,29.91316,31.298084
+stop1798,Maasara Autostrad,29.913094,31.297924
+stop1799,Macdonald's (Mergheny St.),30.087107,31.334702
+stop1800,Macdonald's (Mergheny St.),30.08687,31.333899
+stop1801,Madbah ( Magra Al Oyoun),30.020966,31.240217
+stop1802,Madbah ( Magra Al Oyoun),30.020893,31.240175
+stop1803,Madbah Steps (Ring Rd.),30.149805,31.247515
+stop1804,Madbah Steps (Ring Rd.),30.1497,31.242952
+stop1805,Madinat Al Bo'oth Al Eslamyya,30.0524,31.2771
+stop1806,Madinat Al Bo'oth Al Eslamyya,30.052263,31.277122
+stop1807,Madinat Al Solb (Al Tibeen),29.781528,31.309252
+stop1808,Madinat Al Talaba,30.06988,31.20258
+stop1809,Madinat Al Talaba,30.07137,31.200375
+stop1810,Madinat Al Talaba,30.071438,31.20031
+stop1811,Mafareq (Hadayeq Helwan),29.893034,31.301353
+stop1812,Magd Al Islam Hospital,30.103848,31.254587
+stop1813,Magda Square,29.975174,30.942778
+stop1814,Magda Square,29.974874,30.94245
+stop1815,Magda Square,29.97563,30.942186
+stop1816,Magda Square,29.975327,30.942335
+stop1817,Magra Al Oyoun (Salah Salem),30.018284,31.25178
+stop1818,Magra Al Oyoun (Salah Salem),30.018,31.251762
+stop1819,Mahmoudeya Housing (Al Moqattam),30.005571,31.336842
+stop1820,Mahmoudeya Station,29.974686,31.397041
+stop1821,Mahmoudeya Station,29.97478,31.39704
+stop1822,Makram Ebeid St. & Mostafa Al Nahas St.,30.055138,31.346209
+stop1823,Mall of Arabia,30.002531,30.972605
+stop1824,Mall of Arabia,30.002795,30.97239
+stop1825,Mall of Egypt,29.97066,31.013449
+stop1826,Mall of Egypt,29.970472,31.013355
+stop1827,Mamaleek (Al Manial),30.009726,31.226
+stop1828,Manial Shiha Elementary School,29.950745,31.243542
+stop1829,Manial Shiha Elementary School,29.9507,31.243439
+stop1830,Manial Shiha Post Office,29.959942,31.232166
+stop1831,Manial Shiha Post Office,29.95997,31.232262
+stop1832,Mankaraa Gate (Hadayek Al Ahram),29.95373,31.103989
+stop1833,Manshiyat Al Bakri Steps (Ring Rd.),30.011126,31.14575
+stop1834,Manshiyat Al Bakri Steps (Ring Rd.),30.011288,31.145678
+stop1835,Manshiyat Al Bakry General Hospital,30.093624,31.304672
+stop1836,Manshiyat Al Bakry General Hospital,30.092787,31.3057
+stop1837,Manshiyat Al Bakry General Hospital,30.09242,31.30703
+stop1838,Manshiyat Al Bakry General Hospital,30.09259,31.307098
+stop1839,Manshiyat Al Gamal,30.094223,31.272373
+stop1840,Manshiyat Nasser,30.044466,31.278223
+stop1841,Manshiyat Nasser,30.041355,31.275108
+stop1842,Manshiyat Nasser,30.038061,31.27194
+stop1843,Manshiyat Nasser,30.044363,31.27835
+stop1844,Mansour Chevrolet Sales Center (Alexandria Desert Rd.),30.025475,31.092121
+stop1845,Mansour Chevrolet Sales Center (Alexandria Desert Rd.),30.025595,31.09211
+stop1846,Marioteya & Ring Rd.,30.009365,31.13633
+stop1847,Marioteya & Ring Rd.,30.008919,31.135946
+stop1848,Marioteya Rd. & Faisal St.,29.993595,31.147207
+stop1849,Marioteya Rd. & Faisal St.,29.99388,31.147522
+stop1850,Marioteya Tunnel Entrance,29.994669,31.144905
+stop1851,Marioteya Tunnel Exit,29.994795,31.14496
+stop1852,Marioteyya,30.010399,31.141424
+stop1853,Marioteyya,30.01011,31.14128
+stop1854,Markaz Al Nakheel (6th of October),29.963812,30.903355
+stop1855,Maryam Pharmacy (Faisal St.),30.009298,31.188375
+stop1856,Maryam Pharmacy (Faisal St.),30.009354,31.188183
+stop1857,Masaken Ain Shams,30.136303,31.351545
+stop1858,Masaken Ain Shams,30.136423,31.351551
+stop1859,Masaken Ain Shams Station,30.13588,31.349798
+stop1860,Masaken Al Abd (Al Salam),30.170074,31.408842
+stop1861,Masaken Al Abd (Al Salam),30.169989,31.408886
+stop1862,Masaken Al Kendy,29.992018,31.29302
+stop1863,Masaken Al Kendy,29.991713,31.292899
+stop1864,Masaken Al Shrouq,30.070164,31.368526
+stop1865,Masaken Al Shrouq,30.070038,31.368912
+stop1866,Masaken Al Shrouq Entrance,30.067085,31.36026
+stop1867,Masaken Al Shrouq Entrance,30.06716,31.36039
+stop1868,Masaken Al Wadi Al Qadeem (Al Salam),30.174566,31.412636
+stop1869,Masaken Al Wadi Al Qadeem (Al Salam),30.174633,31.412687
+stop1870,Masaken Al Wehda,30.119507,31.258417
+stop1871,Masaken Al Zobbat (10th District Nasr City),30.038418,31.394695
+stop1872,Masaken Almaza,30.090158,31.348623
+stop1873,Masaken Betcho,29.96947,31.329725
+stop1874,Masaken Betcho,29.969332,31.329721
+stop1875,Masaken Helmeyet Al Zatoun,30.117426,31.328484
+stop1876,Masaken Isbiko St.,30.17711,31.410534
+stop1877,Masaken Isbiko St.,30.17713,31.410727
+stop1878,Masaken Othman,29.918983,30.939407
+stop1879,Masaken Sheraton,30.10547,31.385391
+stop1880,Masaken Zainhom Station,30.022728,31.244081
+stop1881,Masaken Zobbat Almaza,30.082645,31.378819
+stop1882,Masarra,30.07357,31.2404
+stop1883,Mashaal (Haram),29.992138,31.13027
+stop1884,Mashyakhet Al Azhar Al Sharif,30.045752,31.27117
+stop1885,Mashyakhet Al Azhar Al Sharif,30.045607,31.271275
+stop1886,Mashyakhet Al Azhar Al Sharif,30.045563,31.271353
+stop1887,Maspero Exit (15th of May Bridge),30.05515,31.229155
+stop1888,Masraweya,30.025578,31.475554
+stop1889,Masraweya,30.025293,31.475529
+stop1890,Massalah Gadeeda (Al Matareyya),30.127802,31.300982
+stop1891,Mastoura Mosque (Al Moqattam),30.008434,31.315588
+stop1892,Mastoura Mosque (Al Moqattam),30.008352,31.31579
+stop1893,Matbaa,29.973722,31.24716
+stop1894,Matbaa,29.973726,31.246655
+stop1895,May Fair Village (Shorouq City),30.132847,31.60121
+stop1896,May Fair Village (Shorouq City),30.13288,31.601458
+stop1897,Mazallat,30.105316,31.24671
+stop1898,Mazallat,30.104945,31.246608
+stop1899,Mazallat,30.104982,31.246624
+stop1900,Mazallat Station,30.102018,31.246168
+stop1901,Mazar Mall,30.053305,30.96169
+stop1902,Mazar Mall,30.053345,30.962124
+stop1903,Mazda Plaza (Alexandria Desert Rd.),30.081022,30.993906
+stop1904,Mazda Plaza (Alexandria Desert Rd.),30.081692,30.99462
+stop1905,Mazghuna,29.744741,31.261349
+stop1906,Mazghuna,29.74476,31.26125
+stop1907,Mazlaqan Ain Shams,30.132488,31.3231
+stop1908,Mazlaqan Ain Shams,30.132532,31.323242
+stop1909,Mazlaqan Ain Shams,30.133928,31.32383
+stop1910,Mazlaqan Al Deweqa,30.049547,31.286484
+stop1911,Mazlaqan Al Deweqa,30.04977,31.286497
+stop1912,Mazlaqan Om Khinan (Al Hawamdeyya),29.912025,31.267132
+stop1913,Mazlaqan Om Khinan (Al Hawamdeyya),29.912062,31.267258
+stop1914,Megawra 11 (15th of May),29.81839,31.36344
+stop1915,Megawra 3 Bus Station (15th of May),29.8326,31.379328
+stop1916,Megawra 3 Bus Station (15th of May),29.832556,31.379131
+stop1917,Mena House,29.98459,31.13563
+stop1918,Meriam's Tree (Al Matareyya),30.12029,31.307356
+stop1919,Metro (Misr Helwan Rd.),29.964836,31.249016
+stop1920,Metro (Misr Helwan Rd.),29.964918,31.24913
+stop1921,Mffco Helwan (Helwan Corniche),29.833902,31.299072
+stop1922,Mffco Helwan (Helwan Corniche),29.833868,31.298967
+stop1923,Military Academy Stadium (Sheraton),30.112537,31.368286
+stop1924,Military Academy Stadium (Sheraton),30.111944,31.369085
+stop1925,Military Cemetery (N/A Axis),30.022703,31.352621
+stop1926,Mina Gate 4 (Hadayek Al Ahram),29.951818,31.088005
+stop1927,Minerals & Refrigeration Center (Abboud),30.107801,31.260393
+stop1928,Ministry Of Higher Education,30.037981,31.34052
+stop1929,Ministry Of Youth And Sports,30.060867,31.205012
+stop1930,Ministry of Agriculture (Dokki),30.04341,31.211712
+stop1931,Ministry of Agriculture (Dokki),30.043566,31.211887
+stop1932,Ministry of Irrigation (Warraq),30.09151,31.225206
+stop1933,Ministry of Irrigation (Warraq),30.091454,31.225082
+stop1934,Misr 2000,30.038557,31.438967
+stop1935,Misr Al Gadida Military Hospital,30.113325,31.332628
+stop1936,Misr Al Gadida Military Hospital,30.1133,31.332912
+stop1937,Misr Al Qadima,30.000582,31.227833
+stop1938,Misr Al Qadima Police Department,30.006916,31.253723
+stop1939,Misr Al Qadima Post Office,30.00559,31.226345
+stop1940,Misr Al Qadima Post Office,30.005592,31.226488
+stop1941,Misr Al Wosta Electricity Company (Al Bahr Al Aazam St.),29.994123,31.215244
+stop1942,Misr Al Wosta Electricity Company (Al Bahr Al Aazam St.),29.994125,31.215385
+stop1943,Misr Bank (Shobra St.),30.069054,31.24502
+stop1944,Misr El Qadima District Presidency,30.015621,31.238953
+stop1945,Misr El Qadima District Presidency,30.0157,31.23896
+stop1946,Misr El Qadima Police Department,30.007671,31.254263
+stop1947,Misr Gas Station (Giza Square),30.014462,31.208406
+stop1948,Misr Insurance Company (Al Moqattam),30.01296,31.294006
+stop1949,Misr Insurance Company (Al Moqattam),30.01305,31.293583
+stop1950,Misr Petroleum (Port Said St.),30.083559,31.271982
+stop1951,Misr Petroleum (Port Said St.),30.083525,31.272093
+stop1952,Misr Petroleum - Masaken Al Wehda,30.118504,31.25844
+stop1953,Misr Petroleum Gas Station (Badrasheen),29.850142,31.26311
+stop1954,Misr Public Library (Port Said St.),30.087687,31.273754
+stop1955,Misr Public Library (Port Said St.),30.087793,31.273918
+stop1956,Misr Sudan (Nasr City),30.049006,31.327852
+stop1957,Misr Sudan (Nasr City),30.049034,31.328003
+stop1958,Misr University for Sciences and Technology (Must),29.997798,30.964723
+stop1959,Misr University for Sciences and Technology (Must),29.997503,30.964962
+stop1960,Misr for Packing (6th of October),29.920591,30.892967
+stop1961,Misr for Packing (6th of October),29.920528,30.89303
+stop1962,Mit Halfa ( Cairo Alexandria Agriculture Rd. ),30.162876,31.22779
+stop1963,Mit Halfa - Cairo Alexandria Agriculture Road,30.162655,31.227962
+stop1964,Mit Nama Steps (Cairo Alexandria Agriculture Rd.),30.142952,31.230963
+stop1965,Moasasset Al Zakah,30.166513,31.383146
+stop1966,Moassasa,30.123888,31.243042
+stop1967,Moassasa,30.12328,31.245155
+stop1968,Moassasa,30.123755,31.242823
+stop1969,Moassasa,30.12281,31.24161
+stop1970,Moassasa,30.123138,31.245121
+stop1971,Moassasa,30.12043,31.24559
+stop1972,Moassasa,30.120544,31.24574
+stop1973,Moassasa Pedestrian Bridge,30.13647,31.233164
+stop1974,Moassasa Pedestrian Bridge,30.136417,31.233028
+stop1975,Mobil (Ahmed Esmat St.),30.125023,31.334133
+stop1976,Mobil (Al Khalafawy),30.093803,31.236374
+stop1977,Mobil (Al Khalafawy),30.09378,31.236244
+stop1978,Mobil (Cairo Assyout Agricultural Rd.),29.921242,31.265068
+stop1979,Mobil (Cairo Assyout Agricultural Rd.),29.921207,31.26494
+stop1980,Mobil (Hassan Al Sherif St.),30.051668,31.356836
+stop1981,Mobil (Hassan Al Sherif St.),30.051498,31.356998
+stop1982,Mobil (Mostafa Kamel Axis & 1st Settlement),30.05894,31.443382
+stop1983,Mobil (Mostafa Kamel Axis & 1st Settlement),30.058962,31.44368
+stop1984,Mobil (Nile Corniche Maasara),29.90768,31.287535
+stop1985,Mobil (Nile Corniche Maasara),29.90765,31.287441
+stop1986,Mobil (North Teseen St.),30.021812,31.43163
+stop1987,Mobil - Mall of Arabia,30.004673,30.975291
+stop1988,Mobil - Mall of Arabia,30.004383,30.975464
+stop1989,Mobil Gas Station (Abdel Hameed Badawy St.),30.104605,31.37826
+stop1990,Mobil Gas Station (Abdel Hameed Badawy St.),30.104471,31.37811
+stop1991,Mobil Gas Station Bostan St. (Downtown),30.046085,31.235731
+stop1992,Modern School (Ahmed Esmat St.),30.126257,31.330357
+stop1993,Moemen (Nasr St.),29.975727,31.281904
+stop1994,Moemen (Nasr St.),29.975554,31.28192
+stop1995,Mohagreen (Ezbet Al Nakhl),30.14138,31.337551
+stop1996,Mohagreen (Ezbet Al Nakhl),30.1416,31.337622
+stop1997,Mohamed Farid St. & Al Mathan St.,30.168118,31.411205
+stop1998,Mohamed Farid St. & Al Mathan St.,30.168062,31.411081
+stop1999,Mohamed Khattab Pharmacy (Kerdasa),30.02989,31.10432
+stop2000,Mohamed Khattab Pharmacy (Kerdasa),30.02995,31.104385
+stop2001,Mohamed Naguib Metro Station,30.045362,31.244032
+stop2002,Mohamed Naguib St. (Al Salam City),30.170652,31.41781
+stop2003,Mohamedan Light Hospital (Ain Shams),30.126768,31.307093
+stop2004,Mohamedan Light Hospital (Ain Shams),30.126793,31.308014
+stop2005,Mohammed Farid Post Office,30.048399,31.244154
+stop2006,Mohie Al Deen Aboul Ezz St. & Tahrir St.,30.036175,31.201689
+stop2007,Mohie Al Deen Aboul Ezz St. & Tahrir St.,30.036022,31.201664
+stop2008,Moneeb,29.980621,31.213013
+stop2009,Moneeb,29.982689,31.212095
+stop2010,Moneeb,29.984816,31.212927
+stop2011,Moneeb,29.985378,31.213394
+stop2012,Moneeb,29.98663,31.209547
+stop2013,Moneeb,29.98669,31.209644
+stop2014,Moneeb,29.980995,31.210665
+stop2015,Moneeb,29.98297,31.21172
+stop2016,Moneeb,29.98266,31.21223
+stop2017,Moneeb,29.983364,31.21092
+stop2018,Moneeb,29.988012,31.214615
+stop2019,Moneeb,29.98515,31.213678
+stop2020,Moneeb Station,29.987915,31.21475
+stop2021,Montasser (Nile Corniche),29.892239,31.288769
+stop2022,Montasser (Nile Corniche),29.892223,31.288654
+stop2023,Moqattam Entrance from Salah Salem,30.029894,31.26644
+stop2024,Moqattam Entrance from Salah Salem,30.029848,31.26656
+stop2025,Mosheer Ahmed Ismail Station (Sheraton),30.093536,31.372044
+stop2026,Mosheer Ahmed Ismail Station (Sheraton),30.09324,31.37221
+stop2027,Mostorad Pedestrian Bridge,30.131987,31.283829
+stop2028,Mostorod,30.129927,31.291702
+stop2029,Mostorod,30.129826,31.29164
+stop2030,Mostorod,30.130009,31.291748
+stop2031,Mostorod,30.1313,31.289093
+stop2032,Mostorod Bridge (Ring Rd.),30.163208,31.303968
+stop2033,Mostorod Ring Rd.,30.16411,31.30308
+stop2034,Mostorod Ring Rd.,30.164034,31.303305
+stop2035,Motseian,30.01683,31.204742
+stop2036,Motseian,30.016756,31.204502
+stop2037,Mountain View Square,30.01647,31.445032
+stop2038,Mountain View Square,30.01585,31.445246
+stop2039,Mubarak Educational City Entrance,30.010162,30.99353
+stop2040,Mubarak Educational City Entrance,30.010006,30.993658
+stop2041,Mubarak Educational City Entrance,30.00982,30.993801
+stop2042,Nadi Al Baraka Steps (Ring Rd.),30.165895,31.3833
+stop2043,Nadi Al Baraka Steps (Ring Rd.),30.165834,31.382612
+stop2044,Naguib Mahfouz Square (1st Settlement),30.06315,31.432755
+stop2045,Nahda City,30.170757,31.439262
+stop2046,Nahda City,30.17079,31.439524
+stop2047,Nahia,30.045496,31.129242
+stop2048,Nahia,30.045734,31.130259
+stop2049,Nahya Steps (Ring Rd.),30.044216,31.174948
+stop2050,Nahya Steps (Ring Rd.),30.044273,31.17522
+stop2051,Nasr Al Islam Mosque (Al Nozha St.),30.090536,31.341705
+stop2052,Nasr City Sporting Club,30.058653,31.310932
+stop2053,Nasr City Sporting Club,30.058647,31.310713
+stop2054,Nasr City Towers,30.031542,31.354586
+stop2055,Nasr City Towers,30.03162,31.354424
+stop2056,Nasr St. Exit from Autostrad,29.979927,31.289436
+stop2057,Nasser Bank (Al Moqattam),30.018106,31.281368
+stop2058,Nasser Bank (Al Moqattam),30.018063,31.281324
+stop2059,Nasser Institue For Research (Al Khalafawy),30.096975,31.238222
+stop2060,Nasser Institue For Research (Al Khalafawy),30.097075,31.238113
+stop2061,National Authority For Military Production,30.108791,31.26082
+stop2062,National Cardiac Institute,30.06694,31.21059
+stop2063,National Institute for Diabetes (Magra Al Oyoun),30.025934,31.23191
+stop2064,National Institute for Diabetes (Magra Al Oyoun),30.025974,31.230856
+stop2065,National Institute for Occupational Safety and Health (Al Amn Al Senaey),30.11318,31.348698
+stop2066,National Institute for Occupational Safety and Health (Al Amn Al Senaey),30.113134,31.348196
+stop2067,National Institute for Tumor Studies (Magra Al Oyoun),30.02206,31.2309
+stop2068,National Institute for Tumor Studies (Magra Al Oyoun),30.022137,31.230976
+stop2069,National Research Center (Dokki),30.036842,31.204725
+stop2070,National Research Center (Dokki),30.036734,31.204826
+stop2071,National Security (Alexandria Desert Rd.),30.041265,31.056395
+stop2072,National Security (Alexandria Desert Rd.),30.041227,31.055977
+stop2073,Nazlet Al Ashtar Post Office,29.951668,31.199818
+stop2074,Nefertari International School,30.154018,31.443474
+stop2075,Nefertari International School,30.154213,31.44341
+stop2076,Neiazi Sayed (Al Mansoureyya Rd.),30.003693,31.11961
+stop2077,Neiazi Sayed (Al Mansoureyya Rd.),30.003916,31.119549
+stop2078,New Cairo Academy (5th Settlement),29.9935,31.43483
+stop2079,New Cairo Court Station,30.00447,31.425842
+stop2080,New Cairo Sporting Club,30.009804,31.523787
+stop2081,New Cairo Sporting Club,30.00966,31.52347
+stop2082,New Giza Gate 1,30.024078,31.067287
+stop2083,New Giza Gate 1,30.023973,31.067097
+stop2084,New Heliopolis City Authority,30.137775,31.679846
+stop2085,New Heliopolis City Authority,30.13771,31.680084
+stop2086,New Heliopolis Entrance,30.110437,31.691042
+stop2087,New Housing Complex (Al Khanka),30.230246,31.375162
+stop2088,New Housing Complex (Al Khanka),30.230326,31.37518
+stop2089,New Marg,30.162203,31.337381
+stop2090,New Marg,30.16266,31.337194
+stop2091,New Marg,30.162813,31.339207
+stop2092,New Marg,30.164436,31.338858
+stop2093,New Marg Exit (Ring Rd.),30.162926,31.334133
+stop2094,New Marg Station,30.162825,31.337185
+stop2095,New Marg Station,30.163492,31.337286
+stop2096,New Marg Station,30.163736,31.338997
+stop2097,New Market (Asmarat),29.992046,31.340439
+stop2098,New Musuem (Cairo Alex Desert Rd.),29.997232,31.119184
+stop2099,New Musuem (Cairo Alex Desert Rd.),29.997341,31.119328
+stop2100,New Nahda Police Station,30.167107,31.44029
+stop2101,Nile Club (Shubra Al Kheima),30.110659,31.24347
+stop2102,Nile Club (Shubra Al Kheima),30.110699,31.243565
+stop2103,Nile Corniche & Ring Rd. (Maadi),29.98977,31.22771
+stop2104,Nile Corniche & Ring Rd. (Maadi),29.989622,31.227827
+stop2105,Nile Towers (Nile Corniche),30.072557,31.22727
+stop2106,Nile Towers (Nile Corniche),30.072458,31.227383
+stop2107,Nile Towers (Nile Corniche),30.072723,31.228285
+stop2108,Nile University,30.009514,30.98544
+stop2109,Nile University,30.009085,30.985386
+stop2110,Nile University,30.009325,30.985413
+stop2111,Nissan (Kattameya),29.993433,31.384256
+stop2112,Nissan (Kattameya),29.993568,31.384138
+stop2113,North Cairo Ccpp,30.106194,31.26972
+stop2114,North Cairo Electricity Distribution Company (Al Helmeya),30.111246,31.318192
+stop2115,North Cairo Electricity Distribution Company (Al Helmeya),30.111158,31.318108
+stop2116,North Imbaba,30.081482,31.216576
+stop2117,North Imbaba,30.081392,31.216545
+stop2118,Northen Giza Courthouse,30.06882,31.205635
+stop2119,Noubar St.,30.044579,31.241898
+stop2120,Nour Al Huda Automotive (Shubra Al Kheima),30.107895,31.246504
+stop2121,Nour Al Huda Automotive (Shubra Al Kheima),30.107985,31.246365
+stop2122,Nour Al Islam Azhari Institute (Kafr Al Gabal),29.959454,31.162056
+stop2123,Nour Al Islam Azhari Institute (Kafr Al Gabal),29.959702,31.162035
+stop2124,Nour Al Islam Mosque ( Shubra Al Kheima),30.116081,31.284252
+stop2125,Nour Al Islam Mosque (Shubra Al Kheima),30.115997,31.284431
+stop2126,Nour Al Islam Mosque Steps (Ring Rd.),29.992725,31.24664
+stop2127,Nour City steps (Ring Rd.),30.012594,31.155396
+stop2128,Nour City steps (Ring Rd.),30.012444,31.155436
+stop2129,Novartis Pharma (Al Zaytoun),30.105461,31.291664
+stop2130,Novartis Pharma (Al Zaytoun),30.105604,31.29171
+stop2131,Nozha - Nabil Al Waqaad,30.081999,31.340124
+stop2132,Nozha Bridge Entrance,30.086819,31.340912
+stop2133,Nozha Bridge Exit,30.086803,31.341164
+stop2134,Oasis Mall (Sheraton),30.10915,31.37198
+stop2135,Oasis Mall (Sheraton),30.10911,31.371708
+stop2136,Obour,30.270905,31.487392
+stop2137,Obour,30.270998,31.487482
+stop2138,Obour City Authority,30.23899,31.458214
+stop2139,Obour City Authority,30.238962,31.458374
+stop2140,Obour Market,30.168839,31.46365
+stop2141,Obour Market - South,30.160854,31.468397
+stop2142,Obour Market - South,30.161366,31.468367
+stop2143,Obour Police Station,30.235708,31.472202
+stop2144,Obour Sporting Club,30.234264,31.458332
+stop2145,Obour Sporting Club,30.23521,31.45811
+stop2146,Obour Square,30.166965,31.477583
+stop2147,Obour Square (3rd Settlement),29.984064,31.437868
+stop2148,Obour Tunnel,30.163921,31.479042
+stop2149,Officers Housing (Al Remaya St.),29.98742,31.120087
+stop2150,Officers Housing (Al Remaya St.),29.98739,31.120008
+stop2151,Oil Libya Gas Station (Sadat Square),29.841766,31.37508
+stop2152,Oil Libya Gas Station (Sadat Square),29.841871,31.375374
+stop2153,Old 10th of Ramadan,30.148487,31.418085
+stop2154,Old 10th of Ramadan,30.148884,31.41881
+stop2155,Olowwa Faris St. (Bab Al Shaereyya),30.058437,31.259545
+stop2156,Om Al Masryeen Metro,30.00547,31.208727
+stop2157,Om Al Masryeen Metro,30.00551,31.208849
+stop2158,Om Bayoumi,30.143345,31.251034
+stop2159,Om Bayoumi Station,30.148525,31.251385
+stop2160,Omar Efendi (Ahmed Oraby St.),30.063677,31.205362
+stop2161,Omar Efendi (Ahmed Oraby St.),30.063797,31.204277
+stop2162,Omar Ibn Abd El Aziz St. & Al Sekka Al Hadid,29.839275,31.31599
+stop2163,Omar Ibn Abd El Aziz St. & Al Sekka Al Hadid,29.839348,31.316017
+stop2164,Omar Ibn Al Khattab Mosque (Al Matareyya St.),30.108007,31.303547
+stop2165,Omar Ibn Al Khattab Mosque (Al Matareyya St.),30.107979,31.303406
+stop2166,Omar Ibn Al Khattab St. (Awsim),30.113073,31.141054
+stop2167,Ommal Square (5th Settlement),29.997227,31.43216
+stop2168,Ommal Square (5th Settlement),29.9969,31.432194
+stop2169,Opera House,30.043226,31.227074
+stop2170,Opera House,30.043356,31.226871
+stop2171,Orascom Business (Anabib Al Petrol),30.133154,31.37624
+stop2172,Oriental Weavers (6th of October),29.954485,30.917194
+stop2173,Oriental Weavers (6th of October),29.954613,30.917124
+stop2174,Oriental Weavers (Al Haram),30.01039,31.204151
+stop2175,Oriental Weavers (Al Haram),30.010527,31.204174
+stop2176,Oriental Weavers (Sheraton),30.107906,31.36574
+stop2177,Oriental Weavers (Sheraton),30.108177,31.36552
+stop2178,Othman Pedestrian Bridge (Ring Rd.),30.16331,31.3127
+stop2179,Othman Steps (Ring Rd.),30.162973,31.309877
+stop2180,Palace of Culture (Al Matareyya),30.11419,31.285294
+stop2181,Palace of Culture (Al Matareyya),30.114325,31.285145
+stop2182,Palestine School (Ain Shams St.),30.130417,31.322088
+stop2183,Palestine School (Ain Shams St.),30.130455,31.322243
+stop2184,Palestine St. & Ahmed Oraby St.,30.127151,31.345236
+stop2185,Panasonic (Abbas Al Akkad St.),30.065086,31.336735
+stop2186,Panasonic (Abbas Al Akkad St.),30.06514,31.336962
+stop2187,Papa Jones (Batal Ahmed St.),30.053589,31.20565
+stop2188,Papa Jones (Batal Ahmed St.),30.053669,31.205774
+stop2189,Paradise Al Shorouq Compound,30.152594,31.659689
+stop2190,Paradise Al Shorouq Compound,30.152678,31.659798
+stop2191,Pasta Factory Steps (Ring Rd.),29.98468,31.203981
+stop2192,Pasta Factory Steps (Ring Rd.),29.984516,31.204021
+stop2193,Pepsico (Nasr City),30.038673,31.346432
+stop2194,Pepsico (Nasr City),30.038502,31.345976
+stop2195,Petroleum Square (Al Marg),30.149548,31.328136
+stop2196,Pharaonic Village (Al Bahr Al Aazam St.),29.99727,31.21464
+stop2197,Pharaonic Village (Al Bahr Al Aazam St.),29.997166,31.214516
+stop2198,Physical Therapy - Modern Academy,29.992441,31.31131
+stop2199,Pizza Hut (Mostafa Al Nahas St.),30.05681,31.365112
+stop2200,Pizza Hut (Mostafa Al Nahas St.),30.056606,31.365126
+stop2201,Plaza Club (Obour),30.252203,31.463655
+stop2202,Plaza Club (Obour),30.252476,31.463747
+stop2203,Police Academy (Abbaseya),30.069082,31.285023
+stop2204,Police Academy (Mostafa Kamel Axis),30.049852,31.442184
+stop2205,Police Academy (New Cairo),30.053429,31.4134
+stop2206,Police Academy (Ring Rd.),30.037453,31.404417
+stop2207,Police Academy (Ring Rd.),30.037678,31.403715
+stop2208,Police Academy (Ring Rd.),30.038445,31.402857
+stop2209,Police Academy (Ring Rd.),30.037693,31.403917
+stop2210,Police Hospital (Agouza),30.05125,31.216951
+stop2211,Police Hospital (Agouza),30.05129,31.217096
+stop2212,Police Hospital (Al Shaheed Corridor),30.038506,31.328217
+stop2213,Police Hospital (Al Shaheed Corridor),30.038624,31.328287
+stop2214,Police Hospital (Al Tayaran St.),30.038805,31.331459
+stop2215,Police Hospital (Al Tayaran St.),30.038734,31.331314
+stop2216,Police Mosque (Salah Salem St.),30.051949,31.276707
+stop2217,Police Mosque (Salah Salem St.),30.051893,31.276802
+stop2218,Police Officers Club (Zamalek),30.061401,31.218784
+stop2219,Police Officers Club (Zamalek),30.061554,31.218866
+stop2220,Police Union Club,30.055428,31.27624
+stop2221,Policeman Institute St. (Nile Corniche),29.943016,31.272236
+stop2222,Policeman Institute St. (Nile Corniche),29.942905,31.272217
+stop2223,Port Said Square (Maadi),29.961239,31.262598
+stop2224,Port Said St. (Al Sawah),30.107693,31.283998
+stop2225,Port Said St. Pedestrian Al Mosky,30.04988,31.255562
+stop2226,Port Said St. Pedestrian Al Mosky,30.049904,31.255737
+stop2227,Porto Cairo Mall,30.065744,31.42187
+stop2228,Porto Cairo Mall,30.065454,31.422123
+stop2229,Postal Office (1st Settlement),30.067,31.46181
+stop2230,Postal Services Office (Al Haram St.),29.984957,31.135763
+stop2231,Public Taxes Mission (Nasr City),30.059427,31.345406
+stop2232,Public Taxes Mission (Nasr City),30.059458,31.345594
+stop2233,QNB Bank (Haram St),29.988863,31.146486
+stop2234,QNB Bank (Haram St.),29.98873,31.146557
+stop2235,Qadry Basha (Al Sayeda Zeinab),30.03332,31.245604
+stop2236,Qadry Basha (Al Sayeda Zeinab),30.03323,31.245687
+stop2237,Qalaa,30.029772,31.257717
+stop2238,Qalaa Post Office,30.03049,31.25628
+stop2239,Qalyoub Al Balad Bus Station,30.181273,31.207623
+stop2240,Qalyoub Al Balad Bus Station,30.181347,31.207645
+stop2241,Qalyoub District Court,30.18091,31.216993
+stop2242,Qalyoub District Court,30.180977,31.217005
+stop2243,Qalyoub Exit,30.149473,31.230865
+stop2244,Qalyoub Exit to Ring Rd.,30.149155,31.22889
+stop2245,Qalyub,30.181232,31.19986
+stop2246,Qalyub Exit (Cairo Alexandria Agriculture Rd.),30.146801,31.230234
+stop2247,Qalyub Specialized Hospital,30.180817,31.22172
+stop2248,Qalyub Specialized Hospital,30.181185,31.223207
+stop2249,Qalyub Steps (Ring Rd.),30.1493,31.230368
+stop2250,Qasr Oraby Furniture (Gamal Abdel Nasser),30.141216,31.39789
+stop2251,Qasr Oraby Furniture (Gamal Abdel Nasser),30.14141,31.397808
+stop2252,Qatar Ahly Bank (Al Tayaran St.),30.062386,31.32556
+stop2253,Qatar Ahly Bank (Al Tayaran St.),30.062422,31.325817
+stop2254,Qawmeya Arabeya,30.094538,31.204626
+stop2255,Qawmeya Arabeya,30.094893,31.204119
+stop2256,Qawmeya Arabeya Secondary Bus Station,30.0952,31.20067
+stop2257,Qawmeya Steps (Ring Rd.),30.096333,31.199623
+stop2258,Qawmeya Steps (Ring Rd.),30.09639,31.199451
+stop2259,Qism El Marg,30.149586,31.341125
+stop2260,Rabaah Al Adaweya Mosque,30.06723,31.324549
+stop2261,Rabaah Al Adaweya Mosque,30.067356,31.325584
+stop2262,Rabaah Al Adaweya Mosque,30.067537,31.325497
+stop2263,Radisson Hotel (Sheraton),30.106964,31.375172
+stop2264,Radisson Hotel (Sheraton),30.107082,31.375326
+stop2265,Radobis Cinema (Haram St.),30.006748,31.194588
+stop2266,Ragab Sons (Al Gazaer St.),29.975527,31.275873
+stop2267,Ragab Sons (Al Gazaer St.),29.975555,31.27603
+stop2268,Ragab Sons (Al Magzar Mariouteya),29.977827,31.163212
+stop2269,Ragab Sons (Al Magzar Mariouteya),29.977547,31.162792
+stop2270,Ragab Sons (Al Magzar Mariouteya),29.977093,31.162197
+stop2271,Ragab Sons (Al Magzar Mariouteya),29.976965,31.162193
+stop2272,Ragab Sons (Al Shabab St. Obour),30.26533,31.477188
+stop2273,Ragab Sons (Al Shabab St. Obour),30.265488,31.477118
+stop2274,Ragab Sons (Mahdy Arafa St.),30.054977,31.379784
+stop2275,Ragab Sons (Mahdy Arafa St.),30.054983,31.379532
+stop2276,Ragab Sons 7th District (6th of October),29.97828,30.93584
+stop2277,Ragab Sons 7th District (6th of October),29.978182,30.93591
+stop2278,Ragab Sons Al Mehwar Al Markazi (6th of October),29.966967,30.936174
+stop2279,Ragab Sons Al Mehwar Al Markazi (6th of October),29.966864,30.936258
+stop2280,Rahma Mosque (Mostafa Al Nahas St.),30.053057,31.332745
+stop2281,Rahma Mosque (Mostafa Al Nahas St.),30.053263,31.332731
+stop2282,Ramses,30.061483,31.246998
+stop2283,Ramses,30.06066,31.246267
+stop2284,Ramses,30.058985,31.244516
+stop2285,Ramses,30.06259,31.243174
+stop2286,Ramses,30.061308,31.245522
+stop2287,Ramses Extension (North of Nasr Rd.),30.06407,31.297379
+stop2288,Ramses Extension (North of Nasr Rd.),30.06368,31.298397
+stop2289,Ramses Extension (South of Nasr Rd.),30.05132,31.30754
+stop2290,Ramses Extension (South of Nasr Rd.),30.050913,31.307331
+stop2291,Ramses Extension (South of Nasr Rd.),30.050425,31.307947
+stop2292,Ramses Language Schools (Khaloussi),30.078287,31.250034
+stop2293,Ramses Language Schools (Khaloussi),30.078348,31.249996
+stop2294,Ramses Railway Station,30.06187,31.24814
+stop2295,Ramses Railway Station,30.061956,31.248016
+stop2296,Ramses Station,30.060566,31.243015
+stop2297,Raslan (6th of October),29.952736,30.914503
+stop2298,Raslan (6th of October),29.952843,30.914396
+stop2299,Rawda Mosque (Obour),30.242155,31.481285
+stop2300,Real Estate Registration Mission (Shobra),30.074183,31.247993
+stop2301,Realestate Regulation Authoity (6th of October),29.937725,30.912022
+stop2302,Realestate Regulation Authoity (6th of October),29.937658,30.911901
+stop2303,Red Crescent ( Masaken Zainhom),30.02165,31.245596
+stop2304,Red Kiosk (6th of October),29.966007,30.917887
+stop2305,Red Kiosk (6th of October),29.965906,30.917984
+stop2306,Rehab Gate 13,30.063908,31.474693
+stop2307,Rehab Gate 13,30.064064,31.475073
+stop2308,Rehab Gate 6,30.053411,31.490616
+stop2309,Rehab Gate 6,30.05324,31.49001
+stop2310,Rehab Square,30.05463,31.475485
+stop2311,Rehab Square,30.05502,31.47436
+stop2312,Remaya 28,29.990032,31.133598
+stop2313,Remaya 28,29.990707,31.132212
+stop2314,Research Institute of Ophthalmology (Al Giza),30.015724,31.216688
+stop2315,Research Institute of Ophthalmology - Giza,30.015842,31.216574
+stop2316,Rihana Plaza (Sheikh Zayed),30.051807,31.00357
+stop2317,Rihana Plaza (Sheikh Zayed),30.051924,31.003777
+stop2318,Rimo Car (Ahmed Helmy St.),30.078533,31.255575
+stop2319,Rimo Car (Ahmed Helmy St.),30.078783,31.25575
+stop2320,Ring Rd. & Al Mansoureyya Rd.,29.999887,31.120844
+stop2321,Ring Rd. & Al Mansoureyya Rd.,30.000034,31.120731
+stop2322,Ring Rd. & Cario Alex Desert Rd.,29.998892,31.117403
+stop2323,Ring Rd. Entrance from Moneeb,29.98619,31.208862
+stop2324,Ring Rd. Exit to Al Salam,30.164644,31.389011
+stop2325,Ring Rd. Exit to Al Warraq,30.125515,31.20174
+stop2326,Ring Rd. Exit to Bashtil,30.082924,31.189302
+stop2327,Ring Rd. Exit to Cairo Alexandria Agriculture Road,30.149597,31.23345
+stop2328,Ring Rd. Exit to Khosous,30.158407,31.301918
+stop2329,Ring Rd. Exit to Khosous,30.158318,31.302074
+stop2330,Ring Rd. Exit to Moneeb,29.985952,31.208733
+stop2331,Ring Rd. Exit to Saft Al Laban,30.025599,31.164125
+stop2332,Ring Rd. Exit to Saft Al Laban,30.033657,31.165335
+stop2333,Ring Rd. Exit to Saft Al Laban,30.025583,31.163956
+stop2334,Ring Rd. Exit to Zahraa Misr Al Qadima,29.991615,31.234865
+stop2335,Ring Rd. Exit to Zahraa Misr Al Qadima,29.99177,31.234758
+stop2336,Ring Rd. Pedestrian Ezbet Anwar,30.15035,31.265003
+stop2337,Ring Rd. Steps 1 (26th of July Corridor),30.06248,31.172695
+stop2338,Ring Rd. Steps 2 (26th of July Corridor),30.061895,31.175503
+stop2339,Ring Rd. Steps to New Marg,30.163607,31.341734
+stop2340,Ring Rd. Steps to New Marg,30.163393,31.341467
+stop2341,Ring Rd. Steps to Qalyub,30.149168,31.230326
+stop2342,Ring Road Entrance from Cairo Alexandria Agriculture Rd.,30.149067,31.22532
+stop2343,Ring Road Entrance from Cairo Alexandria Agriculture Rd.,30.149412,31.233467
+stop2344,Ring Road Exit to Qalyub,30.148836,31.22521
+stop2345,Ring Road Steps to 26th of July Mehwar,30.062,31.175514
+stop2346,Ring Road Steps to 26th of July Mehwar,30.062584,31.172712
+stop2347,River Transport Authority (Zahraa),29.998129,31.228434
+stop2348,River Transport Authority (Zahraa),29.998611,31.228842
+stop2349,Rod Al Farag Metro Station,30.080585,31.245245
+stop2350,Rod Al Farag Metro Station,30.080608,31.24538
+stop2351,Rod Al Farag Youth Center,30.075893,31.228775
+stop2352,Rod Al Farag Youth Center,30.07534,31.228266
+stop2353,Rotana Motors (Maadi),29.986393,31.278807
+stop2354,Rotana Motors (Maadi),29.986486,31.27877
+stop2355,Roushdy Pharmacy (Al Remaya Square),29.991058,31.130579
+stop2356,Roxy,30.092884,31.315899
+stop2357,Roxy,30.094385,31.317944
+stop2358,Roxy,30.093555,31.314127
+stop2359,Roxy,30.094969,31.316103
+stop2360,Roxy,30.093004,31.315187
+stop2361,Roxy,30.094545,31.31603
+stop2362,Roxy,30.0936,31.314375
+stop2363,Royal City Gate (Sheikh Zayed),30.032719,31.0291
+stop2364,Royal City Gate (Sheikh Zayed),30.032812,31.028227
+stop2365,Royal City Gate (Sheikh Zayed),30.03283,31.029007
+stop2366,Royal City Gate (Sheikh Zayed),30.032986,31.028809
+stop2367,Roz Al Youssef Magazine (Garden City),30.035095,31.233833
+stop2368,Sodic (Sheikh Zayed),30.0767,30.948786
+stop2369,Sodic (Sheikh Zayed),30.0773,30.948208
+stop2370,Saad Zaghloul Metro,30.036503,31.24037
+stop2371,Saad Zaghloul School (15th of May),29.832794,31.38189
+stop2372,Saad Zaghloul School (15th of May),29.8327,31.3823
+stop2373,Saad Zaghloul St & Anwar Al Sadat St.,29.823698,31.373394
+stop2374,Saad Zaghloul St & Anwar Al Sadat St.,29.823755,31.373163
+stop2375,Sadat Academy (Maadi),29.959782,31.248505
+stop2376,Sadat Academy (Maadi),29.9596,31.248276
+stop2377,Safeer Square (Heliopolis),30.097895,31.338606
+stop2378,Safeer Square (Heliopolis),30.097448,31.337849
+stop2379,Saft Al Laban,30.031227,31.16789
+stop2380,Saft Al Laban,30.03168,31.168608
+stop2381,Saft Al Laban,30.03113,31.167854
+stop2382,Saft Al Laban Axis,30.030321,31.162144
+stop2383,Saft Al Laban Entrance from Ring Rd.,30.033817,31.165249
+stop2384,Saft Al Laban Steps (Ring Rd.),30.036617,31.168077
+stop2385,Safwa Clinics (Obour),30.256216,31.46786
+stop2386,Safwa Clinics (Obour),30.256252,31.467695
+stop2387,Saint Fatima Square,30.105753,31.343786
+stop2388,Saint Fatima Square,30.105818,31.344086
+stop2389,Saint George Church (Kotseika),29.935097,31.278316
+stop2390,Saint George Church (Kotseika),29.935076,31.278421
+stop2391,Saint Teresa Metro,30.089281,31.24534
+stop2392,Saint Teresa Metro,30.089275,31.245255
+stop2393,Sakiat Mekki Metro,29.994568,31.209032
+stop2394,Sakiat Mekki Metro,29.994572,31.209177
+stop2395,Sakkara Steps (Ring Rd.),29.973913,31.172462
+stop2396,Sakkara Steps (Ring Rd.),29.973978,31.172287
+stop2397,Salah Al Din Citadel (Salah Salem),30.025267,31.26173
+stop2398,Salah Al Din Citadel (Salah Salem),30.025393,31.261648
+stop2399,Salah Al Din Square (Heliopolis),30.095177,31.330278
+stop2400,Salah Al Din Square (Heliopolis),30.095098,31.330305
+stop2401,Salam Alexandria,30.191721,31.419973
+stop2402,Salam Alexandria Station,30.178528,31.420797
+stop2403,Salam Alexandria Station,30.178455,31.420889
+stop2404,Salam Nahda,30.15508,31.4098
+stop2405,Salam Station (10th of Ramadan Station),30.152508,31.409582
+stop2406,Salam Station (10th of Ramadan Station),30.147972,31.420414
+stop2407,Salam Station (10th of Ramadan Station),30.147766,31.42015
+stop2408,Salam Station (10th of Ramadan Station),30.147718,31.420723
+stop2409,Salam Station (10th of Ramadan Station),30.147877,31.421
+stop2410,Salamtak Labs (Dolce),29.934258,30.922235
+stop2411,Salamtak Labs (Dolce),29.934193,30.922283
+stop2412,Saleh Sobhy (15th of May),29.842047,31.357906
+stop2413,Saleh Sobhy (15th of May),29.842592,31.358164
+stop2414,Samir & Ali Al Thawra St (Heliopolis),30.082613,31.342884
+stop2415,Saqqara (Moroor),29.850904,31.241144
+stop2416,Saqqara (Moroor),29.85097,31.241674
+stop2417,Saqqara Rd. & Al Mansoureya Rd.,29.945744,31.189232
+stop2418,Saqqara Rd. & Al Mansoureya Rd.,29.945488,31.189
+stop2419,Saqqara St.,29.85025,31.23171
+stop2420,Saqr Quraish,29.986189,31.289131
+stop2421,Saqr Quraish,29.98617,31.288908
+stop2422,Saqr Quraish,29.985842,31.285795
+stop2423,Saqr Quraish,29.986143,31.288662
+stop2424,Saqr Quraish,29.985199,31.286264
+stop2425,Saqr Quraish,29.98587,31.285892
+stop2426,Saray Al Qobba,30.098005,31.307537
+stop2427,Saray Al Qobba,30.09799,31.307371
+stop2428,Sawaris Square (Maadi),29.963215,31.260717
+stop2429,Sayyed Al Abedeen Pharmacy (Cablat St.),30.113802,31.292479
+stop2430,Sayyed Al Abedeen Pharmacy (Cablat St.),30.113728,31.29267
+stop2431,Science House Garden (Al Mounira),30.035187,31.235579
+stop2432,Scoial Services School (Roxy),30.09133,31.309944
+stop2433,Sednawy (Sudan St.),30.038057,31.196566
+stop2434,Sednawy (Sudan St.),30.038036,31.196451
+stop2435,Sekat Hadid Al Mahager (Basateen),29.98429,31.271864
+stop2436,Sekat Hadid Al Mahager (Basateen),29.984457,31.271635
+stop2437,Sekka Hadid St. Pedesterian Bridge,29.967897,31.224483
+stop2438,Sekka Hadid St. Pedesterian Bridge,29.967943,31.22457
+stop2439,Sekket Al Waili,30.091593,31.280077
+stop2440,Sekket Al Waili,30.09165,31.279657
+stop2441,Sekket Al Waili St. (Kobry Al Qobba),30.087648,31.289791
+stop2442,Shabab (Obour),30.272763,31.484286
+stop2443,Shabab (Obour),30.272966,31.484793
+stop2444,Shabramant,29.939842,31.195038
+stop2445,Shabramant,29.939383,31.194988
+stop2446,Shabramant,29.940563,31.195961
+stop2447,Shahrazad Hall ( Sawah),30.111885,31.284094
+stop2448,Shalqan Rd.,30.18578,31.141174
+stop2449,Shalqan Rd.,30.185928,31.141087
+stop2450,Shams Club (Alf Maskan),30.121374,31.34283
+stop2451,Shams Club (Alf Maskan),30.121502,31.342644
+stop2452,Shams Club Squash Courts,30.11749,31.36081
+stop2453,Shams Club Squash Courts,30.1176,31.360994
+stop2454,Sharabeya,30.079042,31.261091
+stop2455,Sharea Jadid (Marg Axis),30.141787,31.35266
+stop2456,Sharea Jadid (Marg Axis),30.141636,31.352652
+stop2457,Shawerma Abu Mazen (Maadi),29.960512,31.250332
+stop2458,Sheikh Al Balad (Ain Shams St.),30.12386,31.318848
+stop2459,Sheikh Al Balad (Ain Shams St.),30.123888,31.318703
+stop2460,Sheikh Ali Youssef School (Downtown),30.029987,31.233912
+stop2461,Sheikh Selim Institute (Arbean St.),30.134434,31.31476
+stop2462,Sheikh Zayed Al Nahian Hospital,30.051401,31.288307
+stop2463,Sheikh Zayed Al Nahian Hospital,30.051294,31.288368
+stop2464,Sheikh Zayed Entrance,30.087053,30.962236
+stop2465,Sheikh Zayed Entrance,30.086151,30.963263
+stop2466,Sheikh Zayed General Hospital,30.037895,31.007235
+stop2467,Sheikh Zayed General Hospital,30.0377,31.006987
+stop2468,Sheikh Zayed General Hospital,30.04054,31.007906
+stop2469,Sheikh Zayed General Hospital Northside,30.040459,31.0091
+stop2470,Sheikh Zayed General Hospital Northside,30.0406,31.00895
+stop2471,Sheikh Zayed Specialized Hospital,30.032946,31.003311
+stop2472,Shepheard Hotel (Qasr Al Nile),30.042263,31.231504
+stop2473,Sheraton,30.105793,31.38639
+stop2474,Shobra Banha St. & Ring Rd.,30.149567,31.254063
+stop2475,Shobra Banha St. & Ring Rd.,30.149712,31.25426
+stop2476,Shorouq City,30.138931,31.653978
+stop2477,Shubra Al Khaima City Authority,30.11991,31.242662
+stop2478,Shubra Al Kheima City Authority,30.1201,31.243366
+stop2479,Shubra Al Kheima City Council,30.120104,31.243195
+stop2480,Shubra Al Kheima East District Authority,30.134798,31.27386
+stop2481,Shubra Al Kheima Metro Station,30.121708,31.244541
+stop2482,Shubra Al Kheima Metro Station,30.121758,31.24463
+stop2483,Shubra Al Kheima Power Plant,30.11448,31.24205
+stop2484,Shubra Al Kheima Power Plant,30.11446,31.24194
+stop2485,Silver Nile Social Club (Nile Corniche),29.97855,31.233097
+stop2486,Silver Nile Social Club (Nile Corniche),29.978497,31.232983
+stop2487,Silver Star Mall (5th Settlement),30.003332,31.420359
+stop2488,Silver Star Mall (5th Settlement),30.003584,31.420174
+stop2489,Simsima (Dokki),30.033813,31.211926
+stop2490,Simsima (Dokki),30.033188,31.212132
+stop2491,Sky Mart Mall (1st Settlement),30.06768,31.451134
+stop2492,Sky Mart Mall (1st Settlement),30.067867,31.451164
+stop2493,Small Industries Association - Al Hegaz Street (6th of October),29.980724,30.94649
+stop2494,Small Industries Association - Al Hegaz Street (6th of October),29.98084,30.94649
+stop2495,Smart Village,30.064531,31.023527
+stop2496,Smart Village,30.063822,31.024206
+stop2497,Soap Factory (Marg),30.171864,31.34514
+stop2498,Soap Factory (Marg),30.17183,31.345215
+stop2499,Sobhy Hussein St. (Al Moqattam),29.998503,31.326773
+stop2500,Sobhy Hussein St. (Al Moqattam),29.998299,31.327147
+stop2501,Social Insurance Bureau (Al Khanka),30.227083,31.363916
+stop2502,Social Insurance Bureau (Shubra Al Kheima),30.136131,31.27064
+stop2503,Sonesta Hotel (Al Tayaran St.),30.078846,31.318651
+stop2504,Souq Al Asr (Khalifa Al Mamoun St.),30.088058,31.309906
+stop2505,Souq Al Asr (Khalifa Al Mamoun St.),30.08817,31.309748
+stop2506,Souq Al Gomla,29.966236,31.028818
+stop2507,Souq Al Gomla,29.966028,31.02875
+stop2508,Souq Bab Al Louq,30.04521,31.23972
+stop2509,South Cairo Electricity Distribution Co (Kerdasa),30.034996,31.099918
+stop2510,South Cairo Electricity Distribution Co (Kerdasa),30.03506,31.09992
+stop2511,South Teseen St. Entrance,30.01301,31.401005
+stop2512,Southern Gate Obour Market,30.163269,31.474207
+stop2513,Sphinx Airport,30.078087,30.918173
+stop2514,Sphinx Airport,30.07721,30.91769
+stop2515,Sphinx Square,30.059973,31.208063
+stop2516,Sphinx Square,30.062052,31.207659
+stop2517,Sphinx Square,30.060131,31.207727
+stop2518,St. Antony Church (Zahraa Al Maadi),29.969433,31.324057
+stop2519,St. Antony Church (Zahraa Al Maadi),29.969618,31.324062
+stop2520,St. Mary and St. Mark Church (6th of October),29.959713,30.918528
+stop2521,State Council (Dokki),30.036283,31.218552
+stop2522,State Council (Dokki),30.036324,31.218414
+stop2523,Sudan St. (Ard Al Lewa),30.05537,31.190973
+stop2524,Sudan St. (Ard Al Lewa),30.055252,31.19091
+stop2525,Suez Bridge Entrance to Ring Road,30.080246,31.435545
+stop2526,Suez Bridge Entrance to Ring Road,30.08016,31.435764
+stop2527,Suez Canal Bank (Shobra St.),30.073187,31.244999
+stop2528,Sultan Abou Al Ela Mosque (Maspero),30.056337,31.230844
+stop2529,Sultan Abou Al Ela Mosque (Maspero),30.056225,31.230804
+stop2530,Sultana Weddings Centre (Saqqara),29.952555,31.179588
+stop2531,Sultana Weddings Centre (Saqqara),29.95266,31.17895
+stop2532,Sun City Mall,30.103867,31.384302
+stop2533,Sun City Mall,30.103928,31.384188
+stop2534,Sun Mall,30.050423,31.392763
+stop2535,Swan Lake Compound (1st Settlement),30.054367,31.442087
+stop2536,Syndicate Of Commercial Professions (Abbaseya),30.066675,31.294481
+stop2537,Syndicate Of Commercial Professions (Abbaseya),30.06697,31.293615
+stop2538,Taaqa Gas Station (15th of May),29.834192,31.356184
+stop2539,Taaqa Gas Station (15th of May),29.834093,31.355986
+stop2540,Taawon (Al Matareyya),30.12315,31.301188
+stop2541,Taawon (Al Matareyya),30.12279,31.300503
+stop2542,Taawon (Al Matareyya),30.122944,31.300589
+stop2543,Taba St. & 6 October St. (Salam),30.175072,31.41813
+stop2544,Taba St. & 6 October St. (Salam),30.175047,31.41824
+stop2545,Tabarak (Omar Al Mokhtar St.),30.122448,31.29709
+stop2546,Tabarak (Omar Al Mokhtar St.),30.121536,31.297302
+stop2547,Tabarak Children's Hospital (Nasr City),30.046398,31.32842
+stop2548,Tabarak Children's Hospital (Nasr City),30.046598,31.328562
+stop2549,Tagneed,29.980843,31.112818
+stop2550,Tahrir Square,30.044655,31.236061
+stop2551,Tahrir Square,30.044035,31.235695
+stop2552,Taki (Al Waili),30.059465,31.276337
+stop2553,Taki (Al Waili),30.059368,31.2763
+stop2554,Talaat Harb Cultural Center,30.0227,31.25143
+stop2555,Talaat Harb Mall (Downtown),30.050495,31.24048
+stop2556,Talaat Harb Square (Downtown),30.047781,31.23868
+stop2557,Taqa Gas Station (Badrasheen),29.859756,31.279068
+stop2558,Taqa Gas Station (Badrasheen),29.859943,31.27911
+stop2559,Tara Compound Entrance (Sheikh Zayed),30.040054,31.013706
+stop2560,Tara Compound Entrance (Sheikh Zayed),30.040182,31.01392
+stop2561,Techno Tex Clothes Co (15th of May),29.817312,31.358702
+stop2562,Techno Tex Clothes Co (15th of May),29.817469,31.35875
+stop2563,Telecom Egypt Central (6th Of October),29.974035,30.955143
+stop2564,Telecom Egypt Central (6th Of October),29.9735,30.955431
+stop2565,Telecom Egypt Central (6th Of October),29.973644,30.955437
+stop2566,Telecom Egypt Central (Almaza),30.085083,31.332657
+stop2567,Telecom Egypt Central (Almaza),30.086351,31.334988
+stop2568,Teraat Al Gabal St.,30.101852,31.3057
+stop2569,Teraat Al Gabal St.,30.101713,31.305626
+stop2570,Teraat Al Khashab (Nile Corniche),29.917845,31.286322
+stop2571,Teraat Al Khashab (Nile Corniche),29.917742,31.286455
+stop2572,Teraat Al Marioteyya St.,30.032545,31.122065
+stop2573,Teraat Al Marioteyya St.,30.032679,31.122057
+stop2574,Teraat Al Zomor & Abu Bakr Al Siddiq St.,30.074417,31.184235
+stop2575,Teraat Taware' Axis,30.13981,31.379168
+stop2576,Teraat Taware' Axis,30.139908,31.379086
+stop2577,Tereat Al Gabal St. (Al Horeyya St.),30.11363,31.312176
+stop2578,Tereat Al Gabal St. (Al Horeyya St.),30.113178,31.311941
+stop2579,Tharwat Bridge (Saft El Laban),30.027548,31.201515
+stop2580,Tharwat Bridge (Saft El Laban),30.027373,31.201718
+stop2581,Tharwat Bridge (Saft El Laban),30.02753,31.20166
+stop2582,The Continental School of Cairo (Obour),30.195063,31.460909
+stop2583,The Continental School of Cairo (Obour),30.195194,31.46101
+stop2584,The Egyptian Lawyers Association,30.052374,31.237604
+stop2585,The Good Shepherd Hospital,30.076738,31.245197
+stop2586,The National Museum of Egyptian Civilization,30.005455,31.247887
+stop2587,The National Museum of Egyptian Civilization,30.005583,31.247772
+stop2588,The Outlet Mall (6th of October),29.936983,30.89576
+stop2589,The Platform (Maadi),29.974354,31.234755
+stop2590,The Platform (Maadi),29.974386,31.23488
+stop2591,The Unknown Soldier Memorial,30.064703,31.314491
+stop2592,The Unknown Soldier Memorial,30.064566,31.314634
+stop2593,Three Brothers Supermarket (Al Manial),30.015821,31.22227
+stop2594,Three Brothers Supermarket (Al Manial),30.015936,31.222256
+stop2595,Three Pyramids Hotel,30.000565,31.178139
+stop2596,Three Pyramids Hotel,30.000706,31.178076
+stop2597,Tiba Grand Mall (6th of October),29.949202,30.909094
+stop2598,Tiba Grand Mall (6th of October),29.949324,30.909016
+stop2599,Tiles Workshops (Berak Al Khayam Rd.),30.056458,31.160341
+stop2600,Togareyeen City (Al Moqattam),30.01317,31.297977
+stop2601,Togareyeen City (Al Moqattam),30.012989,31.298185
+stop2602,Tolip (Zahraa Nasr City),30.051811,31.404207
+stop2603,Tolip (Zahraa Nasr City),30.051628,31.404638
+stop2604,Tolip Plaza (5th Settlement),30.025606,31.465607
+stop2605,Tolip Plaza (5th Settlement),30.025322,31.46561
+stop2606,Toman Bay St. (Heliopolis),30.103365,31.314732
+stop2607,Tomwa (Abu Al Nomros),29.932976,31.255991
+stop2608,Tomwa (Abu Al Nomros),29.933035,31.256063
+stop2609,Tora Prison (Autostrad),29.947107,31.28702
+stop2610,Tora Prison (Autostrad),29.946606,31.287207
+stop2611,Tora Steps (Autostrad),29.95158,31.287321
+stop2612,Tora Steps (Autostrad),29.951576,31.287125
+stop2613,Total (6th of October),29.932589,30.877106
+stop2614,Total (Haram Marioteya),29.99099,31.15231
+stop2615,Total (Haram Marioteya),29.99085,31.152378
+stop2616,Total (Kattameya),29.983738,31.366196
+stop2617,Total (Kattameya),29.983715,31.366707
+stop2618,Total (Kattameya),29.98368,31.366373
+stop2619,Total Abou Al Gheit Rd.,30.181444,31.171907
+stop2620,Total Abou Al Gheit Rd.,30.181547,31.172062
+stop2621,Total Gas Station (Autostrad),29.98275,31.289105
+stop2622,Total Gas Station (Autostrad),29.98276,31.289409
+stop2623,Total Gas Station Bassous ( Ring Rd. ),30.140024,31.206123
+stop2624,Total Gas Station Bassous (Ring Rd.),30.139954,31.206324
+stop2625,Total Zahraa Al Maadi (Autostrad),29.95854,31.28749
+stop2626,Total Zahraa Al Maadi (Autostrad),29.95855,31.28734
+stop2627,Traffic Department ( Ain El Sira ),30.014812,31.246943
+stop2628,Traffic Department ( Ain El Sira ),30.014887,31.246954
+stop2629,Traffic Licensing Complex (Shubra),30.108032,31.257969
+stop2630,Traffic Licensing Complex (Shubra),30.107973,31.25775
+stop2631,Triumph Hotel,30.086653,31.306023
+stop2632,Triumph Square,30.100483,31.343649
+stop2633,Triumph Square,30.100554,31.342587
+stop2634,Turnery Mechanical Workshop (Al Matareyya),30.130396,31.310469
+stop2635,Twin Plaza,30.052885,31.43201
+stop2636,Union Housing Al Nasr (Kattameya),29.974215,31.40788
+stop2637,Union Housing Al Nasr (Kattameya),29.974314,31.407803
+stop2638,Universal (6th of October),29.925777,30.900917
+stop2639,Universal (6th of October),29.925703,30.900967
+stop2640,Vehicles Administration (Salah Salem St.),30.061493,31.284578
+stop2641,Vehicles Administration (Salah Salem St.),30.06156,31.284462
+stop2642,Versay ( Waili ),30.103537,31.28065
+stop2643,Versay - Waili,30.10374,31.28061
+stop2644,Victoria (Ahmed Helmy St.),30.086847,31.255991
+stop2645,Victoria (Ahmed Helmy St.),30.08715,31.255913
+stop2646,Vitrac Square (5th Settlement),30.011385,31.41438
+stop2647,Vitrac Square (5th Settlement),30.011192,31.413826
+stop2648,Vodafone (Ahmed Al Zomor St.),30.0486,31.374514
+stop2649,Vodafone (Ahmed Al Zomor St.),30.048439,31.374584
+stop2650,Vodafone (Awsim),30.12184,31.139494
+stop2651,Vodafone (Imbaba),30.072126,31.209368
+stop2652,Vodafone (Zahraa Al Maadi),29.961956,31.303055
+stop2653,Vodafone (Zahraa Al Maadi),29.961712,31.30303
+stop2654,Vodafone Square,29.95148,30.912136
+stop2655,Vodafone Square,29.951216,30.912338
+stop2656,Wadi Al Nile Hospital (Matareya St.),30.09909,31.299648
+stop2657,Wadi Al Nile Hospital (Matareya St.),30.099112,31.299528
+stop2658,Wadi Al Nile St. & 26th of July Corridor (Mit Okba),30.06058,31.20131
+stop2659,Wadi Al Nile St. & 26th of July Corridor (Mit Okba),30.060497,31.201294
+stop2660,Wadi Al Nile St. and Nile Corniche,29.95426,31.25448
+stop2661,Wadi Al Nile St. and Nile Corniche,29.954168,31.25443
+stop2662,Wadi Degla Sporting Club (6th of October),29.972885,31.00573
+stop2663,Wadi Degla Sporting Club (6th of October),29.972685,31.005682
+stop2664,Wadi Degla Sporting Club (Heliopolis),30.095068,31.382782
+stop2665,Wadi Degla Sporting Club (New Cairo),30.052588,31.426676
+stop2666,Wadi Degla Sporting Club (New Cairo),30.052351,31.426702
+stop2667,Wadi Hof Metro,29.879276,31.314032
+stop2668,Wadi Hof Metro,29.878838,31.313166
+stop2669,Wadi Hof Metro,29.879316,31.314125
+stop2670,Waei Islami Hospital (Mostorod),30.120516,31.285673
+stop2671,Waei Islami Hospital (Mostorod),30.12037,31.285807
+stop2672,Waei Islami Hospital (Mostorod),30.120123,31.286963
+stop2673,Waei Islami Hospital (Mostorod),30.119967,31.28705
+stop2674,Waha Garage (Nasr City),30.040401,31.378992
+stop2675,Waha Garage (Nasr City),30.040445,31.378866
+stop2676,Waha Hotel (Alexandria Desert Rd.),30.01349,31.102135
+stop2677,Waha Hotel (Alexandria Desert Rd.),30.013447,31.102034
+stop2678,Warraq Al Arab,30.095516,31.21479
+stop2679,Warraq Al Arab,30.095678,31.214838
+stop2680,Wataneya Gas Station (Al Nasr Company),29.86986,31.3054
+stop2681,Wataneya Gas Station (Autostrad Maadi),29.975748,31.290087
+stop2682,Wataneya Gas Station (Autostrad Maadi),29.975655,31.289839
+stop2683,Wataneya Gas Station (Kattameya Ring Rd.),29.986992,31.309158
+stop2684,Wataneya Gas Station (Kattameya Ring Rd.),29.986769,31.309252
+stop2685,Wataneya Gas Station (Kattameya Ring Rd.),29.986645,31.309198
+stop2686,Water Plant 1 (Asmarat),29.998314,31.33347
+stop2687,Water Plant 2 (Asmarat),29.997972,31.332012
+stop2688,Water Plant 2 (Asmarat),29.997864,31.331882
+stop2689,Water Station (Alexandria Desert Road),30.020966,31.097712
+stop2690,Water Station (Alexandria Desert Road),30.021004,31.097822
+stop2691,Waterway Compound,30.041355,31.47503
+stop2692,Waterway Compound,30.041353,31.474789
+stop2693,Wax Museum (Helwan),29.85955,31.32625
+stop2694,Wax Museum (Helwan),29.860022,31.326483
+stop2695,West Golf (Kattameya),29.999395,31.400955
+stop2696,West Golf (Kattameya),29.999191,31.40061
+stop2697,Windrose Academy,29.979656,31.351667
+stop2698,Wizarat District (New Administrative Capital),30.019442,31.733625
+stop2699,Wonder Land Mall (Abbas Al Akkad St.),30.048262,31.339188
+stop2700,Wonder Land Mall (Abbas Al Akkad St.),30.048222,31.339417
+stop2701,Yathreb and Al Maadi Company St.,29.985985,31.277199
+stop2702,Yathreb and Al Maadi Company St.,29.986086,31.277168
+stop2703,Yellow Kiosk (6th of October),29.934172,30.914888
+stop2704,Yellow Kiosk (6th of October),29.934238,30.91499
+stop2705,Yousef Abbas St & Autostrad St.,30.066807,31.320755
+stop2706,Yousef Abbas St & Autostrad St.,30.066883,31.319574
+stop2707,Youth Club (Sheikh Zayed),30.04364,30.976702
+stop2708,Youth Housing (Shorouq City),30.165552,31.647482
+stop2709,Youth Housing (Shorouq City),30.165657,31.64692
+stop2710,Zahraa Ain Shams,30.137142,31.337488
+stop2711,Zahraa Ain Shams,30.136858,31.338049
+stop2712,Zahraa Al Maadi Tunnel,29.961489,31.289389
+stop2713,Zahraa Madinet Nasr,30.054674,31.413006
+stop2714,Zahraa Madinet Nasr,30.05629,31.413527
+stop2715,Zahraa Madinet Nasr,30.054825,31.413198
+stop2716,Zahraa Madinet Nasr,30.05097,31.406176
+stop2717,Zahraa Metro,29.99813,31.228846
+stop2718,Zahraa Metro,29.995083,31.231228
+stop2719,Zahraa Metro,29.995024,31.231157
+stop2720,Zahraa Nasr City,30.051455,31.399925
+stop2721,Zahraa Nasr City,30.051239,31.399977
+stop2722,Zain Paint Store (Al Rawda Sheikh Zayed),30.038572,31.005129
+stop2723,Zain Paint Store (Al Rawda Sheikh Zayed),30.038471,31.004978
+stop2724,Zaker Hussein St. & Al Tayaran St.,30.043476,31.329092
+stop2725,Zaker Hussein St. & Al Tayaran St.,30.043674,31.328928
+stop2726,Zamalek Sporting Club,30.060734,31.205017
+stop2727,Zamalek Sporting Club,30.060646,31.205017
+stop2728,Zamzam Specialized Hospital (Om Bayoumi),30.139488,31.250868
+stop2729,Zamzam Specialized Hospital (Om Bayoumi),30.139528,31.250591
+stop2730,Zayed 2000,30.019786,31.008443
+stop2731,Zayed 2000,30.019488,31.008719
+stop2732,Zayed Boys Secondary School,30.049925,30.984886
+stop2733,Zayed Boys Secondary School,30.050991,30.98537
+stop2734,Zenin,30.030642,31.183529
+stop2735,Zewail Rd. (Wahat Rd.),29.95611,31.077688
+stop2736,Zohour City (Basateen Rd.),29.993923,31.266552
+stop2737,New Cairo Academy (5th Settlement),29.993293,31.434469
