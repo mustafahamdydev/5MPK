@@ -54,15 +54,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:padding="10dp"
                     android:background="@drawable/roundedbackground"
+                    android:padding="10dp"
                     android:src="@drawable/my_location"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.943"
+                    app:layout_constraintHorizontal_bias="0.956"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/mapFragment"
-                    app:layout_constraintVertical_bias="0.499" />
+                    app:layout_constraintVertical_bias="0.618" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -76,13 +76,14 @@
             <LinearLayout
                 android:id="@+id/maps_BottomSheet"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:gravity="center"
+                android:layout_height="800dp"
+                android:gravity="center|top"
                 android:background="@drawable/bottom_sheet_background"
                 android:orientation="vertical"
                 app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
                 <View
+                    android:id="@+id/view_bar"
                     android:layout_width="40dp"
                     android:layout_height="4dp"
                     android:layout_gravity="center_horizontal"
@@ -117,7 +118,7 @@
                     android:layout_height="50dp"
                     android:visibility="visible"
                     app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="30dp">>
+                    app:cardCornerRadius="30dp">
 
                     <androidx.fragment.app.FragmentContainerView
                         android:id="@+id/des_autocomplete_fragment"

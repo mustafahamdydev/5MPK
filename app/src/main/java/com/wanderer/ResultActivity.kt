@@ -89,7 +89,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
 
         //restricts user movement to the set bounds of Cairo
         map.setLatLngBoundsForCameraTarget(cairoBounds)
-
         drawDirectionsBus(context, PyBackend.coordinatesList!!)
         drawDirectionsWalk(context, PyBackend.startPoint!!,PyBackend.coordinatesList!!.first())
         drawDirectionsWalk(context, PyBackend.coordinatesList!!.last(), PyBackend.endPoint!!)

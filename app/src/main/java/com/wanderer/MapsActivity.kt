@@ -64,11 +64,14 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 val sheet = binding?.mapsBottomSheet
                 sheet?.let { bottomSheetBehavior = BottomSheetBehavior.from(it) }
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-                bottomSheetBehavior.peekHeight = 1200
+                bottomSheetBehavior.peekHeight = 1000
                 bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
             }
         })
 
+        binding?.searchBar?.setOnClickListener {
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
 
 
         ///Drawer setup
@@ -224,14 +227,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             PyBackend.startPoint = com.google.maps.model.LatLng(getPlaceLat(), getPlaceLon())
             PyBackend.endPoint = com.google.maps.model.LatLng(getDestLat(), getDestLon())
         }
-        Toast.makeText(this@MapsActivity, "Got Route Successfully", Toast.LENGTH_SHORT).show()
-        //Sets the TextView to the output of the python code
+           val intent = Intent(this@MapsActivity, ResultActivity::class.java)
+           startActivity(intent)
 
        }
-        binding?.resButton?.setOnClickListener {
-            val intent = Intent(this@MapsActivity, ResultActivity::class.java)
-            startActivity(intent)
-        }
+
 
     }
 
