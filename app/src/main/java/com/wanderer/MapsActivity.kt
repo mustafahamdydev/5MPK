@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -46,6 +45,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     private var mGoogleMap:GoogleMap?=null
     private lateinit var autocompleteFragment: AutocompleteSupportFragment
     private lateinit var desautocompleteFragment :AutocompleteSupportFragment
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMapsBinding.inflate(layoutInflater)
@@ -54,10 +54,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
 
         ///bottomSheet
-
-
-
-
         binding?.mapsBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 binding?.mapsBottomSheet?.viewTreeObserver?.removeOnGlobalLayoutListener(this)
@@ -68,15 +64,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
             }
         })
-
         binding?.searchBar?.setOnClickListener {
             bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
         }
 
-
         ///Drawer setup
-
-
         drawerLayout = findViewById(R.id.main);
         openDrawerButton = findViewById(R.id.btn_open_drawer);
 
@@ -95,60 +87,55 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         }
 
 
-
-
-
-
         /// places api
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
         autocompleteFragment = supportFragmentManager.findFragmentById(R.id.autocomplete_fragment)
                 as AutocompleteSupportFragment
 
 
-        // Apply the filter to the Autocomplete fragment
+            // Apply the filter to the Autocomplete fragment
 
-        autocompleteFragment.setCountries("EG") // Optionally set the country to restrict results
-        autocompleteFragment.setHint("Enter Location")
-        autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
-        autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener{
-            override fun onError(p0: Status) {
-                Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
-            }
+            autocompleteFragment.setCountries("EG") // Optionally set the country to restrict results
+            autocompleteFragment.setHint("Enter Location")
+            autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
+            autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener{
+                override fun onError(p0: Status) {
+                    Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
+                }
 
-            override fun onPlaceSelected(place: Place) {
-                val latLng: LatLng? = place.latLng
-                placeLatlng = place.latLng
-                val placeName : String? = place.name
-                Log.e("","$placeName")
-                zoomOnMap(latLng!!)
-                mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Home"))
-                setDrwaing()
-            }
+                override fun onPlaceSelected(place: Place) {
+                    val latLng: LatLng? = place.latLng
+                    placeLatlng = place.latLng
+                    val placeName : String? = place.name
+                    Log.e("","$placeName")
+                    zoomOnMap(latLng!!)
+                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My location"))
+                }
 
-        })
-        desautocompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
-        desautocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
-        desautocompleteFragment.setHint("Enter Destination")
-        desautocompleteFragment.setCountries("EG")
-        desautocompleteFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
-            override fun onError(p0: Status) {
-                Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
-            }
+            })
+            desautocompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
+            desautocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
+            desautocompleteFragment.setHint("Enter Destination")
+            desautocompleteFragment.setCountries("EG")
+            desautocompleteFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
+                override fun onError(p0: Status) {
+                    Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
+                }
 
-            override fun onPlaceSelected(p0: Place) {
-                val latLng: LatLng? = p0.latLng
-                destnationLatlng = p0.latLng
-                val placeName : String? = p0.name
-                Log.e("","$placeName")
-                zoomOnMap(latLng!!)
-                mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destnation Home"))
-                setDrwaing()
-            }
-
-
-        })
+                override fun onPlaceSelected(p0: Place) {
+                    val latLng: LatLng? = p0.latLng
+                    destnationLatlng = p0.latLng
+                    val placeName : String? = p0.name
+                    Log.e("","$placeName")
+                    zoomOnMap(latLng!!)
+                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destnation"))
+                    setDrawing()
+                }
 
 
+            })
+
+        ///My location Button
         binding?.customLocationButton?.setOnClickListener {
             // Perform actions when the custom location button is clicked
             // For example, you can request location updates or animate the camera to the user's location
@@ -177,7 +164,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
     }
 
-    //drawerfunction
+    //Bottom Sheet Function
     private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
             // Handle bottom sheet state changes here
@@ -194,41 +181,62 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
 
 
-//    fun getLocationLat(): Double {
-//        return locationLat!!
-//    }
-//    fun getLocationLon(): Double {
-//        return locationLon!!
-//    }
-    private fun getDestLat(): Double {
-        return destnationLatlng!!.latitude
+    fun getLocationLat(): Double {
+        return locationLat!!
     }
-    private fun getDestLon(): Double {
-        return destnationLatlng!!.longitude
+    fun getLocationLon(): Double {
+        return locationLon!!
     }
-
-    private fun getPlaceLat(): Double {
-        return placeLatlng!!.latitude
+    private fun getDestLat(): Double? {
+        return destnationLatlng?.latitude
     }
-    private fun getPlaceLon(): Double {
-        return placeLatlng!!.longitude
+    private fun getDestLon(): Double? {
+        return destnationLatlng?.longitude
     }
 
-    fun setDrwaing(){
+    private fun getPlaceLat(): Double? {
+        return placeLatlng?.latitude
+    }
+    private fun getPlaceLon(): Double? {
+        return placeLatlng?.longitude
+    }
+
+    private fun validateInputs (): Boolean{
+        var isValid = true
+        if(getDestLat()==null){
+            isValid = false
+        }else if (getDestLon()==null){
+            isValid = false
+        }else if (getPlaceLat()==null){
+            isValid = false
+        }else if (getPlaceLon()==null){
+            isValid = false
+        }
+        return isValid
+    }
+
+
+
+    fun setDrawing(){
 
        binding?.submit?.setOnClickListener {
-    //                                                             lat           long           lat           long
-        val output = PyBackend.getRoute(this@MapsActivity, getPlaceLat(), getPlaceLon(), getDestLat(), getDestLon())
+           if (validateInputs()){
+               val output = PyBackend.getRoute(this@MapsActivity, getPlaceLat()!!, getPlaceLon()!!, getDestLat()!!, getDestLon()!!)
 
 
-        if (output == null){
-            Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
-        }else{
-            PyBackend.startPoint = com.google.maps.model.LatLng(getPlaceLat(), getPlaceLon())
-            PyBackend.endPoint = com.google.maps.model.LatLng(getDestLat(), getDestLon())
-        }
-           val intent = Intent(this@MapsActivity, ResultActivity::class.java)
-           startActivity(intent)
+               if (output == null){
+                   Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
+               }else{
+                   PyBackend.startPoint = com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
+                   PyBackend.endPoint = com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
+               }
+               val intent = Intent(this@MapsActivity, ResultActivity::class.java)
+               startActivity(intent)
+
+           }else{
+               Toast.makeText(this@MapsActivity, "Please Enter either place or direction", Toast.LENGTH_SHORT).show()
+
+           }
 
        }
 
