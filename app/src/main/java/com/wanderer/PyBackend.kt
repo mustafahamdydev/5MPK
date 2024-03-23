@@ -9,11 +9,17 @@ import com.google.maps.model.LatLng
 
 object PyBackend {
 
+    var routeType : Int? = null
     var startPoint: LatLng? = null
     var endPoint: LatLng? = null
-    var coordinatesList: ArrayList<LatLng>? = null
+    var multiRouteCoordinatesList: ArrayList<ArrayList<LatLng>>? = null
+    var singleRouteCoordinatesList: ArrayList<LatLng>? = null
+    var routeName : String? = null
+    var routeStopsList : ArrayList<List<String>>? = null
 
     fun getRoute(context: Context, startLat: Double, startLon: Double, endLat: Double, endLon: Double): String? {
+        resetVariables()
+
         try {
             if (!Python.isStarted()) {
                 Python.start(AndroidPlatform(context))
@@ -22,40 +28,25 @@ object PyBackend {
             val pyObj: PyObject = py.getModule("Algorithm")
             val output: PyObject = pyObj.callAttr("main", startLat, startLon, endLat, endLon)
 
-            val routeName = output.callAttr("__getitem__", 0).toString()
-            val startStopInfo = output.callAttr("__getitem__", 2).asList().toString()
-            val endStopInfo = output.callAttr("__getitem__", 3).asList().toString()
+            routeName = output.callAttr("__getitem__", 0).toString()
 
             return when (routeName) {
                 "multi" -> {
+                    routeType = 1
                     val stringOutput = output.callAttr("__getitem__", 1).asList().toString()
-                    coordinatesList = processMultiRoute(stringOutput)
-                    Log.e("Hello", stringOutput)
+                    val pair = getBusAndStopsList(stringOutput)
+                    routeStopsList = pair.first
+                    multiRouteCoordinatesList = pair.second
+                    Log.e("route", routeStopsList.toString())
                     stringOutput
                 }
-
                 else -> {
+                    routeType = 0
                     val stringOutput = output.callAttr("__getitem__", 1).asList().toString()
-                    coordinatesList = processSingleRoute(stringOutput)
-                    Log.e("Hello", stringOutput)
+                    singleRouteCoordinatesList = processSingleRoute(stringOutput)
                     stringOutput
                 }
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-        return null
-    }
-
-    // Returns the a LatLng object of a single stop
-    private fun processStop(stopInfoStr: String): LatLng? {
-        try {
-            val parts = stopInfoStr.removeSurrounding("[", "]").split(", ")
-            val latitude = parts[0].toDouble()
-            val longitude = parts[1].toDouble()
-            val name = parts[2]
-            Log.e("stop info", "$latitude, $longitude, $name")
-            return LatLng(latitude, longitude)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -67,7 +58,7 @@ object PyBackend {
         val result = ArrayList<LatLng>()
         val pattern = Regex("\\((-?\\d+\\.\\d+), (-?\\d+\\.\\d+), '([^']*)'\\)")
         pattern.findAll(coordinatesListStr).forEach { matchResult ->
-            val (latStr, lonStr, name) = matchResult.destructured
+            val (latStr, lonStr, _) = matchResult.destructured
             val lat = latStr.toDouble()
             val lon = lonStr.toDouble()
             result.add(LatLng(lat, lon))
@@ -75,16 +66,39 @@ object PyBackend {
         return result
     }
 
-    // Returns ArrayList<LatLng> for a multi bus route
-    private fun processMultiRoute(stopInfoListStr: String): ArrayList<LatLng> {
-        val result = ArrayList<LatLng>()
-        val pattern = Regex("\\('([^']+)', '([^']+)', (-?\\d+\\.\\d+), (-?\\d+\\.\\d+), '[^']+', '[^']+'\\)")
-        pattern.findAll(stopInfoListStr).forEach { matchResult ->
-            val (stopId, name, latStr, lonStr) = matchResult.destructured
+    private fun getBusAndStopsList(input: String): Pair<ArrayList<List<String>>, ArrayList<ArrayList<LatLng>>> {
+        val regex = Regex("""\('([^']+)', '([^']+)', ([\d.]+), ([\d.]+), '([^']+)', '([^']+)'\)""")
+        val matches = regex.findAll(input)
+        val routes = mutableMapOf<String, ArrayList<LatLng>>()
+        val result = ArrayList<List<String>>()
+        var lastLatLng: LatLng? = null
+        matches.forEach { match ->
+            val (_, stopName, latStr, lonStr, routeId, busName) = match.destructured
             val lat = latStr.toDouble()
             val lon = lonStr.toDouble()
-            result.add(LatLng(lat, lon))
+            val latLng = LatLng(lat, lon)
+            if (routes.containsKey(routeId)) {
+                routes[routeId]!!.add(latLng)
+            } else {
+                val newRoute = ArrayList<LatLng>()
+                lastLatLng?.let { newRoute.add(it) }
+                newRoute.add(latLng)
+                routes[routeId] = newRoute
+            }
+            result.add(arrayListOf(stopName, busName))
+            lastLatLng = latLng
         }
-        return result
+        val routeCoordinates = ArrayList(routes.values)
+        return Pair(result, routeCoordinates)
+    }
+
+    private fun resetVariables(){
+        routeType = null
+        startPoint = null
+        endPoint = null
+        multiRouteCoordinatesList = null
+        singleRouteCoordinatesList = null
+        routeName = null
+        routeStopsList = null
     }
 }

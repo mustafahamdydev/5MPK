@@ -3,6 +3,8 @@ package com.wanderer
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.MovementMethod
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
@@ -12,6 +14,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.PolylineOptions
@@ -23,6 +26,7 @@ import com.google.maps.model.DirectionsResult
 import com.google.maps.model.TravelMode
 import com.wanderer.databinding.ActivityResultBinding
 import java.util.ArrayList
+import kotlin.random.Random
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -89,9 +93,26 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
 
         //restricts user movement to the set bounds of Cairo
         map.setLatLngBoundsForCameraTarget(cairoBounds)
-        drawDirectionsBus(context, PyBackend.coordinatesList!!)
-        drawDirectionsWalk(context, PyBackend.startPoint!!,PyBackend.coordinatesList!!.first())
-        drawDirectionsWalk(context, PyBackend.coordinatesList!!.last(), PyBackend.endPoint!!)
+
+        if (PyBackend.routeType == 1){
+            val firstPoint = PyBackend.multiRouteCoordinatesList?.first()?.first()
+            val lastPoint = PyBackend.multiRouteCoordinatesList?.last()?.last()
+
+            drawDirectionsWalk(context, PyBackend.startPoint!!,firstPoint!!)
+            PyBackend.multiRouteCoordinatesList?.forEach { busRoute ->
+                drawDirectionsBus(context,busRoute)
+            }
+            drawDirectionsWalk(context, lastPoint!!, PyBackend.endPoint!!)
+
+            binding?.tvBtmSheet?.text = PyBackend.routeStopsList.toString()
+            binding?.tvBtmSheet?.movementMethod = ScrollingMovementMethod()
+        } else{
+            drawDirectionsBus(context, PyBackend.singleRouteCoordinatesList!!)
+            drawDirectionsWalk(context, PyBackend.startPoint!!,PyBackend.singleRouteCoordinatesList!!.first())
+            drawDirectionsWalk(context, PyBackend.singleRouteCoordinatesList!!.last(), PyBackend.endPoint!!)
+            binding?.tvBtmSheet?.text = PyBackend.routeName.toString()
+        }
+
     }
 
     //Draw Buses route only
@@ -103,7 +124,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             .destination(waypoints.last()) // Example destination
             .mode(TravelMode.DRIVING)
             .waypoints(*waypoints.toTypedArray())
-            .optimizeWaypoints(true)
 
         // Execute the request asynchronously
         request.setCallback(object : PendingResult.Callback<DirectionsResult> {
@@ -117,7 +137,11 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                     val polylineOptions = PolylineOptions()
                     polylineOptions.addAll(
                         route.overviewPolyline.decodePath().map { LatLng(it.lat, it.lng) })
-                    polylineOptions.color(Color.BLUE)
+
+                    val rnd = Random
+                    val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+
+                    polylineOptions.color(color)
                     polylineOptions.width(10f)
                     map.addPolyline(polylineOptions)
 
@@ -146,7 +170,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             .origin(startPoint) // Set the start point
             .destination(endPoint) // Set the end point
             .mode(TravelMode.WALKING)
-            .optimizeWaypoints(true)
 
         // Execute the request asynchronously
         request.setCallback(object : PendingResult.Callback<DirectionsResult> {
@@ -156,13 +179,16 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                     // Process the result here
                     val route = result.routes[0] // Assuming there's only one route
 
-                    // Draw the polyline on the map
-                    val polylineOptions = PolylineOptions()
-                    polylineOptions.addAll(
-                        route.overviewPolyline.decodePath().map { LatLng(it.lat, it.lng) })
-                    polylineOptions.color(Color.GREEN)
-                    polylineOptions.width(10f)
-                    map.addPolyline(polylineOptions)
+                    // Draw the points on the map
+                    for (point in route.overviewPolyline.decodePath().map { LatLng(it.lat, it.lng) }) {
+                        val circleOptions = CircleOptions()
+                            .center(point)
+                            .radius(2.0) // radius in meters
+                            .strokeColor(Color.CYAN)
+                            .strokeWidth(2.0f)
+                            .fillColor(Color.WHITE)
+                        map.addCircle(circleOptions)
+                    }
 
                     // Move camera to fit the entire route
                     val builder = LatLngBounds.builder()

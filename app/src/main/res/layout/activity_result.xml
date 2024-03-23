@@ -35,19 +35,14 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bottom_sheet_handle" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:text="Hello" />
-
         <TextView
+            android:id="@+id/tvBtmSheet"
+            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="50dp"
-            android:text="hello world"
+            android:scrollbars="vertical"
             android:textSize="20sp" />
 
     </LinearLayout>

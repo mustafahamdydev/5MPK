@@ -37,7 +37,7 @@ class InputActivity : AppCompatActivity() {
                 }else{
                     Toast.makeText(this@InputActivity, "Got Route Successfully", Toast.LENGTH_SHORT).show()
                     //Sets the TextView to the output of the python code
-                    binding?.tvOutput?.text = PyBackend.coordinatesList.toString()
+                    binding?.tvOutput?.text = PyBackend.multiRouteCoordinatesList.toString()
                     //Makes the TextView scrollable
                     binding?.tvOutput?.movementMethod = ScrollingMovementMethod()
                 }

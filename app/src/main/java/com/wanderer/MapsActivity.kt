@@ -37,18 +37,20 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
+
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
     private var closeDrawerButton : ImageButton? = null
     private var drawerLayout: DrawerLayout? = null
     private var openDrawerButton: FloatingActionButton? = null
-    private var placeLatlng: LatLng? = null
-    private var destnationLatlng : LatLng? = null
+    private var placeLatLng: LatLng? = null
+    private var destinationLatLng : LatLng? = null
     private var locationLat: Double? = null
     private var locationLon: Double? = null
     private  var binding: ActivityMapsBinding? = null
     private var mGoogleMap:GoogleMap?=null
     private lateinit var autocompleteFragment: AutocompleteSupportFragment
-    private lateinit var desautocompleteFragment :AutocompleteSupportFragment
+    private lateinit var defaultCompleteFragment :AutocompleteSupportFragment
+
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,11 +59,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         enableEdgeToEdge()
 
         binding!!.location.setOnClickListener(){
-
             setDrawingLocationDistance()
-
         }
-
 
         binding?.customLocationButton?.setOnClickListener {
             // Perform actions when the custom location button is clicked
@@ -72,10 +71,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 val location = mGoogleMap!!.myLocation
                 locationLat = location.latitude
                 locationLon = location.longitude
-                if (location != null) {
-                    val currentLatLng = LatLng(location.latitude, location.longitude)
-                    mGoogleMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
-                }
+                val currentLatLng = LatLng(location.latitude, location.longitude)
+                mGoogleMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
             } else {
                 // Handle the case where location permission is not granted
                 // You might want to request permission here
@@ -95,13 +92,13 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         })
 
         ///Drawer setup
-        drawerLayout = findViewById(R.id.main);
-        openDrawerButton = findViewById(R.id.btn_open_drawer);
-        openDrawerButton!!.setOnClickListener(View.OnClickListener {
+        drawerLayout = findViewById(R.id.main)
+        openDrawerButton = findViewById(R.id.btn_open_drawer)
+        openDrawerButton!!.setOnClickListener {
             drawerLayout!!.openDrawer(
                 GravityCompat.START
             )
-        })
+        }
 
         val navHeaderLayout = findViewById<NavigationView>(R.id.nav_view).getHeaderView(0)
         closeDrawerButton = navHeaderLayout.findViewById(R.id.close_drawer)
@@ -111,15 +108,12 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             )
         }
 
-
         /// places api
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
         autocompleteFragment = supportFragmentManager.findFragmentById(R.id.autocomplete_fragment)
                 as AutocompleteSupportFragment
 
-
             // Apply the filter to the Autocomplete fragment
-
             autocompleteFragment.setCountries("EG") // Optionally set the country to restrict results
             autocompleteFragment.setHint("Enter Location")
             autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
@@ -130,7 +124,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
                 override fun onPlaceSelected(place: Place) {
                     val latLng: LatLng? = place.latLng
-                    placeLatlng = place.latLng
+                    placeLatLng = place.latLng
                     val placeName : String? = place.name
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
@@ -138,36 +132,29 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     setDrawingPLaceDistance()
                 }
 
-
             })
-            desautocompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
-            desautocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
-            desautocompleteFragment.setHint("Enter Destination")
-            desautocompleteFragment.setCountries("EG")
-            desautocompleteFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
+            defaultCompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
+            defaultCompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
+            defaultCompleteFragment.setHint("Enter Destination")
+            defaultCompleteFragment.setCountries("EG")
+            defaultCompleteFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
                 override fun onError(p0: Status) {
                     Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onPlaceSelected(p0: Place) {
                     val latLng: LatLng? = p0.latLng
-                    destnationLatlng = p0.latLng
+                    destinationLatLng = p0.latLng
                     val placeName : String? = p0.name
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
-                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destnation"))
+                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destination"))
 
                 }
-
-
             })
 
         val mapFragment=supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-
-
-
     }
 
     //Bottom Sheet Function
@@ -175,13 +162,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
             // Handle bottom sheet state changes here
         }
-
         override fun onSlide(bottomSheet: View, slideOffset: Float) {
             // If the bottom sheet is sliding, consume the touch event to prevent interference with the map
-
         }
     }
-
 
     override fun onBackPressed() {
         super.onBackPressed()
@@ -189,9 +173,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     }
 
      private fun resetInput(){
-         PyBackend.coordinatesList=null
-
-
+         PyBackend.multiRouteCoordinatesList=null
      }
 
     private fun getLocationLat(): Double {
@@ -201,17 +183,17 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         return locationLon!!
     }
     private fun getDestLat(): Double? {
-        return destnationLatlng?.latitude
+        return destinationLatLng?.latitude
     }
     private fun getDestLon(): Double? {
-        return destnationLatlng?.longitude
+        return destinationLatLng?.longitude
     }
 
     private fun getPlaceLat(): Double? {
-        return placeLatlng?.latitude
+        return placeLatLng?.latitude
     }
     private fun getPlaceLon(): Double? {
-        return placeLatlng?.longitude
+        return placeLatLng?.longitude
     }
 
     private fun validateInputs (): Boolean{
@@ -228,21 +210,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         return isValid
     }
 
-
-
-
-    fun setDrawingLocationDistance() {
-
+    private fun setDrawingLocationDistance() {
         binding?.location?.setOnClickListener {
-
-                val output = PyBackend.getRoute(
-                    this@MapsActivity,
-                    getLocationLat(),
-                    getLocationLon(),
-                    getDestLat()!!,
-                    getDestLon()!!
-                )
-
+                val output = PyBackend.getRoute(this@MapsActivity, getLocationLat(), getLocationLon(), getDestLat()!!, getDestLon()!!)
 
                 if (output == null) {
                     Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT)
@@ -255,22 +225,13 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 }
                 val intent = Intent(this@MapsActivity, ResultActivity::class.java)
                 startActivity(intent)
-
-
-
         }
-
-
     }
 
-
     fun setDrawingPLaceDistance(){
-
        binding?.submit?.setOnClickListener {
            if (validateInputs()){
                val output = PyBackend.getRoute(this@MapsActivity, getPlaceLat()!!, getPlaceLon()!!, getDestLat()!!, getDestLon()!!)
-
-
                if (output == null){
                    Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
                }else{
@@ -284,19 +245,14 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                Toast.makeText(this@MapsActivity, "Please Enter either place or direction", Toast.LENGTH_SHORT).show()
 
            }
-
        }
-
-
     }
-
 
     private fun zoomOnMap(latLng: LatLng){
 
         val  newLatLngZoom = CameraUpdateFactory.newLatLngZoom(latLng,20f)
         mGoogleMap?.animateCamera(newLatLngZoom)
     }
-
 
     private fun executeAfterDelay() {
         // Launch a coroutine in the Main Dispatcher
@@ -314,12 +270,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             }else{
                 Toast.makeText(this@MapsActivity, "hehehe", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
-
-
-
 
     override fun onMapReady(googleMap: GoogleMap) {
         mGoogleMap= googleMap
@@ -328,15 +280,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         mGoogleMap!!.addMarker(MarkerOptions().position(myHome).title("My Home"))
         mGoogleMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome,19f))
         mGoogleMap!!.setPadding(0,10,0,50)
-
         mGoogleMap!!.uiSettings.apply {
             isMapToolbarEnabled = false
             isMyLocationButtonEnabled = false
 
-
         }
-
-
         checkLocationPermission()
     }
     private fun checkLocationPermission(){
