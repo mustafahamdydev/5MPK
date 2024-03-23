@@ -62,7 +62,7 @@
                     app:layout_constraintHorizontal_bias="0.956"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/mapFragment"
-                    app:layout_constraintVertical_bias="0.618" />
+                    app:layout_constraintVertical_bias="0.398" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -90,6 +90,11 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/bottom_sheet_handle" />
 
+
+
+
+
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/search_bar"
                     android:layout_width="match_parent"
@@ -98,14 +103,21 @@
                     android:visibility="visible"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="30dp">
+
                     <androidx.fragment.app.FragmentContainerView
                         android:id="@+id/autocomplete_fragment"
                         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         tools:layout_editor_absoluteX="166dp"
                         tools:layout_editor_absoluteY="0dp" />
+                    <ImageButton
+                        android:id="@+id/location"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/my_location"
+                        android:background="#E4E4E4"
+                        />
 
 
 

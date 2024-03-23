@@ -31,6 +31,10 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
@@ -52,6 +56,31 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         setContentView(binding?.root)
         enableEdgeToEdge()
 
+        binding!!.location.setOnClickListener(){
+
+            setDrawingLocationDistance()
+
+        }
+
+
+        binding?.customLocationButton?.setOnClickListener {
+            // Perform actions when the custom location button is clicked
+            // For example, you can request location updates or animate the camera to the user's location
+            // Replace the following code with your desired functionality
+            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                mGoogleMap!!.isMyLocationEnabled = true
+                val location = mGoogleMap!!.myLocation
+                locationLat = location.latitude
+                locationLon = location.longitude
+                if (location != null) {
+                    val currentLatLng = LatLng(location.latitude, location.longitude)
+                    mGoogleMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
+                }
+            } else {
+                // Handle the case where location permission is not granted
+                // You might want to request permission here
+            }
+        }
 
         ///bottomSheet
         binding?.mapsBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
@@ -64,14 +93,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
             }
         })
-        binding?.searchBar?.setOnClickListener {
-            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
-        }
 
         ///Drawer setup
         drawerLayout = findViewById(R.id.main);
         openDrawerButton = findViewById(R.id.btn_open_drawer);
-
         openDrawerButton!!.setOnClickListener(View.OnClickListener {
             drawerLayout!!.openDrawer(
                 GravityCompat.START
@@ -110,7 +135,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My location"))
+                    setDrawingPLaceDistance()
                 }
+
 
             })
             desautocompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
@@ -129,32 +156,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destnation"))
-                    setDrawing()
+
                 }
 
 
             })
-
-        ///My location Button
-        binding?.customLocationButton?.setOnClickListener {
-            // Perform actions when the custom location button is clicked
-            // For example, you can request location updates or animate the camera to the user's location
-            // Replace the following code with your desired functionality
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                mGoogleMap!!.isMyLocationEnabled = true
-                val location = mGoogleMap!!.myLocation
-                locationLat = location.latitude
-                locationLon = location.longitude
-                if (location != null) {
-                    val currentLatLng = LatLng(location.latitude, location.longitude)
-                    mGoogleMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
-                }
-            } else {
-                // Handle the case where location permission is not granted
-                // You might want to request permission here
-            }
-        }
-
 
         val mapFragment=supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -177,14 +183,21 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     }
 
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        resetInput()
+    }
+
+     private fun resetInput(){
+         PyBackend.coordinatesList=null
 
 
+     }
 
-
-    fun getLocationLat(): Double {
+    private fun getLocationLat(): Double {
         return locationLat!!
     }
-    fun getLocationLon(): Double {
+    private fun getLocationLon(): Double {
         return locationLon!!
     }
     private fun getDestLat(): Double? {
@@ -217,7 +230,41 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
 
 
-    fun setDrawing(){
+
+    fun setDrawingLocationDistance() {
+
+        binding?.location?.setOnClickListener {
+
+                val output = PyBackend.getRoute(
+                    this@MapsActivity,
+                    getLocationLat(),
+                    getLocationLon(),
+                    getDestLat()!!,
+                    getDestLon()!!
+                )
+
+
+                if (output == null) {
+                    Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    PyBackend.startPoint =
+                        com.google.maps.model.LatLng(getLocationLat(), getLocationLon())
+                    PyBackend.endPoint =
+                        com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
+                }
+                val intent = Intent(this@MapsActivity, ResultActivity::class.java)
+                startActivity(intent)
+
+
+
+        }
+
+
+    }
+
+
+    fun setDrawingPLaceDistance(){
 
        binding?.submit?.setOnClickListener {
            if (validateInputs()){
@@ -251,7 +298,25 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     }
 
 
+    private fun executeAfterDelay() {
+        // Launch a coroutine in the Main Dispatcher
+        CoroutineScope(Dispatchers.Main).launch {
+            // Add a delay of 1 second (adjust as needed)
+            delay(3000)
 
+            if (ActivityCompat.checkSelfPermission(this@MapsActivity,android.Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
+                mGoogleMap!!.isMyLocationEnabled = true
+                val location = mGoogleMap!!.myLocation
+                locationLat = location.latitude
+                locationLon = location.longitude
+
+
+            }else{
+                Toast.makeText(this@MapsActivity, "hehehe", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+    }
 
 
 
@@ -270,6 +335,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
 
 
         }
+
 
         checkLocationPermission()
     }
