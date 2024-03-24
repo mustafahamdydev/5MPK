@@ -4,13 +4,11 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.MovementMethod
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.LinearLayout
-import android.window.OnBackInvokedDispatcher
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -65,14 +63,11 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
 
         onBackPressedDispatcher.addCallback(this){
-            PyBackend.resetVariables()
             val intent = Intent(this@ResultActivity, MapsActivity::class.java)
             startActivity(intent)
             finish()
         }
     }
-
-
 
     private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
@@ -107,24 +102,17 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         //restricts user movement to the set bounds of Cairo
         map.setLatLngBoundsForCameraTarget(cairoBounds)
 
-        if (PyBackend.routeType == 1){
-            val firstPoint = PyBackend.multiRouteCoordinatesList?.first()?.first()
-            val lastPoint = PyBackend.multiRouteCoordinatesList?.last()?.last()
+        val firstPoint = PyBackend.multiRouteCoordinatesList?.first()?.first()
+        val lastPoint = PyBackend.multiRouteCoordinatesList?.last()?.last()
 
-            drawDirectionsWalk(context, PyBackend.startPoint!!,firstPoint!!)
-            PyBackend.multiRouteCoordinatesList?.forEach { busRoute ->
-                drawDirectionsBus(context,busRoute)
-            }
-            drawDirectionsWalk(context, lastPoint!!, PyBackend.endPoint!!)
-
-            binding?.tvBtmSheet?.text = PyBackend.routeStopsList.toString()
-            binding?.tvBtmSheet?.movementMethod = ScrollingMovementMethod()
-        } else{
-            drawDirectionsBus(context, PyBackend.singleRouteCoordinatesList!!)
-            drawDirectionsWalk(context, PyBackend.startPoint!!,PyBackend.singleRouteCoordinatesList!!.first())
-            drawDirectionsWalk(context, PyBackend.singleRouteCoordinatesList!!.last(), PyBackend.endPoint!!)
-            binding?.tvBtmSheet?.text = PyBackend.routeName.toString()
+        drawDirectionsWalk(context, PyBackend.startPoint!!,firstPoint!!)
+        PyBackend.multiRouteCoordinatesList?.forEach { busRoute ->
+            drawDirectionsBus(context,busRoute)
         }
+        drawDirectionsWalk(context, lastPoint!!, PyBackend.endPoint!!)
+
+        binding?.tvBtmSheet?.text = PyBackend.routeStopsList.toString()
+        binding?.tvBtmSheet?.movementMethod = ScrollingMovementMethod()
 
     }
 
@@ -224,6 +212,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onDestroy(){
         super.onDestroy()
         binding = null
+        PyBackend.resetVariables()
     }
 }
 

@@ -38,11 +38,11 @@ except FileNotFoundError:
         G.add_edge(row['start_stop_id'], row['end_stop_id'], route_id=row['route_id'],
                 direction_id=row['direction_id'], trip_id=row['trip_id'],
                 sequence=row['sequence'], weight=row['weight'])
-        
+
     # Save the graph object
     with open('graph.pkl', 'wb') as file:
         pickle.dump(G, file)
-    
+
 # Finds the closest node (bus stop) to a given coordinates (location)
 def find_closest_node(latitude, longitude):
     distances = [(node, (G.nodes[node]['latitude'], G.nodes[node]['longitude'])) for node in G.nodes]
@@ -55,28 +55,6 @@ def get_stop_info_for_stop(stop_id):
     if not row.empty:
         stop_info = (row['latitude'].values[0], row['longitude'].values[0], row['stop_name'].values[0])
     return stop_info
-
-# Returns the stops info of a given list of stop_ids_list
-def get_stop_info_for_stops_list(stop_ids_list):
-    stop_coordinates = []
-    for stop_id in stop_ids_list:
-        row = nodes_df[nodes_df['stop_id'] == stop_id]
-        if not row.empty:
-            stop_info = (row['latitude'].values[0], row['longitude'].values[0], row['stop_name'].values[0])
-            stop_coordinates.append(stop_info)
-    return stop_coordinates
-
-# Searches if there is a direct bus already that passes the two points
-def trip_exists(start_node, end_node):
-    for _, row in trips_df.iterrows():
-        stops = row['stops'].split(',')
-        if start_node in stops and end_node in stops:
-            start_idx = stops.index(start_node)
-            end_idx = stops.index(end_node)
-            trip_stops = stops[start_idx:end_idx+1]
-            trip_coords = get_stop_info_for_stops_list(trip_stops)
-            return row['route_short_name'], trip_coords
-    return None, None
 
 # Heuristic function using the Haversine formula to calculate the straight-line distance
 def haversine_heuristic(node1, node2):
@@ -124,36 +102,32 @@ def astar_path_with_transfers(start, goal):
 
 # Finds the buses that pass the output path points of the path finding algorithm
 def find_routes(path):
-    trips_df['stops'] = trips_df['stops'].apply(lambda x: x.split(','))
-
-    def find_max_cover_trip(segment, trips_df):
-        max_count = 0
+    enhanced_path = []
+    current_stop_index = 0
+    while current_stop_index < len(path):
+        current_stop_id, _, _, _ = path[current_stop_index]
+        max_covered_stops = 0
         best_trip = None
         for _, trip in trips_df.iterrows():
-            match_count = sum(stop in trip['stops'] for stop, _, _, _ in segment)
-            if match_count > max_count:
-                max_count = match_count
-                best_trip = trip
-        return best_trip if best_trip is not None else None, max_count
-
-    remaining_path = path.copy()
-    enhanced_path = []
-
-    while remaining_path:
-        best_trip, count = find_max_cover_trip(remaining_path, trips_df)
-
-        # Check if no trip can cover the remaining path
-        if best_trip is None:
-            raise ValueError("No trip can be found to cover the remaining path.")
-
-        # Update the path with the trip information
-        for _ in range(count):
-            stop_id, stop_name, lat, lon = remaining_path.pop(0)
-            enhanced_path.append((stop_id, stop_name, lat, lon, best_trip['route_id'], best_trip['route_short_name']))
-
-        if count < len(remaining_path):
-            remaining_path.insert(0, enhanced_path[-1][:4])
-
+            trip_stops = trip['stops'].split(',')
+            try:
+                start_index = trip_stops.index(current_stop_id)
+            except ValueError:
+                continue
+            covered_stops = 1  # Start with 1 to account for the current stop
+            for i, stop_id in enumerate(trip_stops[start_index + 1:]):
+                if (current_stop_index + i + 1) >= len(path) or stop_id != path[current_stop_index + i + 1][0]:
+                    break
+                covered_stops += 1
+            if covered_stops > max_covered_stops:
+                max_covered_stops = covered_stops
+                best_trip = trip['route_id'], trip['route_short_name']
+        if best_trip:
+            for i in range(current_stop_index, current_stop_index + max_covered_stops):
+                enhanced_path.append((*path[i], *best_trip))  # Unpack the tuple
+            current_stop_index += max_covered_stops
+        else:
+            current_stop_index += 1
     return enhanced_path
 
 # Function that handles all other functions, takes as input the coordinates of the start and end points:
@@ -162,11 +136,6 @@ def main(start_lat,start_lon,end_lat,end_lon):
     end_stop = find_closest_node(end_lat, end_lon)
     start_stop_info = get_stop_info_for_stop(start_stop)
     end_stop_info = get_stop_info_for_stop(end_stop)
-    route_name, route_stops_info = trip_exists(start_stop,end_stop)
-    if route_name:
-        return(route_name, route_stops_info, start_stop_info, end_stop_info)
-    else:
-        route_name = 'multi'
-        path = astar_path_with_transfers(start_stop, end_stop)
-        routes = find_routes(path)
-        return(route_name, routes, start_stop_info, end_stop_info)
+    path = astar_path_with_transfers(start_stop, end_stop)
+    routes = find_routes(path)
+    return(routes, start_stop_info, end_stop_info)
