@@ -59,7 +59,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         enableEdgeToEdge()
 
         binding!!.location.setOnClickListener(){
-            setDrawingLocationDistance()
+            autocompleteFragment.setText("Your Current Location")
+            placeLatLng=null
+
         }
 
         binding?.customLocationButton?.setOnClickListener {
@@ -126,10 +128,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     val latLng: LatLng? = place.latLng
                     placeLatLng = place.latLng
                     val placeName : String? = place.name
+                    Toast.makeText(this@MapsActivity, "$placeLatLng", Toast.LENGTH_SHORT).show()
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My location"))
-                    setDrawingPLaceDistance()
                 }
 
             })
@@ -145,11 +147,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 override fun onPlaceSelected(p0: Place) {
                     val latLng: LatLng? = p0.latLng
                     destinationLatLng = p0.latLng
-                    val placeName : String? = p0.name
-                    Log.e("","$placeName")
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destination"))
-
+                    setDrawingPLaceDistance()
                 }
             })
 
@@ -167,21 +167,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         }
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        resetInput()
-    }
-
-     private fun resetInput(){
-         PyBackend.multiRouteCoordinatesList=null
-     }
-
-    private fun getLocationLat(): Double {
-        return locationLat!!
-    }
-    private fun getLocationLon(): Double {
-        return locationLon!!
-    }
     private fun getDestLat(): Double? {
         return destinationLatLng?.latitude
     }
@@ -190,47 +175,23 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     }
 
     private fun getPlaceLat(): Double? {
-        return placeLatLng?.latitude
+        return if (placeLatLng?.latitude==null){
+            locationLat
+        }else{
+            placeLatLng?.latitude
+        }
     }
     private fun getPlaceLon(): Double? {
-        return placeLatLng?.longitude
-    }
-
-    private fun validateInputs (): Boolean{
-        var isValid = true
-        if(getDestLat()==null){
-            isValid = false
-        }else if (getDestLon()==null){
-            isValid = false
-        }else if (getPlaceLat()==null){
-            isValid = false
-        }else if (getPlaceLon()==null){
-            isValid = false
-        }
-        return isValid
-    }
-
-    private fun setDrawingLocationDistance() {
-        binding?.location?.setOnClickListener {
-                val output = PyBackend.getRoute(this@MapsActivity, getLocationLat(), getLocationLon(), getDestLat()!!, getDestLon()!!)
-
-                if (output == null) {
-                    Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT)
-                        .show()
-                } else {
-                    PyBackend.startPoint =
-                        com.google.maps.model.LatLng(getLocationLat(), getLocationLon())
-                    PyBackend.endPoint =
-                        com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
-                }
-                val intent = Intent(this@MapsActivity, ResultActivity::class.java)
-                startActivity(intent)
+        return if (placeLatLng?.longitude==null){
+            locationLon
+        }else{
+            placeLatLng?.longitude
         }
     }
+
 
     fun setDrawingPLaceDistance(){
        binding?.submit?.setOnClickListener {
-           if (validateInputs()){
                val output = PyBackend.getRoute(this@MapsActivity, getPlaceLat()!!, getPlaceLon()!!, getDestLat()!!, getDestLon()!!)
                if (output == null){
                    Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
@@ -240,11 +201,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                }
                val intent = Intent(this@MapsActivity, ResultActivity::class.java)
                startActivity(intent)
+               finish()
 
-           }else{
-               Toast.makeText(this@MapsActivity, "Please Enter either place or direction", Toast.LENGTH_SHORT).show()
-
-           }
        }
     }
 

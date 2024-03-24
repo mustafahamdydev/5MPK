@@ -1,5 +1,6 @@
 package com.wanderer
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,8 @@ import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
 import android.widget.LinearLayout
+import android.window.OnBackInvokedDispatcher
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -60,7 +63,16 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager.findFragmentById(R.id.resultMapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        onBackPressedDispatcher.addCallback(this){
+            PyBackend.resetVariables()
+            val intent = Intent(this@ResultActivity, MapsActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
+
+
 
     private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
@@ -81,6 +93,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap){
         map = googleMap
+        map.clear()
         val apiKey: String = getString(R.string.Google_Api_Key)
 
         // Set up the GeoApiContext with your API key

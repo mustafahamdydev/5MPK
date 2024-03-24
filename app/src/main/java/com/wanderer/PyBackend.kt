@@ -92,7 +92,7 @@ object PyBackend {
         return Pair(result, routeCoordinates)
     }
 
-    private fun resetVariables(){
+    fun resetVariables(){
         routeType = null
         startPoint = null
         endPoint = null

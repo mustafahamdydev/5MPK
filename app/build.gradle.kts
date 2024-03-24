@@ -78,4 +78,5 @@ dependencies {
     implementation (libs.places)
     implementation (libs.easypermissions)
     implementation (libs.circleimageview)
+
 }
