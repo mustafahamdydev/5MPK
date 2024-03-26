@@ -62,10 +62,10 @@ object PyBackend {
     fun populateResultViewData(){
         resultScreenData = ArrayList() // Initialize resultScreenData if null
         routeStopsList?.forEach{ item ->
-            var stopName = item[0]
-            var busName = item[1]
+            val stopName = item[0]
+            val busName = item[1]
             //Todo add image code
-            val route = ResultScreenData(stopName, busName, R.drawable.baseline_directions_bus_24)
+            val route = ResultScreenData(stopName, busName, R.drawable.bus1)
             resultScreenData?.add(route)
         }
     }

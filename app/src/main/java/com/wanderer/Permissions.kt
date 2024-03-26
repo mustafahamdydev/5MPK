@@ -1,7 +1,6 @@
 package com.wanderer
 
 import android.content.Context
-import androidx.fragment.app.Fragment
 import com.wanderer.Constants.PERMISSIONS_LOCATION_CODE
 import pub.devrel.easypermissions.EasyPermissions
 
