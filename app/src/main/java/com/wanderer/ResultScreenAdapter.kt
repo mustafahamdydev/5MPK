@@ -18,7 +18,7 @@ class ResultScreenAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val inflatedView: View = LayoutInflater.from(parent.context)
-            .inflate(R.layout.list_item_places,parent,false)
+            .inflate(R.layout.recycler_view_list,parent,false)
 
         return ItemViewHolder(inflatedView)
     }
