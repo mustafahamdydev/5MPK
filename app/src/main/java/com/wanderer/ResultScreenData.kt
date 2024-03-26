@@ -2,8 +2,14 @@ package com.wanderer
 
 import androidx.annotation.DrawableRes
 
-data class ResultScreenData(
-    val busName: String,
-    val stopName: String,
-    @DrawableRes val img: Int
+data class Bus(
+    val name: String,
+    val stops: List<String>,
+    @DrawableRes val img: Int = R.drawable.bus1
 )
+data class Stop(
+    val name: String,
+    val busName: String
+)
+
+

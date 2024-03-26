@@ -110,8 +110,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                 val sheet = binding?.mapsBottomSheet
                 sheet?.let { bottomSheetBehavior = BottomSheetBehavior.from(it) }
                 bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-                bottomSheetBehavior.peekHeight = 1000
+                bottomSheetBehavior.peekHeight = 800
                 bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
+                bottomSheetBehavior.isDraggable = false
             }
         })
 
@@ -172,7 +173,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     val latLng: LatLng? = p0.latLng
                     destinationLatLng = p0.latLng
                     zoomOnMap(latLng!!)
-                    bottomSheetBehavior.state=BottomSheetBehavior.STATE_EXPANDED
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
                     setDrawingPLaceDistance()
                 }

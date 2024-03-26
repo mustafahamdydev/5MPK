@@ -6,11 +6,13 @@
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
         android:background="@color/white">
 
         <androidx.constraintlayout.widget.Guideline
@@ -18,15 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.11" />
+            app:layout_constraintGuide_percent="0.2" />
 
         <ImageView
-            android:contentDescription="@string/app_name"
-            android:id="@+id/image"
+            android:id="@+id/busImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:contentDescription="@string/app_name"
             android:padding="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,28 +38,24 @@
             android:id="@+id/busName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
             android:textColor="@color/blue_150"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/stopName"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/app_name"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/stopName"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBusStops"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:textColor="#979696"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/busName"
-            tools:text="Mhatet Alf shokr" />
-
+            android:layout_margin="10dp"
+            tools:listitem="@layout/stops_rv_list_item"
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/busName"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

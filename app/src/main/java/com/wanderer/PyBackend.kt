@@ -10,7 +10,6 @@ object PyBackend {
     var endPoint: LatLng? = null
     var multiRouteCoordinatesList: ArrayList<ArrayList<LatLng>>? = null
     var routeStopsList : ArrayList<List<String>>? = null
-    var resultScreenData: ArrayList<ResultScreenData>? = null
 
     fun getRoute(startLat: Double, startLon: Double, endLat: Double, endLon: Double): String?{
         try {
@@ -23,7 +22,6 @@ object PyBackend {
             val pair = getBusAndStopsList(stringOutput)
             routeStopsList = pair.first
             multiRouteCoordinatesList = pair.second
-            populateResultViewData()
 
             return stringOutput
 
@@ -57,17 +55,6 @@ object PyBackend {
         }
         val routeCoordinates = ArrayList(routes.values)
         return Pair(result, routeCoordinates)
-    }
-
-    fun populateResultViewData(){
-        resultScreenData = ArrayList() // Initialize resultScreenData if null
-        routeStopsList?.forEach{ item ->
-            val stopName = item[0]
-            val busName = item[1]
-            //Todo add image code
-            val route = ResultScreenData(stopName, busName, R.drawable.bus1)
-            resultScreenData?.add(route)
-        }
     }
 
     fun resetVariables(){

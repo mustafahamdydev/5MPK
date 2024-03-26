@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.ViewTreeObserver
@@ -28,37 +27,40 @@ import com.google.maps.model.DirectionsResult
 import com.google.maps.model.TravelMode
 import com.wanderer.databinding.ActivityResultBinding
 import java.util.ArrayList
-import kotlin.random.Random
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     private var binding: ActivityResultBinding? = null
     private lateinit var map: GoogleMap
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
-    private val cairoBounds = LatLngBounds(
-        //South-West bounds (south:Helwan, West:October)
-        LatLng(29.80, 30.85),
-        //North-East bounds (North:10th of Ramadan, East:10th of Ramadan)
-        LatLng(30.35, 31.88)
-    )
+    private var colorIndex = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
-        //RecyclerView
-        // Populate the result screen data
-        PyBackend.populateResultViewData()
 
-// Log the size of resultScreenData
-        Log.d("ResultActivity", "Result Screen Data Size: ${PyBackend.resultScreenData?.size}")
+        val busMap = mutableMapOf<String, MutableList<String>>()
 
-// Set up RecyclerView adapter
-        PyBackend.resultScreenData?.let { data ->
-            binding?.bestRecyclerView?.adapter = ResultScreenAdapter(data)
+        for (busInfo in PyBackend.routeStopsList!!) {
+            val busName = busInfo[1]
+            val stop = busInfo[0]
+
+            if (busMap.containsKey(busName)) {
+                busMap[busName]?.add(stop)
+            } else {
+                busMap[busName] = mutableListOf(stop)
+            }
         }
 
-        binding?.bestRecyclerView?.layoutManager = LinearLayoutManager(this)
+        val buses = busMap.map { Bus(it.key, it.value) }
+
+        buses.let {
+            val busAdapter = BusAdapter(it)
+            binding?.rvBuses?.layoutManager = LinearLayoutManager(this)
+            binding?.rvBuses?.adapter = busAdapter
+        }
 
         binding?.llResultBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
@@ -110,10 +112,10 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             .build()
 
         //center the camera within the given bounds
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(cairoBounds.center, 10.0f))
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.cairoBounds.center, 10.0f))
 
         //restricts user movement to the set bounds of Cairo
-        map.setLatLngBoundsForCameraTarget(cairoBounds)
+        map.setLatLngBoundsForCameraTarget(Constants.cairoBounds)
 
         val firstPoint = PyBackend.multiRouteCoordinatesList?.first()?.first()
         val lastPoint = PyBackend.multiRouteCoordinatesList?.last()?.last()
@@ -123,9 +125,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             drawDirectionsBus(context,busRoute)
         }
         drawDirectionsWalk(context, lastPoint!!, PyBackend.endPoint!!)
-        binding?.tvBtmSheet?.text = PyBackend.routeStopsList.toString()
-        binding?.tvBtmSheet?.movementMethod = ScrollingMovementMethod()
-
     }
 
     //Draw Buses route only
@@ -151,8 +150,8 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                     polylineOptions.addAll(
                         route.overviewPolyline.decodePath().map { LatLng(it.lat, it.lng) })
 
-                    val rnd = Random
-                    val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+                    val color = Constants.predefinedColors[colorIndex]
+                    colorIndex = (colorIndex + 1) % Constants.predefinedColors.size
 
                     polylineOptions.color(color)
                     polylineOptions.width(10f)
@@ -166,6 +165,16 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                     }
                     val bounds = builder.build()
                     map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
+
+                    for (stop in waypoints) {
+                        val circleOptions = CircleOptions()
+                            .center(LatLng(stop.lat, stop.lng))
+                            .radius(20.0) // Adjust the radius as needed
+                            .fillColor(Color.WHITE)
+                            .strokeColor(Color.DKGRAY)
+                            .strokeWidth(0.5f)
+                        map.addCircle(circleOptions)
+                    }
                 }
             }
 
@@ -225,6 +234,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         super.onDestroy()
         binding = null
         PyBackend.resetVariables()
+        colorIndex = 0
     }
 }
 
