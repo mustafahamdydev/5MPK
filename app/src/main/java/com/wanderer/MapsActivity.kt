@@ -55,7 +55,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     private var mGoogleMap:GoogleMap?=null
     private lateinit var autocompleteFragment: AutocompleteSupportFragment
     private lateinit var defaultCompleteFragment :AutocompleteSupportFragment
-
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     @SuppressLint("SuspiciousIndentation")
@@ -65,25 +64,29 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         setContentView(binding?.root)
         enableEdgeToEdge()
 
-        binding!!.location.setOnClickListener {
-            autocompleteFragment.setText("Your Current Location")
-            placeLatLng=null
-
-        }
-
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
 
         binding?.customLocationButton?.setOnClickListener {
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            autocompleteFragment.setText("Your Current Location")
+            placeLatLng=null
+            binding!!.location.visibility= View.VISIBLE
+            if (ActivityCompat.checkSelfPermission(
+                    this@MapsActivity,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
                 fusedLocationClient.lastLocation
-                    .addOnSuccessListener { location : Location? ->
+                    .addOnSuccessListener { location: Location? ->
                         // Got last known location. In some rare situations, this can be null.
                         location?.let {
                             locationLat = location.latitude
                             locationLon = location.longitude
                             val currentLatLng = LatLng(location.latitude, location.longitude)
-                            mGoogleMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLatLng, 15f))
+                            mGoogleMap!!.animateCamera(
+                                CameraUpdateFactory.newLatLngZoom(
+                                    currentLatLng,
+                                    15f
+                                )
+                            )
                         }
                     }
             } else {
@@ -91,6 +94,15 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             }
         }
 
+
+        binding!!.mapsBottomSheet.setOnClickListener{
+            bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        }
+
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        executeAfterDelay()
         ///bottomSheet
         binding?.mapsBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
@@ -120,6 +132,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             )
         }
 
+        //New Places API
+
+
         /// places api
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
         autocompleteFragment = supportFragmentManager.findFragmentById(R.id.autocomplete_fragment) as AutocompleteSupportFragment
@@ -129,17 +144,18 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
             autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener{
                 override fun onError(p0: Status) {
-                    Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MapsActivity, "Please Select Place", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onPlaceSelected(place: Place) {
+                    binding!!.location.visibility= View.GONE
                     val latLng: LatLng? = place.latLng
                     placeLatLng = place.latLng
                     val placeName : String? = place.name
                     Toast.makeText(this@MapsActivity, "$placeLatLng", Toast.LENGTH_SHORT).show()
                     Log.e("","$placeName")
                     zoomOnMap(latLng!!)
-                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My location"))
+                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your location"))
                 }
 
             })
@@ -149,14 +165,15 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             defaultCompleteFragment.setCountries("EG")
             defaultCompleteFragment.setOnPlaceSelectedListener(object :PlaceSelectionListener{
                 override fun onError(p0: Status) {
-                    Toast.makeText(this@MapsActivity, "Error in Search", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MapsActivity, "Please Select A Place", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onPlaceSelected(p0: Place) {
                     val latLng: LatLng? = p0.latLng
                     destinationLatLng = p0.latLng
                     zoomOnMap(latLng!!)
-                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("My Destination"))
+                    bottomSheetBehavior.state=BottomSheetBehavior.STATE_EXPANDED
+                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
                     setDrawingPLaceDistance()
                 }
             })
@@ -166,6 +183,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     }
 
     //Bottom Sheet Function
+
+
     private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
             // Handle bottom sheet state changes here
@@ -228,34 +247,41 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         mGoogleMap?.animateCamera(newLatLngZoom)
     }
 
-    //Todo Mustafa e3ml ksm di
     private fun executeAfterDelay() {
         // Launch a coroutine in the Main Dispatcher
         CoroutineScope(Dispatchers.Main).launch {
             // Add a delay of 1 second (adjust as needed)
-            delay(3000)
-            if (ActivityCompat.checkSelfPermission(this@MapsActivity, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            delay(1000)
+            if (ActivityCompat.checkSelfPermission(
+                    this@MapsActivity,
+                    android.Manifest.permission.ACCESS_FINE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
                 fusedLocationClient.lastLocation
                     .addOnSuccessListener { location: Location? ->
                         // Got last known location. In some rare situations, this can be null.
                         location?.let {
                             locationLat = location.latitude
                             locationLon = location.longitude
+                            val currentLatLng = LatLng(location.latitude, location.longitude)
+                            mGoogleMap!!.animateCamera(
+                                CameraUpdateFactory.newLatLngZoom(
+                                    currentLatLng,
+                                    15f
+                                )
+                            )
                         }
                     }
             } else {
-                Toast.makeText(this@MapsActivity, "", Toast.LENGTH_SHORT).show()
+                requestPermission()
             }
         }
     }
 
 
     override fun onMapReady(googleMap: GoogleMap) {
+        autocompleteFragment.setText("Your Current Location")
         mGoogleMap= googleMap
-
-        val myHome = LatLng (30.033849, 31.463658)
-        mGoogleMap!!.addMarker(MarkerOptions().position(myHome).title("My Home"))
-        mGoogleMap!!.moveCamera(CameraUpdateFactory.newLatLngZoom(myHome,19f))
         mGoogleMap!!.setPadding(0,10,0,50)
         mGoogleMap!!.uiSettings.apply {
             isMapToolbarEnabled = false
@@ -270,7 +296,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             == PackageManager.PERMISSION_GRANTED
         ){
             mGoogleMap!!.isMyLocationEnabled = true
-            Toast.makeText(this, "Already Enabled", Toast.LENGTH_LONG).show()
         }else{
             requestPermission()
         }
@@ -295,7 +320,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
             return
         }
         if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-            Toast.makeText(this, "GRANTED", Toast.LENGTH_SHORT).show()
             mGoogleMap!!.isMyLocationEnabled = true
         }
     }

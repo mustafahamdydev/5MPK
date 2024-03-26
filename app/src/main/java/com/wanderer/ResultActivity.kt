@@ -11,6 +11,7 @@ import android.view.ViewTreeObserver
 import android.widget.LinearLayout
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -30,7 +31,6 @@ import java.util.ArrayList
 import kotlin.random.Random
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
-
     private var binding: ActivityResultBinding? = null
     private lateinit var map: GoogleMap
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
@@ -46,6 +46,19 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
+        //RecyclerView
+        // Populate the result screen data
+        PyBackend.populateResultViewData()
+
+// Log the size of resultScreenData
+        Log.d("ResultActivity", "Result Screen Data Size: ${PyBackend.resultScreenData?.size}")
+
+// Set up RecyclerView adapter
+        PyBackend.resultScreenData?.let { data ->
+            binding?.bestRecyclerView?.adapter = ResultScreenAdapter(data)
+        }
+
+        binding?.bestRecyclerView?.layoutManager = LinearLayoutManager(this)
 
         binding?.llResultBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
@@ -110,7 +123,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             drawDirectionsBus(context,busRoute)
         }
         drawDirectionsWalk(context, lastPoint!!, PyBackend.endPoint!!)
-
         binding?.tvBtmSheet?.text = PyBackend.routeStopsList.toString()
         binding?.tvBtmSheet?.movementMethod = ScrollingMovementMethod()
 

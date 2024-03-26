@@ -93,8 +93,6 @@
 
 
 
-
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/search_bar"
                     android:layout_width="match_parent"
@@ -108,6 +106,9 @@
                         android:id="@+id/autocomplete_fragment"
                         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
                         android:layout_width="match_parent"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        android:focusableInTouchMode="true"
                         android:layout_height="match_parent"
                         tools:layout_editor_absoluteX="166dp"
                         tools:layout_editor_absoluteY="0dp" />
@@ -137,7 +138,6 @@
                         android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-
                         tools:layout_editor_absoluteX="166dp"
                         tools:layout_editor_absoluteY="0dp" />
 

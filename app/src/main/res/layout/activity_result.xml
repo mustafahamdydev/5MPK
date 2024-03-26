@@ -35,15 +35,15 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bottom_sheet_handle" />
 
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/bestRecyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/tvBtmSheet"
-            android:paddingTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:scrollbars="vertical"
-            android:textSize="20sp" />
+            android:isScrollContainer="true"/>
 
     </LinearLayout>
 
