@@ -5,7 +5,14 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 
 object Constants {
-    const val PERMISSIONS_LOCATION_CODE =1
+    const val PERMISSIONS_LOCATION_CODE = 1
+    const val CTA_TICKET_PRICE = 8
+    const val MINIBUS_TICKET_PRICE = 10
+    const val AGYAD_TICKET_PRICE = 10
+    const val MICROBUS_TICKET_PRICE = 7
+    const val TOMNAYA_TICKET_PRICE = 5
+    const val BOX_TICKET_PRICE = 5
+
 
     val predefinedColors = listOf(
         Color.parseColor("#b0261c"), //Red

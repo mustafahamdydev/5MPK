@@ -43,6 +43,8 @@ class StopAdapter(private val stops: List<Stop>) : RecyclerView.Adapter<StopView
 class BusViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(bus: Bus) {
         itemView.findViewById<TextView>(R.id.busName).text = bus.name
+        val price : Int = PyBackend.getBusPrice(bus.name)
+        itemView.findViewById<TextView>(R.id.busPrice).text = price.toString()
         itemView.findViewById<ImageView>(R.id.busImage).setImageResource(bus.img)
         // Bind the inner RecyclerView here using another adapter
         val innerRecyclerView = itemView.findViewById<RecyclerView>(R.id.rvBusStops)

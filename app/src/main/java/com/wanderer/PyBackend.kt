@@ -57,6 +57,24 @@ object PyBackend {
         return Pair(result, routeCoordinates)
     }
 
+    fun getBusPrice (name : String) : Int{
+        return if (name.contains("CTA")){
+            Constants.CTA_TICKET_PRICE
+        }else if (name.contains("Minibus")){
+            Constants.MINIBUS_TICKET_PRICE
+        }else if (name.contains("Microbus")){
+            Constants.MICROBUS_TICKET_PRICE
+        }else if(name.contains("Tomnaya")){
+            Constants.TOMNAYA_TICKET_PRICE
+        }else if (name.contains("Box")){
+            Constants.BOX_TICKET_PRICE
+        }else if (name.contains("Agyad")){
+            Constants.AGYAD_TICKET_PRICE
+        } else{
+            0
+        }
+    }
+
     fun resetVariables(){
         startPoint = null
         endPoint = null
