@@ -10,4 +10,7 @@
     <string name="get_route">Get Route</string>
     <string name="open">Open</string>
     <string name="close">CLose</string>
+    <string name="bus_name">Bus Name</string>
+    <string name="example_ticket_price">10</string>
+    <string name="egyptian_pound_sign">E£</string>
 </resources>
