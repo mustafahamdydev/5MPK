@@ -153,8 +153,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
                     val latLng: LatLng? = place.latLng
                     placeLatLng = place.latLng
                     val placeName : String? = place.name
-                    Toast.makeText(this@MapsActivity, "$placeLatLng", Toast.LENGTH_SHORT).show()
-                    Log.e("","$placeName")
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your location"))
                 }
