@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks {
 
         binding?.btnStart?.setOnClickListener {
             if (hasLocationPermission(this)) {
-                intent = Intent(this, MapsActivity::class.java)
+                intent = Intent(this, SignInActivity::class.java)
                 startActivity(intent)
                 finish()
             }else{

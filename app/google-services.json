@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "70611468137",
+    "project_id": "wanderer-6322f",
+    "storage_bucket": "wanderer-6322f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70611468137:android:4ff2c63fdf061d67d147f8",
+        "android_client_info": {
+          "package_name": "com.wanderer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCet90ygfmuqgpP5QMsWOCl-B5CVxYBbAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

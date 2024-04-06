@@ -14,4 +14,28 @@
     <color name="white_100">#f6fbff</color>
     <color name="edit_text_background">#f6fbff</color>
 
+    <color name="default_item_color">#000000</color> <!-- Default item color -->
+
+    <color name="selected_drawer_item_background">#6AADFF</color>
+    <color name="unselected_drawer_item_background">#E0E0E0</color>
+
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#009dff</color>
+    <color name="themeColor">#03A9F4</color>
+
+    <!--normal colors-->
+    <color name="darkTextColor">#020000</color>
+
+
+    <!--colors for light mode-->
+    <color name="contentTextColor">#0288D1</color>
+    <color name="register_bk_color">#03A9F4</color>
+    <color name="login_bk_color">#fff</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#009dff</color>
+
+
+
 </resources>

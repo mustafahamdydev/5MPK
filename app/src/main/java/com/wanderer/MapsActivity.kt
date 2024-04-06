@@ -35,6 +35,8 @@ import com.google.android.libraries.places.widget.listener.PlaceSelectionListene
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -56,6 +58,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
     private lateinit var autocompleteFragment: AutocompleteSupportFragment
     private lateinit var defaultCompleteFragment :AutocompleteSupportFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
 
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +67,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
-
+        firebaseAuth=FirebaseAuth.getInstance()
+        val uid = firebaseAuth.currentUser?.uid
 
         binding?.customLocationButton?.setOnClickListener {
             autocompleteFragment.setText("Your Current Location")
