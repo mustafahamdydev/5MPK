@@ -45,9 +45,9 @@ except FileNotFoundError:
 
 # Finds the closest node (bus stop) to a given coordinates (location)
 def find_closest_node(latitude, longitude):
-    distances = [(node, (G.nodes[node]['latitude'], G.nodes[node]['longitude'])) for node in G.nodes]
-    closest_node = min(distances, key=lambda x: geopy.distance.distance((latitude, longitude), x[1]).m)[0]
-    return closest_node
+    distances = [(node, geopy.distance.distance((latitude, longitude), (G.nodes[node]['latitude'], G.nodes[node]['longitude'])).km) for node in G.nodes]
+    closest_node, closest_distance = min(distances, key=lambda x: x[1])
+    return closest_node, closest_distance * 1000  # Convert to meters
 
 # Returns the stop info of a stop_id
 def get_stop_info_for_stop(stop_id):
@@ -131,11 +131,21 @@ def find_routes(path):
     return enhanced_path
 
 # Function that handles all other functions, takes as input the coordinates of the start and end points:
-def main(start_lat,start_lon,end_lat,end_lon):
-    start_stop = find_closest_node(start_lat, start_lon)
-    end_stop = find_closest_node(end_lat, end_lon)
+def main(start_lat, start_lon, end_lat, end_lon):
+    start_stop, start_distance = find_closest_node(start_lat, start_lon)
+    if start_distance > 2000:  # Check if the distance is more than 2 kilometers
+        return None
+
+    end_stop, end_distance = find_closest_node(end_lat, end_lon)
+    if end_distance > 2000:  # Check if the distance is more than 2 kilometers
+        return None
+
     start_stop_info = get_stop_info_for_stop(start_stop)
     end_stop_info = get_stop_info_for_stop(end_stop)
+
     path = astar_path_with_transfers(start_stop, end_stop)
+    if path is None:
+        return None
+
     routes = find_routes(path)
-    return(routes, start_stop_info, end_stop_info)
+    return routes, start_stop_info, end_stop_info

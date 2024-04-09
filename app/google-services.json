@@ -1,26 +1,74 @@
 {
   "project_info": {
-    "project_number": "70611468137",
-    "project_id": "wanderer-6322f",
-    "storage_bucket": "wanderer-6322f.appspot.com"
+    "project_number": "658555766867",
+    "firebase_url": "https://mpk-218c1-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mpk-218c1",
+    "storage_bucket": "mpk-218c1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:70611468137:android:4ff2c63fdf061d67d147f8",
+        "mobilesdk_app_id": "1:658555766867:android:4a2725e524a001916cdea6",
         "android_client_info": {
-          "package_name": "com.wanderer"
+          "package_name": "com.fivempk"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "658555766867-4sdge0ejmpgl61p90u2bp0dgqfjibavd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fivempk",
+            "certificate_hash": "33f50716f2bef8c7ea27ce0d38fff1469621c72e"
+          }
+        },
+        {
+          "client_id": "658555766867-es2vbine1mjkaqom4pugt33s13e1554l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCet90ygfmuqgpP5QMsWOCl-B5CVxYBbAY"
+          "current_key": "AIzaSyDU9p7uU5wHHmZUugE4rUoZ5rzuE5z0P7I"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658555766867-es2vbine1mjkaqom4pugt33s13e1554l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658555766867:android:366a4ffcc5bba3be6cdea6",
+        "android_client_info": {
+          "package_name": "com.wanderer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658555766867-es2vbine1mjkaqom4pugt33s13e1554l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDU9p7uU5wHHmZUugE4rUoZ5rzuE5z0P7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658555766867-es2vbine1mjkaqom4pugt33s13e1554l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

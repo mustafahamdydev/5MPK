@@ -11,11 +11,11 @@ plugins {
 }
 
 android {
-    namespace = "com.wanderer"
+    namespace = "com.fivempk"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.wanderer"
+        applicationId = "com.fivempk"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -78,17 +78,20 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.firebase.firestore.ktx)
+    implementation(libs.play.services.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation (libs.places)
     implementation (libs.easypermissions)
     implementation (libs.circleimageview)
-    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation(platform(libs.firebase.bom))
     implementation("com.google.firebase:firebase-auth")
-    implementation("com.github.leandroborgesferreira:loading-button-android:2.3.0")
+    implementation(libs.loading.button.android)
     implementation ("com.google.firebase:firebase-storage-ktx")
     implementation ("com.google.firebase:firebase-database-ktx")
-
-
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-firestore:24.11.0")
+    implementation (libs.glide)
+    implementation (libs.play.services.ads)
 }

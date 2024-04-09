@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">5MPK</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="Google_Api_Key">AIzaSyBOOPU9s4r-Wdo_x47hY7XCfnDcn1HehFI</string>
+    <string name="Google_Api_Key">AIzaSyDhydFV8mVx720l3-x5sSvFOQhwfdU_KTw</string>
     <string name="enter_location_coordinates">Enter Location Coordinates</string>
     <string name="enter_destination_coordinates">Enter Destination Coordinates</string>
     <string name="view_route">View Route On Map</string>
@@ -9,6 +9,7 @@
     <string name="longitude_decimal">Longitude (decimal)</string>
     <string name="get_route">Get Route</string>
     <string name="open">Open</string>
+    <string name="required">Required</string>
     <string name="close">CLose</string>
     <string name="bus_name">Bus Name</string>
     <string name="example_ticket_price">10</string>
@@ -25,4 +26,22 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="SignIn_title">Already \nhave an \nAccount?</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="new_user_register_now">New user ? Register Now \t  ></string>
+    <string name="use_other_methods">Or Use other Methods</string>
+    <string name="default_web_client_id">70611468137-epe6gavq0nb4ims12ah3m7iqo8dq63ji.apps.googleusercontent.com</string>
+    <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="elemntcode">xgft4</string>
+    <string name="submit">Submit</string>
+    <string name="userimage">UserImage</string>
+    <string name="please_enter_phone">Please enter your phone number\n to receive a verification code.</string>
+    <string name="verification">Verification</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="continue_text">Continue</string>
+    <string name="default_total_price">20 E£</string>
+    <string name="estimated_total_cost">Estimated\nTotal Cost</string>
+    <string name="default_total_trip_time">5 hours, 55 minutes</string>
+    <string name="estimated_travel_time">Estimated\nTravel Time</string>
 </resources>

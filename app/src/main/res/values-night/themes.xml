@@ -1,13 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Wanderer" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.FiveMPK" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+
+
+
+
+        <item name="colorPrimary">@color/blue_100</item>
+        <item name="colorPrimaryVariant">@color/blue_150</item>
         <item name="colorOnPrimary">@color/black</item>
+        <item name="colorAccent">@color/blue_150</item>
+        <item name="android:colorAccent">@color/blue_150</item>
+        <item name="colorControlActivated">@color/blue_150</item>
+        <item name="colorPrimaryContainer">@color/blue_150</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/poppinsmedium</item>
+
+
+
+
     </style>
 </resources>

@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.wanderer" />
-                  <option name="mobileSdkAppId" value="1:70611468137:android:4ff2c63fdf061d67d147f8" />
-                  <option name="projectId" value="wanderer-6322f" />
-                  <option name="projectNumber" value="70611468137" />
+                  <option name="appId" value="com.fivempk" />
+                  <option name="mobileSdkAppId" value="1:658555766867:android:4a2725e524a001916cdea6" />
+                  <option name="projectId" value="mpk-218c1" />
+                  <option name="projectNumber" value="658555766867" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- background_with_vector.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item android:drawable="@drawable/roundedbackground" />
+    <!-- Vector -->
+    <item android:drawable="@drawable/user" />
+</layer-list>

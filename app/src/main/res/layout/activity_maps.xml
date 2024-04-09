@@ -5,19 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity"
-    tools:openDrawer="start"
+    tools:context=".activities.MapsActivity"
     >
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <!--suppress AndroidUnknownAttribute -->
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/mapFragment"
                     class="com.google.android.gms.maps.SupportMapFragment"
@@ -36,43 +36,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:contentDescription="123"
 
-                    app:tint="@color/white"
                     android:scaleType="fitCenter"
                     android:src="@drawable/icons8_fries_menu_1"
                     app:layout_constraintBottom_toBottomOf="parent"
-
                     app:layout_constraintEnd_toEndOf="@+id/mapFragment"
+
                     app:layout_constraintHorizontal_bias="0.045"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.045"
-                    app:shapeAppearanceOverlay="@style/RoundedCornerFab" />
-
-                <ImageButton
-                    android:id="@+id/customLocationButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/roundedbackground"
-                    android:padding="10dp"
-                    android:src="@drawable/my_location"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.956"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/mapFragment"
-                    app:layout_constraintVertical_bias="0.398" />
+                    app:shapeAppearanceOverlay="@style/RoundedCornerFab"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/elemntcode" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
-
+            <ImageButton
+                android:id="@+id/customLocationButton"
+                android:layout_gravity="bottom|end"
+                android:layout_marginBottom="1250px"
+                android:layout_marginEnd="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbackground"
+                android:padding="10dp"
+                android:src="@drawable/my_location"
+                android:contentDescription="@string/elemntcode" />
 
             <LinearLayout
                 android:id="@+id/maps_BottomSheet"
@@ -119,7 +110,7 @@
                         android:layout_height="50dp"
                         android:src="@drawable/my_location"
                         android:background="#E4E4E4"
-                        />
+                        android:contentDescription="@string/elemntcode" />
 
 
 
@@ -149,9 +140,16 @@
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Submit"/>
+                    android:text="@string/submit"/>
 
-
+                <LinearLayout
+                    android:id="@+id/adView"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    />
             </LinearLayout>
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
@@ -176,13 +174,68 @@
             app:headerLayout="@layout/nav_header"
             app:itemTextColor="@color/default_item_color"
             app:itemBackground="@drawable/nav_drawer_item_background"
-            />
-        <!-- Your drawer menu items go here -->
-        <Button
-            android:id="@+id/btn_drawer_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Drawer Button"/>
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="bottom|center"
+                app:cardElevation="20dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp"
+                android:layout_width="wrap_content"
+                android:minWidth="255dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:background="@drawable/border_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="255dp"
+                    android:orientation="horizontal">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_margin="10dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/background_witg_vector"
+                        />
+                    <LinearLayout
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tv_userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="User Name"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:id="@+id/tv_userEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#AAAAAA"
+                            android:textSize="10dp"
+                            android:text="noone.Everyone@gmail.com"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="end"
+                        android:layout_gravity="right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/dots_btn"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_margin="20dp"
+                            android:src="@drawable/dots_loading"
+                            android:contentDescription="@string/userimage" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.navigation.NavigationView>
     </LinearLayout>
 
 
