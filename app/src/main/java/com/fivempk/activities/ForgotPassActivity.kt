@@ -1,5 +1,7 @@
 package com.fivempk.activities
 
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,5 +20,14 @@ class ForgotPassActivity : AppCompatActivity() {
         binding = ActivityForgotPassBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
+        binding!!.backButton.setOnClickListener{
+            val options: ActivityOptions = ActivityOptions.makeCustomAnimation(
+                this@ForgotPassActivity,
+                R.anim.slide_in_left,
+                R.anim.animate_slide_out_right
+            )
+            val intent = Intent(this@ForgotPassActivity , SignInActivity::class.java)
+            startActivity(intent,options.toBundle())
+        }
     }
 }

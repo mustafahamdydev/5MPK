@@ -2,7 +2,7 @@
 <!-- background_with_vector.xml -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Background -->
-    <item android:drawable="@drawable/roundedbackground" />
+    <item android:drawable="@drawable/user_background_image" />
     <!-- Vector -->
     <item android:drawable="@drawable/user" />
 </layer-list>

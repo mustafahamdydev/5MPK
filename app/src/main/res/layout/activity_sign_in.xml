@@ -64,6 +64,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
+                android:id="@+id/tv_forgot_pass"
                 style="@style/viewParent"
                 android:text="@string/forgot_password"
                 android:textColor="@color/primaryTextColor"

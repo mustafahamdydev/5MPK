@@ -144,6 +144,7 @@
 
                 <LinearLayout
                     android:id="@+id/adView"
+                    android:layout_gravity="center"
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -175,7 +176,8 @@
             app:itemTextColor="@color/default_item_color"
             app:itemBackground="@drawable/nav_drawer_item_background"
             >
-            <androidx.cardview.widget.CardView
+            <LinearLayout
+                android:id="@+id/user_card"
                 android:layout_gravity="bottom|center"
                 app:cardElevation="20dp"
                 android:layout_margin="20dp"
@@ -234,7 +236,7 @@
                     </LinearLayout>
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
         </com.google.android.material.navigation.NavigationView>
     </LinearLayout>
 

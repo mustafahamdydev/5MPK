@@ -95,6 +95,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             startActivity(intent)
             finish()
         }
+        binding!!.userCard.setOnClickListener{
+            val intent = Intent(this , UserProfileActivity::class.java)
+            startActivity(intent)
+        }
 
         binding?.customLocationButton?.setOnClickListener {
             autocompleteFragment.setText("Your Current Location")
@@ -211,12 +215,25 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     //Bottom Sheet Function
 
 
-    // Determine the screen width (less decorations) to use for the ad width.
-    // If the ad hasn't been laid out, default to the full screen width.
+    private val adSize: AdSize
+        get() {
+            val display = windowManager.defaultDisplay
+            val outMetrics = DisplayMetrics()
+            display.getMetrics(outMetrics)
+
+            val density = outMetrics.density
+
+            var adWidthPixels = binding!!.adView.width.toFloat()
+            if (adWidthPixels == 0f) {
+                adWidthPixels = outMetrics.widthPixels.toFloat()
+            }
+
+            val adWidth = (adWidthPixels / density).toInt()
+            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
+        }
 
     private fun loadBanner() {
         // Step 1: Create an inline adaptive banner ad size using the activity context.
-        val adSize = AdSize.getCurrentOrientationInlineAdaptiveBannerAdSize(this, 320)
 
         // Step 2: Create banner using activity context and set the inline ad size and ad unit ID.
         val adView = AdView(this)
@@ -230,11 +247,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
          val adContainer = findViewById<LinearLayout>(R.id.adView)
          adContainer.addView(adView)
     }
-
-
-
-
-
 
     private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
         override fun onStateChanged(bottomSheet: View, newState: Int) {
@@ -392,10 +404,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                 signOut()
                 Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show()
             }
-//            R.id.nav_item2 -> {
-//                // Handle item 2 click
-//            }
-            // Add more cases for other menu items as needed
+            R.id.Settings-> {
+                val intent = Intent(this ,SettingsActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
         // Close the drawer after handling the item click

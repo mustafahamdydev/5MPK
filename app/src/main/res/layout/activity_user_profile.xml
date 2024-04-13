@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.UserProfileActivity">
+    tools:context=".activities.UserProfileActivity"
+    android:background="@drawable/background_user"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/user_card"
+            android:elevation="10dp"
+            android:gravity="bottom">
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="20dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/background_witg_vector"
+            />
+    </RelativeLayout>
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:cardCornerRadius="20dp"
+      android:layout_marginBottom="30dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:padding="20dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:layout_marginBottom="10dp"
+                >
+                <EditText
+                    android:text="name"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="hello" />
+            </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/login_email_hint"
+              android:layout_marginBottom="10dp"
+              >
+              <EditText
+                  android:inputType="none"
+                  android:focusable="false"
+                  android:clickable="false"
+                  android:text="@string/login_email_hint"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+          </com.google.android.material.textfield.TextInputLayout>
+          <com.google.android.material.textfield.TextInputLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/phone_number"
+              android:layout_marginBottom="10dp"
+              >
+              <EditText
+                  android:inputType="none"
+                  android:focusable="false"
+                  android:clickable="false"
+                  android:text="@string/phone_number"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+          </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+      </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

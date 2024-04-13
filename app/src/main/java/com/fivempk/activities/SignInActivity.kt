@@ -35,6 +35,15 @@ class SignInActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
 
+        binding!!.tvForgotPass.setOnClickListener {
+            val options = ActivityOptions.makeCustomAnimation(
+                this@SignInActivity,
+                R.anim.slide_in_right,
+                R.anim.stay
+            )
+            val intent = Intent(this@SignInActivity, ForgotPassActivity::class.java)
+            startActivity(intent, options.toBundle())
+        }
 
         if (currentUser != null) {
             // The user is already signed in, navigate to MapsActivity

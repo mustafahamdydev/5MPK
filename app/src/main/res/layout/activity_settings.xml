@@ -1,10 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SettingsActivity">
+    tools:context=".activities.SettingsActivity"
+    android:orientation="vertical"
+    android:background="@color/White_dimed"
+    >
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/back"/>
+        <TextView
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+   <RelativeLayout
+       android:background="@color/white"
+       android:padding="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_marginTop="20dp"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:text="My Profile"
+           />
+       <View
+           android:layout_centerInParent="true"
+           android:layout_alignParentEnd="true"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:rotation="180"
+           android:background="@drawable/back"
+           android:backgroundTint="@color/grey"
+           />
+   </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Change Password"
+            />
+        <View
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/grey"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Privacy"
+            />
+        <View
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/grey"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="About US"
+            />
+        <View
+            android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/grey"
+            />
+    </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
