@@ -6,7 +6,10 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewTreeObserver
@@ -26,12 +29,15 @@ import com.fivempk.databinding.ActivityMapsBinding
 import com.fivempk.firebase.FireBaseClass
 import com.fivempk.models.User
 import com.fivempk.utils.RouteColorManager
+import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.OnUserEarnedRewardListener
 import com.google.android.gms.common.api.Status
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -54,6 +60,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
+import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoadCallback
+
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener {
 
@@ -71,6 +82,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private lateinit var defaultCompleteFragment :AutocompleteSupportFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var auth: FirebaseAuth
+    private var rewardedInterstitialAd: RewardedInterstitialAd? = null
+    private val TAG = "MapsActivity"
 
 
     @SuppressLint("SuspiciousIndentation")
@@ -80,13 +93,12 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         setContentView(binding?.root)
         enableEdgeToEdge()
 
-
+        var adRequest = AdRequest.Builder().build()
 
         MobileAds.initialize(this) {}
         loadBanner()
         auth=FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
-
 
         if (currentUser != null) {
             FireBaseClass().signInUser(this)
@@ -231,6 +243,68 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             val adWidth = (adWidthPixels / density).toInt()
             return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
         }
+    //ADS
+
+    private fun loadAd() {
+        RewardedInterstitialAd.load(
+            this, "ca-app-pub-3940256099942544/5354046379",
+            AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
+                override fun onAdLoaded(ad: RewardedInterstitialAd) {
+                    Log.d(TAG, "Ad was loaded.")
+                    rewardedInterstitialAd = ad
+                    showRewardedAd()
+                }
+
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.d(TAG, adError.toString())
+                    rewardedInterstitialAd = null
+                }
+            })
+    }
+
+    private fun showRewardedAd() {
+        rewardedInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdDismissedFullScreenContent() {
+                Log.d(TAG, "Ad dismissed fullscreen content.")
+                rewardedInterstitialAd = null
+            }
+
+            override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                Log.e(TAG, "Ad failed to show fullscreen content.")
+                rewardedInterstitialAd = null
+            }
+
+            override fun onAdShowedFullScreenContent() {
+                Log.d(TAG, "Ad showed fullscreen content.")
+                // Ad is displayed, start timer to wait for 10 seconds before dismissing
+                startTimer()
+            }
+        }
+        rewardedInterstitialAd?.show(this, OnUserEarnedRewardListener {
+            val intent = Intent(this@MapsActivity, ResultActivity::class.java)
+            RouteColorManager.resetColorIndex()
+            startActivity(intent)
+            finish()
+        })
+    }
+
+    private fun startTimer() {
+        val delay = 10000L // 10 seconds delay
+        // Schedule a task to dismiss the ad after 10 seconds
+        rewardedInterstitialAd?.let {
+            val handler = Handler(Looper.getMainLooper())
+            handler.postDelayed({
+                rewardedInterstitialAd?.let {
+                    it.fullScreenContentCallback?.onAdDismissedFullScreenContent()
+                }
+
+            }, delay)
+        }
+    }
+
+
+
+
 
     private fun loadBanner() {
         // Step 1: Create an inline adaptive banner ad size using the activity context.
@@ -283,7 +357,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
     fun setDrawingPLaceDistance() {
         binding?.submit?.setOnClickListener {
-            // Launch a new coroutine in background and continue
+            loadAd()
             lifecycleScope.launch(Dispatchers.IO) {
                 val output = PyBackend.getRoute(
                     getPlaceLat()!!,
@@ -300,10 +374,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                             com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
                         PyBackend.endPoint =
                             com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
-                        val intent = Intent(this@MapsActivity, ResultActivity::class.java)
-                        RouteColorManager.resetColorIndex()
-                        startActivity(intent)
-                        finish()
                     }
                 }
             }
@@ -438,3 +508,4 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
 
 }
+
