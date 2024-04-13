@@ -155,14 +155,14 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         //New Places API
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
         autocompleteFragment = supportFragmentManager.findFragmentById(R.id.autocomplete_fragment) as AutocompleteSupportFragment
-            // Apply the filter to the Autocomplete fragment
-            autocompleteFragment.setCountries("EG") // Optionally set the country to restrict results
-            autocompleteFragment.setHint("Enter Location")
-            autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
-            autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener{
-                override fun onError(p0: Status) {
-                    Toast.makeText(this@MapsActivity, "Please Select Place", Toast.LENGTH_SHORT).show()
-                }
+        // Apply the filter to the Autocomplete fragment
+        autocompleteFragment.setCountries("EG") // Optionally set the country to restrict results
+        autocompleteFragment.setHint("Enter Location")
+        autocompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
+        autocompleteFragment.setOnPlaceSelectedListener(object : PlaceSelectionListener{
+            override fun onError(p0: Status) {
+                Toast.makeText(this@MapsActivity, "Please Select Place", Toast.LENGTH_SHORT).show()
+            }
 
                 override fun onPlaceSelected(place: Place) {
                     binding!!.location.visibility= View.GONE
@@ -171,7 +171,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your location"))
                 }
-            })
+            }
+        )
 
             defaultCompleteFragment = supportFragmentManager.findFragmentById(R.id.des_autocomplete_fragment) as AutocompleteSupportFragment
             defaultCompleteFragment.setPlaceFields(listOf(Place.Field.ID,Place.Field.NAME,Place.Field.ADDRESS,Place.Field.LAT_LNG))
