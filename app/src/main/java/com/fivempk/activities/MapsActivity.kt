@@ -12,7 +12,6 @@ import android.util.DisplayMetrics
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -49,7 +48,6 @@ import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -63,7 +61,6 @@ import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoa
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
     private var closeDrawerButton : ImageButton? = null
     private var drawerLayout: DrawerLayout? = null
     private var openDrawerButton: FloatingActionButton? = null
@@ -80,8 +77,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private var rewardedInterstitialAd: RewardedInterstitialAd? = null
     private var isAlgorithmFinished = false
 
-
-    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMapsBinding.inflate(layoutInflater)
@@ -137,18 +132,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         executeAfterDelay()
-        ///bottomSheet
-        binding?.mapsBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                binding?.mapsBottomSheet?.viewTreeObserver?.removeOnGlobalLayoutListener(this)
-                val sheet = binding?.mapsBottomSheet
-                sheet?.let { bottomSheetBehavior = BottomSheetBehavior.from(it) }
-                bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-                bottomSheetBehavior.peekHeight = 1200
-                bottomSheetBehavior.addBottomSheetCallback(bottomSheetCallback)
-                bottomSheetBehavior.isDraggable = true
-            }
-        })
 
         ///Drawer setup
         drawerLayout = findViewById(R.id.main)
@@ -207,6 +190,13 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     setDrawingPLaceDistance()
                 }
             })
+
+        //Prevents moving the map when touching the bottom sheet
+        @Suppress("ClickableViewAccessibility")
+        binding?.mapsBottomSheet?.setOnTouchListener { _, _ ->
+            binding?.main?.requestDisallowInterceptTouchEvent(true)
+            false
+        }
 
         val mapFragment=supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
@@ -288,15 +278,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
          val adContainer = findViewById<LinearLayout>(R.id.adView)
          adContainer.addView(adView)
-    }
-
-    private val bottomSheetCallback = object : BottomSheetBehavior.BottomSheetCallback() {
-        override fun onStateChanged(bottomSheet: View, newState: Int) {
-            // Handle bottom sheet state changes here
-        }
-        override fun onSlide(bottomSheet: View, slideOffset: Float) {
-            // If the bottom sheet is sliding, consume the touch event to prevent interference with the map
-        }
     }
 
     private fun getDestLat(): Double? {

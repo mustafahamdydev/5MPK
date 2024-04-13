@@ -5,85 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MapsActivity"
-    >
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
+    tools:context=".activities.MapsActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout"
+            <!--suppress AndroidUnknownAttribute -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/mapFragment"
+                class="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <!--suppress AndroidUnknownAttribute -->
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/mapFragment"
-                    class="com.google.android.gms.maps.SupportMapFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/btn_open_drawer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/icons8_fries_menu_1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/mapFragment"
-
-                    app:layout_constraintHorizontal_bias="0.045"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.045"
-                    app:shapeAppearanceOverlay="@style/RoundedCornerFab"
-                    app:tint="@color/white"
-                    android:contentDescription="@string/elemntcode" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_open_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icons8_fries_menu_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mapFragment"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.045"
+                app:shapeAppearanceOverlay="@style/RoundedCornerFab"
+                app:tint="@color/white"
+                android:contentDescription="@string/elemntcode" />
 
             <ImageButton
                 android:id="@+id/customLocationButton"
-                android:layout_gravity="bottom|end"
-                android:layout_marginBottom="1250px"
-                android:layout_marginEnd="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/roundedbackground"
                 android:padding="10dp"
                 android:src="@drawable/my_location"
+                android:elevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/maps_BottomSheet"
+                android:layout_margin="20dp"
                 android:contentDescription="@string/elemntcode" />
 
             <LinearLayout
                 android:id="@+id/maps_BottomSheet"
                 android:layout_width="match_parent"
-                android:layout_height="800dp"
-                android:gravity="center|top"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:background="@drawable/bottom_sheet_background"
                 android:orientation="vertical"
-                app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
-
-                <View
-                    android:id="@+id/view_bar"
-                    android:layout_width="40dp"
-                    android:layout_height="4dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/bottom_sheet_handle" />
-
-
-
+                android:padding="20dp"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toTopOf="@id/adView"
+                android:descendantFocusability="blocksDescendants"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:touchscreenBlocksFocus="true"
+                android:clipChildren="true"
+                android:clipToPadding="true">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/search_bar"
@@ -112,8 +101,6 @@
                         android:background="#E4E4E4"
                         android:contentDescription="@string/elemntcode" />
 
-
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -140,21 +127,23 @@
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/submit"/>
+                    android:layout_marginTop="10dp"
+                    android:text="@string/get_route"/>
 
-                <LinearLayout
-                    android:id="@+id/adView"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    />
             </LinearLayout>
 
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <LinearLayout
+                android:id="@+id/adView"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:elevation="5dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/drawer_menu"
@@ -163,7 +152,6 @@
         android:layout_gravity="start"
         android:orientation="vertical"
         >
-
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nav_view"
@@ -239,9 +227,6 @@
             </LinearLayout>
         </com.google.android.material.navigation.NavigationView>
     </LinearLayout>
-
-
-
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

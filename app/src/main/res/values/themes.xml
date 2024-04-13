@@ -2,6 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FiveMPK" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
+
         <item name="colorPrimary">@color/blue_100</item>
         <item name="colorPrimaryVariant">@color/blue_150</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -19,6 +20,5 @@
         <item name="fontFamily">@font/poppinsmedium</item>
 
     </style>
-
     <style name="Theme.FiveMPK" parent="Base.Theme.FiveMPK" />
 </resources>
