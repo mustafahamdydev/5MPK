@@ -4,44 +4,29 @@ import networkx as nx
 import geopy.distance
 import heapq
 import pickle
+import sqlite3
 from shapely.geometry import Point
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Load data into pandas DataFrames
-nodes_table_file = os.path.join(current_dir,'nodes_table.csv')
-nodes_df = pd.read_csv(nodes_table_file)
-edges_table_file = os.path.join(current_dir,'edges_table.csv')
-edges_df = pd.read_csv(edges_table_file)
-trips_with_stops_file = os.path.join(current_dir,'trips_with_stops_updated.csv')
-trips_df = pd.read_csv(trips_with_stops_file)
+db_file = os.path.join(current_dir,'public_transport.db')
 graph_file_path = os.path.join(current_dir, 'graph.pkl')
+
+# Connect to the SQLite database
+conn = sqlite3.connect(db_file)
+
+# Read tables from the database
+edges_df = pd.read_sql_query("SELECT * FROM edges_table", conn)
+nodes_df = pd.read_sql_query("SELECT * FROM nodes_table", conn)
+trips_df = pd.read_sql_query("SELECT * FROM trips_table", conn)
 
 # Convert nodes_df to a GeoDataFrame {for find_closest_node method}
 geometry = [Point(lon, lat) for lon, lat in zip(nodes_df['longitude'], nodes_df['latitude'])]
 
-# Try to open the graph.pkl file if it exists and if it doesnt create it
-try:
-    with open(graph_file_path, 'rb') as file:
-        G = pickle.load(file)
-except FileNotFoundError:
-    # Create a directed graph
-    G = nx.DiGraph()
-
-    # Add nodes to the graph
-    for index, row in nodes_df.iterrows():
-        G.add_node(row['stop_id'], stop_name=row['stop_name'],
-                latitude=row['latitude'], longitude=row['longitude'])
-
-    # Add edges to the graph
-    for index, row in edges_df.iterrows():
-        G.add_edge(row['start_stop_id'], row['end_stop_id'], route_id=row['route_id'],
-                direction_id=row['direction_id'], trip_id=row['trip_id'],
-                sequence=row['sequence'], weight=row['weight'])
-
-    # Save the graph object
-    with open('graph.pkl', 'wb') as file:
-        pickle.dump(G, file)
+#open the graph file
+with open(graph_file_path, 'rb') as file:
+    G = pickle.load(file)
 
 # Finds the closest node (bus stop) to a given coordinates (location)
 def find_closest_node(latitude, longitude):
@@ -67,19 +52,15 @@ def astar_path_with_transfers(start, goal):
     # Priority queue with (priority, node, path, cost, trip_id, transfers_count)
     frontier = []
     heapq.heappush(frontier, (0, start, [], 0, None, 0))
-
     # Explored nodes and their lowest cost and trip_id found
     explored = {(start, None): 0}
-
     while frontier:
         _, current_node, path, current_cost, current_trip_id, transfers = heapq.heappop(frontier)
-
         if current_node == goal:
             return path + [(current_node,
                             G.nodes[current_node]['stop_name'],
                             G.nodes[current_node]['latitude'],
                             G.nodes[current_node]['longitude'])]
-
         for neighbor, edge_attr in G[current_node].items():
             # Check for transfer
             transfer_penalty = 0
@@ -87,7 +68,6 @@ def astar_path_with_transfers(start, goal):
             if current_trip_id is not None and edge_attr['trip_id'] != current_trip_id:
                 transfer_penalty = 300  # Arbitrary transfer penalty
                 new_transfers += 1
-
             new_cost = current_cost + edge_attr['weight'] + transfer_penalty
             # Only consider edges with the same direction_id if one has been set
             if (neighbor, edge_attr['trip_id']) not in explored or new_cost < explored[(neighbor, edge_attr['trip_id'])]:
@@ -130,22 +110,18 @@ def find_routes(path):
             current_stop_index += 1
     return enhanced_path
 
-# Function that handles all other functions, takes as input the coordinates of the start and end points:
+# Function that handles all other functions, takes as input the coordinates of the start point and Returns the following:
 def main(start_lat, start_lon, end_lat, end_lon):
     start_stop, start_distance = find_closest_node(start_lat, start_lon)
     if start_distance > 2000:  # Check if the distance is more than 2 kilometers
         return None
-
     end_stop, end_distance = find_closest_node(end_lat, end_lon)
     if end_distance > 2000:  # Check if the distance is more than 2 kilometers
         return None
-
     start_stop_info = get_stop_info_for_stop(start_stop)
     end_stop_info = get_stop_info_for_stop(end_stop)
-
     path = astar_path_with_transfers(start_stop, end_stop)
     if path is None:
         return None
-
     routes = find_routes(path)
     return routes, start_stop_info, end_stop_info

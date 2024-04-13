@@ -41,7 +41,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="continue_text">Continue</string>
     <string name="default_total_price">20 E£</string>
-    <string name="estimated_total_cost">Estimated\nTotal Cost</string>
+    <string name="estimated_total_cost">Estimated Total Cost</string>
     <string name="default_total_trip_time">5 hours, 55 minutes</string>
-    <string name="estimated_travel_time">Estimated\nTravel Time</string>
+    <string name="estimated_travel_time">Estimated Travel Time</string>
 </resources>

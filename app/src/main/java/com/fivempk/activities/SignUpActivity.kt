@@ -150,7 +150,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun resetForm()
     {
-        var message = "Registration Successful"
+        val message = "Registration Successful"
         AlertDialog.Builder(this)
             .setTitle("Form submitted")
             .setMessage(message)
