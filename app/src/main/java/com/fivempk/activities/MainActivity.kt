@@ -64,6 +64,12 @@ class MainActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks {
         setContentView(binding?.root)
         enableEdgeToEdge()
 
+        intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
+        finish()
+
+
+
 
 
 
