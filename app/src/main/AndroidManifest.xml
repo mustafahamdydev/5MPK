@@ -24,12 +24,17 @@
         android:theme="@style/Theme.FiveMPK"
         tools:targetApi="tiramisu">
         <activity
+            android:name=".activities.OfflineResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.OfflineInputActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ForgotPassActivity"
             android:exported="false" />
         <activity
             android:name=".activities.UserProfileActivity"
-            android:exported="false" />
-        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+            android:exported="false" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <!-- Real AdMob app ID: ca-app-pub-9050992379264255~7766527880 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -63,17 +68,19 @@
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
-            android:theme="@style/Theme.App.Starting"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <property
             android:name="android.adservices.AD_SERVICES_CONFIG"
             android:resource="@xml/gma_ad_services_config"
             tools:replace="android:resource" />
     </application>
+
 </manifest>
