@@ -16,14 +16,14 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.fivempk.utils.Permissions.hasLocationPermission
 import com.fivempk.utils.Permissions.requestLocationPermission
-import com.fivempk.databinding.ActivityMainBinding
+import com.fivempk.databinding.ActivityStartBinding
 import com.google.firebase.auth.FirebaseAuth
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 class StartActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks {
 
-    private var binding: ActivityMainBinding? = null
+    private var binding: ActivityStartBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,7 @@ class StartActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks {
 
         }
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityStartBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
 
