@@ -45,4 +45,6 @@
     <string name="default_total_trip_time">5 hours, 55 minutes</string>
     <string name="estimated_travel_time">Estimated Travel Time</string>
     <string name="delete_account">Delete Account</string>
+    <string name="please_select_destination">Please select destination</string>
+    <string name="please_select_start_location">Please select start location</string>
 </resources>
