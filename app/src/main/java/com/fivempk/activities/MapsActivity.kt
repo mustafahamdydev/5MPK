@@ -228,6 +228,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     Log.d("MapsActivity", adError.toString())
                     rewardedInterstitialAd = null
+                    openResultActivityIfAlgorithmIsFinished()
                 }
             }
         )
