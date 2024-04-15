@@ -1,7 +1,7 @@
 package com.fivempk.utils
 
 import android.content.Context
-import com.fivempk.activities.MainActivity
+import com.fivempk.activities.StartActivity
 import com.fivempk.utils.Constants.PERMISSIONS_LOCATION_CODE
 import pub.devrel.easypermissions.EasyPermissions
 
@@ -14,7 +14,7 @@ object Permissions {
         )
 
 
-    fun requestLocationPermission(activity: MainActivity) {
+    fun requestLocationPermission(activity: StartActivity) {
         EasyPermissions.requestPermissions(
             activity,
             "This Application cannot work without Location Permission",
