@@ -34,22 +34,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"/>
         </RelativeLayout>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:cardBackgroundColor="@color/whiteTextColor"
-            app:cardCornerRadius="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    >
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -60,6 +46,7 @@
                             android:layout_height="wrap_content"
                             android:text="Please Provide Your Account's Email \n Which You want to Reset"
                             android:textAlignment="center"
+                            android:textColor="@color/white"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -73,48 +60,27 @@
                                 style="@style/modifiedEditText"
                                 android:inputType="textEmailAddress"
                                 android:maxLines="1"
+                                android:textColor="@color/white"
                                 android:hint="@string/login_email_hint"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
+                        <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                            android:id="@+id/Reset_btn"
+                            style="@style/loginButton"
+                            android:textColor="@color/black"
+                            android:backgroundTint="@color/white"
+                            app:spinning_bar_width="4dp"
+                            app:spinning_bar_color="#FFF"
+                            android:text="Reset Password"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            app:initialCornerAngle="27dp"
+                            app:spinning_bar_padding="6dp"
+                            android:layout_marginBottom="10dp"/>
+
                     </LinearLayout>
-                </ScrollView>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginBottom="20dp"
-                    >
-                    <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
-                        android:id="@+id/Reset_btn"
-                        style="@style/loginButton"
-                        app:spinning_bar_width="4dp"
-                        app:spinning_bar_color="#FFF"
-                        android:text="Reset Password"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="@dimen/loginViewsMargin"
-                        app:initialCornerAngle="27dp"
-                        app:spinning_bar_padding="6dp"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
 
 
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/White_dimed"
-            app:cardCornerRadius="10dp"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
-            >
-        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>

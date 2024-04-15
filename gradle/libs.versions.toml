@@ -2,6 +2,7 @@
 agp = "8.3.0"
 cardView = "1.0.0"
 circleimageview = "3.1.0"
+coreSplashscreen = "1.0.1"
 easypermissions = "3.0.0"
 firebaseBom = "32.8.0"
 glide = "4.14.2"
@@ -33,6 +34,7 @@ playServicesAuth = "21.0.0"
 [libraries]
 androidx-card-view = { module = "androidx.cardview:card-view", version.ref = "cardView" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
 circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageview" }
 easypermissions = { module = "pub.devrel:easypermissions", version.ref = "easypermissions" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }

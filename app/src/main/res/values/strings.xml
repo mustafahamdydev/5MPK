@@ -10,6 +10,7 @@
     <string name="get_route">Get Route</string>
     <string name="open">Open</string>
     <string name="required">Required</string>
+    <string name="empty_text" />
     <string name="close">CLose</string>
     <string name="bus_name">Bus Name</string>
     <string name="example_ticket_price">10</string>
@@ -43,4 +44,5 @@
     <string name="estimated_total_cost">Estimated Total Cost</string>
     <string name="default_total_trip_time">5 hours, 55 minutes</string>
     <string name="estimated_travel_time">Estimated Travel Time</string>
+    <string name="delete_account">Delete Account</string>
 </resources>

@@ -14,6 +14,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.core.app.ActivityCompat
@@ -61,7 +62,6 @@ import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoa
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener {
 
-    private var closeDrawerButton : ImageButton? = null
     private var drawerLayout: DrawerLayout? = null
     private var openDrawerButton: FloatingActionButton? = null
     private var placeLatLng: LatLng? = null
@@ -95,10 +95,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             startActivity(intent)
             finish()
         }
-        binding!!.userCard.setOnClickListener{
-            val intent = Intent(this , UserProfileActivity::class.java)
-            startActivity(intent)
-        }
+
 
         binding?.customLocationButton?.setOnClickListener {
             autocompleteFragment.setText("Your Current Location")
@@ -145,12 +142,12 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         binding!!.navView.setNavigationItemSelectedListener (this)
 
         val navHeaderLayout = findViewById<NavigationView>(R.id.nav_view).getHeaderView(0)
-        closeDrawerButton = navHeaderLayout.findViewById(R.id.close_drawer)
-        closeDrawerButton!!.setOnClickListener {
-            drawerLayout!!.closeDrawer(
-                GravityCompat.START
-            )
+        val headerInfo :LinearLayout = navHeaderLayout.findViewById(R.id.user_info)
+        headerInfo.setOnClickListener {
+            val intent = Intent(this,UserProfileActivity::class.java)
+            startActivity(intent)
         }
+
 
         //New Places API
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
@@ -449,10 +446,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             .load(user.image)
             .centerCrop()
             .placeholder(R.drawable.background_witg_vector)
-            .into(binding!!.userImage)
+            .into(binding!!.navView.findViewById(R.id.user_image))
 
-        binding!!.tvUserName.text= user.name
-        binding!!.tvUserEmail.text= user.email
+        binding!!.navView.findViewById<TextView>(R.id.tv_userName).text= user.name
+        binding!!.navView.findViewById<TextView>(R.id.tv_userEmail).text= user.email
     }
 
     private fun signOut() {

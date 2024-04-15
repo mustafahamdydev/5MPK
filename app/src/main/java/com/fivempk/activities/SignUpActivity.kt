@@ -99,10 +99,8 @@ class SignUpActivity : AppCompatActivity() {
 
     fun userRegisteredSuccess(){
         auth.signOut()
-        Toast.makeText(this@SignUpActivity,"123123",Toast.LENGTH_LONG).show()
         val btn : CircularProgressButton = findViewById(R.id.cirRegisterButton)
         btn.revertAnimation()
-        finish()
     }
 
     private fun submitForm()
@@ -160,9 +158,14 @@ class SignUpActivity : AppCompatActivity() {
                 binding!!.editTextMobile.text = null
 
 
-                binding!!.textInputEmail.helperText = getString(R.string.required)
-                binding!!.textInputPassword.helperText = getString(R.string.required)
-                binding!!.textInputMobile.helperText = getString(R.string.required)
+                binding!!.textInputEmail.helperText = getString(R.string.empty_text)
+                binding!!.textInputPassword.helperText = getString(R.string.empty_text)
+                binding!!.textInputMobile.helperText = getString(R.string.empty_text)
+                binding!!.textInputName.helperText = getString(R.string.empty_text)
+                binding!!.textInputConfPassword.helperText = getString(R.string.empty_text)
+                binding!!.textInputMobile.helperText = getString(R.string.empty_text)
+
+                finish()
             }
             .show()
     }
@@ -178,6 +181,9 @@ class SignUpActivity : AppCompatActivity() {
         val nameText = binding!!.editTextName.text.toString()
         if (nameText.isEmpty()){
             return "required"
+        }
+        if (nameText.length < 4){
+            return "Name must be more than 4 letters"
         }
         return null
     }

@@ -94,4 +94,5 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:24.11.0")
     implementation (libs.glide)
     implementation (libs.play.services.ads)
+    implementation (libs.androidx.core.splashscreen)
 }

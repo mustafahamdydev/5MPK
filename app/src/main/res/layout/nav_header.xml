@@ -3,46 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="150dp"
     android:background="@drawable/nav_style"
     android:gravity="center_vertical"
-    android:paddingTop="60dp"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:id="@+id/nav_head"
     >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vectortest"
-        app:tint="@color/blue_150" />
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="v1.0"
-        android:textColor="@color/grey"
-        android:textSize="20dp"
 
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="end"
-        >
-        <ImageButton
-            android:id="@+id/close_drawer"
-            android:layout_gravity="end"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/icons8_reply_arrow"
-            android:background="#00FFFFFF"
-            android:scaleType="fitCenter"
-            app:tint="@color/black"
-            android:contentDescription="TODO" />
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/user_info"
+            android:background="@drawable/border_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_margin="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/background_witg_vector"
+                />
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/tv_userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AAAAAA"
+                    android:textSize="10dp"
+                    android:text="noone.Everyone@gmail.com"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/dots_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/back"
+                    app:tint="@color/White_dimed"
+                    android:rotation="180"
+                    android:contentDescription="@string/userimage" />
+            </LinearLayout>
+        </LinearLayout>
 
 
 

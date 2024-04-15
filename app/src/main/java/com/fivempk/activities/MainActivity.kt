@@ -1,9 +1,15 @@
 package com.fivempk.activities
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
+import android.view.animation.OvershootInterpolator
 import androidx.activity.enableEdgeToEdge
+import androidx.core.animation.doOnEnd
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.fivempk.utils.Permissions.hasLocationPermission
 import com.fivempk.utils.Permissions.requestLocationPermission
 import com.fivempk.databinding.ActivityMainBinding
@@ -12,22 +18,55 @@ import pub.devrel.easypermissions.EasyPermissions
 
 class MainActivity : AppCompatActivity() ,EasyPermissions.PermissionCallbacks {
     private var binding: ActivityMainBinding? = null
+    private var requestState : Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (hasLocationPermission(this)){
+            requestState = false
+        }else{
+            requestState = true
+            requestLocationPermission(this)
+        }
+
+        installSplashScreen().apply {
+
+//            setKeepOnScreenCondition {
+//                requestState
+//            }
+            setOnExitAnimationListener{
+                screen -> val zoomX = ObjectAnimator.ofFloat(
+                    screen.iconView,
+                    View.SCALE_X,
+                    0.4f
+                )
+                zoomX.interpolator = OvershootInterpolator()
+                zoomX.duration = 500L
+                zoomX.doOnEnd {
+                    screen.remove()
+                }
+                val zoomY = ObjectAnimator.ofFloat(
+                    screen.iconView,
+                    View.SCALE_Y,
+                    0.4f
+                )
+                zoomY.interpolator = OvershootInterpolator()
+                zoomY.duration = 500L
+                zoomY.doOnEnd {
+                    screen.remove()
+                }
+                zoomX.start()
+                zoomY.start()
+            }
+
+        }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
 
-        binding?.btnStart?.setOnClickListener {
-            if (hasLocationPermission(this)) {
-                intent = Intent(this, SignInActivity::class.java)
-                startActivity(intent)
-                finish()
-            }else{
-                requestLocationPermission(this)
-            }
-        }
+
+
+
     }
 
 
