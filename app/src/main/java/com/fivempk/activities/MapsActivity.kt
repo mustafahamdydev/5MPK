@@ -6,13 +6,10 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -76,6 +73,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private lateinit var auth: FirebaseAuth
     private var rewardedInterstitialAd: RewardedInterstitialAd? = null
     private var isAlgorithmFinished = false
+    private var isLocationSelected = false
+    private var isDestinationSelected = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,7 +82,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         setContentView(binding?.root)
         enableEdgeToEdge()
 
-        MobileAds.initialize(this) {}
+        binding?.submit?.isEnabled = false
+
+        MobileAds.initialize(this)
         loadBanner()
         auth=FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
@@ -95,7 +96,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             startActivity(intent)
             finish()
         }
-
 
         binding?.customLocationButton?.setOnClickListener {
             autocompleteFragment.setText("Your Current Location")
@@ -113,6 +113,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                             locationLat = location.latitude
                             locationLon = location.longitude
                             val currentLatLng = LatLng(location.latitude, location.longitude)
+                            isLocationSelected = true
+                            checkInputs()
                             mGoogleMap!!.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(
                                     currentLatLng,
@@ -160,10 +162,12 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             override fun onError(p0: Status) {
                 Toast.makeText(this@MapsActivity, "Please Select Place", Toast.LENGTH_SHORT).show()
             }
-
+                //Location place selected
                 override fun onPlaceSelected(place: Place) {
                     binding!!.location.visibility= View.GONE
                     val latLng: LatLng? = place.latLng
+                    isLocationSelected = true
+                    checkInputs()
                     placeLatLng = place.latLng
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your location"))
@@ -179,13 +183,15 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                 override fun onError(p0: Status) {
                     Toast.makeText(this@MapsActivity, "Please Select A Place", Toast.LENGTH_SHORT).show()
                 }
-
+                //Destination place selected
                 override fun onPlaceSelected(p0: Place) {
                     val latLng: LatLng? = p0.latLng
                     destinationLatLng = p0.latLng
+                    isDestinationSelected = true
+                    checkInputs()
                     zoomOnMap(latLng!!)
                     mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
-                    setDrawingPLaceDistance()
+                    checkInputs()
                 }
             })
 
@@ -198,6 +204,31 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
         val mapFragment=supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
+        binding?.submit?.setOnClickListener {
+            loadAd()
+            lifecycleScope.launch(Dispatchers.IO) {
+                val output = PyBackend.getRoute(
+                    getPlaceLat()!!,
+                    getPlaceLon()!!,
+                    getDestLat()!!,
+                    getDestLon()!!
+                )
+                // Switch to the Main Thread to update the UI
+                withContext(Dispatchers.Main) {
+                    if (output == null) {
+                        Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
+                    } else {
+                        PyBackend.startPoint =
+                            com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
+                        PyBackend.endPoint =
+                            com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
+                        isAlgorithmFinished = true // Set the flag to true when the algorithm finishes
+                        openResultActivityIfAlgorithmIsFinished()
+                    }
+                }
+            }
+        }
     }
 
     //We have to use this deprecated code because min SDK is API 24
@@ -246,7 +277,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             }
             override fun onAdShowedFullScreenContent() {
                 // Ad is displayed, start timer to wait for 10 seconds before dismissing
-                startTimer()
             }
         }
         rewardedInterstitialAd?.show(this) {
@@ -254,18 +284,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         }
     }
 
-    private fun startTimer() {
-        val delay = 10000L // 10 seconds delay
-        // Schedule a task to dismiss the ad after 10 seconds
-        rewardedInterstitialAd?.let {
-            val handler = Handler(Looper.getMainLooper())
-            handler.postDelayed({
-                rewardedInterstitialAd?.let {
-                    it.fullScreenContentCallback?.onAdDismissedFullScreenContent()
-                }
-            }, delay)
-        }
-    }
 
     private fun loadBanner() {
         val adView = AdView(this)
@@ -303,30 +321,11 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         }
     }
 
-    fun setDrawingPLaceDistance() {
-        binding?.submit?.setOnClickListener {
-            loadAd()
-            lifecycleScope.launch(Dispatchers.IO) {
-                val output = PyBackend.getRoute(
-                    getPlaceLat()!!,
-                    getPlaceLon()!!,
-                    getDestLat()!!,
-                    getDestLon()!!
-                )
-                // Switch to the Main Thread to update the UI
-                withContext(Dispatchers.Main) {
-                    if (output == null) {
-                        Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
-                    } else {
-                        PyBackend.startPoint =
-                            com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
-                        PyBackend.endPoint =
-                            com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
-                        isAlgorithmFinished = true // Set the flag to true when the algorithm finishes
-                    }
-                }
-            }
+    private fun checkInputs() {
+        if (isLocationSelected && isDestinationSelected){
+            binding?.submit?.isEnabled = true
         }
+
     }
 
     private fun openResultActivityIfAlgorithmIsFinished() {
@@ -360,6 +359,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                             locationLat = location.latitude
                             locationLon = location.longitude
                             val currentLatLng = LatLng(location.latitude, location.longitude)
+                            isLocationSelected = true
                             mGoogleMap!!.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(
                                     currentLatLng,
@@ -422,6 +422,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
     override fun onDestroy() {
         super.onDestroy()
+        Places.deinitialize()
         binding = null
     }
 
