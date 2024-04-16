@@ -8,6 +8,21 @@
     android:gravity="center"
     tools:context=".activities.OfflineInputActivity">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/untitled_3"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OFFLINE MODE"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginBottom="80dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +56,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:gravity="center"
         android:enabled="false"
         android:text="@string/get_route"/>
 
