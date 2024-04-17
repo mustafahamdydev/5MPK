@@ -3,6 +3,7 @@ package com.fivempk.activities
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -56,6 +57,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
 import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoadCallback
+import com.google.android.gms.maps.model.MapStyleOptions
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener {
 
@@ -66,7 +68,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private var locationLat: Double? = null
     private var locationLon: Double? = null
     private  var binding: ActivityMapsBinding? = null
-    private var mGoogleMap:GoogleMap?=null
+    private lateinit var mGoogleMap:GoogleMap
     private lateinit var autocompleteFragment: AutocompleteSupportFragment
     private lateinit var defaultCompleteFragment :AutocompleteSupportFragment
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -115,7 +117,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                             val currentLatLng = LatLng(location.latitude, location.longitude)
                             isLocationSelected = true
                             checkInputs()
-                            mGoogleMap!!.animateCamera(
+                            mGoogleMap.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(
                                     currentLatLng,
                                     15f
@@ -170,7 +172,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     checkInputs()
                     placeLatLng = place.latLng
                     zoomOnMap(latLng!!)
-                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your location"))
+                    mGoogleMap.addMarker(MarkerOptions().position(latLng).title("Your location"))
                 }
             }
         )
@@ -190,7 +192,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     isDestinationSelected = true
                     checkInputs()
                     zoomOnMap(latLng!!)
-                    mGoogleMap!!.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
+                    mGoogleMap.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
                     checkInputs()
                 }
             })
@@ -339,7 +341,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
     private fun zoomOnMap(latLng: LatLng){
         val  newLatLngZoom = CameraUpdateFactory.newLatLngZoom(latLng,20f)
-        mGoogleMap?.animateCamera(newLatLngZoom)
+        mGoogleMap.animateCamera(newLatLngZoom)
     }
 
     private fun executeAfterDelay() {
@@ -360,7 +362,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                             locationLon = location.longitude
                             val currentLatLng = LatLng(location.latitude, location.longitude)
                             isLocationSelected = true
-                            mGoogleMap!!.animateCamera(
+                            mGoogleMap.animateCamera(
                                 CameraUpdateFactory.newLatLngZoom(
                                     currentLatLng,
                                     15f
@@ -375,14 +377,27 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         autocompleteFragment.setText("Your Current Location")
         mGoogleMap= googleMap
-        mGoogleMap!!.setPadding(0,10,0,50)
-        mGoogleMap!!.uiSettings.apply {
+        mGoogleMap.setPadding(0,10,0,50)
+        mGoogleMap.uiSettings.apply {
             isMapToolbarEnabled = false
             isMyLocationButtonEnabled = false
-
         }
+        when (currentNightMode) {
+            Configuration.UI_MODE_NIGHT_NO -> {
+                // Light theme
+                val mapStyle = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_light)
+                mGoogleMap.setMapStyle(mapStyle)
+            }
+            Configuration.UI_MODE_NIGHT_YES -> {
+                // Dark theme
+                val mapStyle = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_dark)
+                mGoogleMap.setMapStyle(mapStyle)
+            }
+        }
+
         checkLocationPermission()
     }
 
@@ -391,7 +406,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             ContextCompat.checkSelfPermission(this,android.Manifest.permission.ACCESS_FINE_LOCATION)
             == PackageManager.PERMISSION_GRANTED
         ){
-            mGoogleMap!!.isMyLocationEnabled = true
+            mGoogleMap.isMyLocationEnabled = true
         }else{
             requestPermission()
         }
@@ -416,7 +431,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             return
         }
         if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-            mGoogleMap!!.isMyLocationEnabled = true
+            mGoogleMap.isMyLocationEnabled = true
         }
     }
 

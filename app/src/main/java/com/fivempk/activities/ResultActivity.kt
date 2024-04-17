@@ -1,6 +1,7 @@
 package com.fivempk.activities
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,11 +33,13 @@ import com.fivempk.utils.BusAdapter
 import com.fivempk.utils.Constants
 import com.fivempk.utils.PyBackend
 import com.fivempk.utils.RouteColorManager
+import com.google.android.gms.maps.model.MapStyleOptions
 import java.util.ArrayList
+
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     private var binding: ActivityResultBinding? = null
-    private lateinit var map: GoogleMap
+    private lateinit var mGoogleMap: GoogleMap
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<LinearLayout>
     private var totalEstimatedTravelTimeInSeconds: Long = 0
     private var totalRequests = 0
@@ -110,18 +113,19 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {
             // If the bottom sheet is sliding, consume the touch event to prevent interference with the map
             if (slideOffset > 0) {
-                map.uiSettings.isScrollGesturesEnabled = false
-                map.uiSettings.isZoomGesturesEnabled = false
+                mGoogleMap.uiSettings.isScrollGesturesEnabled = false
+                mGoogleMap.uiSettings.isZoomGesturesEnabled = false
             } else {
-                map.uiSettings.isScrollGesturesEnabled = true
-                map.uiSettings.isZoomGesturesEnabled = true
+                mGoogleMap.uiSettings.isScrollGesturesEnabled = true
+                mGoogleMap.uiSettings.isZoomGesturesEnabled = true
             }
         }
     }
 
     override fun onMapReady(googleMap: GoogleMap){
-        map = googleMap
-        map.clear()
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        mGoogleMap = googleMap
+        mGoogleMap.clear()
         val apiKey: String = getString(R.string.Google_Api_Key)
 
         // Set up the GeoApiContext with your API key
@@ -129,11 +133,24 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             .apiKey(apiKey)
             .build()
 
+        when (currentNightMode) {
+            Configuration.UI_MODE_NIGHT_NO -> {
+                // Light theme
+                val mapStyle = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_light)
+                mGoogleMap.setMapStyle(mapStyle)
+            }
+            Configuration.UI_MODE_NIGHT_YES -> {
+                // Dark theme
+                val mapStyle = MapStyleOptions.loadRawResourceStyle(this, R.raw.maps_dark)
+                mGoogleMap.setMapStyle(mapStyle)
+            }
+        }
+
         //center the camera within the given bounds
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.cairoBounds.center, 10.0f))
+        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.cairoBounds.center, 10.0f))
 
         //restricts user movement to the set bounds of Cairo
-        map.setLatLngBoundsForCameraTarget(Constants.cairoBounds)
+        mGoogleMap.setLatLngBoundsForCameraTarget(Constants.cairoBounds)
 
         val firstPoint = PyBackend.multiRouteCoordinatesList?.first()?.first()
         val lastPoint = PyBackend.multiRouteCoordinatesList?.last()?.last()
@@ -181,7 +198,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
 
                     polylineOptions.color(color)
                     polylineOptions.width(10f)
-                    map.addPolyline(polylineOptions)
+                    mGoogleMap.addPolyline(polylineOptions)
 
                     // Move camera to fit the entire route
                     val builder = LatLngBounds.builder()
@@ -190,7 +207,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                         builder.include(point)
                     }
                     val bounds = builder.build()
-                    map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
+                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
 
                     for (stop in waypoints) {
                         val circleOptions = CircleOptions()
@@ -199,7 +216,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                             .fillColor(Color.WHITE)
                             .strokeColor(Color.DKGRAY)
                             .strokeWidth(0.5f)
-                        map.addCircle(circleOptions)
+                        mGoogleMap.addCircle(circleOptions)
                     }
 
                 }
@@ -243,7 +260,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                             .strokeColor(Color.CYAN)
                             .strokeWidth(2.0f)
                             .fillColor(Color.WHITE)
-                        map.addCircle(circleOptions)
+                        mGoogleMap.addCircle(circleOptions)
                     }
 
                     // Move camera to fit the entire route
@@ -253,7 +270,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                         builder.include(point)
                     }
                     val bounds = builder.build()
-                    map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
+                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
                 }
                 completedRequests++
                 calculateTravelTime()
