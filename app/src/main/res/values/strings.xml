@@ -47,4 +47,16 @@
     <string name="delete_account">Delete Account</string>
     <string name="please_select_destination">Please select destination</string>
     <string name="please_select_start_location">Please select start location</string>
+    <string name="our_goal_des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis sapien felis, nec dapibus velit lobortis pretium. Nam faucibus arcu ante, ut tincidunt dolor laoreet quis. Duis a dictum libero. In blandit mattis dui. In varius hendrerit elit sed pharetra. Fusce venenatis erat vitae tincidunt ultrices. Mauris arcu tortor, porta sed nunc vitae, tincidunt congue lorem. Phasellus sollicitudin interdum magna, id elementum dui volutpat ac. Quisque nulla enim, fringilla posuere elementum non, sodales vel felis. In vitae blandit nisi, id scelerisque libero.</string>
+    <string name="faq">Frequently Asked Questions</string>
+    <string name="faq_q1">Why couldn\'t a trip be found?</string>
+    <string name="faq_answer1">Well, our algorithm went on a scavenger hunt for a direct trip that doesn\'t require any walking transfers between buses. But alas, it returned empty-handed.</string>
+    <string name="faq_q2">How accurate is the cost estimation of the trip?</string>
+    <string name="faq_answer2">It\'s as accurate as a dart thrown by a professional darts player for buses and minibuses. But for other modes of transportation like microbuses, it\'s more of a pay-as-you-go system. So, you\'ll have a ballpark figure of the cost, and you might end up paying a tad more or less.</string>
+    <string name="faq_q3">How accurate is the trip time estimation?</string>
+    <string name="faq_q4">Why do I get one trip and not many options like Google Maps?</string>
+    <string name="faq_answer4">Well, this was a conscious choice. Apps like Google Maps might give you multiple options, but let\'s be honest, the top one is usually the best. It\'s like being at a buffet but always choosing the first dish. So, with 5MPK, we decided to serve you the best option based on time, distance, cost, and least transfers. We\'ve done the thinking, so you can focus on more important stuff, like what will you eat today.</string>
+    <string name="faq_q5">Why doesn\'t the offline mode include a map?</string>
+    <string name="faq_answer5">To include a usable map of the Greater Cairo Area for offline mode would make the app size balloon to over 3 GIGABYTES. That\'s like trying to fit an elephant in a mini-fridge! So, we decided to skip the map.</string>
+    <string name="privacy_policy">Privacy Policy</string>
 </resources>

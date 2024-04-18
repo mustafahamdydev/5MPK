@@ -34,7 +34,9 @@ class PhoneAuthentication : AppCompatActivity() {
         setContentView(binding?.root)
         auth = FirebaseAuth.getInstance()
 
+        number=intent.getStringExtra("phoneNumber")!!
 
+        binding!!.tdPhone.setText(number.substring(1))
 
         binding!!.contBtn.setOnClickListener{
            number =  binding!!.tdPhone.text.trim().toString()

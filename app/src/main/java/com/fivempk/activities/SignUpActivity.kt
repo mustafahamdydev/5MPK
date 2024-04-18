@@ -33,9 +33,6 @@ class SignUpActivity : AppCompatActivity() {
         phoneFocusListener()
         nameFocusListener()
         conPasswordFocusListener()
-        binding?.signinwithgoogle?.setOnClickListener{
-
-        }
 
         val options: ActivityOptions = ActivityOptions.makeCustomAnimation(
             this@SignUpActivity,
@@ -44,14 +41,7 @@ class SignUpActivity : AppCompatActivity() {
         )
         val intent = Intent(this@SignUpActivity, SignInActivity::class.java)
 
-
-
         auth = FirebaseAuth.getInstance()
-
-
-
-
-
 
         binding?.cirRegisterButton?.setOnClickListener{
            val name = binding!!.editTextName.text.toString()
@@ -69,23 +59,23 @@ class SignUpActivity : AppCompatActivity() {
                 if (pass == confirmPass){
                     auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
                         if (it.isSuccessful){
-                            submitForm()
+                            submitForm(numb)
                             val firebaseUser:FirebaseUser= it.result!!.user!!
                             val registeredEmail = firebaseUser.email!!
                             val user = User(firebaseUser.uid,name,"",registeredEmail,numb)
                             FireBaseClass().registerUser(this,user)
 
                         }else{
-                            submitForm()
+                            submitForm("")
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                         }
                     }
                 }else{
-                    submitForm()
+                    submitForm("")
                     Toast.makeText(this, "Invalid Inputs", Toast.LENGTH_SHORT).show()
                 }
             }else{
-                submitForm()
+                submitForm("")
                 Toast.makeText(this, "Please Fill out All Fields", Toast.LENGTH_SHORT).show()
             }
 
@@ -103,7 +93,7 @@ class SignUpActivity : AppCompatActivity() {
         btn.revertAnimation()
     }
 
-    private fun submitForm()
+    private fun submitForm(numb:String)
     {
         binding!!.textInputName.helperText = validName()
         binding!!.textInputEmail.helperText = validEmail()
@@ -118,7 +108,7 @@ class SignUpActivity : AppCompatActivity() {
         val validPhone = binding!!.textInputMobile.helperText == null
 
         if (validName && validEmail && validPhone && validPassword && validConPassword )
-            resetForm()
+            resetForm(numb)
         else
             invalidForm()
     }
@@ -146,11 +136,11 @@ class SignUpActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun resetForm()
+    private fun resetForm(numb: String)
     {
-        val message = "Registration Successful"
+        val message = "Just Verifiy Phone number And We are ready to start"
         AlertDialog.Builder(this)
-            .setTitle("Form submitted")
+            .setTitle("Registration Successful")
             .setMessage(message)
             .setPositiveButton("Okay"){ _,_ ->
                 binding!!.editTextEmail.text = null
@@ -165,10 +155,17 @@ class SignUpActivity : AppCompatActivity() {
                 binding!!.textInputConfPassword.helperText = getString(R.string.empty_text)
                 binding!!.textInputMobile.helperText = getString(R.string.empty_text)
 
-                finish()
+                val intent = Intent(this,PhoneAuthentication::class.java)
+                intent.putExtra("phoneNumber",numb)
+                startActivity(intent)
+
             }
             .show()
     }
+
+    ////////////////////////////////////////////////////////////////////////////
+    //Register  From Validation
+    ///////////////////////////////////////////////////////////////////////////
 
     private fun nameFocusListener(){
         binding!!.editTextName.setOnFocusChangeListener { _ , hasFocus ->

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.location.Location
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -443,6 +444,25 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.sharebtn->{
+                val url = "https://github.com/mustafahamdydev/5MPK.git" // Replace "https://example.com" with your actual URL
+
+                // Create an Intent with the ACTION_VIEW action and the URL
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+
+                // Check if there's an app available to handle this Intent
+                if (intent.resolveActivity(this.packageManager) != null) {
+                    // Start the activity to open the URL
+                    startActivity(intent)
+                } else {
+                    // Handle the case where there's no app available to handle the Intent
+                    Toast.makeText(this, "No app available to handle this action", Toast.LENGTH_SHORT).show()
+                }
+            }
+            R.id.faq->{
+                val intent = Intent(this ,FAQActivity::class.java)
+                startActivity(intent)
+            }
             R.id.logout -> {
                 signOut()
                 Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show()

@@ -67,6 +67,7 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent, options.toBundle())
         }
 
+
         binding?.cirLoginButton?.setOnClickListener{
             val btn :CircularProgressButton = findViewById(R.id.cirLoginButton)
             btn.startAnimation()
@@ -124,8 +125,13 @@ class SignInActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    Toast.makeText(this, "Signed in as ${user?.displayName}", Toast.LENGTH_SHORT).show()
+                    val googleUser = auth.currentUser
+                    val name = googleUser!!.displayName!!
+                    val email = googleUser.email!!
+                    val userData = User(googleUser.uid,name,googleUser.photoUrl.toString(),email)
+                    FireBaseClass().registerGoogleUser(this,userData)
+
+                    Toast.makeText(this, "Signed in as ${googleUser.displayName}", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, StartActivity::class.java))
                     finish()
                 } else {
@@ -141,6 +147,6 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun signInSuccess(loggedInUser: User) {
-        //sasduse
+
     }
 }

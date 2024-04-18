@@ -24,6 +24,18 @@
         android:theme="@style/Theme.FiveMPK"
         tools:targetApi="tiramisu">
         <activity
+            android:name=".activities.FAQActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.OfflineResultActivity"
             android:exported="false" />
         <activity

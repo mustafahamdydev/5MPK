@@ -67,8 +67,12 @@ class OtpActivity : AppCompatActivity() {
             
             if (typedOTP.isNotEmpty()){
                 if (typedOTP.length==6){
-                    val credential = PhoneAuthProvider.getCredential(otp,typedOTP)
-                    signInWithPhoneAuthCredential(credential)
+                    Toast.makeText(this, "OTP = $otp typedOTP = $typedOTP ", Toast.LENGTH_SHORT).show()
+
+                    if (otp == typedOTP){
+                        startActivity(Intent(this,SignInActivity::class.java))
+                    }
+                    Toast.makeText(this, "not equal", Toast.LENGTH_SHORT).show()
                 }else{
                     Toast.makeText(this, "Incorrect OTP", Toast.LENGTH_SHORT).show()
                 }
@@ -82,51 +86,6 @@ class OtpActivity : AppCompatActivity() {
 
 
     // Function to sign in with the phone authentication credential
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-        auth.signInWithCredential(credential)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    val user = auth.currentUser
-                    // Phone number verification successful, complete registration
-                    // Get user input from the beginning
-                    val intent = Intent(this@OtpActivity, MapsActivity::class.java)
-                    startActivity(intent)
-                    val email = email
-                    val password = pass
-                    val phoneNumber = phoneNumber
-
-                    // Update user profile with phone number
-                    val profileUpdates = UserProfileChangeRequest.Builder()
-                        .setDisplayName(name)
-                        .build()
-
-                    user?.updateProfile(profileUpdates)?.addOnCompleteListener { profileTask ->
-                        if (profileTask.isSuccessful) {
-                            // Profile updated successfully, now update email and password
-                            user.updateEmail(email).addOnCompleteListener { emailTask ->
-                                if (emailTask.isSuccessful) {
-                                    // Email updated successfully, now update password
-                                    user.updatePassword(password).addOnCompleteListener { passwordTask ->
-                                        if (passwordTask.isSuccessful) {
-                                            // Email and password updated successfully
-                                            // Proceed with your registration process here
-                                        } else {
-                                            // Handle password update failure
-                                        }
-                                    }
-                                } else {
-                                    // Handle email update failure
-                                }
-                            }
-                        } else {
-                            // Handle profile update failure
-                        }
-                    }
-                } else {
-                    // Handle sign-in failure
-                }
-            }
-    }
 
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 

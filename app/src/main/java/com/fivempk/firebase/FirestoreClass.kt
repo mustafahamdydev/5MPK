@@ -24,6 +24,14 @@ class FireBaseClass {
                 activity.userRegisteredSuccess()
             }
     }
+    fun registerGoogleUser(activity: SignInActivity, userInfo: User){
+        database.child(Constants.USERS)
+            .child(getCurrentUserId())
+            .setValue(userInfo)
+            .addOnSuccessListener {
+                activity.signInSuccess(userInfo)
+            }
+    }
     fun signInUser(activity: Activity){
         database.child(Constants.USERS)
             .child(getCurrentUserId())

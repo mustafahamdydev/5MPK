@@ -1,6 +1,7 @@
 package com.fivempk.activities
 
 import android.app.ActivityOptions
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -27,6 +28,7 @@ class ForgotPassActivity : AppCompatActivity() {
         }
 
 
+
         binding!!.backButton.setOnClickListener{
             val options: ActivityOptions = ActivityOptions.makeCustomAnimation(
                 this@ForgotPassActivity,
@@ -38,6 +40,14 @@ class ForgotPassActivity : AppCompatActivity() {
         }
     }
     private fun resertPass(email : String ){
-        auth.sendPasswordResetEmail(email)
+
+    val message = "Please check your email for the reset link"
+    AlertDialog.Builder(this)
+        .setTitle("Form submitted")
+        .setMessage(message)
+        .setPositiveButton("Okay"){ _,_ ->
+            binding!!.editTextEmail.text = null
+        }
+        .show()
     }
 }

@@ -12,16 +12,18 @@
             android:background="@drawable/nav_drawer_item_background"
             />
         <item
+            android:checkable="false"
             android:title="Share Our App"
-            android:id="@+id/test2"
+            android:id="@+id/sharebtn"
             android:icon="@drawable/icons8_reply_arrow"
             android:background="@drawable/nav_drawer_item_background"
             />
 
         <item
+            android:checkable="false"
             android:icon="@drawable/baseline_question_answer_24"
             android:title="FAQ"
-            android:id="@+id/test5"
+            android:id="@+id/faq"
             android:background="@drawable/nav_drawer_item_background"
             />
 

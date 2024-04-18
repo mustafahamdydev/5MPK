@@ -36,6 +36,7 @@
                 />
         </LinearLayout>
         <RelativeLayout
+            android:id="@+id/profile_btn"
             android:background="@color/white"
             android:padding="10dp"
             android:layout_width="match_parent"
@@ -61,6 +62,7 @@
                 />
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/change_pass_btn"
             android:background="@color/white"
             android:padding="10dp"
             android:layout_width="match_parent"
@@ -86,6 +88,7 @@
                 />
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/privacy_btn"
             android:background="@color/white"
             android:padding="10dp"
             android:layout_width="match_parent"
@@ -110,6 +113,7 @@
                 />
         </RelativeLayout>
         <RelativeLayout
+            android:id="@+id/about_us_btn"
             android:background="@color/white"
             android:padding="10dp"
             android:layout_width="match_parent"
