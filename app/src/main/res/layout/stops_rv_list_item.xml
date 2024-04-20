@@ -17,7 +17,7 @@
             android:layout_height="20dp"
             android:text="Default Bus Station Hamada Helal"
             android:textSize="10sp"
-            android:textColor="@color/grey"
+            android:textColor="?attr/colorSecondary"
             android:layout_margin="5dp"
             android:textStyle="bold"/>
 

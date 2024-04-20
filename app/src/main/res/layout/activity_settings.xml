@@ -7,26 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".activities.SettingsActivity"
     android:orientation="vertical"
+    android:background="?attr/colorOnPrimary"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/background_user"
         >
         <LinearLayout
-            android:background="@color/white"
+            android:paddingTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <View
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:backgroundTint="@color/black"
-                android:background="@drawable/back"/>
             <TextView
+                android:textColor="?attr/colorPrimary"
                 android:layout_margin="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,7 +31,7 @@
         </LinearLayout>
         <RelativeLayout
             android:id="@+id/profile_btn"
-            android:background="@color/white"
+            android:background="?attr/cardBackgroundColor"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,12 +52,12 @@
                 android:layout_height="20dp"
                 android:rotation="180"
                 android:background="@drawable/back"
-                android:backgroundTint="@color/grey"
+                android:backgroundTint="?attr/colorPrimary"
                 />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/change_pass_btn"
-            android:background="@color/white"
+            android:background="?attr/cardBackgroundColor"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -89,7 +83,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/privacy_btn"
-            android:background="@color/white"
+            android:background="?attr/cardBackgroundColor"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,7 +108,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/about_us_btn"
-            android:background="@color/white"
+            android:background="?attr/cardBackgroundColor"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

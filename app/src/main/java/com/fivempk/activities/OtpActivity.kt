@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.Editable
+import android.text.InputType
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.fivempk.R
 import com.google.firebase.FirebaseException
@@ -63,22 +66,17 @@ class OtpActivity : AppCompatActivity() {
                     +binding!!.inOtp5.text.toString()
                     +binding!!.inOtp6.text.toString())
 
-            Toast.makeText(this, "$typedOTP", Toast.LENGTH_SHORT).show()
-            
             if (typedOTP.isNotEmpty()){
                 if (typedOTP.length==6){
-                    Toast.makeText(this, "OTP = $otp typedOTP = $typedOTP ", Toast.LENGTH_SHORT).show()
-
-                    if (otp == typedOTP){
-                        startActivity(Intent(this,SignInActivity::class.java))
-                    }
-                    Toast.makeText(this, "not equal", Toast.LENGTH_SHORT).show()
+                    val credential = PhoneAuthProvider.getCredential(otp,typedOTP)
+                    signInWithPhoneAuthCredential(credential)
                 }else{
                     Toast.makeText(this, "Incorrect OTP", Toast.LENGTH_SHORT).show()
                 }
             }else{
                 Toast.makeText(this, "Please Enter OTP", Toast.LENGTH_SHORT).show()
             }
+
         }
 
 
@@ -86,6 +84,17 @@ class OtpActivity : AppCompatActivity() {
 
 
     // Function to sign in with the phone authentication credential
+    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val currentUser = auth.currentUser
+
+                } else {
+                    // Handle sign-in failure
+                }
+            }
+    }
 
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 

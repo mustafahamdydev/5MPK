@@ -47,7 +47,7 @@
     <string name="delete_account">Delete Account</string>
     <string name="please_select_destination">Please select destination</string>
     <string name="please_select_start_location">Please select start location</string>
-    <string name="our_goal_des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis facilisis sapien felis, nec dapibus velit lobortis pretium. Nam faucibus arcu ante, ut tincidunt dolor laoreet quis. Duis a dictum libero. In blandit mattis dui. In varius hendrerit elit sed pharetra. Fusce venenatis erat vitae tincidunt ultrices. Mauris arcu tortor, porta sed nunc vitae, tincidunt congue lorem. Phasellus sollicitudin interdum magna, id elementum dui volutpat ac. Quisque nulla enim, fringilla posuere elementum non, sodales vel felis. In vitae blandit nisi, id scelerisque libero.</string>
+    <string name="our_goal_des">Our goal is to develop an innovative multi-modal transportation solution that optimizes urban mobility, enhancing efficiency, accessibility, and user experience. Through the integration of real-time data, personalized preferences, and advanced algorithms, our aim is to redefine commuting, making it seamless, sustainable, and user-centric. This project strives to address the challenges of modern urban transportation, ultimately transforming the way people navigate cities and improving their daily lives.</string>
     <string name="faq">Frequently Asked Questions</string>
     <string name="faq_q1">Why couldn\'t a trip be found?</string>
     <string name="faq_answer1">Well, our algorithm went on a scavenger hunt for a direct trip that doesn\'t require any walking transfers between buses. But alas, it returned empty-handed.</string>
@@ -59,4 +59,5 @@
     <string name="faq_q5">Why doesn\'t the offline mode include a map?</string>
     <string name="faq_answer5">To include a usable map of the Greater Cairo Area for offline mode would make the app size balloon to over 3 GIGABYTES. That\'s like trying to fit an elephant in a mini-fridge! So, we decided to skip the map.</string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="faq_answer3">The trip time is calculated considering a whole bunch of factors like congestion, road conditions, the length of the trip, and the anticipated wait time for the next bus. So, we try to give you the most probable time, kind of like predicting the weather.</string>
 </resources>

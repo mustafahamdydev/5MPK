@@ -138,7 +138,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun resetForm(numb: String)
     {
-        val message = "Just Verifiy Phone number And We are ready to start"
+        val message = "Congrats ! You are Ready to go"
         AlertDialog.Builder(this)
             .setTitle("Registration Successful")
             .setMessage(message)
@@ -155,9 +155,7 @@ class SignUpActivity : AppCompatActivity() {
                 binding!!.textInputConfPassword.helperText = getString(R.string.empty_text)
                 binding!!.textInputMobile.helperText = getString(R.string.empty_text)
 
-                val intent = Intent(this,PhoneAuthentication::class.java)
-                intent.putExtra("phoneNumber",numb)
-                startActivity(intent)
+                finish()
 
             }
             .show()
@@ -209,6 +207,9 @@ class SignUpActivity : AppCompatActivity() {
         val phoneText = binding!!.editTextMobile.text.toString()
         if (phoneText.length != 11){
             return "Invalid Phone Number"
+        }
+        if (phoneText.substring(0,2) != "01"){
+            return "Number Should Start with \"01\" "
         }
         return null
     }

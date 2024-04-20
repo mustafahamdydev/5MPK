@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp">
         <LinearLayout
+            android:id="@+id/profileImage_background"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:orientation="vertical"
@@ -21,17 +22,18 @@
             android:gravity="bottom">
         </LinearLayout>
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/user_image"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:elevation="20dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/background_witg_vector"
-            />
+                android:id="@+id/user_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:elevation="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/background_witg_vector" />
+
     </RelativeLayout>
   <androidx.cardview.widget.CardView
+      app:cardBackgroundColor="?attr/cardBackgroundColor"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       app:cardCornerRadius="20dp"
@@ -90,14 +92,28 @@
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"/>
           </com.google.android.material.textfield.TextInputLayout>
+          <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+              android:id="@+id/Update_btn"
+              android:layout_width="match_parent"
+              android:backgroundTint="?attr/colorPrimary"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:layout_height="50dp"
+              app:spinning_bar_width="4dp"
+              app:spinning_bar_color="#FFF"
+              android:text="Update"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="@dimen/loginViewsMargin"
+              app:initialCornerAngle="27dp"
+              app:spinning_bar_padding="6dp"/>
           <Button
               android:id="@+id/delete_btn"
               android:layout_marginTop="40dp"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:textColor="@android:color/holo_red_light"
+              android:textColor="?attr/colorError"
               android:text="@string/delete_account"
-              android:backgroundTint="@color/black"
+              android:backgroundTint="?attr/colorErrorContainer"
               />
 
       </LinearLayout>

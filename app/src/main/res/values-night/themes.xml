@@ -2,20 +2,42 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.FiveMPK" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
-
-        <item name="colorPrimary">@color/blue_100</item>
-        <item name="colorPrimaryVariant">@color/blue_150</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <item name="colorAccent">@color/blue_150</item>
-        <item name="android:colorAccent">@color/blue_150</item>
-        <item name="colorControlActivated">@color/blue_150</item>
-        <item name="colorPrimaryContainer">@color/blue_150</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <!-- Primary color. -->
+        <item name="colorPrimary">#8dcdff</item>
+        <item name="colorOnPrimary">#00344f</item>
+        <item name="colorPrimaryContainer">#004b70</item>
+        <item name="colorOnPrimaryContainer">#cae6ff</item>
+        <!-- Secondary color. -->
+        <item name="colorSecondary">#b7c9d9</item>
+        <item name="colorOnSecondary">#22323f</item>
+        <item name="colorSecondaryContainer">#384956</item>
+        <item name="colorOnSecondaryContainer">#d3e5f5</item>
+        <!-- Tertiary color -->
+        <item name="colorTertiary">#95ccff</item>
+        <item name="colorOnTertiary">#003352</item>
+        <item name="colorTertiaryContainer">#004a75</item>
+        <item name="colorOnTertiaryContainer">#cde5ff</item>
+        <!--Error color -->
+        <item name="colorError">#ffb4ab</item>
+        <item name="colorOnError">#690005</item>
+        <item name="colorErrorContainer">#93000a</item>
+        <item name="colorOnErrorContainer">#ffdad6</item>
+        <!-- Background color -->
+        <item name="backgroundColor">#001f25</item>
+        <item name="colorOnBackground">#a6eeff</item>
+        <item name="colorSurface">#001f25</item>
+        <item name="colorOnSurface">#a6eeff</item>
+        <!-- Outline color -->
+        <item name="colorOutline">#8b9198</item>
+        <item name="colorSurfaceVariant">#41474d</item>
+        <item name="colorOnSurfaceVariant">#c1c7ce</item>
+        <!--Card color-->
+        <item name="cardBackgroundColor">#0F4864</item>
+        <!--SearchBar Color-->
+        <item name="colorContainer">#ffffff</item>
+        <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <!-- Font Family -->
         <item name="fontFamily">@font/poppinsmedium</item>
 
     </style>

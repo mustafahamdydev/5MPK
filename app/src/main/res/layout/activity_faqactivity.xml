@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:background="?attr/colorOnPrimary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.FAQActivity">
     <TextView
+        android:textColor="?attr/colorPrimary"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +20,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/blue_150"
+        android:background="?attr/colorPrimary"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         />
@@ -42,7 +44,8 @@
                 android:orientation="horizontal"
                 >
                 <RadioButton
-                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top"
                     android:id="@+id/q1"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -59,10 +62,11 @@
                         android:layout_height="50dp"
                         android:gravity="center"
                         android:textSize="16sp"
-                        android:textColor="@color/blue_150"
+                        android:textColor="?attr/colorSecondary"
                         android:text="@string/faq_q1"
                         />
                     <TextView
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:id="@+id/answer1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -80,7 +84,8 @@
                 android:orientation="horizontal"
                 >
                 <RadioButton
-                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top"
                     android:id="@+id/q2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -96,10 +101,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:textSize="16sp"
-                        android:textColor="@color/blue_150"
+                        android:textColor="?attr/colorSecondary"
                         android:text="@string/faq_q2"
                         />
                     <TextView
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:id="@+id/answer2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -117,7 +123,8 @@
                 android:orientation="horizontal"
                 >
                 <RadioButton
-                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top"
                     android:id="@+id/q3"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -134,14 +141,15 @@
                         android:layout_height="50dp"
                         android:gravity="center"
                         android:textSize="16sp"
-                        android:textColor="@color/blue_150"
+                        android:textColor="?attr/colorSecondary"
                         android:text="@string/faq_q3"
                         />
                     <TextView
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:id="@+id/answer3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/our_goal_des"
+                        android:text="@string/faq_answer3"
                         android:textSize="14sp"
                         android:visibility="gone"
                         />
@@ -155,7 +163,8 @@
                 android:orientation="horizontal"
                 >
                 <RadioButton
-                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top"
                     android:id="@+id/q4"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -171,10 +180,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:textSize="16sp"
-                        android:textColor="@color/blue_150"
+                        android:textColor="?attr/colorSecondary"
                         android:text="@string/faq_q4"
                         />
                     <TextView
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:id="@+id/answer4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -192,7 +202,8 @@
                 android:orientation="horizontal"
                 >
                 <RadioButton
-                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top"
                     android:id="@+id/q5"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -208,10 +219,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:textSize="16sp"
-                        android:textColor="@color/blue_150"
+                        android:textColor="?attr/colorSecondary"
                         android:text="@string/faq_q5"
                         />
                     <TextView
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:id="@+id/answer5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

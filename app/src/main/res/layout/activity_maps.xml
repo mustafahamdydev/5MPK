@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:scaleType="fitCenter"
+                android:backgroundTint="?attr/colorPrimary"
                 android:src="@drawable/icons8_fries_menu_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/mapFragment"
@@ -41,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.045"
                 app:shapeAppearanceOverlay="@style/RoundedCornerFab"
-                app:tint="@color/white"
+                app:tint="?attr/colorOnPrimary"
                 android:contentDescription="@string/elemntcode" />
 
             <ImageButton
@@ -81,7 +82,7 @@
                     android:layout_margin="10dp"
                     android:layout_height="50dp"
                     android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
+                    app:cardBackgroundColor="?attr/colorContainer"
                     app:cardCornerRadius="30dp">
 
                     <androidx.fragment.app.FragmentContainerView
@@ -99,7 +100,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/my_location"
-                        android:background="#E4E4E4"
+                        android:background="?attr/colorContainer"
                         android:contentDescription="@string/elemntcode" />
 
                 </androidx.cardview.widget.CardView>
@@ -110,7 +111,7 @@
                     android:layout_margin="10dp"
                     android:layout_height="50dp"
                     android:visibility="visible"
-                    app:cardBackgroundColor="@color/white"
+                    app:cardBackgroundColor="?attr/colorContainer"
                     app:cardCornerRadius="30dp">
 
                     <androidx.fragment.app.FragmentContainerView
@@ -124,8 +125,14 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <Button
+                <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
                     android:id="@+id/submit"
+                    android:paddingStart="20dp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnPrimary"
+                    app:spinning_bar_color="@color/white"
+                    android:backgroundTint="@color/White_dimed"
+                    android:paddingEnd="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -142,7 +149,7 @@
                 android:layout_height="50dp"
                 android:orientation="horizontal"
                 android:elevation="5dp"
-                android:background="@color/white"
+                android:background="?attr/colorOnPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -163,7 +170,7 @@
             android:background="@drawable/nav_style"
             app:menu="@menu/drawer_menu"
             app:headerLayout="@layout/nav_header"
-            app:itemTextColor="@color/default_item_color"
+            app:itemTextColor="?attr/colorPrimary"
             app:itemBackground="@drawable/nav_drawer_item_background"
             >
 

@@ -8,6 +8,7 @@ import android.location.Location
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.controls.templates.StatelessTemplate
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.MenuItem
@@ -28,6 +29,7 @@ import com.fivempk.databinding.ActivityMapsBinding
 import com.fivempk.firebase.FireBaseClass
 import com.fivempk.models.User
 import com.fivempk.utils.RouteColorManager
+import com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
@@ -209,6 +211,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         mapFragment.getMapAsync(this)
 
         binding?.submit?.setOnClickListener {
+            val btn : CircularProgressButton = findViewById(R.id.submit)
+            btn.startAnimation()
             loadAd()
             lifecycleScope.launch(Dispatchers.IO) {
                 val output = PyBackend.getRoute(
@@ -327,6 +331,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private fun checkInputs() {
         if (isLocationSelected && isDestinationSelected){
             binding?.submit?.isEnabled = true
+            val colorStateList = android.content.res.ColorStateList.valueOf(com.google.android.material.R.attr.colorPrimary)
+            binding?.submit?.backgroundTintList = colorStateList
+            binding?.submit?.setTextColor(getColor(R.color.white))
         }
 
     }
@@ -445,19 +452,15 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sharebtn->{
-                val url = "https://github.com/mustafahamdydev/5MPK.git" // Replace "https://example.com" with your actual URL
+                val appMsg : String = "Hey ! , Check out this app for Public Transportation Guide in Egypt . " +
+                        "https://github.com/mustafahamdydev/5MPK.git"
 
-                // Create an Intent with the ACTION_VIEW action and the URL
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                val intent =Intent()
+                intent.action = Intent.ACTION_SEND
+                intent.putExtra(Intent.EXTRA_TEXT,appMsg)
+                intent.type= "text/plain"
+                startActivity(intent)
 
-                // Check if there's an app available to handle this Intent
-                if (intent.resolveActivity(this.packageManager) != null) {
-                    // Start the activity to open the URL
-                    startActivity(intent)
-                } else {
-                    // Handle the case where there's no app available to handle the Intent
-                    Toast.makeText(this, "No app available to handle this action", Toast.LENGTH_SHORT).show()
-                }
             }
             R.id.faq->{
                 val intent = Intent(this ,FAQActivity::class.java)

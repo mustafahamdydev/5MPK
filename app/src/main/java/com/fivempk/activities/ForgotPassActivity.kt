@@ -24,7 +24,7 @@ class ForgotPassActivity : AppCompatActivity() {
 
         binding!!.ResetBtn.setOnClickListener{
             val textEmail = binding!!.editTextEmail.text.toString()
-            resertPass(textEmail)
+            resetPass(textEmail)
         }
 
 
@@ -39,15 +39,31 @@ class ForgotPassActivity : AppCompatActivity() {
             startActivity(intent,options.toBundle())
         }
     }
-    private fun resertPass(email : String ){
-
-    val message = "Please check your email for the reset link"
-    AlertDialog.Builder(this)
-        .setTitle("Form submitted")
-        .setMessage(message)
-        .setPositiveButton("Okay"){ _,_ ->
-            binding!!.editTextEmail.text = null
+    private fun resetPass(email : String ){
+        auth.sendPasswordResetEmail(email).addOnSuccessListener {
+            val message = "Please check your email for the reset link"
+            AlertDialog.Builder(this)
+                .setTitle("Form submitted")
+                .setMessage(message)
+                .setPositiveButton("Okay"){ _,_ ->
+                    binding!!.editTextEmail.text = null
+                    finish()
+                }
+                .show()
+        }.addOnFailureListener {
+            val message = "Please make sure your email is register or try again later"
+            AlertDialog.Builder(this)
+                .setTitle("Failed")
+                .setMessage(message)
+                .setPositiveButton("Okay"){ _,_ ->
+                    binding!!.editTextEmail.text = null
+                    finish()
+                }
+                .show()
         }
-        .show()
+
+
+
     }
+
 }

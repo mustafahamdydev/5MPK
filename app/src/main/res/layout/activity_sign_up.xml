@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.SignUpActivity"
-    android:background="@color/register_bk_color"
+    android:background="?attr/colorOnPrimary"
     android:focusableInTouchMode="true"
     android:gravity="center"
     android:layout_gravity="center">
@@ -25,7 +25,7 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
                     style="@style/viewParent.headerText.NoMode"
-                    android:textColor="@color/whiteTextColor"
+                    android:textColor="?attr/colorPrimary"
                     android:text="Here’s your first\nstep with us! "/>
 
                 <ImageView
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_marginTop="10dp"
-                app:cardBackgroundColor="@color/whiteTextColor"
+                app:cardBackgroundColor="?attr/cardBackgroundColor"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -154,7 +154,7 @@
                             style="@style/parent"
                             android:textAlignment="center"
                             android:textStyle="bold"
-                            android:textColor="@color/themeColor"
+                            android:textColor="?attr/colorPrimary"
                             android:textSize="17sp"
                             android:text="Already have an account?"
                             android:layout_marginTop="@dimen/loginViewsMargin"

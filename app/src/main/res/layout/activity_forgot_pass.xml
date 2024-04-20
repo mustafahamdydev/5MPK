@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.ForgotPassActivity"
-    android:background="@color/register_bk_color"
+    android:background="?attr/colorOnPrimary"
     android:focusableInTouchMode="true">
 
     <LinearLayout
@@ -24,7 +24,7 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 style="@style/viewParent.headerText.NoMode"
-                android:textColor="@color/whiteTextColor"
+                android:textColor="?attr/colorPrimary"
                 android:text="Forgot Password \nNo Worries"/>
 
             <ImageView
@@ -46,7 +46,7 @@
                             android:layout_height="wrap_content"
                             android:text="Please Provide Your Account's Email \n Which You want to Reset"
                             android:textAlignment="center"
-                            android:textColor="@color/white"
+                            android:textColor="?attr/colorPrimary"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -60,15 +60,13 @@
                                 style="@style/modifiedEditText"
                                 android:inputType="textEmailAddress"
                                 android:maxLines="1"
-                                android:textColor="@color/white"
+                                android:textColor="?attr/colorOnPrimary"
                                 android:hint="@string/login_email_hint"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
                             android:id="@+id/Reset_btn"
                             style="@style/loginButton"
-                            android:textColor="@color/black"
-                            android:backgroundTint="@color/white"
                             app:spinning_bar_width="4dp"
                             app:spinning_bar_color="#FFF"
                             android:text="Reset Password"

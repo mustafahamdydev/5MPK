@@ -12,6 +12,9 @@ object Constants {
     const val MICROBUS_TICKET_PRICE = 7
     const val TOMNAYA_TICKET_PRICE = 5
     const val BOX_TICKET_PRICE = 5
+    const val IMAGE:String = "image"
+    const val NAME:String = "name"
+    const val NUMBER:String = "number"
 
 
 

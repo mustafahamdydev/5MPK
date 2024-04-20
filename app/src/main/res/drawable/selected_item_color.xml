@@ -5,7 +5,7 @@
     android:insetRight="10dp"
     android:insetBottom="0dp">
     <shape android:shape="rectangle">
-        <solid android:color="@color/selected_drawer_item_background" />
+        <solid android:color="?attr/colorSurface" />
         <corners android:radius="26dp" /> <!-- Adjust radius as per your preference -->
         <padding
             android:left="8dp"
