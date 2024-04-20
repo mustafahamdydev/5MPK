@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".activities.StartActivity"
     android:background="?attr/colorOnPrimary"
     >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/blob_signin"
-        app:tint="@color/black"
-        android:contentDescription="Logo" />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="46sp"
+       android:text="Welcome"
+       android:fontFamily="@font/poppinsmedium"
+       android:layout_alignParentTop="true"
+       android:layout_centerInParent="true"
+       android:layout_marginTop="40dp"
+       android:textColor="?attr/colorPrimary"
+       />
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/untitled_3"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/tv_permsion"
+        android:layout_marginBottom="200dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_permsion"
+        android:layout_width="wrap_content"
+        android:textColor="?attr/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:text="We just need location Permission to start Please accept the dialoge that will appaear now"
+        />
+
+</RelativeLayout>
