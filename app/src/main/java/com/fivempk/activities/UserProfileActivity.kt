@@ -3,12 +3,14 @@ package com.fivempk.activities
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.webkit.MimeTypeMap
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -34,9 +36,11 @@ class UserProfileActivity : AppCompatActivity() {
 
     companion object{
         private const val READ_STORAGE_PERMISSION_CODE = 1
+        private const val READ_IMAGE_PERMISSION_CODE = 1
         private const val PICK_IMAGE_REQUEST_CODE = 2
     }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -63,6 +67,16 @@ class UserProfileActivity : AppCompatActivity() {
             }else{
                 ActivityCompat.requestPermissions(
                     this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                    READ_STORAGE_PERMISSION_CODE)
+            }
+            if (ContextCompat.checkSelfPermission(
+                    this,android.Manifest.permission.READ_MEDIA_IMAGES)
+                == android.content.pm.PackageManager.PERMISSION_GRANTED){
+                showImageChooser()
+
+            }else{
+                ActivityCompat.requestPermissions(
+                    this, arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES),
                     READ_STORAGE_PERMISSION_CODE)
             }
         }
