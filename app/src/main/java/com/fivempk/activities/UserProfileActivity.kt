@@ -36,7 +36,6 @@ class UserProfileActivity : AppCompatActivity() {
 
     companion object{
         private const val READ_STORAGE_PERMISSION_CODE = 1
-        private const val READ_IMAGE_PERMISSION_CODE = 1
         private const val PICK_IMAGE_REQUEST_CODE = 2
     }
 
@@ -67,16 +66,6 @@ class UserProfileActivity : AppCompatActivity() {
             }else{
                 ActivityCompat.requestPermissions(
                     this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
-                    READ_STORAGE_PERMISSION_CODE)
-            }
-            if (ContextCompat.checkSelfPermission(
-                    this,android.Manifest.permission.READ_MEDIA_IMAGES)
-                == android.content.pm.PackageManager.PERMISSION_GRANTED){
-                showImageChooser()
-
-            }else{
-                ActivityCompat.requestPermissions(
-                    this, arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES),
                     READ_STORAGE_PERMISSION_CODE)
             }
         }
