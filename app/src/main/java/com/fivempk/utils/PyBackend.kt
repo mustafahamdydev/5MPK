@@ -51,7 +51,7 @@ object PyBackend {
                 newRoute.add(latLng)
                 routes[routeId] = newRoute
             }
-            result.add(arrayListOf(stopName, busName))
+            result.add(arrayListOf(stopName, busName, routeId))
             lastLatLng = latLng
         }
         val routeCoordinates = ArrayList(routes.values)

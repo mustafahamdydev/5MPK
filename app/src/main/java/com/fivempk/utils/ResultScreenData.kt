@@ -5,7 +5,8 @@ import com.fivempk.R
 
 data class Bus(
     val name: String,
-    val stops: List<String>
+    val stops: List<String>,
+    var color: Int? = null
 )
 data class Stop(
     val name: String,

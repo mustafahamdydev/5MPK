@@ -45,8 +45,10 @@ class BusViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(bus: Bus) {
         val busNameTextView = itemView.findViewById<TextView>(R.id.busName)
         busNameTextView.text = bus.name
-        val color = RouteColorManager.getBusNextColor()
-        busNameTextView.backgroundTintList = ColorStateList.valueOf(color)
+        if (bus.color == null) {
+            bus.color = RouteColorManager.getBusNextColor()
+        }
+        busNameTextView.backgroundTintList = ColorStateList.valueOf(bus.color!!)
         val price : Int = PyBackend.getBusPrice(bus.name)
         itemView.findViewById<TextView>(R.id.busPrice).text = price.toString()
         // Bind the inner RecyclerView here using another adapter

@@ -36,7 +36,6 @@ import com.fivempk.utils.RouteColorManager
 import com.google.android.gms.maps.model.MapStyleOptions
 import java.util.ArrayList
 
-
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     private var binding: ActivityResultBinding? = null
     private lateinit var mGoogleMap: GoogleMap
@@ -44,6 +43,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     private var totalEstimatedTravelTimeInSeconds: Long = 0
     private var totalRequests = 0
     private var completedRequests = 0
+    private var busCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,26 +51,28 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         setContentView(binding?.root)
         enableEdgeToEdge()
 
-        val busMap = mutableMapOf<String, MutableList<String>>()
+        // Map to link routeID with a pair containing the bus name and list of stops
+        val busMap = mutableMapOf<String, Pair<String, MutableList<String>>>()
 
         for (busInfo in PyBackend.routeStopsList!!) {
-            val busName = busInfo[1]
             val stop = busInfo[0]
-
-            if (busMap.containsKey(busName)) {
-                busMap[busName]?.add(stop)
-            } else {
-                busMap[busName] = mutableListOf(stop)
-            }
+            val busName = busInfo[1]
+            val routeId = busInfo[2] // Using routeId as the unique identifier
+            val currentPair = busMap[routeId] ?: Pair(busName, mutableListOf())
+            // Add stop to the list of stops in the pair
+            val updatedPair = currentPair.copy(second = currentPair.second.apply { add(stop) })
+            // Update the map
+            busMap[routeId] = updatedPair
         }
 
-        val buses = busMap.map { Bus(it.key, it.value) }
+        // Convert the map entries to Bus objects
+        val buses = busMap.entries.map { Bus(it.value.first, it.value.second) }
 
         buses.let {
             // Calculate the total travel cost
             val totalTravelCost = it.sumOf { bus ->
+                busCount += 1
                 PyBackend.getBusPrice(bus.name)
-
             }
             PyBackend.totalTravelCost = totalTravelCost
 
@@ -283,18 +285,21 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         })
     }
 
-    private fun calculateTravelTime(){
+    private fun calculateTravelTime() {
         if (completedRequests == totalRequests) {
-            val totalTravelTimeInHours = totalEstimatedTravelTimeInSeconds / 3600
-            val totalTravelTimeInMinutes = (totalEstimatedTravelTimeInSeconds % 3600) / 60
+            var totalTravelTimeInMinutes = totalEstimatedTravelTimeInSeconds / 60
+            // Add extra 10 minutes as waiting time for the arrival of each transport mode
+            totalTravelTimeInMinutes += busCount * 10
+
+            val hours = totalTravelTimeInMinutes / 60
+            val minutes = totalTravelTimeInMinutes % 60
 
             // Generate the formatted string
-            val formattedTime = if (totalTravelTimeInHours > 1.0) {
-                "$totalTravelTimeInHours hour, $totalTravelTimeInMinutes minutes"
+            val formattedTime = if (hours > 0) {
+                "$hours hours, $minutes mins"
             } else {
-                "$totalTravelTimeInMinutes minutes"
+                "$minutes mins"
             }
-            // Update the TextView with the formatted total travel time
             binding?.tvTotalTravelTime?.text = formattedTime
         }
     }
