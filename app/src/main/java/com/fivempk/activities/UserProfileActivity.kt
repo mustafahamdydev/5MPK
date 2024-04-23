@@ -1,11 +1,9 @@
 package com.fivempk.activities
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
 import android.webkit.MimeTypeMap
 import android.widget.Toast
@@ -13,7 +11,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.fivempk.R
 import com.fivempk.databinding.ActivityUserProfileBinding
@@ -24,8 +21,10 @@ import com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgre
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.google.maps.android.PackageManager
 import java.io.IOException
+import android.content.pm.PackageManager
+import android.Manifest
+import androidx.activity.result.contract.ActivityResultContracts
 
 class UserProfileActivity : AppCompatActivity() {
     private var binding: ActivityUserProfileBinding? = null
@@ -34,9 +33,26 @@ class UserProfileActivity : AppCompatActivity() {
     private var mProfileImageURL :String = ""
     private lateinit var mUserDetails:User
 
+    private val getContent =
+        registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            // Handle the returned Uri here
+            if (uri != null) {
+                mSelectedImageFileUri = uri
+                try {
+                    Glide
+                        .with(this)
+                        .load(mSelectedImageFileUri)
+                        .centerCrop()
+                        .placeholder(R.drawable.background_witg_vector)
+                        .into(binding!!.userImage)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            }
+        }
+
     companion object{
         private const val READ_STORAGE_PERMISSION_CODE = 1
-        private const val PICK_IMAGE_REQUEST_CODE = 2
     }
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
@@ -48,7 +64,6 @@ class UserProfileActivity : AppCompatActivity() {
 
         auth= FirebaseAuth.getInstance()
         val currentUser = auth.currentUser
-
         if (currentUser != null) {
             FireBaseClass().signInUser(this)
         }else{
@@ -57,26 +72,28 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
-        binding!!.userImage.setOnClickListener{
-            if (ContextCompat.checkSelfPermission(
-                    this,android.Manifest.permission.READ_EXTERNAL_STORAGE)
-                == android.content.pm.PackageManager.PERMISSION_GRANTED){
-                showImageChooser()
-
-            }else{
-                ActivityCompat.requestPermissions(
-                    this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
-                    READ_STORAGE_PERMISSION_CODE)
+        binding?.userImage?.setOnClickListener {
+            when {
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkPermissionsTiramisu() -> {
+                    showImageChooser()
+                }
+                Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED -> {
+                    showImageChooser()
+                }
+                else -> {
+                    requestStoragePermission()
+                }
             }
         }
 
         binding!!.deleteBtn.setOnClickListener {
             currentUser!!.delete()
             FireBaseClass().deleteUser(this)
-            val intent = Intent(this, StartActivity::class.java)
-            startActivity(intent)
-            finish()
+            auth.signOut()
+            startActivity(Intent(this, SignInActivity::class.java))
+            finishAffinity()
         }
+
         binding!!.UpdateBtn.setOnClickListener {
             if (mSelectedImageFileUri != null){
                 uploadUserImage()
@@ -86,76 +103,63 @@ class UserProfileActivity : AppCompatActivity() {
                 updateUserProfileData()
             }
         }
+    }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+    private fun checkPermissionsTiramisu(): Boolean {
+        return checkSelfPermission(Manifest.permission.READ_MEDIA_IMAGES) == PackageManager.PERMISSION_GRANTED
+    }
 
-
+    private fun requestStoragePermission() {
+        val permissionsToRequest = mutableListOf<String>()
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissionsToRequest.add(Manifest.permission.READ_MEDIA_IMAGES)
+        } else {
+            permissionsToRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE)
+        }
+        ActivityCompat.requestPermissions(
+            this,
+            permissionsToRequest.toTypedArray(),
+            READ_STORAGE_PERMISSION_CODE
+        )
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == READ_STORAGE_PERMISSION_CODE) {
-            if (grantResults.isNotEmpty() && grantResults[0] == android.content.pm.PackageManager.PERMISSION_GRANTED) {
-                // Permission granted, handle the case
-                showImageChooser()
-                Toast.makeText(this, "Permission granted", Toast.LENGTH_SHORT).show()
-            } else {
-                // Permission denied, handle the case
-                Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
+        when (requestCode) {
+            READ_STORAGE_PERMISSION_CODE -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    showImageChooser()
+                } else {
+                    Toast.makeText(this, "Permission denied", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
 
-    private fun showImageChooser(){
-        val galleryIntent = Intent(Intent.ACTION_PICK,
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-        startActivityForResult(galleryIntent,PICK_IMAGE_REQUEST_CODE)
-    }
-
-    @Deprecated("Deprecated in Java")
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK && requestCode == PICK_IMAGE_REQUEST_CODE && data!!.data != null ){
-            mSelectedImageFileUri = data.data
-
-
-            try {
-                Glide
-                    .with(this)
-                    .load(mSelectedImageFileUri)
-                    .centerCrop()
-                    .placeholder(R.drawable.background_witg_vector)
-                    .into(binding!!.userImage)
-            }catch (e:IOException){
-                e.printStackTrace()
-            }
-        }
+    private fun showImageChooser() {
+        getContent.launch("image/*")
     }
 
     fun fillUserInfo(user:User){
         mUserDetails = user
-
         Glide
             .with(this)
             .load(user.image)
             .centerCrop()
             .placeholder(R.drawable.background_witg_vector)
             .into(binding!!.userImage)
-
         binding!!.edittextName.setText(user.name)
         binding!!.edittextEmail.setText(user.email)
         binding!!.edittextPhone.setText(user.phone)
     }
 
     private fun updateUserProfileData(){
-
-
         val  userHashMap = HashMap<String,Any>()
          if (mProfileImageURL.isNotEmpty() && mProfileImageURL != mUserDetails.image){
              userHashMap[Constants.IMAGE] = mProfileImageURL
          }
-
         FireBaseClass().updateUserProfileData(this , userHashMap)
-
     }
 
     private fun uploadUserImage(){
@@ -196,5 +200,4 @@ class UserProfileActivity : AppCompatActivity() {
         btn.revertAnimation()
         finish()
     }
-
 }

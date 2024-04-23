@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.fivempk.R
@@ -67,7 +68,6 @@ class SignInActivity : AppCompatActivity() {
             startActivity(intent, options.toBundle())
         }
 
-
         binding?.cirLoginButton?.setOnClickListener{
             val btn :CircularProgressButton = findViewById(R.id.cirLoginButton)
             btn.startAnimation()
@@ -91,6 +91,10 @@ class SignInActivity : AppCompatActivity() {
                 btn.revertAnimation()
                 Toast.makeText(this, "Please Fill out All Fields", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        onBackPressedDispatcher.addCallback(this){
+            finishAffinity()
         }
     }
 

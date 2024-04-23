@@ -5,10 +5,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.location.Location
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.controls.templates.StatelessTemplate
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.MenuItem
@@ -134,7 +132,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
         executeAfterDelay()
 
         ///Drawer setup
@@ -154,7 +151,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             val intent = Intent(this,UserProfileActivity::class.java)
             startActivity(intent)
         }
-
 
         //New Places API
         Places.initialize(applicationContext,getString(R.string.Google_Api_Key))
@@ -296,10 +292,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         val adView = AdView(this)
         adView.adUnitId = "ca-app-pub-9050992379264255/2491285948"
         adView.setAdSize(adSize)
-
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
-
          val adContainer = findViewById<LinearLayout>(R.id.adView)
          adContainer.addView(adView)
     }
@@ -335,7 +329,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             binding?.submit?.backgroundTintList = colorStateList
             binding?.submit?.setTextColor(getColor(R.color.white))
         }
-
     }
 
     private fun openResultActivityIfAlgorithmIsFinished() {
@@ -405,7 +398,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                 mGoogleMap.setMapStyle(mapStyle)
             }
         }
-
         checkLocationPermission()
     }
 
@@ -441,12 +433,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
             mGoogleMap.isMyLocationEnabled = true
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Places.deinitialize()
-        binding = null
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -487,7 +473,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             .centerCrop()
             .placeholder(R.drawable.background_witg_vector)
             .into(binding!!.navView.findViewById(R.id.user_image))
-
         binding!!.navView.findViewById<TextView>(R.id.tv_userName).text= user.name
         binding!!.navView.findViewById<TextView>(R.id.tv_userEmail).text= user.email
     }
@@ -498,5 +483,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
          finish() // If you want to finish the current activity after sign-out
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Places.deinitialize()
+        binding = null
+    }
 }
 

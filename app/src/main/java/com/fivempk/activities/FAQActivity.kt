@@ -4,11 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.fivempk.R
 import com.fivempk.databinding.ActivityFaqactivityBinding
-import com.fivempk.databinding.ActivityForgotPassBinding
 
 class FAQActivity : AppCompatActivity() {
     private var binding : ActivityFaqactivityBinding? = null

@@ -48,13 +48,13 @@ class SignUpActivity : AppCompatActivity() {
             val email = binding!!.editTextEmail.text.toString()
             val numb = binding!!.editTextMobile.text.toString()
             val pass = binding!!.editTextPassword.text.toString()
+            val btn : CircularProgressButton = findViewById(R.id.cirRegisterButton)
             val confirmPass = binding!!.editTextConfPassword.text.toString()
             if ( name.isNotEmpty()
                 && email.isNotEmpty()
                 && numb.isNotEmpty()
                 && pass.isNotEmpty()
                 && confirmPass.isNotEmpty()){
-                val btn : CircularProgressButton = findViewById(R.id.cirRegisterButton)
                 btn.startAnimation()
                 if (pass == confirmPass){
                     auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
@@ -68,19 +68,20 @@ class SignUpActivity : AppCompatActivity() {
                         }else{
                             submitForm("")
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            btn.revertAnimation()
                         }
                     }
                 }else{
                     submitForm("")
                     Toast.makeText(this, "Invalid Inputs", Toast.LENGTH_SHORT).show()
+                    btn.revertAnimation()
                 }
             }else{
                 submitForm("")
                 Toast.makeText(this, "Please Fill out All Fields", Toast.LENGTH_SHORT).show()
+                btn.revertAnimation()
             }
-
         }
-
 
         binding?.backButton?.setOnClickListener {
             startActivity(intent, options.toBundle())
@@ -132,8 +133,7 @@ class SignUpActivity : AppCompatActivity() {
             .setMessage(message)
             .setPositiveButton("Okay"){ _,_ ->
                 // do nothing
-            }
-            .show()
+            }.show()
     }
 
     private fun resetForm(numb: String)
@@ -146,19 +146,14 @@ class SignUpActivity : AppCompatActivity() {
                 binding!!.editTextEmail.text = null
                 binding!!.editTextPassword.text = null
                 binding!!.editTextMobile.text = null
-
-
                 binding!!.textInputEmail.helperText = getString(R.string.empty_text)
                 binding!!.textInputPassword.helperText = getString(R.string.empty_text)
                 binding!!.textInputMobile.helperText = getString(R.string.empty_text)
                 binding!!.textInputName.helperText = getString(R.string.empty_text)
                 binding!!.textInputConfPassword.helperText = getString(R.string.empty_text)
                 binding!!.textInputMobile.helperText = getString(R.string.empty_text)
-
                 finish()
-
-            }
-            .show()
+            }.show()
     }
 
     ////////////////////////////////////////////////////////////////////////////
