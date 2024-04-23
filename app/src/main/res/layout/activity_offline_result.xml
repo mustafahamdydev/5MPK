@@ -5,10 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorOnPrimary"
     tools:context=".activities.OfflineResultActivity">
 
     <LinearLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:id="@+id/llOfflineTotalPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +26,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:padding="5dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp">
 
@@ -62,13 +64,15 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="20dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/untitled_3"/>
+            android:src="@drawable/untitled_3"
+            android:contentDescription="@string/todo" />
     </LinearLayout>
 
     <LinearLayout
+        android:padding="10dp"
         android:id="@+id/llOfflineResult"
         android:layout_width="match_parent"
         android:layout_height="0dp"

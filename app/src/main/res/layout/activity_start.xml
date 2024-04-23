@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".activities.StartActivity"
     android:background="?attr/colorOnPrimary"
@@ -13,7 +12,7 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:textSize="46sp"
-       android:text="Welcome"
+       android:text="@string/welcome"
        android:fontFamily="@font/poppinsmedium"
        android:layout_alignParentTop="true"
        android:layout_centerInParent="true"
@@ -28,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/tv_permsion"
         android:layout_marginBottom="200dp"
-        />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/tv_permsion"
@@ -39,7 +38,7 @@
         android:layout_centerVertical="true"
         android:textAlignment="center"
         android:textSize="26sp"
-        android:text="We just need location Permission to start Please accept the dialoge that will appaear now"
+        android:text="@string/we_just_need_location_permission_to_start_please_accept_the_dialoge_that_will_appaear_now"
         />
 
 </RelativeLayout>

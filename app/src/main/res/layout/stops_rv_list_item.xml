@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -15,11 +16,12 @@
             android:id="@+id/stopName"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="Default Bus Station Hamada Helal"
+            android:text="@string/default_bus_station_hamada_helal"
             android:textSize="10sp"
             android:textColor="?attr/colorSecondary"
             android:layout_margin="5dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
 
     </LinearLayout>
 

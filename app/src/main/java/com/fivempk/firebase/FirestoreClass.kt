@@ -3,14 +3,12 @@ package com.fivempk.firebase
 import android.app.Activity
 import android.util.Log
 import android.widget.Toast
-import com.fivempk.R
 import com.fivempk.activities.MapsActivity
 import com.fivempk.activities.SignInActivity
 import com.fivempk.activities.SignUpActivity
 import com.fivempk.activities.UserProfileActivity
 import com.fivempk.models.User
 import com.fivempk.utils.Constants
-import com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase

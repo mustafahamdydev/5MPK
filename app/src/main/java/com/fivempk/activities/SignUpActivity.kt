@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.fivempk.R
 import com.fivempk.models.User
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import com.fivempk.databinding.ActivitySignUpBinding
 import com.fivempk.firebase.FireBaseClass
 import com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
@@ -19,10 +18,8 @@ import com.google.firebase.auth.FirebaseUser
 
 class SignUpActivity : AppCompatActivity() {
 
-    private var exists : Boolean  = false
     private var binding: ActivitySignUpBinding? = null
     private lateinit var auth: FirebaseAuth
-    private lateinit var database: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -59,25 +56,25 @@ class SignUpActivity : AppCompatActivity() {
                 if (pass == confirmPass){
                     auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener {
                         if (it.isSuccessful){
-                            submitForm(numb)
+                            submitForm()
                             val firebaseUser:FirebaseUser= it.result!!.user!!
                             val registeredEmail = firebaseUser.email!!
                             val user = User(firebaseUser.uid,name,"",registeredEmail,numb)
                             FireBaseClass().registerUser(this,user)
 
                         }else{
-                            submitForm("")
+                            submitForm()
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                             btn.revertAnimation()
                         }
                     }
                 }else{
-                    submitForm("")
+                    submitForm()
                     Toast.makeText(this, "Invalid Inputs", Toast.LENGTH_SHORT).show()
                     btn.revertAnimation()
                 }
             }else{
-                submitForm("")
+                submitForm()
                 Toast.makeText(this, "Please Fill out All Fields", Toast.LENGTH_SHORT).show()
                 btn.revertAnimation()
             }
@@ -94,7 +91,7 @@ class SignUpActivity : AppCompatActivity() {
         btn.revertAnimation()
     }
 
-    private fun submitForm(numb:String)
+    private fun submitForm()
     {
         binding!!.textInputName.helperText = validName()
         binding!!.textInputEmail.helperText = validEmail()
@@ -109,7 +106,7 @@ class SignUpActivity : AppCompatActivity() {
         val validPhone = binding!!.textInputMobile.helperText == null
 
         if (validName && validEmail && validPhone && validPassword && validConPassword )
-            resetForm(numb)
+            resetForm()
         else
             invalidForm()
     }
@@ -136,7 +133,7 @@ class SignUpActivity : AppCompatActivity() {
             }.show()
     }
 
-    private fun resetForm(numb: String)
+    private fun resetForm()
     {
         val message = "Congrats ! You are Ready to go"
         AlertDialog.Builder(this)

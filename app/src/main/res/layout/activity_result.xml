@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".activities.ResultActivity">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/resultMapFragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"

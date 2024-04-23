@@ -19,8 +19,8 @@
             android:textColor="?attr/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About US"
-            android:textSize="30dp"
+            android:text="@string/about_us"
+            android:textSize="30sp"
             android:layout_margin="20dp"
             />
         <View
@@ -49,7 +49,7 @@
                     android:textColor="?attr/colorPrimary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Our Goal"
+                    android:text="@string/our_goal"
                     android:textSize="25sp"
                     android:layout_margin="20dp"
                     />
@@ -65,7 +65,7 @@
                     android:layout_margin="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Our Team"
+                    android:text="@string/our_team"
                     android:textSize="25sp"
                     android:textColor="?attr/colorPrimary"
                     />
@@ -100,12 +100,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kerolos Atef"
+                            android:text="@string/kerolos_atef"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000150"
+                            android:text="@string/_202000150"
                             />
                     </LinearLayout>
 
@@ -133,12 +133,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mustafa Hamdy"
+                            android:text="@string/mustafa_hamdy"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000053"
+                            android:text="@string/_202000053"
                             />
                     </LinearLayout>
 
@@ -173,12 +173,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Mark Joseph"
+                            android:text="@string/mark_joseph"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000225"
+                            android:text="@string/_202000225"
                             />
                     </LinearLayout>
 
@@ -206,12 +206,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Motaz Ismail"
+                            android:text="@string/motaz_ismail"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000544"
+                            android:text="@string/_202000544"
                             />
                     </LinearLayout>
 
@@ -246,12 +246,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Markos Youssef"
+                            android:text="@string/markos_youssef"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000206"
+                            android:text="@string/_202000206"
                             />
                     </LinearLayout>
 
@@ -279,12 +279,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Marwan Moustafa"
+                            android:text="@string/marwan_moustafa"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000655"
+                            android:text="@string/_202000655"
                             />
 
                     </LinearLayout>
@@ -321,12 +321,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Paula Mikhail"
+                            android:text="@string/paula_mikhail"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="202000779"
+                            android:text="@string/_202000779"
                             />
                     </LinearLayout>
 

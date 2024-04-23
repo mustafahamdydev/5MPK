@@ -37,7 +37,8 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/blob_signin"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/todo" />
             </RelativeLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +50,8 @@
                     style="@style/modifiedEditText"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:hint="@string/login_email_hint"/>
+                    android:hint="@string/login_email_hint"
+                    android:autofillHints="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +63,8 @@
                     style="@style/modifiedEditText"
                     android:hint="@string/login_password_hint"
                     android:maxLines="1"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:autofillHints="" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
@@ -77,7 +80,7 @@
                 style="@style/loginButton"
                 app:spinning_bar_width="4dp"
                 app:spinning_bar_color="#FFF"
-                android:text="Login"
+                android:text="@string/login"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 app:initialCornerAngle="27dp"
@@ -118,9 +121,10 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/White_dimed"
-                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="?attr/colorOnPrimary"
+                app:cardCornerRadius="20dp"
                 android:padding="10dp"
+                app:cardElevation="5dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 >
@@ -129,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    >
+                    tools:ignore="UseCompoundDrawables">
                        <ImageView
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
@@ -137,7 +141,7 @@
                            android:layout_marginStart="10dp"
                            android:contentDescription="@string/app_name" />
                        <TextView
-                           android:textColor="@color/themeColor"
+                           android:textColor="?attr/colorPrimary"
                            android:padding="10dp"
                            android:textStyle="bold"
                            android:layout_width="wrap_content"
@@ -153,20 +157,16 @@
     <TextView
         android:layout_marginBottom="80dp"
         android:layout_alignParentBottom="true"
-        style="@style/parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="?attr/colorPrimary"
         android:textSize="17sp"
+        android:layout_centerInParent="true"
         android:text="@string/new_user_register_now"
         android:layout_marginTop="@dimen/loginViewsMargin" />
-    <View
-        android:layout_width="11dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ic_side_bg" />
+
     <ImageView
         android:id="@+id/add_button"
         android:layout_alignParentBottom="true"
@@ -174,6 +174,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/add"
-        android:layout_marginEnd="11dp"
         android:layout_marginBottom="30dp" />
 </RelativeLayout>

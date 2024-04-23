@@ -12,12 +12,13 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/untitled_3"/>
+        android:src="@drawable/untitled_3"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OFFLINE MODE"
+        android:text="@string/offline_mode"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
         android:textSize="30sp"

@@ -97,7 +97,6 @@ class SignInActivity : AppCompatActivity() {
             finishAffinity()
         }
     }
-
     private fun signIn() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -151,6 +150,6 @@ class SignInActivity : AppCompatActivity() {
     }
 
     fun signInSuccess(loggedInUser: User) {
-
+        Log.e("","Signed In as ${loggedInUser.name}")
     }
 }

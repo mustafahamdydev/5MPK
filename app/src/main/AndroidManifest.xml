@@ -60,12 +60,6 @@
             android:name=".activities.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.OtpActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.PhoneAuthentication"
-            android:exported="false" />
-        <activity
             android:name=".activities.SignInActivity"
             android:exported="false" />
         <activity
