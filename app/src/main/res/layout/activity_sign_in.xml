@@ -165,7 +165,8 @@
         android:textSize="17sp"
         android:layout_centerInParent="true"
         android:text="@string/new_user_register_now"
-        android:layout_marginTop="@dimen/loginViewsMargin" />
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        tools:ignore="RelativeOverlap" />
 
     <ImageView
         android:id="@+id/add_button"
@@ -174,5 +175,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/add"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/todo" />
 </RelativeLayout>

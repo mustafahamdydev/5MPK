@@ -99,9 +99,11 @@
     <string name="name">Name</string>
     <string name="update">Update</string>
     <string name="user_name">User Name</string>
-    <string name="noone_everyone_gmail_com">noone.Everyone@gmail.com</string>
+    <string name="no_one_everyone_gmail_com">NoOne.Everyone@gmail.com</string>
     <string name="default_bus_station_hamada_helal">Default Bus Station Hamada Helal</string>
     <string name="home">Home</string>
     <string name="share_our_app">Share Our App</string>
     <string name="f_a_q">FAQ</string>
+    <string name="account">Account</string>
+    <string name="logout">logout</string>
 </resources>

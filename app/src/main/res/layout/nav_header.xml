@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="?attr/colorOnTertiary"
                     android:textSize="10sp"
-                    android:text="@string/noone_everyone_gmail_com"
+                    android:text="@string/no_one_everyone_gmail_com"
                     tools:ignore="SmallSp" />
             </LinearLayout>
             <LinearLayout

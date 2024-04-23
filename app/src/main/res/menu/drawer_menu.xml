@@ -31,18 +31,18 @@
     </group>
 
     <item
-        android:title="Account"
+        android:title="@string/account"
         >
         <menu>
             <item
-                android:title="Settings"
+                android:title="@string/settings"
                 android:id="@+id/Settings"
                 android:icon="@drawable/baseline_settings_24"
 
                 />
             <item
                 android:icon="@drawable/baseline_logout_24"
-                android:title="logout"
+                android:title="@string/logout"
                 android:id="@+id/logout">
 
             </item>
