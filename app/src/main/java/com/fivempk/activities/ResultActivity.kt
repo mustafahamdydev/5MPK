@@ -11,6 +11,9 @@ import android.view.ViewTreeObserver
 import android.widget.LinearLayout
 import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fivempk.R
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -50,6 +53,15 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding?.root!!) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                top = insets.top, // this is for the tool bar inset
+                bottom = insets.bottom // lift up the bottom part of the UI above navigation bar
+            )
+            WindowInsetsCompat.CONSUMED
+        }
 
         // Map to link routeID with a pair containing the bus name and list of stops
         val busMap = mutableMapOf<String, Pair<String, MutableList<String>>>()
@@ -147,6 +159,13 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                 mGoogleMap.setMapStyle(mapStyle)
             }
         }
+
+        mGoogleMap.uiSettings.apply {
+            isMapToolbarEnabled = false
+            isMyLocationButtonEnabled = false
+            isCompassEnabled = false
+        }
+        mGoogleMap.isTrafficEnabled = true
 
         //center the camera within the given bounds
         mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.cairoBounds.center, 10.0f))

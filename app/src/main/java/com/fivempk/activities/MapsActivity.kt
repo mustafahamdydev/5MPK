@@ -18,6 +18,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
@@ -84,6 +87,15 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         enableEdgeToEdge()
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding?.root!!) { view, windowInsets ->
+            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                top = insets.top, // this is for the tool bar inset
+                bottom = insets.bottom // lift up the bottom part of the UI above navigation bar
+            )
+            WindowInsetsCompat.CONSUMED
+        }
 
         binding?.submit?.isEnabled = false
 
@@ -385,7 +397,9 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         mGoogleMap.uiSettings.apply {
             isMapToolbarEnabled = false
             isMyLocationButtonEnabled = false
+            isCompassEnabled = false
         }
+        mGoogleMap.isTrafficEnabled = true
         when (currentNightMode) {
             Configuration.UI_MODE_NIGHT_NO -> {
                 // Light theme
