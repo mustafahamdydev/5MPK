@@ -11,11 +11,13 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.fivempk.R
 import com.fivempk.databinding.ActivityOfflineInputBinding
 import com.fivempk.models.DatabaseHelper
 import com.fivempk.models.OfflineStop
 import com.fivempk.utils.PyBackend
 import com.fivempk.utils.RouteColorManager
+import com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
 import com.google.maps.model.LatLng
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -95,6 +97,8 @@ class OfflineInputActivity : AppCompatActivity() {
         }
 
         binding?.btnStart?.setOnClickListener {
+            val btn : CircularProgressButton = findViewById(R.id.btn_Start)
+            btn.startAnimation()
             if (locationSelected && destinationSelected) {
                 lifecycleScope.launch(Dispatchers.IO) {
                     val output = PyBackend.getRoute(
@@ -107,6 +111,7 @@ class OfflineInputActivity : AppCompatActivity() {
                     withContext(Dispatchers.Main) {
                         if (output == null) {
                             Toast.makeText(this@OfflineInputActivity, "No Routes :(", Toast.LENGTH_SHORT).show()
+                            btn.revertAnimation()
                         } else {
                             PyBackend.startPoint =
                                 LatLng(locationLatitude, locationLongitude)
@@ -127,6 +132,11 @@ class OfflineInputActivity : AppCompatActivity() {
     }
     private fun updateStartButtonState() {
         binding?.btnStart?.isEnabled = locationSelected && destinationSelected
+        if (locationSelected && destinationSelected){
+            val colorStateList = android.content.res.ColorStateList.valueOf(com.google.android.material.R.attr.colorOnPrimary)
+            binding?.btnStart?.backgroundTintList = colorStateList
+            binding?.btnStart?.setTextColor(getColor(R.color.white))
+        }
     }
 
     override fun onDestroy() {
