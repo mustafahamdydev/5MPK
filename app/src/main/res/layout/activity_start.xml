@@ -38,7 +38,7 @@
         android:layout_centerVertical="true"
         android:textAlignment="center"
         android:textSize="26sp"
-        android:text="@string/we_just_need_location_permission_to_start_please_accept_the_dialoge_that_will_appaear_now"
+        android:text="@string/we_just_need_location_permission_to_start_please_accept_the_dialogue_that_will_appear_now"
         />
 
 </RelativeLayout>

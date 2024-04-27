@@ -4,40 +4,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#656565</color>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="blue_100">#03A9F4</color>
-    <color name="blue_150">#009dff</color>
-    <color name="blue_200">#0288D1</color>
-    <color name="white_100">#f6fbff</color>
-    <color name="edit_text_background">#f6fbff</color>
-    <color name="White_dimed">#D8D8D8</color>
-    <color name="default_item_color">#000000</color> <!-- Default item color -->
-    <color name="white_grey">#D1D1D1</color>
-    <color name="Light_grey">#A8A8A8</color>
-    <color name="selected_drawer_item_background">#6AADFF</color>
-    <color name="unselected_drawer_item_background">#E0E0E0</color>
-
-
+    <color name="White_dimmed">#D8D8D8</color>
+    <!-- Default item color -->
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#009dff</color>
-    <color name="themeColor">#03A9F4</color>
-
-    <!--normal colors-->
-    <color name="darkTextColor">#020000</color>
-
-
     <!--colors for light mode-->
     <color name="contentTextColor">#0288D1</color>
-    <color name="register_bk_color">#03A9F4</color>
-    <color name="login_bk_color">#fff</color>
-    <color name="whiteTextColor">#fff</color>
-    <color name="primaryTextColor">#009dff</color>
-
-
-
 </resources>

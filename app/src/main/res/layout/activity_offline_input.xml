@@ -58,7 +58,7 @@
         android:textStyle="bold"
         android:textColor="?attr/colorOnPrimary"
         app:spinning_bar_color="@color/white"
-        android:backgroundTint="@color/White_dimed"
+        android:backgroundTint="@color/White_dimmed"
         android:paddingEnd="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

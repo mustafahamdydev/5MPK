@@ -16,7 +16,7 @@
             android:id="@+id/stopName"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:text="@string/default_bus_station_hamada_helal"
+            android:text="@string/default_bus_station"
             android:textSize="10sp"
             android:textColor="?attr/colorSecondary"
             android:layout_margin="5dp"

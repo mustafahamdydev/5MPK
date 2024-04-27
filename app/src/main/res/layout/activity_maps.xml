@@ -43,7 +43,7 @@
                 app:layout_constraintVertical_bias="0.045"
                 app:shapeAppearanceOverlay="@style/RoundedCornerFab"
                 app:tint="?attr/colorOnPrimary"
-                android:contentDescription="@string/elemntcode" />
+                android:contentDescription="@string/element_code" />
 
             <ImageButton
                 android:id="@+id/customLocationButton"
@@ -56,7 +56,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/maps_BottomSheet"
                 android:layout_margin="20dp"
-                android:contentDescription="@string/elemntcode" />
+                android:contentDescription="@string/element_code" />
 
             <LinearLayout
                 android:id="@+id/maps_BottomSheet"
@@ -102,7 +102,7 @@
                         android:layout_height="50dp"
                         android:src="@drawable/my_location"
                         android:background="?attr/colorContainer"
-                        android:contentDescription="@string/elemntcode" />
+                        android:contentDescription="@string/element_code" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -133,7 +133,7 @@
                     android:textStyle="bold"
                     android:textColor="?attr/colorOnPrimary"
                     app:spinning_bar_color="@color/white"
-                    android:backgroundTint="@color/White_dimed"
+                    android:backgroundTint="@color/White_dimmed"
                     android:paddingEnd="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

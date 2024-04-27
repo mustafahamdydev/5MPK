@@ -50,12 +50,10 @@
             android:exported="false" />
         <activity
             android:name=".activities.UserProfileActivity"
-            android:exported="false" /> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
-        <!-- Real AdMob app ID: ca-app-pub-9050992379264255~7766527880 -->
+            android:exported="false" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9050992379264255~7766527880" />
-
+            android:value="@string/Google_ads_Key" />
         <activity
             android:name=".activities.SettingsActivity"
             android:exported="false" />
@@ -65,11 +63,9 @@
         <activity
             android:name=".activities.SignUpActivity"
             android:exported="false" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/Google_Api_Key" />
-
         <activity
             android:name=".activities.MapsActivity"
             android:exported="false" />

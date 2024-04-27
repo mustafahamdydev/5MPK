@@ -62,9 +62,9 @@
                     android:layout_height="20dp"
                     android:layout_margin="20dp"
                     android:src="@drawable/back"
-                    app:tint="@color/White_dimed"
+                    app:tint="@color/White_dimmed"
                     android:rotation="180"
-                    android:contentDescription="@string/userimage" />
+                    android:contentDescription="@string/user_image" />
             </LinearLayout>
         </LinearLayout>
 
