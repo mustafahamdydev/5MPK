@@ -97,6 +97,7 @@
                         tools:layout_editor_absoluteX="166dp"
                         tools:layout_editor_absoluteY="0dp" />
                     <ImageButton
+                        app:tint="@color/Start_location_Marker"
                         android:id="@+id/location"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
@@ -123,6 +124,14 @@
                         android:layout_height="match_parent"
                         tools:layout_editor_absoluteX="166dp"
                         tools:layout_editor_absoluteY="0dp" />
+                    <ImageButton
+                        app:tint="@color/Destination_location_Marker"
+                        android:id="@+id/destination"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/my_location"
+                        android:background="?attr/colorContainer"
+                        android:contentDescription="@string/element_code" />
 
 
                 </androidx.cardview.widget.CardView>

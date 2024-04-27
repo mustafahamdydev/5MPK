@@ -6,6 +6,8 @@
     <color name="grey">#656565</color>
     <color name="blue_100">#03A9F4</color>
     <color name="White_dimmed">#D8D8D8</color>
+    <color name="Start_location_Marker">#2e91e6</color>
+    <color name="Destination_location_Marker">#7725dc</color>
     <!-- Default item color -->
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000</color>

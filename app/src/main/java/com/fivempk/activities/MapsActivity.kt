@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.location.Geocoder
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -62,7 +63,9 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAd
 import com.google.android.gms.ads.rewardedinterstitial.RewardedInterstitialAdLoadCallback
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.Marker
 
 class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnNavigationItemSelectedListener {
 
@@ -178,13 +181,48 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             }
                 //Location place selected
                 override fun onPlaceSelected(place: Place) {
-                    binding!!.location.visibility= View.GONE
                     val latLng: LatLng? = place.latLng
                     isLocationSelected = true
                     checkInputs()
                     placeLatLng = place.latLng
                     zoomOnMap(latLng!!)
-                    mGoogleMap.addMarker(MarkerOptions().position(latLng).title("Your location"))
+                    mGoogleMap.addMarker(MarkerOptions()
+                        .icon(BitmapDescriptorFactory
+                            .defaultMarker(208.0f))
+                        .draggable(true)
+                        .position(latLng)
+                        .title("Your location"))
+                    mGoogleMap.setOnMarkerDragListener(object : GoogleMap.OnMarkerDragListener {
+                        override fun onMarkerDragStart(marker: Marker) {
+                            // Called when the marker starts being dragged
+                        }
+
+                        override fun onMarkerDrag(marker: Marker) {
+                            // Called while the marker is being dragged
+                        }
+
+                        override fun onMarkerDragEnd(marker: Marker) {
+                            val draggedPosition = marker.position // Get the LatLng of the marker
+                            // Initialize a Geocoder
+                            val geocoder = Geocoder(applicationContext)
+                            // Perform reverse geocoding to get the address from LatLng
+                            @Suppress("DEPRECATION")
+                            val addresses = geocoder.getFromLocation(draggedPosition.latitude, draggedPosition.longitude, 1)
+
+                            // Check if addresses were found
+                            if (addresses != null) {
+                                if (addresses.isNotEmpty()) {
+                                    val address = addresses[0] // Get the first address
+                                    val placeName = address.featureName // Get the place name from the address
+                                    autocompleteFragment.setText(placeName)
+                                } else {
+                                    // If no address was found, display a message indicating so
+                                    Toast.makeText(applicationContext, "No address found for this location", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                            placeLatLng= draggedPosition
+                        }
+                    })
                 }
             }
         )
@@ -204,8 +242,45 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     isDestinationSelected = true
                     checkInputs()
                     zoomOnMap(latLng!!)
-                    mGoogleMap.addMarker(MarkerOptions().position(latLng).title("Your Destination"))
+                    mGoogleMap.addMarker(MarkerOptions()
+                        .icon(BitmapDescriptorFactory
+                            .defaultMarker(267.0f))
+                        .draggable(true)
+                        .position(latLng)
+                        .title("Your Destination"))
                     checkInputs()
+                    mGoogleMap.setOnMarkerDragListener(object : GoogleMap.OnMarkerDragListener {
+                        override fun onMarkerDragStart(marker: Marker) {
+                            // Called when the marker starts being dragged
+                        }
+
+                        override fun onMarkerDrag(marker: Marker) {
+                            // Called while the marker is being dragged
+                        }
+
+                        override fun onMarkerDragEnd(marker: Marker) {
+                            val draggedPosition = marker.position // Get the LatLng of the marker
+                            // Initialize a Geocoder
+                            val geocoder = Geocoder(applicationContext)
+
+                            // Perform reverse geocoding to get the address from LatLng
+                            @Suppress("DEPRECATION")
+                            val addresses = geocoder.getFromLocation(draggedPosition.latitude, draggedPosition.longitude, 1)
+
+                            // Check if addresses were found
+                            if (addresses != null) {
+                                if (addresses.isNotEmpty()) {
+                                    val address = addresses[0] // Get the first address
+                                    val placeName = address.featureName // Get the place name from the address
+                                    defaultCompleteFragment.setText(placeName)
+                                } else {
+                                    // If no address was found, display a message indicating so
+                                    Toast.makeText(applicationContext, "No address found for this location", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                            destinationLatLng= draggedPosition
+                        }
+                    })
                 }
             })
 
@@ -424,7 +499,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
 
     override fun onMapReady(googleMap: GoogleMap) {
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
-        autocompleteFragment.setText("Your Current Location")
         mGoogleMap= googleMap
         mGoogleMap.setPadding(0,10,0,50)
         mGoogleMap.uiSettings.apply {

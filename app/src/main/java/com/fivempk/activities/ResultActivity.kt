@@ -36,7 +36,9 @@ import com.fivempk.utils.BusAdapter
 import com.fivempk.utils.Constants
 import com.fivempk.utils.PyBackend
 import com.fivempk.utils.RouteColorManager
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.MapStyleOptions
+import com.google.android.gms.maps.model.MarkerOptions
 import java.util.ArrayList
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -146,7 +148,14 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         val context = GeoApiContext.Builder()
             .apiKey(apiKey)
             .build()
-
+        //Marker for start location
+        googleMap.addMarker(MarkerOptions().icon(
+            BitmapDescriptorFactory
+            .defaultMarker(208.0f)).position(LatLng(PyBackend.startPoint!!.lat,PyBackend.startPoint!!.lng)))
+        //Marker for destination location
+        googleMap.addMarker(MarkerOptions().icon(
+            BitmapDescriptorFactory
+                .defaultMarker(267.0f)).position(LatLng(PyBackend.endPoint!!.lat,PyBackend.endPoint!!.lng)))
         when (currentNightMode) {
             Configuration.UI_MODE_NIGHT_NO -> {
                 // Light theme
