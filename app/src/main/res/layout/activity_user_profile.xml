@@ -41,89 +41,107 @@
       android:layout_marginBottom="10dp"
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp">
-      <LinearLayout
+      <RelativeLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:orientation="vertical"
-          android:padding="20dp"
-          >
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/name"
-                android:layout_marginBottom="10dp"
-                >
-                <EditText
-                    android:id="@+id/edittext_name"
-                    android:text="@string/name"
-                    android:inputType="none"
-                    android:focusable="false"
-                    android:clickable="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:autofillHints="hello"
-                    tools:ignore="LabelFor" />
-            </com.google.android.material.textfield.TextInputLayout>
-          <com.google.android.material.textfield.TextInputLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="@string/login_email_hint"
-              android:layout_marginBottom="10dp"
-              >
-              <EditText
-                  android:id="@+id/edittext_email"
-                  android:inputType="none"
-                  android:focusable="false"
-                  android:clickable="false"
-                  android:text="@string/login_email_hint"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  tools:ignore="LabelFor,TextFields"
-                  android:autofillHints="emailAddress" />
-          </com.google.android.material.textfield.TextInputLayout>
-          <com.google.android.material.textfield.TextInputLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:hint="@string/phone_number"
-              android:layout_marginBottom="10dp"
-              >
-              <EditText
-                  android:id="@+id/edittext_phone"
-                  android:inputType="none"
-                  android:focusable="false"
-                  android:clickable="false"
-                  android:text="@string/phone_number"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  tools:ignore="LabelFor,TextFields"
-                  android:autofillHints="phone" />
-          </com.google.android.material.textfield.TextInputLayout>
-          <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
-              android:id="@+id/Update_btn"
-              android:layout_width="200dp"
-              android:backgroundTint="?attr/colorPrimary"
-              android:textStyle="bold"
-              android:textColor="?attr/colorOnPrimary"
-              android:layout_height="50dp"
-              app:spinning_bar_width="4dp"
-              app:spinning_bar_color="#FFF"
-              android:text="@string/update"
-              android:layout_gravity="center_horizontal"
-              android:layout_marginTop="200dp"
-              app:initialCornerAngle="27dp"
-              app:spinning_bar_padding="6dp"/>
-          <Button
-              android:id="@+id/delete_btn"
-              android:layout_marginTop="40dp"
-              android:layout_width="200dp"
-              android:layout_gravity="center"
-              android:layout_height="wrap_content"
-              android:textColor="?attr/colorError"
-              android:text="@string/delete_account"
-              android:backgroundTint="?attr/colorErrorContainer"
-              />
+          android:padding="20dp">
 
-      </LinearLayout>
+          <LinearLayout
+                  android:id="@+id/input_layout_container"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_above="@id/buttons_container"
+                  android:layout_alignParentTop="true">
+
+              <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="@string/name"
+                      android:layout_marginBottom="10dp"
+                      >
+                  <EditText
+                          android:id="@+id/edittext_name"
+                          android:text="@string/name"
+                          android:inputType="none"
+                          android:focusable="false"
+                          android:clickable="false"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:autofillHints="hello"
+                          tools:ignore="LabelFor" />
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="@string/login_email_hint"
+                      android:layout_marginBottom="10dp"
+                      >
+                  <EditText
+                          android:id="@+id/edittext_email"
+                          android:inputType="none"
+                          android:focusable="false"
+                          android:clickable="false"
+                          android:text="@string/login_email_hint"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          tools:ignore="LabelFor,TextFields"
+                          android:autofillHints="emailAddress" />
+              </com.google.android.material.textfield.TextInputLayout>
+              <com.google.android.material.textfield.TextInputLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="@string/phone_number"
+                      android:layout_marginBottom="10dp"
+                      >
+                  <EditText
+                          android:id="@+id/edittext_phone"
+                          android:inputType="none"
+                          android:focusable="false"
+                          android:clickable="false"
+                          android:text="@string/phone_number"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          tools:ignore="LabelFor,TextFields"
+                          android:autofillHints="phone" />
+              </com.google.android.material.textfield.TextInputLayout>
+
+          </LinearLayout>
+
+          <LinearLayout
+                  android:id="@+id/buttons_container"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal"
+                  android:layout_alignParentBottom="true"
+                  android:orientation="vertical">
+
+              <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                      android:id="@+id/Update_btn"
+                      android:layout_width="200dp"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:backgroundTint="?attr/colorPrimary"
+                      android:text="@string/update"
+                      android:textColor="?attr/colorOnPrimary"
+                      android:textStyle="bold"
+                      app:initialCornerAngle="27dp"
+                      app:spinning_bar_color="#FFF"
+                      app:spinning_bar_padding="6dp"
+                      app:spinning_bar_width="4dp" />
+
+              <Button
+                      android:id="@+id/delete_btn"
+                      android:layout_width="200dp"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:layout_marginTop="40dp"
+                      android:backgroundTint="?attr/colorErrorContainer"
+                      android:text="@string/delete_account"
+                      android:textColor="?attr/colorError" />
+          </LinearLayout>
+
+      </RelativeLayout>
   </androidx.cardview.widget.CardView>
 
 

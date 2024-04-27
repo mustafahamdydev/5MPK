@@ -85,6 +85,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private var isAlgorithmFinished = false
     private var isLocationSelected = false
     private var isDestinationSelected = false
+    private var isAdClosed = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -295,30 +296,97 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         mapFragment.getMapAsync(this)
 
         binding?.submit?.setOnClickListener {
-            val btn : CircularProgressButton = findViewById(R.id.submit)
+            val btn: CircularProgressButton = findViewById(R.id.submit)
             btn.startAnimation()
             loadAd()
-            lifecycleScope.launch(Dispatchers.IO) {
-                val output = PyBackend.getRoute(
-                    getPlaceLat()!!,
-                    getPlaceLon()!!,
-                    getDestLat()!!,
-                    getDestLon()!!
-                )
-                // Switch to the Main Thread to update the UI
-                withContext(Dispatchers.Main) {
-                    if (output == null) {
-                        Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
-                        btn.revertAnimation()
-                    } else {
-                        PyBackend.startPoint =
-                            com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
-                        PyBackend.endPoint =
-                            com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
-                        isAlgorithmFinished = true // Set the flag to true when the algorithm finishes
-                    }
+            calculateRoute()
+        }
+    }
+
+    private fun calculateRoute() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val output = PyBackend.getRoute(
+                getPlaceLat()!!,
+                getPlaceLon()!!,
+                getDestLat()!!,
+                getDestLon()!!
+            )
+            withContext(Dispatchers.Main) {
+                handleRouteResult(output)
+            }
+        }
+    }
+
+    private fun handleRouteResult(output: Any?) {
+        val btn: CircularProgressButton = findViewById(R.id.submit)
+        if (output == null) {
+            Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
+            btn.revertAnimation()
+        } else {
+            PyBackend.startPoint = com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
+            PyBackend.endPoint = com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
+            isAlgorithmFinished = true
+            if (isAdClosed) {
+                openResultActivityIfAlgorithmIsFinished()
+            }
+        }
+    }
+
+    private fun loadAd() {
+        RewardedInterstitialAd.load(
+            this, "ca-app-pub-9050992379264255/2860575749",
+            AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
+                override fun onAdLoaded(ad: RewardedInterstitialAd) {
+                    Log.d("MapsActivity", "Ad was loaded.")
+                    rewardedInterstitialAd = ad
+                    showRewardedAd()
+                }
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    Log.e("MapsActivity", adError.toString())
+                    isAdClosed = true
+                    calculateRoute()
                 }
             }
+        )
+    }
+
+    private fun showRewardedAd() {
+        rewardedInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdDismissedFullScreenContent() {
+                isAdClosed = true
+                if (isAlgorithmFinished) {
+                    openResultActivityIfAlgorithmIsFinished()
+                }
+            }
+            override fun onAdFailedToShowFullScreenContent(adError: AdError) {
+                isAdClosed = true
+            }
+            override fun onAdShowedFullScreenContent() {
+                startDismissTimer()
+            }
+        }
+        rewardedInterstitialAd?.show(this@MapsActivity) {}
+    }
+
+    private fun startDismissTimer() {
+        val timer = object : CountDownTimer(10000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {}
+            override fun onFinish() {
+                isAdClosed = true
+                if (isAlgorithmFinished) {
+                    openResultActivityIfAlgorithmIsFinished()
+                }
+            }
+        }
+        timer.start()
+    }
+
+    private fun openResultActivityIfAlgorithmIsFinished() {
+        if (isAlgorithmFinished) {
+            val intent = Intent(this@MapsActivity, ResultActivity::class.java)
+            RouteColorManager.resetColorIndex()
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -336,77 +404,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
         val adWidth = (adWidthPixels / density).toInt()
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
     }
-
-    //ADS
-    private fun loadAd(){
-        RewardedInterstitialAd.load(
-            this, "ca-app-pub-9050992379264255/2860575749",
-            AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
-                override fun onAdLoaded(ad: RewardedInterstitialAd) {
-                    Log.d("MapsActivity", "Ad was loaded.")
-                    rewardedInterstitialAd = ad
-                    showRewardedAd()
-                }
-                override fun onAdFailedToLoad(adError: LoadAdError) {
-                    Log.e("MapsActivity", adError.toString())
-                    rewardedInterstitialAd = null
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        val output = PyBackend.getRoute(
-                            getPlaceLat()!!,
-                            getPlaceLon()!!,
-                            getDestLat()!!,
-                            getDestLon()!!
-                        )
-                        // Switch to the Main Thread to update the UI
-                        withContext(Dispatchers.Main) {
-                            if (output == null) {
-                                Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
-                                val btn : CircularProgressButton = findViewById(R.id.submit)
-                                btn.revertAnimation()
-                            } else {
-                                PyBackend.startPoint =
-                                    com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
-                                PyBackend.endPoint =
-                                    com.google.maps.model.LatLng(getDestLat()!!, getDestLon()!!)
-                                isAlgorithmFinished = true // Set the flag to true when the algorithm finishes
-                                openResultActivityIfAlgorithmIsFinished()
-                            }
-                        }
-                    }
-                }
-            }
-        )
-    }
-
-    private fun showRewardedAd() {
-        rewardedInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
-            override fun onAdDismissedFullScreenContent() {
-                rewardedInterstitialAd = null
-                openResultActivityIfAlgorithmIsFinished()
-            }
-            override fun onAdFailedToShowFullScreenContent(adError: AdError) {
-                rewardedInterstitialAd = null
-                openResultActivityIfAlgorithmIsFinished()
-            }
-            override fun onAdShowedFullScreenContent() {
-                // Ad is displayed, start timer to wait for 10 seconds before dismissing
-                val timer = object : CountDownTimer(10000, 1000) {
-                    override fun onTick(millisUntilFinished: Long) {
-                    }
-                    override fun onFinish() {
-                        // Timer finished, dismiss the ad
-                        rewardedInterstitialAd = null
-                        openResultActivityIfAlgorithmIsFinished()
-                    }
-                }
-                timer.start()
-            }
-        }
-        rewardedInterstitialAd?.show(this) {
-            isAlgorithmFinished = true
-        }
-    }
-
 
     private fun loadBanner() {
         val adView = AdView(this)
@@ -448,15 +445,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             val colorStateList = android.content.res.ColorStateList.valueOf(com.google.android.material.R.attr.colorPrimary)
             binding?.submit?.backgroundTintList = colorStateList
             binding?.submit?.setTextColor(getColor(R.color.white))
-        }
-    }
-
-    private fun openResultActivityIfAlgorithmIsFinished() {
-        if (isAlgorithmFinished) {
-            val intent = Intent(this@MapsActivity, ResultActivity::class.java)
-            RouteColorManager.resetColorIndex()
-            startActivity(intent)
-            finish()
         }
     }
 
