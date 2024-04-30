@@ -61,7 +61,7 @@
                                 style="@style/modifiedEditText"
                                 android:inputType="textEmailAddress"
                                 android:maxLines="1"
-                                android:textColor="?attr/colorOnPrimary"
+                                android:textColor="?attr/colorPrimary"
                                 android:hint="@string/login_email_hint"/>
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,13 +84,7 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="11dp"
-        android:layout_height="match_parent"
-        android:background="@drawable/ic_side_bg"/>
+
     <ImageView
         android:id="@+id/back_button"
         android:layout_alignParentBottom="true"
