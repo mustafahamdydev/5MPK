@@ -86,6 +86,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private var isLocationSelected = false
     private var isDestinationSelected = false
     private var isAdClosed = false
+    private var isCalculateRouteRunning = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -299,11 +300,14 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             val btn: CircularProgressButton = findViewById(R.id.submit)
             btn.startAnimation()
             loadAd()
-            calculateRoute()
+            if (!isCalculateRouteRunning) {
+                calculateRoute()
+            }
         }
     }
 
     private fun calculateRoute() {
+        isCalculateRouteRunning = true
         lifecycleScope.launch(Dispatchers.IO) {
             val output = PyBackend.getRoute(
                 getPlaceLat()!!,
@@ -382,7 +386,8 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     }
 
     private fun openResultActivityIfAlgorithmIsFinished() {
-        if (isAlgorithmFinished) {
+        if (isAlgorithmFinished && !isFinishing) {
+            isAlgorithmFinished = false
             val intent = Intent(this@MapsActivity, ResultActivity::class.java)
             RouteColorManager.resetColorIndex()
             startActivity(intent)
