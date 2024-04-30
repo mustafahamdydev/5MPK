@@ -18,7 +18,8 @@ import com.google.maps.errors.ApiException
 import com.fivempk.databinding.ActivitySignInBinding
 import com.fivempk.firebase.FireBaseClass
 import com.fivempk.models.User
-
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
 
 class SignInActivity : AppCompatActivity() {
     companion object {
@@ -74,7 +75,8 @@ class SignInActivity : AppCompatActivity() {
             val email = binding!!.editTextEmail.text.toString()
             val pass = binding!!.editTextPassword.text.toString()
             if (email.isNotEmpty() && pass.isNotEmpty()){
-                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { it
+                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { @Suppress("UNUSED_EXPRESSION")
+                it
                     if (it.isSuccessful) {
                         btn.revertAnimation()
                         FireBaseClass().signInUser(this)
@@ -83,8 +85,12 @@ class SignInActivity : AppCompatActivity() {
                         finish()
                     } else {
                         btn.revertAnimation()
-                        Log.i("firebase", it.exception.toString())
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        val e = it.exception
+                        var message = "An error occurred"
+                        if (e is FirebaseAuthInvalidUserException || e is FirebaseAuthInvalidCredentialsException) {
+                            message = "Wrong Email or Password"
+                        }
+                        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
@@ -97,14 +103,15 @@ class SignInActivity : AppCompatActivity() {
             finishAffinity()
         }
     }
+
     private fun signIn() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
         val signInIntent = googleSignInClient.signInIntent
+        @Suppress("DEPRECATION")
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
 
@@ -133,7 +140,6 @@ class SignInActivity : AppCompatActivity() {
                     val email = googleUser.email!!
                     val userData = User(googleUser.uid,name,googleUser.photoUrl.toString(),email)
                     FireBaseClass().registerGoogleUser(this,userData)
-
                     Toast.makeText(this, "Signed in as ${googleUser.displayName}", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, StartActivity::class.java))
                     finish()
@@ -142,7 +148,6 @@ class SignInActivity : AppCompatActivity() {
                 }
             }
     }
-
 
     override fun onDestroy() {
         super.onDestroy()
