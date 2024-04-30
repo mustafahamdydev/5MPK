@@ -73,9 +73,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             val busName = busInfo[1]
             val routeId = busInfo[2] // Using routeId as the unique identifier
             val currentPair = busMap[routeId] ?: Pair(busName, mutableListOf())
-            // Add stop to the list of stops in the pair
             val updatedPair = currentPair.copy(second = currentPair.second.apply { add(stop) })
-            // Update the map
             busMap[routeId] = updatedPair
         }
 
@@ -144,10 +142,10 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         mGoogleMap.clear()
         val apiKey: String = getString(R.string.Google_Api_Key)
 
-        // Set up the GeoApiContext with your API key
         val context = GeoApiContext.Builder()
             .apiKey(apiKey)
             .build()
+
         //Marker for start location
         googleMap.addMarker(MarkerOptions().icon(
             BitmapDescriptorFactory
@@ -156,6 +154,7 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
         googleMap.addMarker(MarkerOptions().icon(
             BitmapDescriptorFactory
                 .defaultMarker(267.0f)).position(LatLng(PyBackend.endPoint!!.lat,PyBackend.endPoint!!.lng)))
+
         when (currentNightMode) {
             Configuration.UI_MODE_NIGHT_NO -> {
                 // Light theme
@@ -174,10 +173,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             isMyLocationButtonEnabled = false
             isCompassEnabled = false
         }
-        mGoogleMap.isTrafficEnabled = true
-
-        //center the camera within the given bounds
-        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Constants.cairoBounds.center, 10.0f))
 
         //restricts user movement to the set bounds of Cairo
         mGoogleMap.setLatLngBoundsForCameraTarget(Constants.cairoBounds)
@@ -236,19 +231,18 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                         .map { LatLng(it.lat, it.lng) }) {
                         builder.include(point)
                     }
-                    val bounds = builder.build()
-                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
 
                     for (stop in waypoints) {
                         val circleOptions = CircleOptions()
                             .center(LatLng(stop.lat, stop.lng))
-                            .radius(20.0) // Adjust the radius as needed
+                            .radius(20.0)
                             .fillColor(Color.WHITE)
                             .strokeColor(Color.DKGRAY)
                             .strokeWidth(0.5f)
                         mGoogleMap.addCircle(circleOptions)
                     }
-
+                    val bounds = builder.build()
+                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 300))
                 }
                 completedRequests++
                 calculateTravelTime()
@@ -299,8 +293,6 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                         .map { LatLng(it.lat, it.lng) }) {
                         builder.include(point)
                     }
-                    val bounds = builder.build()
-                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100))
                 }
                 completedRequests++
                 calculateTravelTime()

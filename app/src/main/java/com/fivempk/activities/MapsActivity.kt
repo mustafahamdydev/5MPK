@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.LinearLayout
@@ -324,7 +323,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
     private fun handleRouteResult(output: Any?) {
         val btn: CircularProgressButton = findViewById(R.id.submit)
         if (output == null) {
-            Toast.makeText(this@MapsActivity, "output = null", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MapsActivity, "No Route Was Found", Toast.LENGTH_SHORT).show()
             btn.revertAnimation()
         } else {
             PyBackend.startPoint = com.google.maps.model.LatLng(getPlaceLat()!!, getPlaceLon()!!)
@@ -341,12 +340,10 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
             this, "ca-app-pub-9050992379264255/2860575749",
             AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: RewardedInterstitialAd) {
-                    Log.d("MapsActivity", "Ad was loaded.")
                     rewardedInterstitialAd = ad
                     showRewardedAd()
                 }
                 override fun onAdFailedToLoad(adError: LoadAdError) {
-                    Log.e("MapsActivity", adError.toString())
                     isAdClosed = true
                     calculateRoute()
                 }
