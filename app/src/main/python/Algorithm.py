@@ -56,7 +56,8 @@ def astar_path_with_transfers(start, goal):
     explored = {(start, None): 0}
     while frontier:
         _, current_node, path, current_cost, current_trip_id, transfers = heapq.heappop(frontier)
-        if current_node == goal:
+        # Check if the remaining distance is less than 100 meters
+        if haversine_heuristic(current_node, goal) < 200:
             return path + [(current_node,
                             G.nodes[current_node]['stop_name'],
                             G.nodes[current_node]['latitude'],
