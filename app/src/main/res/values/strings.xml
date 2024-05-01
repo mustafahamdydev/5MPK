@@ -85,4 +85,7 @@
     <string name="f_a_q">FAQ</string>
     <string name="account">Account</string>
     <string name="logout">logout</string>
+    <string name="to">To</string>
+    <string name="this_is_the_default_start_location">This is the default start location</string>
+    <string name="from">From</string>
 </resources>

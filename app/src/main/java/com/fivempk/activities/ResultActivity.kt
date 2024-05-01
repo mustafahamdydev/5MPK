@@ -1,8 +1,10 @@
 package com.fivempk.activities
 
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.Color
+import android.location.Geocoder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -40,6 +42,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import java.util.ArrayList
+import java.util.Locale
 
 class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
     private var binding: ActivityResultBinding? = null
@@ -97,6 +100,12 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
             binding?.rvBuses?.adapter = busAdapter
         }
 
+        val startAddress = getAddressFromLatLng(this@ResultActivity, PyBackend.startPoint!!.lat, PyBackend.startPoint!!.lng)
+        val endAddress = getAddressFromLatLng(this@ResultActivity, PyBackend.endPoint!!.lat, PyBackend.endPoint!!.lng)
+
+        binding?.tvStartStop?.text = startAddress
+        binding?.tvEndStop?.text = endAddress
+
         binding?.llResultBottomSheet?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 binding?.llResultBottomSheet?.viewTreeObserver?.removeOnGlobalLayoutListener(this)
@@ -134,6 +143,13 @@ class ResultActivity : AppCompatActivity(), OnMapReadyCallback {
                 mGoogleMap.uiSettings.isZoomGesturesEnabled = true
             }
         }
+    }
+
+    @Suppress("DEPRECATION")
+    private fun getAddressFromLatLng(context: Context, latitude: Double, longitude: Double): String {
+        val geocoder = Geocoder(context, Locale.getDefault())
+        val addresses = geocoder.getFromLocation(latitude, longitude, 1)
+        return addresses?.get(0)!!.getAddressLine(0)
     }
 
     override fun onMapReady(googleMap: GoogleMap){

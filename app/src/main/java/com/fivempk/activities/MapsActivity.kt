@@ -189,7 +189,7 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                     zoomOnMap(latLng!!)
                     mGoogleMap.addMarker(MarkerOptions()
                         .icon(BitmapDescriptorFactory
-                            .defaultMarker(208.0f))
+                        .defaultMarker(208.0f))
                         .draggable(true)
                         .position(latLng)
                         .title("Your location"))
@@ -345,7 +345,6 @@ class MapsActivity : AppCompatActivity() , OnMapReadyCallback,NavigationView.OnN
                 }
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     isAdClosed = true
-                    calculateRoute()
                 }
             }
         )
