@@ -60,7 +60,7 @@ class OfflineInputActivity : AppCompatActivity() {
                     locationSelected = false
                     binding?.btnStart?.isEnabled = false
                 } else {
-                    val selectedStop = stops[position]
+                    val selectedStop = stops[position - 1]
                     // Save the coordinates of the selected stop
                     locationLatitude = selectedStop.latitude
                     locationLongitude = selectedStop.longitude
@@ -81,7 +81,7 @@ class OfflineInputActivity : AppCompatActivity() {
                     destinationSelected = false
                     binding?.btnStart?.isEnabled = false
                 } else {
-                    val selectedStop = stops[position]
+                    val selectedStop = stops[position - 1]
                     // Save the coordinates of the selected stop
                     destinationLatitude = selectedStop.latitude
                     destinationLongitude = selectedStop.longitude
@@ -116,7 +116,7 @@ class OfflineInputActivity : AppCompatActivity() {
                             PyBackend.startPoint =
                                 LatLng(locationLatitude, locationLongitude)
                             PyBackend.endPoint =
-                                LatLng(locationLatitude, locationLongitude)
+                                LatLng(destinationLatitude, destinationLongitude)
 
                             val intent = Intent(this@OfflineInputActivity, OfflineResultActivity::class.java)
                             RouteColorManager.resetColorIndex()
