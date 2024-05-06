@@ -32,7 +32,7 @@ with open(graph_file_path, 'rb') as file:
 def find_closest_node(latitude, longitude):
     distances = [(node, geopy.distance.distance((latitude, longitude), (G.nodes[node]['latitude'], G.nodes[node]['longitude'])).km) for node in G.nodes]
     closest_node, closest_distance = min(distances, key=lambda x: x[1])
-    return closest_node, closest_distance * 1000  # Convert to meters
+    return closest_node, closest_distance * 1000
 
 # Returns the stop info of a stop_id
 def get_stop_info_for_stop(stop_id):
@@ -49,37 +49,32 @@ def haversine_heuristic(node1, node2):
 
 # A* algorithm with bus transfer handling
 def astar_path_with_transfers(start, goal):
-    # Priority queue with (priority, node, path, cost, trip_id, transfers_count)
     frontier = []
     heapq.heappush(frontier, (0, start, [], 0, None, 0))
-    # Explored nodes and their lowest cost and trip_id found
     explored = {(start, None): 0}
     while frontier:
         _, current_node, path, current_cost, current_trip_id, transfers = heapq.heappop(frontier)
-        # Check if the remaining distance is less than 100 meters
-        if haversine_heuristic(current_node, goal) < 200:
+        if haversine_heuristic(current_node, goal) < 500:
             return path + [(current_node,
                             G.nodes[current_node]['stop_name'],
                             G.nodes[current_node]['latitude'],
                             G.nodes[current_node]['longitude'])]
         for neighbor, edge_attr in G[current_node].items():
-            # Check for transfer
             transfer_penalty = 0
             new_transfers = transfers
             if current_trip_id is not None and edge_attr['trip_id'] != current_trip_id:
-                transfer_penalty = 300  # Arbitrary transfer penalty
+                transfer_penalty = 300
                 new_transfers += 1
             new_cost = current_cost + edge_attr['weight'] + transfer_penalty
-            # Only consider edges with the same direction_id if one has been set
             if (neighbor, edge_attr['trip_id']) not in explored or new_cost < explored[(neighbor, edge_attr['trip_id'])]:
                 explored[(neighbor, edge_attr['trip_id'])] = new_cost
-                priority = new_cost + haversine_heuristic(neighbor, goal) + (100000 * new_transfers)  # Penalize transfers
+                priority = new_cost + haversine_heuristic(neighbor, goal) + (100000 * new_transfers)
                 new_path = path + [(current_node,
                                     G.nodes[current_node]['stop_name'],
                                     G.nodes[current_node]['latitude'],
                                     G.nodes[current_node]['longitude'])]
                 heapq.heappush(frontier, (priority, neighbor, new_path, new_cost, edge_attr['trip_id'], new_transfers))
-    return None  # Goal not reachable
+    return None
 
 # Finds the buses that pass the output path points of the path finding algorithm
 def find_routes(path):
@@ -95,7 +90,7 @@ def find_routes(path):
                 start_index = trip_stops.index(current_stop_id)
             except ValueError:
                 continue
-            covered_stops = 1  # Start with 1 to account for the current stop
+            covered_stops = 1
             for i, stop_id in enumerate(trip_stops[start_index + 1:]):
                 if (current_stop_index + i + 1) >= len(path) or stop_id != path[current_stop_index + i + 1][0]:
                     break
@@ -105,24 +100,51 @@ def find_routes(path):
                 best_trip = trip['route_id'], trip['route_short_name']
         if best_trip:
             for i in range(current_stop_index, current_stop_index + max_covered_stops):
-                enhanced_path.append((*path[i], *best_trip))  # Unpack the tuple
+                enhanced_path.append((*path[i], *best_trip))
             current_stop_index += max_covered_stops
         else:
             current_stop_index += 1
     return enhanced_path
 
+def calculate_total_time(path):
+    total_time = 0
+    for i in range(len(path) - 1):
+        edge_data = G.get_edge_data(path[i][0], path[i+1][0])
+        total_time += edge_data['weight']
+    return total_time
+
+def find_closest_nodes(latitude, longitude, num_stops=3):
+    distances = [(node, geopy.distance.distance((latitude, longitude), (G.nodes[node]['latitude'], G.nodes[node]['longitude'])).km) for node in G.nodes]
+    closest_nodes = heapq.nsmallest(num_stops, distances, key=lambda x: x[1])
+    return [(node, distance * 1000) for node, distance in closest_nodes]
+
 # Function that handles all other functions, takes as input the coordinates of the start point and Returns the following:
 def main(start_lat, start_lon, end_lat, end_lon):
-    start_stop, start_distance = find_closest_node(start_lat, start_lon)
-    if start_distance > 2000:  # Check if the distance is more than 2 kilometers
-        return None
+    start_stops = find_closest_nodes(start_lat, start_lon, num_stops=3)
     end_stop, end_distance = find_closest_node(end_lat, end_lon)
-    if end_distance > 2000:  # Check if the distance is more than 2 kilometers
+    if end_distance > 2000:
         return None
-    start_stop_info = get_stop_info_for_stop(start_stop)
     end_stop_info = get_stop_info_for_stop(end_stop)
-    path = astar_path_with_transfers(start_stop, end_stop)
-    if path is None:
+
+    best_path = None
+    best_total_time = float('inf')
+
+    for start_stop, start_distance in start_stops:
+        if start_distance > 2000:
+            continue
+        start_stop_info = get_stop_info_for_stop(start_stop)
+        path = astar_path_with_transfers(start_stop, end_stop)
+        if path is None:
+            continue
+
+        routes = find_routes(path)
+        total_time = calculate_total_time(routes)
+
+        if total_time < best_total_time:
+            best_path = routes
+            best_total_time = total_time
+
+    if best_path is None:
         return None
-    routes = find_routes(path)
-    return routes, start_stop_info, end_stop_info
+
+    return best_path, start_stop_info, end_stop_info
