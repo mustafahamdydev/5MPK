@@ -1,23 +1,47 @@
+**![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)**
+**![Version](https://img.shields.io/badge/version-3.0-blue)**
+**![Status](https://img.shields.io/badge/status-Complete-yellow)**
+**![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?logo=kotlin&logoColor=white)**
+**![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)**
+**![Maintained](https://img.shields.io/maintenance/No/2025)**
+![Python Version](https://img.shields.io/badge/Python-3.8-green)
+
+
 ![image](https://github.com/mustafahamdydev/5MPK/assets/80783716/2959fabb-05c8-40be-a09d-992e94d26551)
 
 
 # 5MPK!
 
-## Project Description
+## 🚀 Features
+
+- **Route Planning**: Determine the most efficient public transport routes between locations.
+- **Cost Estimation**: Calculate the total travel cost for the selected route.
+- **Time Estimation**: Provide estimated travel time, including transfers and walking.
+- **Interactive Maps**: Visualize routes on Google Maps with all stops, transfer points, and walking distances.
+- **Multi-Modal Integration**: Combine various modes of public transport for optimal routing.
+
+## 🛠️ Tech Stack
+
+- **Programming Language**: Kotlin - Java - Python
+- **Platform**: Android
+- **Mapping**: Google Maps API
+- **Algorithm**: Custom A* path-finding algorithm
+
+## 📠 Project Description
 5MPK is a comprehensive Android application, developed in Kotlin, that facilitates multi-modal public transport route 
 planning within the Greater Cairo Region. The application assists users in identifying the most efficient route from
 one location to another using Cairo’s public transport system. It provides valuable information such as the estimated
 total travel cost, travel time, and a visual representation of the route on Google Maps, complete with all stops, 
 transfer points, and walking distances.
 
-## How it works
+## 👜 How it works
 The application employs a customized A* path-finding algorithm, developed in Python, which selects the optimal path
 based on factors such as distance (impacting travel time) and the number of transfers (affecting cost). The algorithm’s
 backend runs on-device using Chaquopy. The application integrates Google Maps APIs to display the route and calculate
 the estimated travel time. For monetization, the app incorporates Google AdMob to display ads. Additionally, it uses
 Firebase for handling user authentication and account management.
 
-### The Backend Python Algorithm
+#### The Backend Python Algorithm
 The centerpiece of the project is a bespoke path-finding algorithm implemented using the python programming language, 
 meticulously designed for the specific task of mapping public transportation routes. This algorithm is an exemplification
 of the harmonious integration of various computational components, each contributing to the overall functionality of the 
@@ -38,7 +62,7 @@ It iterates over the path, and for each stop, it finds the bus trip that covers 
 stops, along with the route ID and short name of the bus trip, are then added to an enhanced path. This process continues 
 until all stops in the path have been covered.
 
-### The Application
+#### The Application
 The application is built using Android Kotlin, which provides a rich set of pre-built UI components and tools for mobile 
 application development. Kotlin, which provides a reactive programming paradigm, runs natively on Android devices, offering
 unmatched speed, reliability, and features compared to other technologies such as Flutter or React Native. In addition to the
@@ -50,28 +74,15 @@ Google Maps SDK, Google Places API, Google Geocoding API, Google Geolocation API
 throughout the application. For authentication, Google Cloud Firestore API and Firebase are used, which, depending on the user’s 
 login/signup preference, will be used to save users' profile data. 
 
-## Development Challanges
-Our journey in developing this application was not without its challenges, the most significant of which was dealing
-with Google’s frequent policy changes and updates. Despite being a global tech giant with a talented workforce,
-Google’s multiple policy shifts during our three-month development period posed considerable hurdles. These changes
-affected our use of their APIs, introduced bugs through five updates to Android Studio, and led to the deprecation of
-numerous functions and classes. Google’s Android development environment can be complex and bloated, with many functions
-performing similar tasks and libraries often conflicting with each other. We found Gradle to be particularly cumbersome,
-and Jetpack Compose is a complex way for UI creation that should be removed. Despite these challenges, we chose to build
-the app using Kotlin, as it is the most efficient language for Android app development in 2024, with Java being outdated
-and Flutter Dart proving to be disorganized and cumbersome.
-
-In addition to the challenges posed by Google’s erratic policy changes, we were severely hindered by the absolute inadequacy
-of the Egyptian Government. The struggle to find usable public transport datasets in Egypt was a nightmare. Without the 
-General Transit Feed Specification (GTFS), our application, which is designed to alleviate the daily commuting chaos for 
-Egyptians, would have been a pipe dream. The current regime in Egypt has shown a staggering lack of progress in these areas,
-and it often feels like they are actively stifling opportunities for individuals or groups to contribute to such improvements.
-This has exacerbated the difficulties faced by Egyptians in their daily commute, turning it into a veritable hell. It’s a disgrace
-that in this day and age, citizens are left to fend for themselves due to the government’s abject failure to provide basic services.
-
-## Screenshots from the app
+## 📸 Screenshots
 
 ![App Screens 1](https://github.com/mustafahamdydev/5MPK/assets/80783716/7bea6f9c-4bda-4bc3-80dc-7b3cb41e57cc)
 
 
 ![App Screens 2](https://github.com/mustafahamdydev/5MPK/assets/80783716/f8888b87-25c0-4c7d-b919-2098cf7e0937)
+
+## 📜 License
+
+This project is **closed-source** and **all rights are reserved**.  
+You may **not** copy, modify, distribute, or use this project in any way without explicit permission from the owner.
+
